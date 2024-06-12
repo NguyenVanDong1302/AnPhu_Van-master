@@ -33,7 +33,7 @@ namespace idn.AnPhu.Website
             //);
 
             //routes.MapRoute(
-            //    "Default",
+            //    "Default",    
             //    "{culture}/{controller}/{action}/{id}",
             //    new { culture = "vi", controller = "Home", action = "Index", id = UrlParameter.Optional },
             //    new[] { "idn.AnPhu.Website.Controllers" }
