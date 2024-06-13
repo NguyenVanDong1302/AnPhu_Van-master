@@ -17,6 +17,7 @@ namespace idn.AnPhu.Biz.Services
             #region["Auth"]
             services.Add(typeof(Sys_UserManager), new Sys_UserManager(new Sys_UserProvider()));
             services.Add(typeof(Sys_GroupManager), new Sys_GroupManager(new Sys_GroupProvider()));
+            services.Add(typeof(PrdCategoriesManager), new PrdCategoriesManager(new AnPhu.Biz.Persistance.SqlServer.PrdCategoriesProvider()));
             #endregion
         }
 
@@ -50,9 +51,36 @@ namespace idn.AnPhu.Biz.Services
                 return (Sys_GroupManager)services[typeof(Sys_GroupManager)];
             }
             set
-            {
+            {   
                 services[typeof(Sys_GroupManager)] = value;
             }
         }
+
+
+        public static PrdCategoriesManager ProductCategoryManager
+        {
+            get
+            {
+                return (PrdCategoriesManager)services[typeof(PrdCategoriesManager)];
+            }
+            set
+            {
+                services[typeof(PrdCategoriesManager)] = value;
+            }
+        }
+
+        public static ProductManager ProductManager
+        {
+            get
+            {
+                return (ProductManager)services[typeof(ProductManager)];
+            }
+            set
+            {
+                services[typeof(ProductManager)] = value;
+            }
+        }
+
+        public static object ProductPropertyManager { get; set; }
     }
 }

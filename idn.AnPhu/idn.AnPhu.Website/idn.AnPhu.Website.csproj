@@ -129,6 +129,7 @@
     <Compile Include="Areas\Auth\AuthAreaRegistration.cs" />
     <Compile Include="Areas\Auth\Controllers\AccountController.cs" />
     <Compile Include="Areas\Auth\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Auth\Controllers\ProductController.cs" />
     <Compile Include="Areas\Auth\Controllers\Sys_UserController.cs" />
     <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -798,6 +799,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Auth\Models\" />
+    <Folder Include="Areas\Auth\Views\Product\" />
     <Folder Include="Views\Administrator\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Test\" />
