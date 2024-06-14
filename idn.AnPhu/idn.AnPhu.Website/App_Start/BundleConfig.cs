@@ -29,6 +29,8 @@ namespace idn.AnPhu.Website
 
             #region["Administrator"]
             #region["stylesheet"]
+
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css", "~/Content/styles-{version}.css"));
             bundles.Add(new StyleBundle("~/Content/admin-bootstrap-ace").Include(
                 "~/Areas/Auth/Content/assets/css/bootstrap.min.css",
                 //"~/Areas/Auth/Content/assets/css/font-awesome.min.css",

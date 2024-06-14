@@ -129,12 +129,12 @@
     <Compile Include="Areas\Auth\AuthAreaRegistration.cs" />
     <Compile Include="Areas\Auth\Controllers\AccountController.cs" />
     <Compile Include="Areas\Auth\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Auth\Controllers\ProductController.cs" />
     <Compile Include="Areas\Auth\Controllers\Sys_UserController.cs" />
     <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NetAdvImageController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Data\DataWrapper.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Extensions\Pager\IPagedList.cs" />
@@ -146,6 +146,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\ResultHelper.cs" />
+    <Compile Include="Models\HtmlPageCategory.cs" />
+    <Compile Include="Models\HtmlPageCategoryBase.cs" />
     <Compile Include="Models\JsonResult.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -157,6 +160,9 @@
     <Compile Include="State\UserState.cs" />
     <Compile Include="UI\BaseViewPage.cs" />
     <Compile Include="Utils\FileUtils.cs" />
+    <Compile Include="Utils\StringUtils.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Auth\Content\Administrator.css" />
@@ -341,10 +347,30 @@
     <Content Include="Content\2010.2.713\telerik.common.min.css" />
     <Content Include="Content\2010.2.713\telerik.default.min.css" />
     <Content Include="Content\Admin\Css\ace.css" />
+    <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dashboard.css" />
+    <Content Include="Content\demo-page.css" />
+    <Content Include="Content\effeckt.css" />
+    <Content Include="Content\fancyInput.css" />
+    <Content Include="Content\hover.css" />
+    <Content Include="Content\Images\logo-dailynew.png" />
+    <Content Include="Content\Images\logo-tcmotornew1.png" />
+    <Content Include="Content\jquery.jqpivot.css" />
+    <Content Include="Content\jssort.css" />
+    <Content Include="Content\magic.css" />
+    <Content Include="Content\metisMenu.css" />
+    <Content Include="Content\metisMenu.min.css" />
+    <Content Include="Content\normalize.css" />
+    <Content Include="Content\sb-admin-2.css" />
+    <Content Include="Content\SiteV2.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\Styles-1.0.1.css" />
+    <Content Include="Content\test-drive.css" />
+    <Content Include="Content\uploadfile.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -795,11 +821,15 @@
     <Content Include="Views\Shared\FileManagerButton.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Shared\_DetailLayout.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Shared\NavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Auth\Models\" />
     <Folder Include="Areas\Auth\Views\Product\" />
+    <Folder Include="Content\fontHyundai\font\" />
     <Folder Include="Views\Administrator\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Test\" />

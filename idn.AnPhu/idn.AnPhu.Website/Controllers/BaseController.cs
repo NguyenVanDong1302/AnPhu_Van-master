@@ -13,9 +13,24 @@ namespace idn.AnPhu.Website.Controllers
     [CustomErrorHandler]
     public class BaseController : Controller
     {
+
+        public virtual string GetDefaultMasterName()
+        {
+            return null;
+            //string masterName = "Site";
+            //return masterName;
+        }
         public DateTime DateTimeNow()
         {
             return DateTime.Now;
+        }
+
+        public string Culture
+        {
+            get
+            {
+                return System.Globalization.CultureInfo.CurrentCulture.ToString();
+            }
         }
 
         public string Now

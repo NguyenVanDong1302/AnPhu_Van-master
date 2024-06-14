@@ -18,6 +18,9 @@ namespace idn.AnPhu.Biz.Services
             services.Add(typeof(Sys_UserManager), new Sys_UserManager(new Sys_UserProvider()));
             services.Add(typeof(Sys_GroupManager), new Sys_GroupManager(new Sys_GroupProvider()));
             services.Add(typeof(PrdCategoriesManager), new PrdCategoriesManager(new AnPhu.Biz.Persistance.SqlServer.PrdCategoriesProvider()));
+            services.Add(typeof(ProductPropertyManager), new ProductPropertyManager(new ProductPropertyProvider()));
+            services.Add(typeof(ProductReviewManager), new ProductReviewManager(new AnPhu.Biz.Persistance.SqlServer.ProductReviewProvider()));
+            services.Add(typeof(AppDicDomainManager), new AppDicDomainManager(new AnPhu.Biz.Persistance.SqlServer.AppDicDomainProvider()));
             #endregion
         }
 
@@ -56,7 +59,6 @@ namespace idn.AnPhu.Biz.Services
             }
         }
 
-
         public static PrdCategoriesManager ProductCategoryManager
         {
             get
@@ -81,6 +83,41 @@ namespace idn.AnPhu.Biz.Services
             }
         }
 
-        public static object ProductPropertyManager { get; set; }
+        //public static object ProductPropertyManager { get; set; }
+        public static ProductPropertyManager ProductPropertyManager
+        {
+            get
+            {
+                return (ProductPropertyManager)services[typeof(ProductPropertyManager)];
+            }
+            set
+            {
+                services[typeof(ProductPropertyManager)] = value;
+            }
+        }
+
+        public static ProductReviewManager ProductReviewManager
+        {
+            get
+            {
+                return (ProductReviewManager)services[typeof(ProductReviewManager)];
+            }
+            set
+            {
+                services[typeof(ProductReviewManager)] = value;
+            }
+        }
+
+        public static AppDicDomainManager AppDicDomainManager
+        {
+            get
+            {
+                return (AppDicDomainManager)services[typeof(AppDicDomainManager)];
+            }
+            set
+            {
+                services[typeof(AppDicDomainManager)] = value;
+            }
+        }
     }
 }

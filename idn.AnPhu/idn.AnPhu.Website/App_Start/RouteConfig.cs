@@ -40,6 +40,13 @@ namespace idn.AnPhu.Website
             //);
 
             routes.MapRoute(
+                 "productdetail",
+                 url: "{culture}/san-pham",
+                 new { culture = "vi", controller = "Product", action = "Detail" },
+                 new[] { "idn.AnPhu.Website.Controllers" }
+             );
+    
+            routes.MapRoute(
              "NetAdvImage",
              "{scriptPath}/tinymce/plugins/netadvimage/{action}",
              new { controller = "NetAdvImage" }
@@ -58,6 +65,14 @@ namespace idn.AnPhu.Website
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 new[] { "idn.AnPhu.Website.Controllers" }
             );
+            //routes.MapRoute(
+            //    name: "productdetail",
+            //    url: "{culture}/san-pham/{productcode}",
+            //    defaults: new { culture = "vi", controller = "Product", action = "Detail", productcode = UrlParameter.Optional }
+            //);
+
+            //routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+     
         }
     }
 }
