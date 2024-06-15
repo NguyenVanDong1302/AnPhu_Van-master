@@ -1,0 +1,939 @@
+﻿
+@using idn.AnPhu.Biz.Services
+@{
+    Layout = null;
+    //var news = idn.AnPhu.Biz.Services.ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
+    //var services = CauDien.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("dich-vu", Culture);
+    //var video = CauDien.Biz.Services.ServiceFactory.VideoCategoryManager.ListAllVideoCategory(Culture);
+
+    //var support = CauDien.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("chinh-sach-va-quy-dinh", Culture);
+    //var about = CauDien.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("ve-cong-ty", Culture);
+    //var listcate = CauDien.Biz.Services.ServiceFactory.ProductCategoryManager.ListAllProductCategory(Culture);
+    //var listprall = CauDien.Biz.Services.ServiceFactory.ProductManager.ProductGetAllActive(Culture);
+    //var companyinfo = ServiceFactory.CompanyManager.Get(new Company { CompanyId = 1 });
+    //var adpop = ServiceFactory.AdPopCenterManager.Get(new AdPopCenter { AdCenterId = 1 });
+    //var adleft = ServiceFactory.AdBannerLeftManager.Get(new AdBannerLeft { AdLeftId = 1 });
+    //var adright = ServiceFactory.AdBannerRightManager.Get(new AdBannerRight { AdRightId = 1 });
+    //var listhotnews = ViewData["ListHotNews"] as List<News>;
+    var hotline = "0942661366";
+
+
+    var services = "";
+    var news = "";
+    var video = "";
+    var support = "";
+    var about = "";
+    var listcate = "";
+    var listprall = "";
+    var companyinfo = "";
+    var adpop = "";
+    var adleft = "";
+    var adright = "";
+    var listhotnews = "";
+
+}
+
+<div class=" ">
+    <div class="" style="">
+        <a class="floating-top1" href="#"></a>
+    </div>
+</div>
+<nav class=" header navbar navbar-default " role="navigation" style="background-color: none; font-family: HyundaiSansHead-Regular;">
+    <div class="">
+        <div class="" style="">
+            @*<div class="container">
+                    <div class="col-sm-12  no-padding">
+                        <div class="col-xs-12 col-lg-8 no-padding forma-bar" style="float: right; text-align: center">
+                            <div class="col-sm-3 col-xs-4 no-padding-right icon-contact-nav">
+                                <div class="col-xs-3 no-padding " style="float: right; margin-right: -3px;">
+                                    <a href="@companyinfo.CompanyFace" class="forma-icon">
+                                        <img class="lazy" src="~/Images/icon-fb.png" id="anim9" />
+                                    </a>
+                                </div>
+                                <div class="col-xs-3 no-padding " style="float: right; margin-right: -8px">
+                                    <a href="@companyinfo.CompanyYoutube" class="forma-icon ">
+                                        <img class="lazy" src="~/Images/icon-youtube.png" id="anim8" />
+                                    </a>
+                                </div>
+                                <div class="col-xs-3 no-padding " style="float: right; left: 9px;">
+                                    <a href="@companyinfo.CompanyGoogle" class=" forma-icon  ">
+                                        <img class="lazy" src="~/Images/icon-google.png" id="anim7" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-xs-5 hidden-xs hidden-sm no-padding ">
+                                <div class="col-sm-12 no-padding" style="padding-right: 3px;">
+                                    <div class=" col-sm-10 no-padding nav-form-control " id="search">
+                                        <input style="padding: 0; margin-top: 9px;" type="text" class="form-control text-seach col-sm-10" autocomplete="off" id="search_keywords" placeholder="" />
+                                    </div>
+                                    <div class=" col-sm-1 no-padding" style="margin-left: -3px;" id="submit_search">
+                                        <button class="btn-s " id="iconsubmit" style="" type="button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-5 no-padding margin-top-nav ">
+                                <div class="col-xs-10 height-nav no-padding-right" style="float: right">
+                                    <div class="col-xs-11 no-padding">
+                                        <div class="col-xs-11 no-padding">
+                                            <a href="/" class="col-xs-3 padding-phone-nav ">
+                                                <img src="~/Images/icon-phone.png" class="animated infinite tada" />
+
+                                            </a>
+                                            <div class="col-xs-9 no-padding " style="padding-left: 10px">
+                                                <div class="col-xs-12 no-padding ">
+                                                    <h3>@companyinfo.CompanyHotline</h3>
+                                                </div>
+                                                <div class="col-xs-12 no-padding">
+                                                    <h3>0948 080 066</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+            <div class="container-fluid no-padding" style="padding: 0 36px">
+                <a href="/" class="float-left navbar-logo">
+                    <img src="@Url.Content("~/Content/Images/logo-tcmotornew1.png")" alt="hyundai cầu diễn" />
+                </a>
+                <a href="/" class="float-right navbar-logo dealer-logo" style="line-height: 55px; height: 55px;">
+                    <img src="@Url.Content("~/Content/Images/logo-dailynew.png")" alt="hyundai cầu diễn" class="img-responsive d-inline-block" />
+                </a>
+            </div>
+        </div>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header" id="nav">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand visible-xs visible-sm  " style="padding:8px 0 0 10px" href="@Url.Action("IndexSale", "Home")">
+                    <img style="" src="/images/logo-header.png" alt="Trang chủ" class="img-responsive lazy " />
+                </a>
+                @*<span class="visible-xs  visible-sm logo-hd" style=" color: #000; background: #F3E00A; width: 35%;">@companyinfo.CompanyHotline</span>*@
+                <div class="visible-xs  visible-sm logo-hd" style=" color: #000; background: #F3E00A; width: 50%;" id="BusinessHotline">
+                    <a href="tel:@hotline" class="hidden-sm" target="_blank">
+                        <img src="/images/ico-hotline.png" alt="phone" style="padding-right: 10px;" />@*@companyinfo.CompanyHotline*@ @hotline
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="  collapse navbar-collapse header-menu " id="navbar-collapse-main" style="border: none; margin: 0">
+    </div>
+    <!-- new menu-->
+
+    <div class="header">
+        <div class="row navbar-default no-margin" style="background-color: inherit;">
+            <div class="hidden-xs hidden-sm right-info menu">
+                <div class="container">
+                    <ul class="navbar">
+                        <li><a href="@Url.Action("ListProduct", "Product")">Sản phẩm</a></li>
+                        <li class="dropdown">
+                            <a href="@Url.Action("Services", "HtmlPage", new { shortname = "dich-vu" })" class="dropdown-toggle " data-toggle="dropdown" aria-expanded="true">Dịch vụ</a>
+                            <ul class="dropdown-menu menu-fullwidth">
+
+                                @if (services != null)
+                                {
+
+                                    //Comment 
+                                    @*foreach (HtmlPageCategory item in services)
+                                    {
+                                        var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
+                                        if (listhtmlpage != null)
+                                        {
+                                            var n = 1;
+                                            foreach (HtmlPage item1 in listhtmlpage)
+                                            {
+                                                if (n == 1)
+                                                {
+                                                    <li class="">
+                                                        <a class="hvr-sweep-to-right" href="@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName })">
+
+                                                            @item.HtmlPageCategoryTitle
+                                                        </a>
+                                                    </li>
+
+                                                }
+                                                n++;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <li class=" hidden-lg">
+                                                <a class="hvr-sweep-to-right" href="@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName })">
+                                                    @item.HtmlPageCategoryTitle
+                                                </a>
+
+                                            </li>
+                                        }
+
+                                    }*@
+
+
+                                }
+
+
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="@Url.Action("ShowListCateNews", "News")" class="dropdown-toggle" data-toggle="dropdown">Tin tức</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a class="hvr-sweep-to-right" href="@Url.Action("ShowListCateNews", "News")">Tin tức chung</a></li>
+                                @if (news != null)
+                                {
+
+                                    //Comment 
+                                    @*foreach (NewsCategories item in news)
+                                    {
+                                        <li><a href="@Url.Action("ShowCateNews", "News", new { shortname = item.NewsCategoryShortName })">@item.NewsCategoryTitle</a></li>
+                                    }*@
+                                }
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="@Url.Action("ListVideo", "Video")" class="dropdown-toggle" data-toggle="dropdown">Video</a>
+                            <ul class="dropdown-menu" role="menu">
+                                @if (video != null)
+                                {
+                                    // Comment
+                                    @*foreach (VideoCategory item in video)
+                                    {
+                                        <li><a href="@Url.Action("ListVideoByCate", "Video", new { shortname=item.VideoCategoryShortName})">@item.VideoCategoryTitle</a></li>
+                                    }*@
+                                }
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Register", "ProductAction")">Đăng ký lái thử</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Contact", "Home")">Liên hệ</a>
+                        </li>
+                        <li class="search-box float-right">
+                            <input type="text" name="txtSearch" id="txtSearch" value="" autocomplete="off" placeholder="Nhập từ khoá tìm kiếm" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--end new menu-->
+    <!-- /.navbar-collapse -->
+</nav>
+<div class="header-mobile">
+    <button type="button" class="navbar-toggle pull-right" onclick="openMenu()" style="margin-right: 0">
+        <center>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </center>
+    </button>
+    <a href="\" class="logo-hyundai">
+        <img class="img-responsive lazy" src="~/Images/HTV_Logo_Symbol_Blue_RGB.png" style="width: 3em !important; padding-left: 5px !important" />
+    </a>
+    <a class="logo-daily" href="/" style="padding-right: 82px; margin-top: 5px;">
+        @*<img src="/Images/logo.svg" class="img-responsive lazy" alt="Hyundai Hà Tĩnh" />*@
+        <img src="/Images/logo-dailynew.png" class="img-responsive lazy" alt="Hyundai Hà Tĩnh" />
+    </a>
+
+
+
+    <div class="mobile-nav" id="collapse-menu" style="transform: translateX(-250px);">
+        <i class="fa fa-close" onclick="closeMenu()"></i>
+        <div class="container" style="padding: 0; background-color: #fff;">
+            <ul class="nav navbar-nav navbar-left" style="margin: 0">
+                <li id="li-logo-collapse">
+                    <a href="/">
+                        <img src="~/Images/new-logo.svg" alt="Trang chủ">
+                    </a>
+                </li>
+                <li><a href="@Url.Action("ListProductSale","Product" )">Sản phẩm</a></li>
+                <li class="dropdown li-service">
+                    <a href="@Url.Action("Services", "HtmlPage", new {shortname = "dich-vu"})" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Dịch vụ</a>
+                    <ul class="dropdown-menu menu-fullwidth">
+
+                        @if (services != null)
+                        {
+
+                            //Comment
+                            @*foreach (HtmlPageCategory item in services)
+                            {
+                                if (item.HtmlPageCategoryShortName != "hen-lich-dich-vu")
+                                {
+                                    var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
+                                    if (listhtmlpage.Count != 0)
+                                    {
+                                        var n = 1;
+                                        foreach (HtmlPage item1 in listhtmlpage)
+                                        {
+                                            if (n == 1)
+                                            {
+                                                <li class="">
+                                                    <a href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName, htmlpageid = item1.HtmlPageId})">
+
+                                                        @item.HtmlPageCategoryTitle
+                                                    </a>
+                                                </li>
+
+                                            }
+                                            n++;
+                                        }
+                                    }
+                                }
+                            }*@
+                        }
+
+
+
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="@Url.Action("ShowListCateNews", "News")" class="dropdown-toggle" data-toggle="dropdown">Tin tức</a>
+                    <ul class="dropdown-menu" role="menu">
+                        @if (news != null)
+                        {
+                            //Comment
+                            @*foreach (NewsCategories item in news)
+                            {
+                                <li><a href="@Url.Action("ShowCateNews", "News", new { shortname=item.NewsCategoryShortName})">@item.NewsCategoryTitle</a></li>
+                            }*@
+                        }
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="@Url.Action("Register", "ProductAction")">Đăng ký lái thử</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Contact", "Home")">Liên hệ</a>
+                </li>
+                @*<li style="float: right">
+                        <a href="/" class="logo-daily">
+                            <img src="/images/logo.png" class="img-responsive lazy" alt="Hyundai Hà Tĩnh" />
+                        </a>
+                    </li>*@
+                <li class="clearfix"></li>
+
+            </ul>
+        </div>
+    </div>
+
+    @*<button type="button" class="navbar-toggle" onclick="openMenu()" style="margin-right: 0">
+            <center>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </center>
+        </button>*@
+</div>
+
+<div class="container">
+    <div class="show-menu6 " style="background-color: white">
+        <div id="show-menu6" class=" container no-padding " style="display: none; min-height: 212px">
+            <div>
+                <a href="@Url.Action("Support", "HtmlPage", new { shortname = "chinh-sach-va-quy-dinh" })"></a>
+                <div class="col-xs-12 ">
+                    <button type="button" class="close col-sm-1 " style="font-weight: bold; color: black; text-align: right; margin-top: 10px" onclick="showmenu2(false);">X</button>
+                </div>
+                @if (support != null)
+                {
+                    //Comment
+                    @*foreach (HtmlPageCategory item in support)
+                    {
+                        var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
+                        if (listhtmlpage != null)
+                        {
+                            var n = 1;
+                            foreach (HtmlPage item1 in listhtmlpage)
+                            {
+                                if (n == 1)
+                                {
+                                    <div class="col-sm-3 no-padding" style="margin-top: 19px; border-right: 1px solid #e2e2e2">
+                                        <div class="col-xs-12 no-padding ">
+                                            <img class="lazy" src="@item.HtmlPageCategoryImage" style="margin-left:auto; margin-right:auto; display:block" alt="" />
+                                        </div>
+                                        <a class="col-sm-12 no-padding" style="margin-top:16px" href="@Url.Action("SupportSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName, htmlpageid = item1.HtmlPageId })">
+                                            <div class="col-sm-12" style="font-weight: bolder; text-align: center">
+                                                @item.HtmlPageCategoryTitle
+                                            </div>
+                                        </a>
+                                    </div>
+                                }
+                                n++;
+                            }
+                        }
+                        else
+                        {
+                            <div class="col-sm-3" style="margin-top: 19px">
+                                <div class="col-xs-12 no-padding ">
+                                    <img class="lazy" src="@item.HtmlPageCategoryImage" style="margin-left:auto; margin-right:auto; display:block" alt="" />
+                                </div>
+                                <a class="col-sm-12" style="text-align:center" href="@Url.Action("SupportSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName })">
+                                    @item.HtmlPageCategoryTitle
+                                </a>
+                            </div>
+                        }
+                    }*@
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="show-menu2 " style="background-color: white; box-shadow: 0 6px 12px rgba(0,0,0,.175)">
+        <div id="show-menu2" class=" container no-padding " style="display: none; min-height: 195px">
+            <div>
+                <a href="@Url.Action("Services", "HtmlPage", new { shortname = "dich-vu" })"></a>
+                <div class="col-xs-12 ">
+                    <button type="button" class="close col-sm-1 " style="font-weight: bold; color: black; text-align: right; margin-top: 10px" onclick="showmenu2(false);">X</button>
+                </div>
+                @if (services != null)
+                {
+                    //Comment
+                    @*foreach (HtmlPageCategory item in services)
+                    {
+                        var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
+                        if (listhtmlpage != null)
+                        {
+                            var n = 1;
+                            foreach (HtmlPage item1 in listhtmlpage)
+                            {
+                                if (n == 1)
+                                {
+                                    <div class="col-sm-3 no-padding" style="border-right: 1px solid #e2e2e2">
+                                        <a class="col-sm-12 no-padding hvr-buzz" style="margin-top: 16px" href="@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName, htmlpageid = item1.HtmlPageId })">
+                                            <div class="col-xs-12 no-padding ">
+                                                <img class="lazy" src="@item.HtmlPageCategoryImage" style="margin-left: auto; margin-right: auto; display: block" alt="" />
+                                            </div>
+
+                                            <div class="col-sm-12 service-cus-title" style="margin-top: 15px" id="c-nav">
+                                                @item.HtmlPageCategoryTitle
+                                            </div>
+                                        </a>
+                                    </div>
+                                }
+                                n++;
+                            }
+                        }
+                        else
+                        {
+                            <div class="col-sm-3">
+                                <a class="col-sm-12 service-cus-title hvr-buzz" style="" href="@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName })" id="c2-nav">
+                                    <div class="col-xs-12 no-padding ">
+                                        <img src="@item.HtmlPageCategoryImage" style="margin-left:auto; margin-right:auto; display:block" alt="" />
+                                    </div>
+                                    <div class="col-sm-12 service-cus-title" style="margin-top: 15px">
+                                        @item.HtmlPageCategoryTitle
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    }*@
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="show-menu " style="background-color: white; font-family: ModernHBold;">
+        <div id="show-menu" class=" container no-padding" style="display: none">
+            <div class="col-sm-12 col-xs-12 col-md-12 no-padding" style="background-color: #d0d9dd;">
+                <ul class="nav nav-tabs" id="my_nav">
+                    @if (listcate != null)
+                    {
+                        <li class="active" style="">
+                            <a data-toggle="tab" href="#0" style="margin-left: 25px; color: #4a4a4a">
+                                Tất cả
+                            </a>
+                        </li>
+                        var count = 1;
+                        //Comment
+                        @*foreach (ProductCategory item1 in listcate)
+                        {
+                            <li class="" style="background: url(images/icon-bar.png) no-repeat right center;">
+                                <a data-toggle="tab" href="#@count" class="effeckt-tab" style=" color:#4a4a4a">
+                                    @item1.PrdCategoryTitle
+                                </a>
+                            </li>
+                            count++;
+                        }*@
+                    }
+                    <button type="button" class="close col-sm-1 " style="font-weight: bold; color: black; text-align: right; margin-right: 16px;" onclick="showmenu(false);">X</button>
+                </ul>
+
+            </div>
+            <div class="tab-content col-sm-12 col-xs-12 col-md-12 no-padding " style="overflow-y: scroll; margin-top: 30px; height: 270px; padding-left: 60px;">
+                 @*Comment*@
+                @*@if (listcate != null)
+                {
+                    <div id="0" class="tab-pane fade in active col-sm-12 no-padding">
+
+                        @foreach (Product itemprd in listprall)
+                        {
+                            <div class="col-sm-3 col-xs-6 product-popup no-padding ">
+
+                                <a href="@Url.Action("Detail", "Product", new { productcode = itemprd.ProductCode })">
+                                    <img src="@itemprd.ProductImage" class="img-product-popup lazy col-centered animated infinite flash" alt="@itemprd.ProductName" />
+                                    <div class="carname" style="text-align: center; width: 150px; font-weight: bolder; font-size: 14px; color: #7b7b7b">@itemprd.ProductName</div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                    var count = 1;
+                    foreach (ProductCategory item1 in listcate)
+                    {
+                        var product = CauDien.Biz.Services.ServiceFactory.ProductManager.ProductGetByCateId(item1.PrdCategoryId, Culture);
+                        <div id="@count" class="tab-pane fade in">
+                            @if (product != null)
+                            {
+                                foreach (Product itemprd in product)
+                                {
+                                    <div class="col-sm-3 col-xs-6  product-popup no-padding">
+                                        <a href="@Url.Action("Detail", "Product", new { productcode = itemprd.ProductCode })">
+                                            <img src="@itemprd.ProductImage" class="img-product-popup lazy col-centered animated infinite flash" alt="@itemprd.ProductName" />
+                                            <div class="carname" style="text-align: center; width: 150px; font-weight: bolder; font-size: 14px; color: #7b7b7b">@itemprd.ProductName</div>
+                                        </a>
+                                    </div>
+                                }
+                            }
+                        </div>
+                        count++;
+                    }
+                }*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const collapseMenu = document.querySelector("#collapse-menu");
+    const collapseBtn = document.querySelector("#collapse-btn");
+    const menuOpacity = document.querySelector(".menu-opacity");
+    function openMenu() {
+
+        collapseMenu.style.transform = "translateX(0)";
+        menuOpacity.style.display = "block";
+    }
+
+    function closeMenu() {
+        collapseMenu.style.transform = "translateX(-250px)";
+        menuOpacity.style.display = "none";
+    }
+</script>
+
+<script type="text/javascript">
+
+    function handleSearch() {
+        jQuery('.search').click(function () {
+            if (jQuery('.search-btn').hasClass('fa-search')) {
+                jQuery('.search-open').fadeIn(500);
+                jQuery('.search-btn').removeClass('fa-search');
+                $(".text-seach").focus();
+            } else {
+                jQuery('.search-open').fadeOut(500);
+                jQuery('.search-btn').addClass('fa-search');
+            }
+        });
+    }
+
+    $("input.text-seach").blur(function () {
+        jQuery('.search-open').fadeOut(500);
+        jQuery('.search-btn').addClass('fa-search');
+
+    });
+
+    handleSearch();
+</script>
+
+<script type="text/javascript">
+    $('.floating-top1').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+    });
+    $(window).scroll(function () {
+        if ($(window).scrollTop() <= 200) {
+            $('.floating-top1').stop(false, true).fadeOut(600);
+        } else {
+            $('.floating-top1').stop(false, true).fadeIn(600);
+        }
+    });
+    $(document).ready(function () {
+        if ($(window).scrollTop() <= 200) {
+            $('.floating-top1').stop(false, true).fadeOut(0);
+        } else {
+            $('.floating-top1').stop(false, true).fadeIn(0);
+        }
+    });
+</script>
+<script>
+
+    showmenu = function a() {
+        var i = 0;
+
+        $('#show-menu').eq(0).slideToggle(500);
+
+        $('#show-menu2').hide();
+        $('#show-menu3').hide();
+        $('#show-menu4').hide();
+        $('#show-menu5').hide();
+        $('#show-menu6').hide();
+        if (i == 0) {
+            $('.menu-pr').addClass('active');
+
+            i = 1;
+        }
+        else if (i == 1) {
+
+
+            $('.menu-pr').removeClass('active');
+            $('#show-menu').hide();
+
+            i = 0;
+        }
+    };
+    showmenu2 = function b() {
+        var i = 2;
+
+        $('#show-menu2').eq(0).slideToggle(50);
+        $('#show-menu').hide();
+        $('#show-menu3').hide();
+        $('#show-menu4').hide();
+        $('#show-menu5').hide();
+        $('#show-menu6').hide();
+
+        if (i == 2) {
+            $('.menu-pr2').addClass('active');
+            i = 3;
+        }
+        else if (i == 3) {
+            $('.menu-pr2').removeClass('active');
+            $('#show-menu2').hide();
+            i = 2;
+        }
+    };
+    showmenu3 = function c() {
+        var i = 4;
+        $('#show-menu3').eq(0).slideToggle(50);
+        $('#show-menu').hide();
+        $('#show-menu2').hide();
+        $('#show-menu4').hide();
+        $('#show-menu5').hide();
+        $('#show-menu6').hide();
+        if (i == 4) {
+            $('.menu-pr3').addClass('active');
+            i = 5;
+        }
+        else if (i == 5) {
+            $('.menu-pr3').removeClass('active');
+            $('#show-menu3').hide();
+            i = 4;
+        }
+    };
+    showmenu4 = function d() {
+        var i = 6;
+        $('#show-menu4').eq(0).slideToggle(50);
+        $('#show-menu').hide();
+        $('#show-menu2').hide();
+        $('#show-menu3').hide();
+        $('#show-menu5').hide();
+        $('#show-menu6').hide();
+        if (i == 6) {
+            $('.menu-pr4').addClass('active');
+            i = 7;
+        }
+        else if (i == 7) {
+            $('.menu-pr4').removeClass('active');
+            $('#show-menu4').hide();
+            i = 6;
+        }
+    };
+    showmenu5 = function e() {
+        var i = 8;
+        $('#show-menu5').eq(0).slideToggle(50);
+        $('#show-menu').hide();
+        $('#show-menu2').hide();
+        $('#show-menu3').hide();
+        $('#show-menu4').hide();
+        $('#show-menu6').hide();
+        if (i == 8) {
+            $('.menu-pr5').addClass('active');
+            i = 9;
+        }
+        else if (i == 9) {
+            $('.menu-pr5').removeClass('active');
+            $('#show-menu5').hide();
+            i = 8;
+        }
+    };
+    showmenu6 = function e() {
+        var i = 10;
+        $('#show-menu6').eq(0).slideToggle(50);
+        $('#show-menu').hide();
+        $('#show-menu2').hide();
+        $('#show-menu3').hide();
+        $('#show-menu4').hide();
+        $('#show-menu5').hide();
+        if (i == 10) {
+            $('.menu-pr6').addClass('active');
+            i = 11;
+        }
+        else if (i == 11) {
+            $('.menu-pr6').removeClass('active');
+            $('#show-menu6').hide();
+            i = 10;
+        }
+    };
+</script>
+@{
+    var chara = "@";
+}
+
+<script type="text/javascript">
+    var searchVal = "";
+    $("#search_keywords").val(searchVal)
+    .blur(function() { if ($(this).val() == '') $(this).val(searchVal); })
+    .focus(function() { if ($(this).val() == searchVal) $(this).val(''); });
+
+    //
+    function Search() {
+        var key = $('input[name="txtSearch"]').val();
+
+        var value = "Nhập từ khóa muốn tìm kiếm";
+
+        if (key.length == 0 || key == value) {
+            alert("Vui lòng nhập từ khóa tìm kiếm");
+            $('input[name="txtSearch"]').addClass('btn-s')
+
+        } else {
+            key = $.trim(key);
+            key = key.toLowerCase();
+            key = key.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+            key = key.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+            key = key.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+            key = key.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+            key = key.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+            key = key.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+            key = key.replace(/đ/g, "d");
+            key = key.replace(/!|@chara|%|\^|\*|\(|\)|\+|\=|\&lt;|\&gt;|\?|\/|,|\.|\:|\;|\'| |\"|\&amp;|\#|\[|\]|~|\$|_/g, "-");
+            key = key.replace(/-+-/g, "-");
+            key = key.replace(/^\-+|\-+$/g, "");
+            var urlsearch = "@Url.Action("HomeSearch", "Home")" + "?key=" + key;
+            //window.location.href = '@Url.Action("", "Home", new { })/search.aspx?key=' + key;
+            window.location.href = urlsearch;
+        }
+        return false;
+    };
+
+
+    $(document).ready(function () {
+        $(window).keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                Search();
+            }
+        });
+    })
+
+</script>
+
+<script>
+    $(function () {
+        $('#a-nav').each(function () {
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active');
+            }
+        });
+    });
+
+    $(function () {
+        $('#c-nav').each(function () {
+            if ($('#c-nav').prop('href') == window.location.href || $('#title').hasClass("active") || $('#title').prop('href') == window.location.href) {
+                $('#c1-nav').addClass('testbn');
+                $('#c-sev').addClass('testbn');
+            }
+        });
+    });
+
+    $(function () {
+        $('#c2-nav').each(function () {
+            if ($('#c1-nav').prop('href') == window.location.href) {
+                $('#c1-nav').addClass('active');
+            }
+        });
+    });
+    $(function () {
+        $('#d-nav').each(function () {
+            if ($('#contact-myactive').hasClass('no-padding')) {
+                $(this).addClass('testbn');
+            }
+        });
+    });
+    $(function () {
+        $('#e1-nav').each(function () {
+            if ($('#carnamebuy').hasClass("carname-buycar")) {
+                $('#e-nav').addClass('testbn');
+            }
+        });
+    });
+
+    $(function () {
+        $('#e2-nav').each(function () {
+            if ($('#register-content').hasClass("register")) {
+                $('#e-nav').addClass('testbn');
+            }
+        });
+    });
+    $(function () {
+        $('#e3-nav').each(function () {
+            if ($('#showimage').hasClass("img-responsive lazy")) {
+                $('#e-nav').addClass('testbn');
+            }
+        });
+    });
+
+    $(function () {
+        $('#g-nav').each(function () {
+            if ($('#pro-id-del').hasClass("item-productprice")) {
+                $('#g-nav').addClass('testbn');
+            }
+        });
+    });
+    $(function () {
+        $('#m-nav').each(function () {
+            if ($('#mynewsnav').hasClass("my-news-nav1") || $('#childnews').hasClass("padding-news") || $('#j-nav').hasClass("titlenewsdetail")) {
+                $('#m-nav').addClass('testbn');
+            }
+        });
+    });
+
+    $(function () {
+        $('#k-nav').each(function () {
+            if ($('#k-nav').prop('href') == window.location.href) {
+                $('#k-nav').addClass('testbn');
+                $('#m-nav').removeClass('testbn');
+            }
+        });
+    });
+
+    //document.getElementById("about-us10").onclick = function() {
+    //    document.getElementById("about-us10").href="/vi/ve-cong-ty/gioi-thieu-21/17";
+    //};
+
+    $(function () {
+        $('#about-us10').each(function () {
+            if ($('#about-us9').hasClass("no-padding")) {
+                $('#about-us10').addClass('testbn');
+            }
+        });
+    });
+</script>
+
+@*Comment*@
+@*@if (adpop.IsActive == false)
+{
+}*@
+
+@*@if (adpop.IsActive == true)
+{
+    <div id="ctl00_ContentPlaceHolder1_Adv_Popup_pnAdv" style="display: none" runat="server" class="hidden-xs hidden-sm hidden-md">
+        <div id="overPage">
+        </div>
+        <div id="floating" style="margin-right: 175px; margin-left: 0">
+            <p style="position: relative; margin-left: 500px">
+                <a href="javascript:closeMe();">
+                    <img src="~/Images/icon-quit.png" />
+
+                </a>
+            </p>
+            <a href="javascript:AdsMe();">
+                <img src="@adpop.AdCenterImage" style=" cursor:pointer; border:0" usemap="#offline" class="animated infinite swing hidden-xs hidden-sm "></img>
+            </a>
+        </div>
+    </div>
+}*@
+<script language="javascript" type="text/javascript">
+    function opennew() {
+        var expire = new Date();
+        expire = new Date(expire.getTime() + 20);
+        document.cookie = "VFGEN-FORUM=here; expires=" + expire;
+        @*window.open('@adpop.AdCenterLink', '_blank');*@
+    }
+
+    function GetCookie(name) {
+        var arg = name + "=";
+        var alen = arg.length;
+        var clen = document.cookie.length;
+        var i = 0;
+        while (i < clen) {
+            var j = i + alen;
+            if (document.cookie.substring(i, j) == arg)
+                return "here";
+            i = document.cookie.indexOf(" ", i) + 1;
+            if (i == 0) break;
+        }
+        return null;
+    }
+
+    var visit = GetCookie("VFGEN-FORUM");
+    //if (visit == null) {
+    $("#ctl00_ContentPlaceHolder1_Adv_Popup_pnAdv").show();
+    //}
+    var lastScroll;
+    var delay = 30;
+    var speed = 1;
+    var img_w = 1000;
+    var img_h = 310;
+    function centerIt() {
+        $("#overPage").css("width", $(window).width());
+        $("#overPage").css("height", $(document).height());
+        $("#floating").css("left", ($(window).width()-500)/2);
+        $("#floating").css("right", 0);
+        $("#floating").css("top", $(window).height() / 2 - img_h / 2 + $(document).scrollTop());
+    }
+    $(document).ready(function () {
+        $("#overPage").css("opacity", 0.7);
+        $("#overPage,#floating").show();
+        centerIt();
+    });
+    $(window).scroll(function () {
+        setTimeout(function () { ani(); }, delay);
+        lastScroll = new Date().getTime();
+    });
+    $(window).resize(function () {
+        centerIt();
+    });
+    function ani() {
+        if ((new Date().getTime() - lastScroll) >= (delay - 20)) {
+            $("#floating").animate({ top: ($(window).height() / 2 - img_h / 2 + $(document).scrollTop()) }, speed);
+        }
+    }
+    function closeMe() {
+        $("#overPage,#floating").hide();
+        var expire = new Date();
+        expire = new Date(expire.getTime() + 20)
+        document.cookie = "VFGEN-FORUM=here; expires=" + expire;
+
+
+    }
+    function AdsMe() {
+        $("#overPage,#floating").hide();
+        opennew();
+    }
+
+</script>
+<!-----------end popup---------------->
+
+<script type="text/javascript" src="http://icichtc.ewave.vn:4900/livechatclient/scripts?appid=10340"></script>
+
