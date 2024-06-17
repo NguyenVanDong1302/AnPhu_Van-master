@@ -47,8 +47,18 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
             throw new NotImplementedException();
         }
 
-        public List<ProductProperty> GetByPrdId(int productid, string culture)
+        public List<ProductProperty> GetByPrdId(int productId, string culture)
         {
+            var comm = this.GetCommand("sp_ProductPropertyGetByPrdId");
+            if (comm == null)
+            {
+                return null;
+            }
+            comm.AddParameter<int>(this.Factory, "ProductId", productId);
+            comm.AddParameter<string>(this.Factory, "Culture", culture);
+            var dt = this.GetTable(comm);
+            var htmlPage = EntityBase.ParseListFromTable<ProductProperty>(dt);
+            return htmlPage ?? null;
             throw new NotImplementedException();
         }
 

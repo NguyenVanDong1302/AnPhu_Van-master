@@ -1,0 +1,3322 @@
+﻿ 
+# Nearforums PO file - en-US
+# PO File format: http://www.gnu.org/s/hello/manual/gettext/PO-Files.html
+# This file is distributed under the MIT license: http://nearforums.codeplex.com/license
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Contact"
+msgstr "Liên hệ"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Contactk"
+msgstr "Liên hệ"
+
+#: Portal.Web.Output\Views\Admin\FooterContent.cshtml
+msgid "sitemap"
+msgstr "Sơ đồ web site"
+
+#: Portal.Web.Output\Views\Shared\MainNav.cshtml
+msgid "ContactUrl"
+msgstr "lien-he"
+
+#: Portal.Web.Output\Views\Shared\MainNav.cshtml
+msgid "keysearch"
+msgstr "Nhập từ khóa cần tìm"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Admin Dashboard"
+msgstr "Quản trị"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Forums"
+msgstr "Home"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Moderation"
+msgstr "Mod"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage forums"
+msgstr "Quản lý diễn đàn"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Add / edit / delete forums."
+msgstr "Thêm / Sửa / Xóa diễn đàn."
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Unanswered threads"
+msgstr "Chưa có trả lời"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "View unanswered threads from all forums."
+msgstr "Xem tất cả các topic chưa có bài phản hồi."
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Flagged messages"
+msgstr "Những bài viết được lưu ý(nội dung xấu)"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage all flagged messages."
+msgstr "Quản lý những bài viết được lưu ý(nội dung xấu)."
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage users"
+msgstr "Quản lý thành viên"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Promote, demote and delete forum users."
+msgstr "Promote, demote, Xóa thành viên."
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Administration"
+msgstr "Quản trị diễn đàn"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage pages"
+msgstr "Quản lý trang tĩnh"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage content pages like about / privacy / ..."
+msgstr "Quản lý các trang tĩnh như: Giới thiêu, Quy định và điều khoản sử dụng..."
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage templates"
+msgstr "Quản lý templates"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage the site templates for the forum."
+msgstr "Manage the site templates for the forum."
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in"
+msgstr "Đăng nhập"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in using your existing account"
+msgstr "Đăng nhập với tài khoản có sẵn"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in with your Facebook account"
+msgstr "Đăng nhập bằng tài khoản Facebook"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "You should be entering the same email address and password that you would use to log into Facebook homepage. Facebook will not share your password with us."
+msgstr "You should be entering the same email address and password that you would use to log into Facebook homepage. Facebook will not share your password with us."
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in with your Twitter account"
+msgstr "Đăng nhập bằng tài khoản Twitter"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "You should be entering your twitter username and password at twitter.com website to login on the forums. Twitter will not share your password with us."
+msgstr "You should be entering your twitter username and password at twitter.com website to login on the forums. Twitter will not share your password with us."
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in with your site credentials"
+msgstr "Sign in with your site credentials"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Login"
+msgstr "Đăng nhập"
+
+#: Portal.Web.Output\Views\Authentication\NotAuthorized.cshtml
+msgid "Access denied"
+msgstr "Truy cập bị từ chối"
+
+#: Portal.Web.Output\Views\Authentication\NotAuthorized.cshtml
+msgid "You must belong to the role {0} to perform this action."
+msgstr "Bạn phải có quyền {0} để thực hiện tác vụ này."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Change Password"
+msgstr "Đổi mật khẩu"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Please check the following errors:"
+msgstr "Bạn hãy kiểm tra các lỗi dưới đây:"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "You must specify your current password."
+msgstr "Bạn phải điền mật khẩu hiện tại."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Your current password does not match."
+msgstr "Mật khẩu hiện tại không đúng."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "You must specify a new password of {0} or more characters."
+msgstr "Bạn phải điền mật khẩu mới (tối thiểu {0} ký tự)."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "The new password and confirmation password do not match."
+msgstr "Mật khẩu xác nhận không đúng."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Use the form below to change your password"
+msgstr "Điền vào form dưới đây để thay đổi mật khẩu của bạn"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Current password"
+msgstr "Mật khẩu hiện tại"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "New password"
+msgstr "Mật khẩu mới"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "New passwords are required to be a minimum of {0} characters in length."
+msgstr "Mật khẩu mời phải có tối đa {0} ký tự."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Confirm new password"
+msgstr "Xác nhận mật khẩu mới"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePasswordSuccess.cshtml
+msgid "Your password has been changed successfully."
+msgstr "Bạn đã thay đổi mật khẩu thành công."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePasswordSuccess.cshtml
+msgid "Back to my account >>"
+msgstr "Quay lại trang cá nhân >>"
+
+#: \Portal.Web.Output\Views\FormsAuthentication\Login.cshtml
+msgid "The username or password provided is incorrect."
+msgstr "Tên đăng nhập hoặc mật khẩu không đúng."
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Enter your username and password. <br />Don't have an account?"
+msgstr "Hãy điền tên đăng nhập và mật khẩu của bạn. <br />Bạn chưa có tài khoản?"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Create one"
+msgstr "Tạo mới tài khoản"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Remember me"
+msgstr "Lưu thông tin đăng nhập"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Forgot your password?"
+msgstr "Quên mật khẩu?"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Register"
+msgstr "Đăng ký"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Email must not be blank."
+msgstr "Bạn phải điền email."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Email format is not valid."
+msgstr "Email không hợp lệ."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "A user account already exists for the email address you entered."
+msgstr "Email này đã được đăng ký."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Username must not be blank."
+msgstr "Bạn phải điền tên đăng nhập."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Username format is not valid."
+msgstr "Tên đăng nhập không hợp lệ."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Username already in use"
+msgstr "Tên đăng nhập đã được sử dụng"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Password must not be blank."
+msgstr "Bạn phải điền mật khẩu."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Password format is not valid."
+msgstr "Password format is not valid."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Password does not match the confirm password."
+msgstr "Password does not match the confirm password."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Use the form below to create a new account"
+msgstr "Nhập thông tin vào form dưới đây để tạo mới tài khoản"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Email"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Passwords are required to be a minimum of {0} characters in length."
+msgstr "Mật khẩu phải có tối thiểu {0} ký tự."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Confirm Password"
+msgstr "Xác nhận mật khẩu"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "I agree with the Terms and Conditions set forth by the Site Owner."
+msgstr "Tôi đồng ý với các điều khoản sử dụng diễn đàn."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Create a new account"
+msgstr "Tạo mới tài khoản"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "Reset Password"
+msgstr "Reset Mật khẩu"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "There is no account associated with the provided email address."
+msgstr "There is no account associated with the provided email address."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "Provide your email. A link will be sent to your email so that you can reset your password."
+msgstr "Provide your email. A link will be sent to your email so that you can reset your password."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "Submit"
+msgstr "Đồng ý"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPasswordEmailConfirmation.cshtml
+msgid "Email Sent"
+msgstr "Email Sent"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPasswordEmailConfirmation.cshtml
+msgid "Instructions about how to reset your password were sent to your email."
+msgstr "Instructions about how to reset your password were sent to your email."
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "{0} - Most viewed"
+msgstr "{0} - Xem nhiều nhất"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "{0} - Latest activity"
+msgstr "{0} - Mới nhất"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "No threads for this forum."
+msgstr "No threads for this forum."
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "Previous"
+msgstr "Quay lại"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "Next"
+msgstr "Tiếp theo"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "Post a thread >>"
+msgstr "Tạo chủ đề mới >>"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "Edit"
+msgstr "Sửa"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Edit forum"
+msgstr "Sửa forum"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Create a forum"
+msgstr "Tạo mới forum"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Admin"
+msgstr "Quản trị"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Description must not be blank."
+msgstr "Description must not be blank."
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Forum name must not be blank."
+msgstr "Forum name must not be blank."
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Category must not be blank."
+msgstr "Category must not be blank."
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Name"
+msgstr "Name"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Category"
+msgstr "Category"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "-Select a Category-"
+msgstr "-Select a Category-"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Message"
+msgstr "Message"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Send"
+msgstr "Send"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "The role required to post should be greater than the required to read."
+msgstr "The role required to post should be greater than the required to read."
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Read access"
+msgstr "Cho phép xem"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Everybody"
+msgstr "Mọi người"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Access to post a new thread"
+msgstr "Cho phép tạo chủ đề"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Notice that roles are hierarchical"
+msgstr "Các role được thừa kế"
+
+#: Portal.Web.Output\Views\Forums\ForumOptions.cshtml
+msgid "Most viewed threads"
+msgstr "Xem nhiều nhất"
+
+#: Portal.Web.Output\Views\Forums\ForumOptions.cshtml
+msgid "Latest activity"
+msgstr "Mới nhất"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Replies"
+msgstr "Trả lời"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Views"
+msgstr "Xem"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Last post"
+msgstr "Bài viết cuối"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "by"
+msgstr "bởi"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "{0} <span class=\"label\">replies</span>"
+msgstr "{0} <span class=\"label\">trả lời</span>"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "1 <span class=\"label\">reply</span>"
+msgstr "1 <span class=\"label\">trả lời</span>"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml, Portal.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "{0} <span class=\"label\">views</span>"
+msgstr "{0} <span class=\"label\">lượt xem</span>"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml, Portal.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "1 <span class=\"label\">view</span>"
+msgstr "1 <span class=\"label\">xem</span>"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "No posts"
+msgstr "Không có bài viết"
+
+#: Portal.Web.Output\Views\Forums\LatestAllTopics.cshtml
+msgid "Latest threads on all forums"
+msgstr "Latest threads on all forums"
+
+#: Portal.Web.Output\Views\Forums\LatestAllTopics.cshtml
+msgid "Latest threads on all forums at {0}"
+msgstr "Latest threads on all forums at {0}"
+
+#: Portal.Web.Output\Views\Forums\LatestTopicsRss.cshtml
+msgid "Latest threads on '{0}' forum"
+msgstr "Latest threads on '{0}' forum"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Forum"
+msgstr "Forum"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Topics"
+msgstr "Chủ đề"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Posts"
+msgstr "Bài viết"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "threads"
+msgstr "threads"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "thread"
+msgstr "thread"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "posts"
+msgstr "posts"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "post"
+msgstr "post"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "No forums found."
+msgstr "No forums found."
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Welcome to Nearforums!"
+msgstr "Welcome to Nearforums!"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "You've successfully setup your Nearforums site"
+msgstr "You've successfully setup your Nearforums site"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Here are a few things you can do to get started"
+msgstr "Here are a few things you can do to get started"
+
+#: Portal.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "Unanswered Threads"
+msgstr "Unanswered Threads"
+
+#: Portal.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "No unanswered threads, for now :)"
+msgstr "No unanswered threads, for now :)"
+
+#: Portal.Web.Output\Views\Forums\ListUnansweredTopics.cshtml
+msgid "{0} - Unanswered threads"
+msgstr "{0} - Unanswered threads"
+
+#: Portal.Web.Output\Views\Forums\ListUnansweredTopics.cshtml
+msgid "No unanswered threads for this forum."
+msgstr "No unanswered threads for this forum."
+
+#: Portal.Web.Output\Views\Forums\Manage.cshtml
+msgid "Delete"
+msgstr "Xóa"
+
+#: Portal.Web.Output\Views\Forums\Manage.cshtml
+msgid "Create a new forum >>"
+msgstr "Create a new forum >>"
+
+#: Portal.Web.Output\Views\Forums\Manage.cshtml
+msgid "Are you sure you want to delete this forum?.\\nAll threads and posts of this forum will not be accessible."
+msgstr "Are you sure you want to delete this forum?.\\nAll threads and posts of this forum will not be accessible."
+
+#: Portal.Web.Output\Views\Forums\TagDetail.cshtml
+msgid "Threads tagged \"{0}\""
+msgstr "Threads tagged \"{0}\""
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "remove"
+msgstr "remove"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "clear flags"
+msgstr "clear flags"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "Are you sure you want to clear all flags from the message?"
+msgstr "Are you sure you want to clear all flags from the message?"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "Are you sure you want to hide the message #{0}?"
+msgstr "Are you sure you want to hide the message #{0}?"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "Message removed"
+msgstr "Message removed"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "No flagged messages found."
+msgstr "No flagged messages found."
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Edit page"
+msgstr "Edit page"
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Create a new content page"
+msgstr "Create a new content page"
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Pages"
+msgstr "Pages"
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Page title must not be blank."
+msgstr "Tiêu đề trang không được bỏ trống."
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Page content must not be blank."
+msgstr "Nội dung trang không được bỏ trống."
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Page title"
+msgstr "Page title"
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Content of the page"
+msgstr "Nội dung của trang"
+
+#: Portal.Web.Output\Views\PageContents\List.cshtml
+msgid "Content Pages"
+msgstr "Trang nội dung"
+
+#: Portal.Web.Output\Views\PageContents\List.cshtml
+msgid "Create a new content page >>"
+msgstr "Tạo trang nội dung mới >>"
+
+#: Portal.Web.Output\Views\PageContents\List.cshtml
+msgid "Are you sure you want to delete the page {0}?"
+msgstr "Bạn có chắc chắn muốn xóa trang {0}?"
+
+#: Portal.Web.Output\Views\Shared\ButtonFacebook.cshtml
+msgid "Login using Facebook"
+msgstr "Đăng nhập sử dụng Facebook"
+
+#: Portal.Web.Output\Views\Shared\ButtonTwitter.cshtml
+msgid "Login using Twitter"
+msgstr "Đăng nhập sử dụng Twitter"
+
+#: Portal.Web.Output\Views\Shared\FooterContent.cshtml
+msgid "About"
+msgstr "About"
+
+#: Portal.Web.Output\Views\Shared\FooterContent.cshtml
+msgid "Terms and conditions"
+msgstr "Terms and conditions"
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml, Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Member for:"
+msgstr "Là thành viên được:"
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml
+msgid "The message was removed by a forum moderator."
+msgstr "Bài viết bị xóa bởi quản trị viên."
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml
+msgid "link"
+msgstr "link"
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml
+msgid "flag"
+msgstr "flag"
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml, Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "reply"
+msgstr "trả lời"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "years"
+msgstr "năm"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "year"
+msgstr "năm"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "months"
+msgstr "tháng"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "month"
+msgstr "tháng"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "days"
+msgstr "ngày"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "day"
+msgstr "ngày"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "Less than a day"
+msgstr "chưa được 1 ngày"
+
+#: Portal.Web.Output\Views\Shared\TagCloud.cshtml
+msgid "Browse by tags"
+msgstr "Xem theo tags"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Go to content"
+msgstr "Xem nội dung"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Sign In"
+msgstr "Đăng nhập"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Admin dashboard"
+msgstr "Quản trị"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Account"
+msgstr "Tài khoản"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Logout"
+msgstr "Thoát"
+
+#: Portal.Web.Output\Views\Shared\Errors\403.cshtml
+msgid "Forbidden"
+msgstr "Forbidden"
+
+#: Portal.Web.Output\Views\Shared\Errors\403.cshtml
+msgid "The page you requested is forbidden."
+msgstr "The page you requested is forbidden."
+
+#: Portal.Web.Output\Views\Shared\Errors\404.cshtml
+msgid "Page not found"
+msgstr "Page not found"
+
+#: Portal.Web.Output\Views\Shared\Errors\404.cshtml
+msgid "The page you requested was not found."
+msgstr "The page you requested was not found."
+
+#: Portal.Web.Output\Views\Shared\Errors\500.cshtml
+msgid "An error occurred while processing your request"
+msgstr "An error occurred while processing your request"
+
+#: Portal.Web.Output\Views\Shared\Errors\500.cshtml
+msgid "An error occurred"
+msgstr "An error occurred"
+
+#: Portal.Web.Output\Views\Shared\Errors\500.cshtml
+msgid "An error occurred on the server when processing your request. <br />The error detail was sent to our support team.<br />Sorry for the inconvenience."
+msgstr "An error occurred on the server when processing your request. <br />The error detail was sent to our support team.<br />Sorry for the inconvenience."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Add Template"
+msgstr "Add Template"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Templates"
+msgstr "Templates"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "The application does not have file Write access on the server's template folder."
+msgstr "The application does not have file Write access on the server's template folder."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "File format is invalid. Please include only the allowed files."
+msgstr "File format is invalid. Please include only the allowed files."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "File must not be blank."
+msgstr "File must not be blank."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "File size is larger than the maximum size supported (3Mb)."
+msgstr "File size is larger than the maximum size supported (3Mb)."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "You can not replace the active template."
+msgstr "You can not replace the active template."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "The html template file does not contain the required placeholders: headcontainer and bodycontainer"
+msgstr "The html template file does not contain the required placeholders: headcontainer and bodycontainer"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Template key format is not valid. Include a-z 0-9 and up to 64 characters."
+msgstr "Template key format is not valid. Include a-z 0-9 and up to 64 characters."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Template File (.zip)"
+msgstr "Template File (.zip)"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Comments"
+msgstr "Comments"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Use default name"
+msgstr "Use default name"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Name / Key"
+msgstr "Name / Key"
+
+#: Portal.Web.Output\Views\Templates\AddDefaultTemplates.cshtml
+msgid "Load default templates"
+msgstr "Load default templates"
+
+#: Portal.Web.Output\Views\Templates\AddDefaultTemplates.cshtml
+msgid "{0} templates loaded."
+msgstr "{0} templates loaded."
+
+#: Portal.Web.Output\Views\Templates\AddDefaultTemplates.cshtml
+msgid "Continue >>"
+msgstr "Continue >>"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "You cannot delete the current template."
+msgstr "You cannot delete the current template."
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "The application does not have the necessary file read/write access."
+msgstr "The application does not have the necessary file read/write access."
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Activate"
+msgstr "Activate"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Preview"
+msgstr "Preview"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Active"
+msgstr "Active"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Export"
+msgstr "Export"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Remove"
+msgstr "Remove"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "No templates found."
+msgstr "No templates found."
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Do you want to load the default templates?"
+msgstr "Do you want to load the default templates?"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "How to create a custom template"
+msgstr "How to create a custom template"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Upload a new template >>"
+msgstr "Upload a new template >>"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Templating feature is <strong>disabled</strong> by configuration."
+msgstr "Templating feature is <strong>disabled</strong> by configuration."
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Are you sure you want to REMOVE this template?.\\nthis action is not reversible."
+msgstr "Are you sure you want to REMOVE this template?.\\nthis action is not reversible."
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Are you sure you want to activate this template?"
+msgstr "Are you sure you want to activate this template?"
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "Posted by"
+msgstr "Viết bởi"
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "Displaying <span class=\"firstItem\">{0}</span> to <span class=\"lastItem\">{1}</span> of <span class=\"totalItems\">{2}</span> messages"
+msgstr "Hiển thị từ <span class=\"firstItem\">{0}</span> đến <span class=\"lastItem\">{1}</span> trong tổng số <span class=\"totalItems\">{2}</span> bài viết"
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "Show more messages"
+msgstr "Hiển thị các bài viêt khác"
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "Thanks you, a moderator will review the message."
+msgstr "Cám ơn bạn, chúng tôi se xem xét nội dung bài viết và có biện pháp xử lý thích hợp."
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "The browser has lost session, click ok to return to the login page"
+msgstr "Phiên làm việc đã hết hạn, click ok để đến trang đăng nhập"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Edit thread"
+msgstr "Sửa chủ đề"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Post new thread"
+msgstr "Tạo chủ đề mới"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Thread message must not be blank."
+msgstr "Bạn phải điền nội dung bài viết."
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Tags must not be blank, separated by spaces and must not contain special characters. The maximum number of tags allowed is 6."
+msgstr "Bạn phải điền nội tag, phân cách bởi dấu phảy, không bao gồm các ký tự đặc biệt. Tối đa 6 tag."
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Subject must not be blank."
+msgstr "Bạn phải điền tiêu đề."
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Email must not be blank in order to notify of new posts."
+msgstr "Bạn phải điền email đề nhận thông báo bài mới."
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Fill in the fields and submit"
+msgstr "Điền nội dung vào form dưới đây"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Subject"
+msgstr "Tiêu đề"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Tags"
+msgstr "Tags"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Separated by spaces"
+msgstr "Ngăn cách bằng dấu phẩy"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Type the text shown in the image"
+msgstr "Hãy gõ lại các ký tự hiển thị trong ảnh"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Sticky thread?"
+msgstr "Sticky thread?"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Notify me of new posts on this thread via email"
+msgstr "Gửi email cho tôi nếu có bài mới"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Access to post a message in this thread"
+msgstr "Cho phép trả lời"
+
+#: Portal.Web.Output\Views\Topics\LatestMessages.cshtml
+msgid "Latest messages on &apos;{0}&apos; thread"
+msgstr "Latest messages on &apos;{0}&apos; thread"
+
+#: Portal.Web.Output\Views\Topics\Move.cshtml
+msgid "Move thread \"{0}\" to another forum"
+msgstr "Move thread \"{0}\" to another forum"
+
+#: Portal.Web.Output\Views\Topics\Move.cshtml
+msgid "Select the destination forum"
+msgstr "Select the destination forum"
+
+#: Portal.Web.Output\Views\Topics\Related.cshtml
+msgid "Related threads"
+msgstr "Chủ đề liên quan"
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Reply"
+msgstr "Reply"
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Body must not be blank."
+msgstr "Body must not be blank."
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Captcha must not be blank."
+msgstr "Captcha must not be blank."
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Captcha does not match the image value. Please retry."
+msgstr "Captcha does not match the image value. Please retry."
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Description"
+msgstr "Mô tả"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Show all messages"
+msgstr "Hiển thị tất cả bài viết"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Print"
+msgstr "In"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Move thread"
+msgstr "Di chuyển chủ đề"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Close"
+msgstr "Đóng"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Open to replies"
+msgstr "Mở đề trả lời"
+
+#: \Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Are you sure you want to DELETE this thread?"
+msgstr "Bạn có chắc mình muốn xóa chủ đề này?"
+
+#: \Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Are you sure you want to CLOSE this thread for further replies?"
+msgstr "Bạn có chắc mình muốn đóng chủ đề này?"
+
+#: Portal.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "Unsubscribe"
+msgstr "Unsubscribe"
+
+#: Portal.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "Unsubscribed from the thread"
+msgstr "Unsubscribed from the thread"
+
+#: Portal.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "You have been unsubscribed from the thread {0}."
+msgstr "You have been unsubscribed from the thread {0}."
+
+#: Portal.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "Thank you."
+msgstr "Thank you."
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "{0} profile"
+msgstr "{0} profile"
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Role"
+msgstr "Role"
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Messages posted by {0}"
+msgstr "Các bài viết của {0}"
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Get all messages posted by {0}"
+msgstr "Hiển thị tất cả các bìa viêt của {0}"
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Loading..."
+msgstr "Loading..."
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "No messages found."
+msgstr "Không có bài viết."
+
+#: \Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Threads posted by {0}"
+msgstr "Chủ để tạo bởi {0}"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Email format is invalid."
+msgstr "Định dạng email không hợp lệ."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Website url format is invalid."
+msgstr "Định dạng website không hợp lệ."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Photo url format is invalid."
+msgstr "Đường dẫn ảnh không hợp lệ.."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Username is required."
+msgstr "Bạn phải điền tên đăng nhập."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Change your account information"
+msgstr "Thay đôi thông tin tài khoản của bạn"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Public name"
+msgstr "Tên đăng nhập"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Birthdate"
+msgstr "Ngày sinh"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Timezone"
+msgstr "Timezone"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Photo url"
+msgstr "Ảnh đại diện"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Profile image"
+msgstr "Profile image"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Website"
+msgstr "Website"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Your email will not be shared with anyone. We will not make a different use than detailed below."
+msgstr "Your email will not be shared with anyone. We will not make a different use than detailed below."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Email address"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Use my email to notify me of replies to threads I subscribed to"
+msgstr "Use my email to notify me of replies to threads I subscribed to"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Send me a newsletter"
+msgstr "Send me a newsletter"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "To edit your account settings, click here"
+msgstr "To edit your account settings, click here"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "User name"
+msgstr "User name"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Action"
+msgstr "Action"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Registration date"
+msgstr "Registration date"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Promote"
+msgstr "Promote"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Demote"
+msgstr "Demote"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Are you sure you want to DELETE the user {0}?"
+msgstr "Are you sure you want to DELETE the user {0}?"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Are you sure you want to Promote the user {0}?"
+msgstr "Are you sure you want to Promote the user {0}?"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Are you sure you want to Demote the user {0}?"
+msgstr "Are you sure you want to Demote the user {0}?"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "No user found for the username &quot;{0}&quot;."
+msgstr "No user found for the username &quot;{0}&quot;."
+
+#: Portal.Web.Output\Views\Shared\MainNav.cshtml
+msgid "Home"
+msgstr "Trang chủ"
+
+#: Portal.Web.Output\Views\Shared\HeaderContent.cshtml
+msgid "Vietnamese"
+msgstr "Tiếng Việt"
+
+#: Portal.Web.Output\Views\Shared\HeaderContent.cshtml
+msgid "English"
+msgstr "Tiếng Anh"
+
+#: Portal.Web.Output\Views\Shared\HeaderContent.cshtml
+msgid "Hello"
+msgstr "Xin chào"
+
+#: Portal.Web.Output\Views\LiveChat\Index.cshtml
+msgid "Live chat"
+msgstr "Live chat"
+
+#: Portal.Web.Output\Views\LiveChat\Index.cshtml
+msgid "Content Questions"
+msgstr "Nội dung câu hỏi"
+
+#: Portal.Web.Output\Views\LiveChat\Index.cshtml
+msgid "User name livechat"
+msgstr "Tên của bạn"
+
+#: Portal.Web.Output\Views\LiveChat\Index.cshtml
+msgid "Start live chat"
+msgstr "Bắt đầu"
+
+#: Portal.Web.Output\Views\Shared\List.cshtml
+msgid "HtmlContentsList"
+msgstr "Danh sách trang tĩnh"
+
+#: Portal.Web.Output\Views\Shared\AdminSearchContent.cshtml
+msgid "Keyword"
+msgstr "Từ khóa"
+
+#: Portal.Web.Output\Views\Shared\AdminSearchContent.cshtml
+msgid "Danh mục"
+msgstr "Danh mục"
+
+#: Portal.Web.Output\Views\Shared\AdminSearchContent.cshtml
+msgid "All"
+msgstr "-Tất cả-"
+
+#: Portal.Web.Output\Views\Shared\AdminSearchContent.cshtml
+msgid "Filter"
+msgstr "Lọc"
+
+#: Portal.Web.Output\Views\HtmlContents\List.cshtml
+msgid "Header"
+msgstr "Tiêu đề"
+
+#: Portal.Web.Output\Views\HtmlContents\List.cshtml
+msgid "Category"
+msgstr "Danh mục"
+
+#: Portal.Web.Output\Views\HtmlContents\List.cshtml
+msgid "Active"
+msgstr "Hiển thị"
+
+#: Portal.Web.Output\Views\HtmlContents\List.cshtml
+msgid "Add new content>>>"
+msgstr "Thêm mới>>>"
+
+#: Portal.Web.Output\Views\Shared\AdminPager.cshtml
+msgid "Prev"
+msgstr "Quay lại"
+
+#: Portal.Web.Output\Views\Shared\AdminPager.cshtml
+msgid "Next"
+msgstr "Tiếp theo"
+
+#: Portal.Web.Output\Views\Products\AddCategory.cshtml
+msgid "Hiển thị"
+msgstr "Hiển thị"
+
+#: Portal.Web.Output\Views\Products\AddCategory.cshtml
+msgid "Mô tả"
+msgstr "Mô tả"
+
+#: Portal.Web.Output\Views\Products\AddCategory.cshtml
+msgid "Tiêu đề"
+msgstr "Tiêu đề"
+
+#: Portal.Web.Output\Views\Products\AddCategory.cshtml
+msgid "-Chọn một loại sản phẩm-"
+msgstr "Chọn nhóm danh mục"
+
+#: Portal.Web.Output\Views\Products\EditCategory.cshtml
+msgid "Hiển thị"
+msgstr "Hiển thị"
+
+#: Portal.Web.Output\Views\Products\EditCategory.cshtml
+msgid "Mô tả"
+msgstr "Mô tả"
+
+#: Portal.Web.Output\Views\Products\EditCategory.cshtml
+msgid "Tiêu đề"
+msgstr "Tiêu đề"
+
+#: Portal.Web.Output\Views\Products\EditCategory.cshtml
+msgid "-Chọn một loại sản phẩm-"
+msgstr "Chọn nhóm danh mục"
+
+#: Portal.Web.Output\Views\Products\EditCategory.cshtml
+msgid "Please check the following errors:"
+msgstr "Bạn hãy kiểm tra các lỗi dưới đây:"
+
+#: Portal.Web.Output\Views\Products\EditCategory.cshtml
+msgid "Page title must not be blank."
+msgstr "Tiêu đề trang không được bỏ trống."
+
+
+
+#: Portal.Web.Output\Views\Products\AddCategory.cshtml
+msgid "News Category"
+msgstr "Danh mục tin tức"
+
+#: Portal.Web.Output\Views\Products\AddCategory.cshtml
+msgid "Please check the following errors:"
+msgstr "Bạn hãy kiểm tra các lỗi dưới đây:"
+
+#: Portal.Web.Output\Views\Products\AddCategory.cshtml
+msgid "Page title must not be blank."
+msgstr "Tiêu đề trang không được bỏ trống."
+
+#: Portal.Web.Output\Views\Products\AddCategory.cshtml
+msgid "-Select a Category-"
+msgstr "Chọn nhóm danh mục"
+
+#: Portal.Web.Output\Views\Products\AddProp.cshtml
+msgid "Clear Parameters"
+msgstr "Xóa thông số"
+
+#: Portal.Web.Output\Views\Products\AddProp.cshtml
+msgid "Hiển thị"
+msgstr "Hiển thị"
+
+#: Portal.Web.Output\Views\Products\CateDetail.cshtml
+msgid "Danh sách sản phẩm"
+msgstr "Danh sách sản phẩm"
+
+#: Portal.Web.Output\Views\Products\Detail.cshtml
+msgid "Danh sách Bảo hiểm"
+msgstr "Danh sách Bảo hiểm"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Sửa thông tin bảo hiểm editpr"
+msgstr "Sửa thông tin bảo hiểm"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Thêm mới thông tin bảo hiểm editpr"
+msgstr "Thêm mới thông tin bảo hiểm"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Thông tin bảo hiểm"
+msgstr "Thông tin bảo hiểm"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Please check the following errors:"
+msgstr "Bạn hãy kiểm tra các lỗi dưới đây:"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Page title must not be blank."
+msgstr "Tiêu đề trang không được bỏ trống"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Page content must not be blank."
+msgstr "Nội dung trang không được bỏ trống."
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "-Select a Category editpr-"
+msgstr "-Chọn nhóm danh mục-"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Danh mục editpr"
+msgstr "Danh mục"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Tên bảo hiểm"
+msgstr "Tên bảo hiểm"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Trích dẫn"
+msgstr "Trích dẫn"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Ảnh lớn"
+msgstr "Ảnh lớn"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Ảnh nhỏ"
+msgstr "Ảnh nhỏ"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Brochure"
+msgstr "Tài liệu"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Hiển thị"
+msgstr "Hiển thị"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Hiển thị trên trang chủ"
+msgstr "Hiển thị trên trang chủ"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Là sản phẩm để bán"
+msgstr "Là sản phẩm để bán"
+
+#: Portal.Web.Output\Views\Products\Edit.cshtml
+msgid "Lưu"
+msgstr "Lưu"
+
+
+#: Portal.Web.Output\Views\Products\List.cshtml
+msgid "Quản lý danh mục listpr"
+msgstr "Quản lý danh mục"
+
+#: Portal.Web.Output\Views\Products\List.cshtml
+msgid "Categorylist"
+msgstr "Danh mục"
+
+#: Portal.Web.Output\Views\Products\List.cshtml
+msgid "Activelist"
+msgstr "Hiển thị"
+
+
+
+#: Portal.Web.Output\Views\Products\List.cshtml
+msgid "List insurance"
+msgstr "Danh sách Bảo hiểm"
+
+#: Portal.Web.Output\Views\Products\List.cshtml
+msgid "AddCar"
+msgstr "Thêm mới xe >>"
+
+#: Portal.Web.Output\Views\Products\List.cshtml
+msgid "AddNews"
+msgstr "Thêm mới tin tức"
+
+#: Portal.Web.Output\Views\Booking\Book.cshtml
+msgid "Danh sách bảo hiểm VNI"
+msgstr "Danh sách bảo hiểm VNI"
+
+#: Portal.Web.Output\Views\Booking\Book.cshtml
+msgid "Bảo hiểm xe máy"
+msgstr "Bảo hiểm xe máy"
+
+#: Portal.Web.Output\Views\Booking\Book.cshtml
+msgid "Bảo hiểm Ô tô"
+msgstr "Bảo hiểm Ô tô"
+
+#: Portal.Web.Output\Views\Booking\Book.cshtml
+msgid "Bảo hiểm Du lịch Quốc tế"
+msgstr "Bảo hiểm Du lịch Quốc tế"
+
+#: Portal.Web.Output\Views\Booking\Book.cshtml
+msgid "Bảo hiểm White lotus"
+msgstr "Bảo hiểm White lotus"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Bảo hiểm"
+msgstr "Bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Bảo hiểm"
+msgstr "Bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Du lịch Quốc tế"
+msgstr "Du lịch Quốc tế"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Đặt mua"
+msgstr "Đặt mua"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Đặt mua"
+msgstr "Đặt mua"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Thông tin bổ sung"
+msgstr "Thông tin bổ sung"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Thông tin bổ sung"
+msgstr "Thông tin bổ sung"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Hoàn tất"
+msgstr "Hoàn tất"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Hoàn tất"
+msgstr "Hoàn tất"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Thông tin bảo hiểm"
+msgstr "Thông tin bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Gói bảo hiểm"
+msgstr "Gói bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Thông tin du lịch"
+msgstr "Thông tin du lịch"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Điểm khởi hành"
+msgstr "Điểm khởi hành"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Việt Nam"
+msgstr "Việt Nam"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Điểm đến"
+msgstr "Điểm đến"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "ASEAN"
+msgstr "ASEAN"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Châu Á ( lọai trừ Nhật Bản), Úc và New Zealand"
+msgstr "Châu Á ( lọai trừ Nhật Bản), Úc và New Zealand"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Toàn cầu"
+msgstr "Toàn cầu"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Hình thức du lịch"
+msgstr "Hình thức du lịch"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Cá nhân"
+msgstr "Cá nhân"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Gia đình"
+msgstr "Gia đình"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Chương trình"
+msgstr "Chương trình"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Chương trình A"
+msgstr "Chương trình A"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Chương trình B"
+msgstr "Chương trình B"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Chương trình C"
+msgstr "Chương trình C"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Ngày khởi hành"
+msgstr "Ngày khởi hành "
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Số ngày du lịch"
+msgstr "Số ngày du lịch"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Số người"
+msgstr "Số người"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Ngoài các thành viên trong gia đình"
+msgstr "(Ngoài các thành viên trong gia đình)"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Các thành viên trong gia đình"
+msgstr "Các thành viên trong gia đình"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Họ tên"
+msgstr "Họ tên"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Ngày sinh"
+msgstr "Ngày sinh"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Giới tính"
+msgstr "Giới tính"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "CMT/Hộ chiếu"
+msgstr "CMT/Hộ chiếu"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Chồng"
+msgstr "Chồng"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Nam"
+msgstr "Nam"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Vợ"
+msgstr "Vợ"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Nữ"
+msgstr "Nữ"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Con"
+msgstr "Con"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Danh sách người tham gia"
+msgstr "Danh sách người tham gia"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "STT"
+msgstr "STT"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Nhập thông tin cá nhân của bạn"
+msgstr "Nhập thông tin cá nhân của bạn"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Họ tên người nhận"
+msgstr "Họ tên người nhận"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Địa chỉ nhận"
+msgstr "Địa chỉ nhận"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Email"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Email nhận thông báo kết quả giao dịch"
+msgstr "(Email nhận thông báo kết quả giao dịch)"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Số điện thoại"
+msgstr "Số điện thoại"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "finished!"
+msgstr "Kết thúc"
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "Thông tin phí bảo hiểm"
+msgstr "Thông tin phí bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotusFinish.cshtml
+msgid "Thông tin phí bảo hiểm"
+msgstr "Thông tin phí bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotusFinish.cshtml
+msgid "thankyouWhiteLT"
+msgstr "Cảm ơn Quý khách đã lựa chọn dịch vụ của Bảo hiểm Hàng không. Nhân viên của Bảo hiểm Hàng không sẽ liên hệ với Quý khách trong vòng 24h làm việc để xác nhận đơn hàng và Giấy chứng nhận bảo hiểm sẽ được chuyển tới Quý khách chậm nhất trong vòng 03 ngày làm việc kể từ khi nhận được yêu cầu từ Quý khách."
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotusFinish.cshtml
+msgid "Trân trọng cảm ơn!"
+msgstr "Trân trọng cảm ơn!"
+
+
+#: Portal.Web.Output\Views\Booking\BookDLQT.cshtml
+msgid "TỔNG PHÍ"
+msgstr "TỔNG PHÍ"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Bảo hiểm"
+msgstr "Bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Du lịch Quốc tế"
+msgstr "Du lịch Quốc tế"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Đặt mua"
+msgstr "Đặt mua"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Thông tin bổ sung"
+msgstr "Thông tin bổ sung"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Hoàn tất"
+msgstr "Hoàn tất"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Bạn đã đặt mua thành công gói bảo hiểm với tổng số tiền là"
+msgstr "Bạn đã đặt mua thành công gói bảo hiểm với tổng số tiền là"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Thông tin phí bảo hiểm"
+msgstr "Thông tin phí bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "TỔNG PHÍ"
+msgstr "TỔNG PHÍ"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Nam"
+msgstr "Nam"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "thankyouDLQT"
+msgstr "Cảm ơn Quý khách đã lựa chọn dịch vụ của Bảo hiểm Hàng không. Nhân viên của Bảo hiểm Hàng không sẽ liên hệ với Quý khách trong vòng 24h làm việc để xác nhận đơn hàng và Giấy chứng nhận bảo hiểm sẽ được chuyển tới Quý khách chậm nhất trong vòng 03 ngày làm việc kể từ khi nhận được yêu cầu từ Quý khách."
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Trân trọng cảm ơn!"
+msgstr "Trân trọng cảm ơn!"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Nam"
+msgstr "Nam"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "Nữ"
+msgstr "Nữ"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Nữ"
+msgstr "Nữ"
+
+#: Portal.Web.Output\Views\Booking\BookDLQTFinish.cshtml
+msgid "STT"
+msgstr "STT"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Bảo hiểm"
+msgstr "Bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Xe máy"
+msgstr "Xe máy"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Đặt mua"
+msgstr "Đặt mua"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Thông tin bổ sung"
+msgstr "Thông tin bổ sung"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Hoàn tất"
+msgstr "Hoàn tất"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Bảo hiểm bắt buộc"
+msgstr "Bảo hiểm bắt buộc"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "66.000 VNĐ"
+msgstr "66.000 VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Bảo hiểm bắt buộc TNDS đối với xe trên 50cc"
+msgstr "Bảo hiểm bắt buộc TNDS đối với xe trên 50cc"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "60.500 VNĐ"
+msgstr "60.500 VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Bảo hiểm bắt buộc TNDS đối với xe dưới 50 cc"
+msgstr "Bảo hiểm bắt buộc TNDS đối với xe dưới 50 cc"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Bảo hiểm tai nạn người ngồi trên xe (tự nguyện)"
+msgstr "Bảo hiểm tai nạn người ngồi trên xe (tự nguyện)"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "10.000 VNĐ"
+msgstr "10.000 VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Mức thấp, 5 Triệu/Người(x2 Người)"
+msgstr "Mức thấp, 5 Triệu/Người(x2 Người)"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "20.000 VNĐ"
+msgstr "20.000 VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Mức cao, 10 Triệu/Người(x2 Người)"
+msgstr "Mức cao, 10 Triệu/Người(x2 Người)"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Nhập thông tin ghi trên đăng ký xe"
+msgstr "Nhập thông tin ghi trên đăng ký xe"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Tên chủ xe"
+msgstr "Tên chủ xe"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Địa chỉ đăng ký"
+msgstr "Địa chỉ đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Thông tin bắt buộc: Tỉnh/Thành Phố"
+msgstr "(Thông tin bắt buộc: Tỉnh/Thành Phố)"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Tình trạng biển số"
+msgstr "Tình trạng biển số"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Xe đã có biển số"
+msgstr "Xe đã có biển số"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Xe chưa có biển số"
+msgstr "Xe chưa có biển số"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Biển kiểm soát"
+msgstr "Biển kiểm soát"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Số khung"
+msgstr "Số khung"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Số máy"
+msgstr "Số máy"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Thời hạn bảo hiểm"
+msgstr "Thời hạn bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "01 năm kể từ ngày"
+msgstr "01 năm kể từ ngày"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "và sau thời hạn thanh toán phí"
+msgstr "và sau thời hạn thanh toán phí"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Nhập thông tin cá nhân của bạn"
+msgstr "Nhập thông tin cá nhân của bạn"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Họ tên người nhận"
+msgstr "Họ tên người nhận"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Địa chỉ nhận"
+msgstr "Địa chỉ nhận"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Email"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Email nhận thông báo kết quả giao dịch"
+msgstr "(Email nhận thông báo kết quả giao dịch)"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Số điện thoại"
+msgstr "Số điện thoại"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "finished!"
+msgstr "Kết thúc"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "Thông tin phí bảo hiểm"
+msgstr "Thông tin phí bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "BH bắt buộc(+VAT)"
+msgstr "BH bắt buộc(+VAT)"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "BH tự nguyện"
+msgstr "BH tự nguyện"
+
+#: Portal.Web.Output\Views\Booking\BookMoto.cshtml
+msgid "TỔNG PHÍ"
+msgstr "TỔNG PHÍ"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "Bảo hiểm"
+msgstr "Bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "Xe máy"
+msgstr "Xe máy"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "Đặt mua"
+msgstr "Đặt mua"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "Thông tin bổ sung"
+msgstr "Thông tin bổ sung"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "Hoàn tất"
+msgstr "Hoàn tất"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "Bạn đã đặt mua thành công gói bảo hiểm với tổng số tiền là"
+msgstr "Bạn đã đặt mua thành công gói bảo hiểm với tổng số tiền là"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "Thông tin phí bảo hiểm"
+msgstr "Thông tin phí bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "BH bắt buộc(+VAT)"
+msgstr "BH bắt buộc(+VAT)"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "BH tự nguyện"
+msgstr "BH tự nguyện"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "TỔNG PHÍ"
+msgstr "TỔNG PHÍ"
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "thankyouMoto"
+msgstr "Cảm ơn Quý khách đã lựa chọn dịch vụ của Bảo hiểm Hàng không. Nhân viên của Bảo hiểm Hàng không sẽ liên hệ với Quý khách trong vòng 24h làm việc để xác nhận đơn hàng và Giấy chứng nhận bảo hiểm sẽ được chuyển tới Quý khách chậm nhất trong vòng 03 ngày làm việc kể từ khi nhận được yêu cầu từ Quý khách."
+
+#: Portal.Web.Output\Views\Booking\BookMotoFinish.cshtml
+msgid "Trân trọng cảm ơn!"
+msgstr "Trân trọng cảm ơn!"
+
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Bảo hiểm"
+msgstr "Bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Ô tô"
+msgstr "Ô tô"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Đặt mua"
+msgstr "Đặt mua"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Thông tin bổ sung"
+msgstr "Thông tin bổ sung"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Hoàn tất"
+msgstr "Hoàn tất"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Thông tin xe"
+msgstr "Thông tin xe"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Mục đích sử dụng"
+msgstr "Mục đích sử dụng"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Cá nhân"
+msgstr "Cá nhân"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Kinh doanh"
+msgstr "Kinh doanh"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Hãng xe"
+msgstr "Hãng xe"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Dòng xe/Dung tích xi lanh"
+msgstr "Dòng xe/Dung tích xi lanh"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Năm sản xuất"
+msgstr "Năm sản xuất"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Số chỗ ngồi"
+msgstr "Số chỗ ngồi"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Bảo hiểm vật chất Ô tô"
+msgstr "Bảo hiểm vật chất Ô tô"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Quy tắc bảo hiểm:"
+msgstr "Quy tắc bảo hiểm:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Quy tắc bảo hiểm kết hợp xe cơ giới"
+msgstr "Quy tắc bảo hiểm kết hợp xe cơ giới"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Các điều kiện mở rộng."
+msgstr "Các điều kiện mở rộng."
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Số tiền bảo hiểm:"
+msgstr "Số tiền bảo hiểm:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Phạm vi bảo hiểm:"
+msgstr "Phạm vi bảo hiểm:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "-Phạm vi cơ bản:"
+msgstr "-Phạm vi cơ bản:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "-Phạm vi mở rộng:"
+msgstr "-Phạm vi mở rộng:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Quý khách có thể chọn để mở rộng thêm 2 điều kiện bảo hiểm sau:"
+msgstr "Quý khách có thể chọn để mở rộng thêm 2 điều kiện bảo hiểm sau:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "BS 01 - XCG: Bảo hiểm thay mới bộ phận"
+msgstr "BS 01 - XCG: Bảo hiểm thay mới bộ phận"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "BS 02 - XCG: Điều khoản sửa chữa chính hãng"
+msgstr "BS 02 - XCG: Điều khoản sửa chữa chính hãng"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "BS 06 - XCG: Bảo hiểm thiệt hại động cơ do hiện tượng thuỷ kích"
+msgstr "BS 06 - XCG: Bảo hiểm thiệt hại động cơ do hiện tượng thuỷ kích"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Mức miễn thường không khấu trừ:"
+msgstr "Mức miễn thường không khấu trừ:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "/ vụ tổn thất"
+msgstr "/ vụ tổn thất"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Bảo hiểm tai nạn lái xe, phụ xe và người ngồi trên xe"
+msgstr "Bảo hiểm tai nạn lái xe, phụ xe và người ngồi trên xe"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Quy tắc bảo hiểm:"
+msgstr "Quy tắc bảo hiểm:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Quy tắc bảo hiểm kết hợp xe cơ giới"
+msgstr "Quy tắc bảo hiểm kết hợp xe cơ giới"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Số người tham gia bảo hiểm:"
+msgstr "Số người tham gia bảo hiểm:"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Số người tham gia bảo hiểm"
+msgstr "Số người tham gia bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Các mục bảo hiểm"
+msgstr "Các mục bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Tương ứng với số chỗ ngồi trên xe"
+msgstr "(Tương ứng với số chỗ ngồi trên xe)"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Mức trách nhiệm:"
+msgstr "Mức trách nhiệm:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "10 triệu đồng / người/ vụ"
+msgstr "10 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "20 triệu đồng / người/ vụ"
+msgstr "20 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "30 triệu đồng / người/ vụ"
+msgstr "30 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "40 triệu đồng / người/ vụ"
+msgstr "40 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "50 triệu đồng / người/ vụ"
+msgstr "50 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "60 triệu đồng / người/ vụ"
+msgstr "60 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "70 triệu đồng / người/ vụ"
+msgstr "70 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "80 triệu đồng / người/ vụ"
+msgstr "80 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "90 triệu đồng / người/ vụ"
+msgstr "90 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "100 triệu đồng / người/ vụ"
+msgstr "100 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "150 triệu đồng / người/ vụ"
+msgstr "150 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "200 triệu đồng / người/ vụ"
+msgstr "200 triệu đồng / người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Quyền lợi bảo hiểm:"
+msgstr "Quyền lợi bảo hiểm:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Chết vì tai nạn:"
+msgstr "Chết vì tai nạn:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Trả đủ"
+msgstr "Trả đủ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "người/ vụ"
+msgstr "người/ vụ"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Thương tật vì tai nạn:"
+msgstr "Thương tật vì tai nạn:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Trả tối đa bằng số tiền bảo hiểm"
+msgstr "Trả tối đa bằng số tiền bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Bảo hiểm kết hợp xe cơ giới - bảng tỉ lệ chi trả tiền thương tật"
+msgstr "Bảo hiểm kết hợp xe cơ giới - bảng tỉ lệ chi trả tiền thương tật"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Theo bảng tỉ lệ chi trả tiền thương tật."
+msgstr "Theo bảng tỉ lệ chi trả tiền thương tật."
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới"
+msgstr "Bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Thông tư 151/2012/TT-BTC"
+msgstr "Thông tư 151/2012/TT-BTC"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Loại xe"
+msgstr "Loại xe"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Xe không kinh doanh vận tải"
+msgstr "Xe không kinh doanh vận tải"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Kinh doanh vận tải"
+msgstr "Kinh doanh vận tải"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Xe ô tô chở hàng(Xe tải)"
+msgstr "Xe ô tô chở hàng(Xe tải)"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Tên chủ xe"
+msgstr "Tên chủ xe"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Địa chỉ đăng ký"
+msgstr "Địa chỉ đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Thông tin bắt buộc: Tỉnh/Thành Phố"
+msgstr "(Thông tin bắt buộc: Tỉnh/Thành Phố)"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Biển kiểm soát"
+msgstr "Biển kiểm soát"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Số khung"
+msgstr "Số khung"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Số máy"
+msgstr "Số máy"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Nhập thông tin cá nhân của bạn"
+msgstr "Nhập thông tin cá nhân của bạn"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Họ tên người nhận"
+msgstr "Họ tên người nhận"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Địa chỉ nhận"
+msgstr "Địa chỉ nhận"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Email nhận thông báo kết quả giao dịch"
+msgstr "(Email nhận thông báo kết quả giao dịch)"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Số điện thoại"
+msgstr "Số điện thoại"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Thời hạn bảo hiểm"
+msgstr "Thời hạn bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "01 năm kể từ ngày"
+msgstr "01 năm kể từ ngày"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "và sau thời hạn thanh toán phí"
+msgstr "và sau thời hạn thanh toán phí"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Thông tin phí bảo hiểm(VNĐ)"
+msgstr "Thông tin phí bảo hiểm(VNĐ)"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "BH vật chất cơ bản:"
+msgstr "BH vật chất cơ bản:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Thuế VAT"
+msgstr "Thuế VAT"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Bảo hiểm con người:"
+msgstr "Bảo hiểm con người:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Bảo hiểm TNDS:"
+msgstr "Bảo hiểm TNDS:"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Số chỗ ngồi"
+msgstr "Số chỗ ngồi"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Dưới 6 chỗ ngồi"
+msgstr "Dưới 6 chỗ ngồi"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "6 đến 11 chỗ ngồi"
+msgstr "6 đến 11 chỗ ngồi"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "12 đến 24 chỗ ngồi"
+msgstr "12 đến 24 chỗ ngồi"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Trên 24 chỗ ngồi"
+msgstr "Trên 24 chỗ ngồi"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Xe vừa chở người vừa chở hàng(Pickup, minivan)"
+msgstr "Xe vừa chở người vừa chở hàng(Pickup, minivan)"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "6 chỗ ngồi theo đăng ký"
+msgstr "6 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "7 chỗ ngồi theo đăng ký"
+msgstr "7 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "8 chỗ ngồi theo đăng ký"
+msgstr "8 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "9 chỗ ngồi theo đăng ký"
+msgstr "9 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "10 chỗ ngồi theo đăng ký"
+msgstr "10 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "11 chỗ ngồi theo đăng ký"
+msgstr "11 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "12 chỗ ngồi theo đăng ký"
+msgstr "12 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "13 chỗ ngồi theo đăng ký"
+msgstr "13 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "14 chỗ ngồi theo đăng ký"
+msgstr "14 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "15 chỗ ngồi theo đăng ký"
+msgstr "15 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "16 chỗ ngồi theo đăng ký"
+msgstr "16 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "17 chỗ ngồi theo đăng ký"
+msgstr "17 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "18 chỗ ngồi theo đăng ký"
+msgstr "18 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "19 chỗ ngồi theo đăng ký"
+msgstr "19 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "20 chỗ ngồi theo đăng ký"
+msgstr "20 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "21 chỗ ngồi theo đăng ký"
+msgstr "21 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "22 chỗ ngồi theo đăng ký"
+msgstr "22 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "23 chỗ ngồi theo đăng ký"
+msgstr "23 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "24 chỗ ngồi theo đăng ký"
+msgstr "24 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "25 chỗ ngồi theo đăng ký"
+msgstr "25 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Trên 25 chỗ ngồi theo đăng ký"
+msgstr "Trên 25 chỗ ngồi theo đăng ký"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Trọng tải"
+msgstr "Trọng tải"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Dưới 3 tấn"
+msgstr "Dưới 3 tấn"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Từ 3 đến 8 tấn"
+msgstr "Từ 3 đến 8 tấn"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Từ 8 đến 15 tấn"
+msgstr "Từ 8 đến 15 tấn"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "Trên 15 tấn"
+msgstr "Trên 15 tấn"
+
+#: Portal.Web.Output\Views\Booking\BookOto.cshtml
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Bảo hiểm"
+msgstr "Bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Ô tô"
+msgstr "Ô tô"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Đặt mua"
+msgstr "Đặt mua"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Thông tin bổ sung"
+msgstr "Thông tin bổ sung"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Hoàn tất"
+msgstr "Hoàn tất"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Bạn đã đặt mua thành công gói bảo hiểm với tổng số tiền là"
+msgstr "Bạn đã đặt mua thành công gói bảo hiểm với tổng số tiền là"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Thông tin phí bảo hiểm(VNĐ)"
+msgstr "Thông tin phí bảo hiểm(VNĐ)"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "BH vật chất cơ bản:"
+msgstr "BH vật chất cơ bản:"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Thuế VAT"
+msgstr "Thuế VAT"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Bảo hiểm con người:"
+msgstr "Bảo hiểm con người:"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Bảo hiểm TNDS:"
+msgstr "Bảo hiểm TNDS:"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "TỔNG PHÍ"
+msgstr "TỔNG PHÍ"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "thankyouOtofi"
+msgstr "Cảm ơn Quý khách đã lựa chọn dịch vụ của Bảo hiểm Hàng không. Nhân viên của Bảo hiểm Hàng không sẽ liên hệ với Quý khách trong vòng 24h làm việc để xác nhận đơn hàng và Giấy chứng nhận bảo hiểm sẽ được chuyển tới Quý khách chậm nhất trong vòng 03 ngày làm việc kể từ khi nhận được yêu cầu từ Quý khách."
+
+#: Portal.Web.Output\Views\Booking\BookOtoFinish.cshtml
+msgid "Trân trọng cảm ơn!"
+msgstr "Trân trọng cảm ơn!"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Chi tiết đơn hàng"
+msgstr "Chi tiết đơn hàng"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Quản trị Đơn hàng"
+msgstr "Quản trị Đơn hàng"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Ngày tạo"
+msgstr "Ngày tạo"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Tình trạng"
+msgstr "Tình trạng"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Địa chỉ"
+msgstr "Địa chỉ"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Email"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Điện thoại"
+msgstr "Điện thoại"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Số tiền"
+msgstr "Số tiền"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Xử lý"
+msgstr "Xử lý"
+
+#: Portal.Web.Output\Views\Booking\Detail.cshtml
+msgid "Xóa"
+msgstr "Xóa"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Chi tiết đơn hàng"
+msgstr "Chi tiết đơn hàng"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Quản trị Đơn hàng"
+msgstr "Quản trị Đơn hàng"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Ngày tạo"
+msgstr "Ngày tạo"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Tình trạng"
+msgstr "Tình trạng"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Địa chỉ"
+msgstr "Địa chỉ"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Email"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Điện thoại"
+msgstr "Điện thoại"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "BH bắt buộc"
+msgstr "BH bắt buộc"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "BH tự nguyện"
+msgstr "BH tự nguyện"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "TỔNG PHÍ"
+msgstr "TỔNG PHÍ"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Chủ xe"
+msgstr "Chủ xe"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Địa chỉ đăng ký"
+msgstr "Địa chỉ đăng ký"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Biển kiểm soát"
+msgstr "Biển kiểm soát"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Số khung"
+msgstr "Số khung"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Số máy"
+msgstr "Số máy"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Ngày hiệu lực"
+msgstr "Ngày hiệu lực"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Xử lý"
+msgstr "Xử lý"
+
+#: Portal.Web.Output\Views\Booking\DetailMoto.cshtml
+msgid "Xóa"
+msgstr "Xóa"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Chi tiết đơn hàng"
+msgstr "Chi tiết đơn hàng"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Quản trị Đơn hàng"
+msgstr "Quản trị Đơn hàng"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Ngày tạo"
+msgstr "Ngày tạo"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Tình trạng"
+msgstr "Tình trạng"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Địa chỉ"
+msgstr "Địa chỉ"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Email"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Điện thoại"
+msgstr "Điện thoại"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Mục đích sử dụng"
+msgstr "Mục đích sử dụng"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Cá nhân"
+msgstr "Cá nhân"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Kinh doanh"
+msgstr "Kinh doanh"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Hãng xe"
+msgstr "Hãng xe"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Dòng xe"
+msgstr "Dòng xe"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Năm sản xuất"
+msgstr "Năm sản xuất"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Bảo hiểm thay mới bộ phận"
+msgstr "Bảo hiểm thay mới bộ phận"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Bảo hiểm sửa chữa chính hãng"
+msgstr "Bảo hiểm sửa chữa chính hãng"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Bảo hiểm Thủy kích"
+msgstr "Bảo hiểm Thủy kích"
+
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Bảo hiểm tai nạn con người"
+msgstr "Bảo hiểm tai nạn con người"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "đồng/người /vụ"
+msgstr "đồng/người /vụ"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Bảo hiểm TNDS"
+msgstr "Bảo hiểm TNDS"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Loại xe"
+msgstr "Loại xe"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Không kinh doanh"
+msgstr "Không kinh doanh"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Kinh doanh vận tải"
+msgstr "Kinh doanh vận tải"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Xe chở hàng"
+msgstr "Xe chở hàng"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Số chỗ ngồi(hoặc tải trọng)"
+msgstr "Số chỗ ngồi(hoặc tải trọng)"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Tổng phí"
+msgstr "Tổng phí"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Chủ xe"
+msgstr "Chủ xe"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Địa chỉ đăng ký"
+msgstr "Địa chỉ đăng ký"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Biển kiểm soát"
+msgstr "Biển kiểm soát"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Số khung"
+msgstr "Số khung"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Số máy"
+msgstr "Số máy"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Ngày hiệu lực"
+msgstr "Ngày hiệu lực"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Xử lý"
+msgstr "Xử lý"
+
+#: Portal.Web.Output\Views\Booking\DetailOto.cshtml
+msgid "Xóa"
+msgstr "Xóa"
+
+#: Portal.Web.Output\Views\Booking\HelpList.cshtml
+msgid "Thông tin trợ giúp"
+msgstr "Thông tin trợ giúp"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Quản trị Đặt hàng"
+msgstr "Quản trị Đặt hàng"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Danh sách xe Ô tô"
+msgstr "Danh sách xe Ô tô"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Nhập danh sách từ Excel"
+msgstr "Nhập danh sách từ Excel"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Đường dẫn file excel"
+msgstr "Đường dẫn file excel"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Quản trị Đơn hàng"
+msgstr "Quản trị Đơn hàng"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Họ tên"
+msgstr "Họ tên"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Loại bảo hiểm"
+msgstr "Loại bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Tổng phí"
+msgstr "Tổng phí"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Thời gian"
+msgstr "Thời gian"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Tình trạng"
+msgstr "Tình trạng"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Process"
+msgstr "Process"
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Delete"
+msgstr "Delete"
+
+
+bbbbbb
+
+#: Portal.Web.Output\Views\Booking\ImportCarList.cshtml
+msgid "Delete"
+msgstr "Delete"
+
+
+
+
+#: Portal.Web.Output\Views\Booking\Book.cshtml
+msgid "Bảo hiểm Du lịch Quốc tế"
+msgstr "Bảo hiểm Du lịch Quốc tế"
+
+
+#: Portal.Web.Output\Views\News\Category.cshtml
+msgid "News"
+msgstr "TIN TỨC"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "SendtoRoom"
+msgstr "Gửi đến phòng"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Họ và tên (*)"
+msgstr "Họ và tên (*)"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Email (*)"
+msgstr "Email (*)"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Tiêu đề (*)"
+msgstr "Tiêu đề (*)"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "BodyContent"
+msgstr "Nội dung (*)"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Gửi"
+msgstr "Gửi"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Cancel"
+msgstr "Hủy"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Choice"
+msgstr "====Lựa chọn===="
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "PKD"
+msgstr "Phòng kinh doanh"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "PKT"
+msgstr "Phòng kỹ thuật"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Room 1401A, 14 Floor, Centec Tower, 72-74 NTMK Street,District 6, Ward 3, HCMC."
+msgstr "Phòng 1401A, Tầng 14, Centec Tower, Số 72-74 NTMK, Phường 6, Quận 3, TpHCM."
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Input your Name"
+msgstr "Hãy nhập tên của bạn"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Input your email"
+msgstr "Hãy nhập email của bạn"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Email is not valid"
+msgstr "Email không đúng định dạng"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Input your Subject"
+msgstr "Vui lòng nhập tiêu đề"
+
+#: Portal.Web.Output\Views\Shared\HotNewsOnHome.cshtml
+msgid "Tin tức on home"
+msgstr "Tin tức"
+
+#: Portal.Web.Output\Views\Shared\MainNav.cshtml
+msgid "product"
+msgstr "Sản phẩm"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "Buy Now"
+msgstr "Đặt mua"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "Choose one product"
+msgstr "Chọn loại hình bảo hiểm"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "Buy Insurance Online"
+msgstr "Mua Bảo Hiểm Trực Tuyến"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "Motorbikes Insurance"
+msgstr "Bảo hiểm Xe máy"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "Cars Insurance"
+msgstr "Bảo hiểm Ô tô"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "International Travel Insurance"
+msgstr "Bảo hiểm Du lịch Quốc tế"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "White Lotus Insurance"
+msgstr "Bảo hiểm White Lotus"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "Aviation Insurance"
+msgstr "Bảo hiểm hàng không"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "Insurance Business"
+msgstr "Bảo hiểm doanh nghiệp"
+
+#: Portal.Web.Output\Views\Home\Home.cshtml
+msgid "Personal Insurance"
+msgstr "Bảo hiểm cá nhân"
+
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Choose one product"
+msgstr "Chọn loại hình bảo hiểm"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Buy Insurance Online"
+msgstr "Mua Bảo Hiểm Trực Tuyến"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Motorbikes Insurance"
+msgstr "Bảo hiểm Xe máy"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Cars Insurance"
+msgstr "Bảo hiểm Ô tô"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "International Travel Insurance"
+msgstr "Bảo hiểm Du lịch Quốc tế"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "White Lotus Insurance"
+msgstr "Bảo hiểm White Lotus"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Aviation Insurance"
+msgstr "Bảo hiểm hàng không"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Insurance Business"
+msgstr "Bảo hiểm doanh nghiệp"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Personal Insurance"
+msgstr "Bảo hiểm cá nhân"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Buy Nowb"
+msgstr "Đặt Mua"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Support Onlineb"
+msgstr "Tư vấn trực tuyến"
+
+#: Portal.Web.Output\Views\Shared\BoxRight.cshtml
+msgid "Mạng lưới dịch vụ"
+msgstr "Mạng Lưới Dịch Vụ"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "addc"
+msgstr "Tầng 15, Tòa nhà Geleximco, số 36, Hoàng cầu, Quận Đống Đa, Thành Phố Hà Nội"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "contactc"
+msgstr "LIÊN HỆ VỚI CHÚNG TÔI"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "thankyouc"
+msgstr "Cám ơn Quý khách đã gửi thông tin đến Công ty Cổ phần Bảo hiểm Hàng không."
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "thankyouc1"
+msgstr "Nhân viên của chúng tôi sẽ liên hệ với Quý khách trong thời gian sớm nhất."
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Headoffice"
+msgstr "Trụ sở chính"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Customerinformation"
+msgstr "Thông tin khách hàng"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "contactcus"
+msgstr "Hoặc liên hệ với chúng tôi theo cách sau"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "fullnamec"
+msgstr "Họ và tên"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "companyc"
+msgstr "Công ty"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "addressc"
+msgstr "Địa chỉ"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Emailc"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Telc"
+msgstr "Điện thoại"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "subjectc"
+msgstr "Tiêu đề"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "Contentc"
+msgstr "Nội dung"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "sendc"
+msgstr "Gửi"
+
+#: Portal.Web.Output\Views\Home\Contact.cshtml
+msgid "resetc"
+msgstr "Hủy"
+
+#: Portal.Web.Output\Views\News\Detail.cshtml
+msgid "Viewmore"
+msgstr "Các Tin Khác"
+
+#: Portal.Web.Output\Views\News\Category.cshtml
+msgid "Viewdetail"
+msgstr "Xem tiếp >>"
+
+
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "Chooseoneproducthtml"
+msgstr "Chọn loại hình bảo hiểm"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "CarsInsurancehtml"
+msgstr "Bảo hiểm Ô tô"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "SupportOnlinehmtl"
+msgstr "Tư vấn trực tuyến"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "Buynowhtml"
+msgstr "Đặt Mua"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "Partnerlinkhtml"
+msgstr "Đối tác liên kết"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "Listgaragehtml"
+msgstr "Danh sách garage"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "centralrescuinghtml"
+msgstr "Trung tâm cứu hộ"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "listhospitalhtml"
+msgstr "Danh sách bệnh viện"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "Corporateidentityhtml"
+msgstr "Nhận diện thương hiệu"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "LawDocumentationhtml"
+msgstr "Văn bản pháp luật"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "ProductsDocumentationhtml"
+msgstr "Tài liệu sản phẩm"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "librarytemplatehtml"
+msgstr "Thư viện biểu mẫu"
+
+#: Portal.Web.Output\Views\HtmlContents\Detail.cshtml
+msgid "Edithtml"
+msgstr "Sửa"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "Edit static page html"
+msgstr "Sửa trang tĩnh"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "Create static page html"
+msgstr "Thêm mới trang tĩnh"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "Edit static page html"
+msgstr "Sửa trang tĩnh"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "Create static page html"
+msgstr "Thêm mới trang tĩnh"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "Page static html"
+msgstr "Trang tĩnh"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "Home html"
+msgstr "Trang chủ"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "subject html"
+msgstr "Tiêu đề"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "Content html"
+msgstr "Nội dung"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "Show html"
+msgstr "Hiển thị"
+
+#: Portal.Web.Output\Views\HtmlContents\Edit.cshtml
+msgid "Save html"
+msgstr "Lưu"
+
+#: Portal.Web.Output\Views\Ads\List.cshtml
+msgid "Create Advertise>>"
+msgstr "Thêm mới quảng cáo>>"
+
+#: Portal.Web.Output\Views\Ads\List.cshtml
+msgid "Edit Advertise"
+msgstr "Sửa"
+
+#: Portal.Web.Output\Views\Ads\List.cshtml
+msgid "Delete Advertise"
+msgstr "Xóa"
+
+#: Portal.Web.Output\Views\Ads\List.cshtml
+msgid "DeleteT Advertise"
+msgstr "Bạn có chắc mình muốn xóa tin này?"
+
+#: Portal.Web.Output\Views\Ads\List.cshtml
+msgid "List Advertise"
+msgstr "Danh sách quảng cáo"
+
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Quyền lợi tai nạn"
+msgstr "Quyền lợi tai nạn"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Chi phí nằm viện và phẫu thuật"
+msgstr "Chi phí nằm viện và phẫu thuật"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Tử vong/ TTVV do ốm bệnh"
+msgstr "Tử vong/ TTVV do ốm bệnh"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Điều trị ngoại trú"
+msgstr "Điều trị ngoại trú"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Nhập số lượng"
+msgstr "Nhập số lượng"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Danh sách bảo hiểm"
+msgstr "Danh sách bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "STT"
+msgstr "STT"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Họ tên"
+msgstr "Họ tên"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Ngày sinh"
+msgstr "Ngày sinh"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Giới tính"
+msgstr "Giới tính"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "CMT/Hộ chiếu"
+msgstr "CMT/Hộ chiếu"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Phí"
+msgstr "Phí"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Thông tin phí bảo hiểm"
+msgstr "Thông tin phí bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Thông tin trợ giúp"
+msgstr "Thông tin trợ giúp"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "TỔNG PHÍ"
+msgstr "TỔNG PHÍ"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Thời hạn bảo hiểm"
+msgstr "Thời hạn bảo hiểm"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "01 năm kể từ ngày"
+msgstr "01 năm kể từ ngày"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "và sau thời hạn thanh toán phí"
+msgstr "và sau thời hạn thanh toán phí"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Nhập thông tin cá nhân của bạn"
+msgstr "Nhập thông tin cá nhân của bạn"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Họ tên người nhận"
+msgstr "Họ tên người nhận"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Địa chỉ nhận"
+msgstr "Địa chỉ nhận"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Email"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "(Email nhận thông báo kết quả giao dịch)"
+msgstr "(Email nhận thông báo kết quả giao dịch)"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Số điện thoại"
+msgstr "Số điện thoại"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "VNĐ"
+msgstr "VNĐ"
+
+#: Portal.Web.Output\Views\Booking\BookWhiteLotus.cshtml
+msgid "Bạn đã đặt mua thành công gói bảo hiểm với tổng số tiền là"
+msgstr "Bạn đã đặt mua thành công gói bảo hiểm với tổng số tiền là"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Trang chủ"
+msgstr "Trang chủ"
+
+#: Portal.Web.Output\Views\News\Detail.cshtml
+msgid "Trang chủ"
+msgstr "Trang chủ"
+
+#: Portal.Web.Output\Views\News\Category.cshtml
+msgid "Trang chủ"
+msgstr "Trang chủ"
+
+#: Portal.Web.Output\Views\HtmlContents\Category.cshtml
+msgid "Trang chủ"
+msgstr "Trang chủ"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Tư vấn - hỏi đáp"
+msgstr "Tư vấn - hỏi đáp"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "ĐẶT CÂU HỎI"
+msgstr "ĐẶT CÂU HỎI"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Tên khách hàng (*)"
+msgstr "Tên khách hàng (*)"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Số điện thoại"
+msgstr "Số điện thoại"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Email"
+msgstr "Email"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Loại hình bảo hiểm"
+msgstr "Loại hình bảo hiểm"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Nội dung câu hỏi"
+msgstr "Nội dung câu hỏi"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Gửi câu hỏi"
+msgstr "Gửi câu hỏi"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Hủy bỏ"
+msgstr "Hủy bỏ"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Chọn loại hình bảo hiểm"
+msgstr "Chọn loại hình bảo hiểm"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Bảo hiểm Xe máy"
+msgstr "Bảo hiểm Xe máy"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Bảo hiểm Ô tô"
+msgstr "Bảo hiểm Ô tô"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Bảo hiểm Du lịch Quốc tế"
+msgstr "Bảo hiểm Du lịch Quốc tế"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Bảo hiểm White Lotus"
+msgstr "Bảo hiểm White Lotus"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm cho các hãng hàng không"
+msgstr "--Bảo hiểm cho các hãng hàng không"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm vệ tinh"
+msgstr "--Bảo hiểm vệ tinh"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm hàng không"
+msgstr "--Bảo hiểm hàng không"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Bảo hiểm doanh nghiệp"
+msgstr "Bảo hiểm doanh nghiệp"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm tài sản"
+msgstr "--Bảo hiểm tài sản"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm hàng hóa"
+msgstr "--Bảo hiểm hàng hóa"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm kỹ thuật"
+msgstr "--Bảo hiểm kỹ thuật"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm tàu"
+msgstr "--Bảo hiểm tàu"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm dầu khí"
+msgstr "--Bảo hiểm dầu khí"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm trách nhiệm"
+msgstr "--Bảo hiểm trách nhiệm"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Bảo hiểm cá nhân"
+msgstr "Bảo hiểm cá nhân"
+
+
+
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm du lịch"
+msgstr "--Bảo hiểm du lịch"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm sức khỏe"
+msgstr "--Bảo hiểm sức khỏe"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "--Bảo hiểm nhà tư nhân"
+msgstr "--Bảo hiểm nhà tư nhân"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Đặt mua"
+msgstr "Đặt mua"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Tư vấn trực tuyến"
+msgstr "Tư vấn trực tuyến"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Hủy bỏ"
+msgstr "Hủy bỏ"
+
+#: Portal.Web.Output\Views\Advice\Index.cshtml
+msgid "Gửi câu hỏi"
+msgstr "Gửi câu hỏi"
+
+#: Portal.Web.Output\Views\Texts\Detail.cshtml
+msgid "Các văn bản khác"
+msgstr "Các văn bản khác"
+
+#: idocNet.Web\Views\Home\Index.cshtml
+msgid "key"
+msgstr "Chìa khóa"
+

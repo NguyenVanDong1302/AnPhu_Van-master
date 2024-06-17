@@ -30,7 +30,11 @@ namespace idn.AnPhu.Website
             #region["Administrator"]
             #region["stylesheet"]
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css", "~/Content/styles-{version}.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/site.css", 
+                "~/Content/styles-{version}.css",
+                "~/Content/bootstrap.min.css"
+                ));
             bundles.Add(new StyleBundle("~/Content/admin-bootstrap-ace").Include(
                 "~/Areas/Auth/Content/assets/css/bootstrap.min.css",
                 //"~/Areas/Auth/Content/assets/css/font-awesome.min.css",
@@ -70,7 +74,6 @@ namespace idn.AnPhu.Website
                 "~/Areas/Auth/Scripts/jquery-ui/jquery-ui.min.js",
                 "~/Areas/Auth/Content/assets/js/jquery-ui.custom.min.js"//,
                                                                         //"~/Areas/Auth/Content/assets/js/jquery.ui.touch-punch.min.js"
-
             ));
             bundles.Add(new ScriptBundle("~/bundles/admin-jquery-bootstrap").Include(
                 "~/Areas/Auth/Content/assets/js/bootstrap.min.js",
@@ -90,6 +93,7 @@ namespace idn.AnPhu.Website
             bundles.Add(new ScriptBundle("~/bundles/admin-jquery-library").Include(
                 "~/Areas/Auth/Scripts/js/jquery-library-1.0.7.js"
             ));
+
             #endregion
             #endregion
 
@@ -99,6 +103,27 @@ namespace idn.AnPhu.Website
 
             BundleTable.EnableOptimizations = false;
             //BundleTable.EnableOptimizations = true;
+
+
+
+            // ==================================================
+
+
+            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                        "~/Scripts/jquery-{version}.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                        "~/Scripts/jquery-ui-{version}.js", "~/Scripts/jquery.form-{version}.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                        "~/Scripts/jquery.validate*"));
+
+            // Use the development version of Modernizr to develop with and learn from. Then, when you're
+            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
+            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+                        "~/Scripts/modernizr-*"));
+
+
         }
     }
 }

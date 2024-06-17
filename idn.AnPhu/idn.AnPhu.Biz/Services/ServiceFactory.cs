@@ -21,6 +21,7 @@ namespace idn.AnPhu.Biz.Services
             services.Add(typeof(ProductPropertyManager), new ProductPropertyManager(new ProductPropertyProvider()));
             services.Add(typeof(ProductReviewManager), new ProductReviewManager(new AnPhu.Biz.Persistance.SqlServer.ProductReviewProvider()));
             services.Add(typeof(AppDicDomainManager), new AppDicDomainManager(new AnPhu.Biz.Persistance.SqlServer.AppDicDomainProvider()));
+            services.Add(typeof(ProductManager), new ProductManager(new idn.AnPhu.Biz.Persistance.SqlServer.ProductProvider()));
             #endregion
         }
 

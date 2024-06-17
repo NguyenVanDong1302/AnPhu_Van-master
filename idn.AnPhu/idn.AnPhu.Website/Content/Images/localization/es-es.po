@@ -1,0 +1,1091 @@
+﻿# Nearforums PO file - es-ES
+# PO File format: http://www.gnu.org/s/hello/manual/gettext/PO-Files.html
+# This file is distributed under the MIT license: http://nearforums.codeplex.com/license
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Admin Dashboard"
+msgstr "Panel de administración"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Forums"
+msgstr "Foros"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Moderation"
+msgstr "Moderación"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage forums"
+msgstr "Gestionar foros"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Add / edit / delete forums."
+msgstr "Añadir / editar / borrar foros."
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Unanswered threads"
+msgstr "Temas sin respuesta"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "View unanswered threads from all forums."
+msgstr "Ver temas sin respuesta de todos los foros."
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Flagged messages"
+msgstr "Mensajes inadecuados"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage all flagged messages."
+msgstr "Gestionar los mensajes marcados como inadecuados."
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage users"
+msgstr "Administrar usuarios"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Promote, demote and delete forum users."
+msgstr "Promover, degradar y eliminar usuarios del foro."
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Administration"
+msgstr "Administración"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage pages"
+msgstr "Gestionar páginas"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage content pages like about / privacy / ..."
+msgstr "Administrar las páginas de contenido (Acerca de, Privacidad, ...)"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage templates"
+msgstr "Templates: Administrar plantillas"
+
+#: Portal.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage the site templates for the forum."
+msgstr "Administrar las plantillas de sitio."
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in"
+msgstr "Login"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in using your existing account"
+msgstr "Inicia sesión con tu cuenta"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in with your Facebook account"
+msgstr "Inicia sesión con tu cuenta de Facebook"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "You should be entering the same email address and password that you would use to log into Facebook homepage. Facebook will not share your password with us."
+msgstr "Utiliza tus datos de acceso de Facebook. Facebook no compartirá tu contraseña con nosotros."
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in with your Twitter account"
+msgstr "Inicia sesión con tu cuenta de Twitter"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "You should be entering your twitter username and password at twitter.com website to login on the forums. Twitter will not share your password with us."
+msgstr "Utiliza tus datos de acceso de Twitter. Facebook no compartirá tu contraseña con nosotros."
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in with your site credentials"
+msgstr "Iniciar sesión con las credenciales de este	sitio"
+
+#: Portal.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Login"
+msgstr "Login"
+
+#: Portal.Web.Output\Views\Authentication\NotAuthorized.cshtml
+msgid "Access denied"
+msgstr "Acceso denegado"
+
+#: Portal.Web.Output\Views\Authentication\NotAuthorized.cshtml
+msgid "You must belong to the role {0} to perform this action."
+msgstr "Debes ser un usuario del rol {0} para realizar esta acción."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Change Password"
+msgstr "Cambiar contraseña"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Please check the following errors:"
+msgstr "Por favor, consulta los siguientes errores:"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "You must specify your current password."
+msgstr "Debes especificar la contraseña actual."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Your current password does not match."
+msgstr "Tu contraseña actual no coincide."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "You must specify a new password of {0} or more characters."
+msgstr "Debes especificar una nueva contraseña de caracteres {0} o más."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "The new password and confirmation password do not match."
+msgstr "La nueva contraseña y la confirmación de la contraseña no coinciden."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Use the form below to change your password"
+msgstr "Utiliza el siguiente formulario para cambiar su contraseña"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Current password"
+msgstr "Contraseña actual"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "New password"
+msgstr "Nueva contraseña"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "New passwords are required to be a minimum of {0} characters in length."
+msgstr "Las contraseñas deben tener un mínimo de {0} caracteres."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Confirm new password"
+msgstr "Confirmar nueva contraseña"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePasswordSuccess.cshtml
+msgid "Your password has been changed successfully."
+msgstr "Su contraseña ha sido cambiada con éxito."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ChangePasswordSuccess.cshtml
+msgid "Back to my account >>"
+msgstr "Volver a Mi cuenta>>"
+
+#: \Portal.Web.Output\Views\FormsAuthentication\Login.cshtml
+msgid "The username or password provided is incorrect."
+msgstr "El nombre de usuario o contraseña no son correctos."
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Enter your username and password. <br />Don't have an account?"
+msgstr "Introduce tu nombre de usuario y contraseña. <br /> ¿Todavía no tienes una cuenta?"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Create one"
+msgstr "Crea tu cuenta ahora"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Password"
+msgstr "Contraseña"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Remember me"
+msgstr "Recordar"
+
+#: Portal.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Forgot your password?"
+msgstr "¿Has olvidado tu contraseña?"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Register"
+msgstr "Registrar"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Email must not be blank."
+msgstr "El correo electrónico no debe estar en blanco."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Email format is not valid."
+msgstr "Formato de correo electrónico no es válido."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "A user account already exists for the email address you entered."
+msgstr "Una cuenta de usuario ya existe para la dirección de correo indicada."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Username must not be blank."
+msgstr "Nombre de usuario no debe estar en blanco."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Username format is not valid."
+msgstr "El formato del campo nombre de usuario no es válido."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Username already in use"
+msgstr "Nombre de usuario ya está en uso"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Password must not be blank."
+msgstr "La contraseña no debe estar en blanco."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Password format is not valid."
+msgstr "Formato de del campo contraseña no es válido."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Password does not match the confirm password."
+msgstr "La contraseña no coincide con la contraseña de confirmación."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Use the form below to create a new account"
+msgstr "Utiliza el siguiente formulario para crear una cuenta nueva"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Passwords are required to be a minimum of {0} characters in length."
+msgstr "Las contraseñas deben tener un mínimo de {0} caracteres."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Confirm Password"
+msgstr "Confirmar contraseña"
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "I agree with the Terms and Conditions set forth by the Site Owner."
+msgstr "Estoy de acuerdo con los términos y condiciones establecidos por el propietario del sitio."
+
+#: Portal.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Create a new account"
+msgstr "Crear una nueva cuenta de usuario"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "Reset Password"
+msgstr "Restablecer contraseña"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "There is no account associated with the provided email address."
+msgstr "No hay ninguna cuenta asociada a la dirección de correo electrónico."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "Provide your email. A link will be sent to your email so that you can reset your password."
+msgstr "Introduzca su correo electrónico. Un enlace será enviada a su correo electrónico para que pueda restablecer su contraseña."
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "Submit"
+msgstr "Enviar"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPasswordEmailConfirmation.cshtml
+msgid "Email Sent"
+msgstr "Hemos enviado un correo a su cuenta de email"
+
+#: Portal.Web.Output\Views\FormsAuthentication\ResetPasswordEmailConfirmation.cshtml
+msgid "Instructions about how to reset your password were sent to your email."
+msgstr "Instrucciones acerca de cómo restablecer su contraseña fueron enviados a su correo electrónico."
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "{0} - Most viewed"
+msgstr "{0} - Más visitados"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "{0} - Latest activity"
+msgstr "{0} - Más recientes"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "No threads for this forum."
+msgstr "No hay temas en este foro."
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "Previous"
+msgstr "Anterior"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "Next"
+msgstr "Siguiente"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "Post a thread >>"
+msgstr "Publicar un nuevo tema >>"
+
+#: Portal.Web.Output\Views\Forums\Detail.cshtml
+msgid "Edit"
+msgstr "Editar"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Edit forum"
+msgstr "Editar foro"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Create a forum"
+msgstr "Crear un foro"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Admin"
+msgstr "Administración"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Description must not be blank."
+msgstr "La descripción no debe estar en blanco."
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Forum name must not be blank."
+msgstr "El nombre del foro no debe estar en blanco."
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Category must not be blank."
+msgstr "La categoría no debe estar en blanco."
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Name"
+msgstr "Nombre"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Category"
+msgstr "Categoría"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "-Select a Category-"
+msgstr "-Selecciona una categoría-"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Message"
+msgstr "Mensaje"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Send"
+msgstr "Enviar"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "The role required to post should be greater than the required to read."
+msgstr "El rol requerido para publicar debe ser un rol superior al de lectura."
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Read access"
+msgstr "Acceso de lectura"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Everybody"
+msgstr "Todos"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Access to post a new thread"
+msgstr "Acceso a publicar un nuevo tema"
+
+#: Portal.Web.Output\Views\Forums\Edit.cshtml
+msgid "Notice that roles are hierarchical"
+msgstr "Tenga en cuenta que los roles son jerárquicos"
+
+#: Portal.Web.Output\Views\Forums\ForumOptions.cshtml
+msgid "Most viewed threads"
+msgstr "Más visitados"
+
+#: Portal.Web.Output\Views\Forums\ForumOptions.cshtml
+msgid "Latest activity"
+msgstr "Más recientes"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Title"
+msgstr "Asunto"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Replies"
+msgstr "Respuestas"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Views"
+msgstr "Visitas"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Last post"
+msgstr "Último mensaje"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "by"
+msgstr "por"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "{0} <span class=\"label\">replies</span>"
+msgstr "{0} <span class=\"label\">respuestas</span>"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "1 <span class=\"label\">reply</span>"
+msgstr "1 <span class=\"label\">respuesta</span>"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml, Portal.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "{0} <span class=\"label\">views</span>"
+msgstr "{0} <span class=\"label\">visitas</span>"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml, Portal.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "1 <span class=\"label\">view</span>"
+msgstr "1 <span class=\"label\">visita</span>"
+
+#: Portal.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "No posts"
+msgstr "Ningún mensaje"
+
+#: Portal.Web.Output\Views\Forums\LatestAllTopics.cshtml
+msgid "Latest threads on all forums"
+msgstr "Temas mas recientes en todos los foros"
+
+#: Portal.Web.Output\Views\Forums\LatestAllTopics.cshtml
+msgid "Latest threads on all forums at {0}"
+msgstr "Temas más recientes en todos los foros - {0}"
+
+#: Portal.Web.Output\Views\Forums\LatestTopicsRss.cshtml
+msgid "Latest threads on '{0}' forum"
+msgstr "Temas más recientes en el foro '{0}'"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Forum"
+msgstr "Foro"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Topics"
+msgstr "Temas"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Posts"
+msgstr "Mensajes"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "threads"
+msgstr "temas"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "thread"
+msgstr "tema"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "posts"
+msgstr "mensajes"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "post"
+msgstr "mensaje"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "No forums found."
+msgstr "No hay ningún foro."
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Welcome to Nearforums!"
+msgstr "Bienvenido a Nearforums!"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "You've successfully setup your Nearforums site"
+msgstr "Has instalado Nearforums correctamente"
+
+#: Portal.Web.Output\Views\Forums\List.cshtml
+msgid "Here are a few things you can do to get started"
+msgstr "Hay aquí algunas cosas que podrás hacer para empezar"
+
+#: Portal.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "Unanswered Threads"
+msgstr "Temas sin respuestas"
+
+#: Portal.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "No unanswered threads, for now :)"
+msgstr "No hay temas sin respuesta, por ahora:)"
+
+#: Portal.Web.Output\Views\Forums\ListUnansweredTopics.cshtml
+msgid "{0} - Unanswered threads"
+msgstr "{0} - Sin respuesta"
+
+#: Portal.Web.Output\Views\Forums\ListUnansweredTopics.cshtml
+msgid "No unanswered threads for this forum."
+msgstr "No hay temas sin respuesta en este foro."
+
+#: Portal.Web.Output\Views\Forums\Manage.cshtml
+msgid "Delete"
+msgstr "Suprimir"
+
+#: Portal.Web.Output\Views\Forums\Manage.cshtml
+msgid "Create a new forum >>"
+msgstr "Crear un nuevo foro >>"
+
+#: Portal.Web.Output\Views\Forums\Manage.cshtml
+msgid "Are you sure you want to delete this forum?.\\nAll threads and posts of this forum will not be accessible."
+msgstr "¿Estás seguro que desea eliminar este foro?\\nTodos los temas y los mensajes de este foro no serán accesibles."
+
+#: Portal.Web.Output\Views\Forums\TagDetail.cshtml
+msgid "Threads tagged \"{0}\""
+msgstr "Temas \"{0}\""
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "remove"
+msgstr "eliminar"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "clear flags"
+msgstr "quitar marcas"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "Are you sure you want to clear all flags from the message?"
+msgstr "¿Está seguro que desea quitar todas las marcas al mensaje?"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "Are you sure you want to hide the message #{0}?"
+msgstr "¿Está seguro que desea ocultar el mensaje #{0}?"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "Message removed"
+msgstr "Mensaje eliminado"
+
+#: Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "No flagged messages found."
+msgstr "No se han encontrado mensajes marcados como inadecuado."
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Edit page"
+msgstr "Editar página"
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Create a new content page"
+msgstr "Crear una nueva página de contenido"
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Pages"
+msgstr "Páginas"
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Page title must not be blank."
+msgstr "El título de la página no debe estar en blanco."
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Page content must not be blank."
+msgstr "El contenido de la página no debe estar en blanco."
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Page title"
+msgstr "Título"
+
+#: Portal.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Content of the page"
+msgstr "Contenido"
+
+#: Portal.Web.Output\Views\PageContents\List.cshtml
+msgid "Content Pages"
+msgstr "Páginas de Contenido"
+
+#: Portal.Web.Output\Views\PageContents\List.cshtml
+msgid "Create a new content page >>"
+msgstr "Crear una nueva página de contenido >>"
+
+#: Portal.Web.Output\Views\PageContents\List.cshtml
+msgid "Are you sure you want to delete the page {0}?"
+msgstr "¿Está seguro que desea eliminar la página {0}?"
+
+#: Portal.Web.Output\Views\Shared\ButtonFacebook.cshtml
+msgid "Login using Facebook"
+msgstr "Iniciar sesión con Facebook"
+
+#: Portal.Web.Output\Views\Shared\ButtonTwitter.cshtml
+msgid "Login using Twitter"
+msgstr "Iniciar sesión con Twitter"
+
+#: Portal.Web.Output\Views\Shared\FooterContent.cshtml
+msgid "About"
+msgstr "Acerca de"
+
+#: Portal.Web.Output\Views\Shared\FooterContent.cshtml
+msgid "Terms and conditions"
+msgstr "Términos y condiciones"
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml, Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Member for:"
+msgstr "Miembro por:"
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml
+msgid "The message was removed by a forum moderator."
+msgstr "El mensaje fue eliminado por un moderador del foro."
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml
+msgid "link"
+msgstr "enlace"
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml, Portal.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "reply"
+msgstr "responder"
+
+#: Portal.Web.Output\Views\Shared\MessageItem.cshtml
+msgid "flag"
+msgstr "marcar como inapropiado"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "years"
+msgstr "años"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "year"
+msgstr "año"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "months"
+msgstr "meses"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "month"
+msgstr "mes"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "days"
+msgstr "días"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "day"
+msgstr "día"
+
+#: Portal.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "Less than a day"
+msgstr "Menos de un día"
+
+#: Portal.Web.Output\Views\Shared\TagCloud.cshtml
+msgid "Browse by tags"
+msgstr "Navegar por tags"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Go to content"
+msgstr "Ir al contenido"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Sign In"
+msgstr "Login"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Admin dashboard"
+msgstr "Panel de administración"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Account"
+msgstr "Cuenta"
+
+#: Portal.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: Portal.Web.Output\Views\Shared\Errors\403.cshtml
+msgid "Forbidden"
+msgstr "Acceso prohibido"
+
+#: Portal.Web.Output\Views\Shared\Errors\403.cshtml
+msgid "The page you requested is forbidden."
+msgstr "El acceso a la página solicitada está prohibido."
+
+#: Portal.Web.Output\Views\Shared\Errors\404.cshtml
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#: Portal.Web.Output\Views\Shared\Errors\404.cshtml
+msgid "The page you requested was not found."
+msgstr "La página solicitada no se encuentra."
+
+#: Portal.Web.Output\Views\Shared\Errors\500.cshtml
+msgid "An error occurred while processing your request"
+msgstr "Ha ocurrido un error al procesar su solicitud"
+
+#: Portal.Web.Output\Views\Shared\Errors\500.cshtml
+msgid "An error occurred"
+msgstr "Ha ocurrido un error"
+
+#: Portal.Web.Output\Views\Shared\Errors\500.cshtml
+msgid "An error occurred on the server when processing your request. <br />The error detail was sent to our support team.<br />Sorry for the inconvenience."
+msgstr "Se produjo un error en el servidor al procesar la petición. <br /> El detalle de error fue enviado a nuestro equipo de soporte. <br /> Disculpa las molestias."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Add Template"
+msgstr "Añadir template"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Templates"
+msgstr "Templates"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "The application does not have file Write access on the server's template folder."
+msgstr "La aplicación no tiene acceso de escritura en carpeta de Templates del servidor."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "File format is invalid. Please include only the allowed files."
+msgstr "El formato de archivo no es válido. Por favor, incluya sólo los ficheros permitidos."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "File must not be blank."
+msgstr "El archivo no debe estar en blanco."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "File size is larger than the maximum size supported (3Mb)."
+msgstr "El tamaño del archivo es superior al tamaño máximo permitido (3 Mb)."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "You can not replace the active template."
+msgstr "No se puede reemplazar el template activo."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "The html template file does not contain the required placeholders: headcontainer and bodycontainer"
+msgstr "El archivo HTML no contiene los marcadores de posición requeridos: headcontainer y bodycontainer"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Template key format is not valid. Include a-z 0-9 and up to 64 characters."
+msgstr "El nombre del template no es válido. Solo a-z 0-9 y hasta 64 caracteres."
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Template File (.zip)"
+msgstr "Archivo de template (.zip)"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Comments"
+msgstr "Comentarios"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Use default name"
+msgstr "Usar el nombre por defecto"
+
+#: Portal.Web.Output\Views\Templates\Add.cshtml
+msgid "Name / Key"
+msgstr "Nombre (Identificador)"
+
+#: Portal.Web.Output\Views\Templates\AddDefaultTemplates.cshtml
+msgid "Load default templates"
+msgstr "Cargar los templates por defecto"
+
+#: Portal.Web.Output\Views\Templates\AddDefaultTemplates.cshtml
+msgid "{0} templates loaded."
+msgstr "{0} templates cargados."
+
+#: Portal.Web.Output\Views\Templates\AddDefaultTemplates.cshtml
+msgid "Continue >>"
+msgstr "Continuar >>"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "You cannot delete the current template."
+msgstr "No se puede eliminar el template activo."
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "The application does not have the necessary file read/write access."
+msgstr "La aplicación no tiene los permisos necesarios de lectura / escritura en el servidor."
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Activate"
+msgstr "Activar"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Preview"
+msgstr "Vista previa"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Active"
+msgstr "Activo"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Export"
+msgstr "Exportar"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Remove"
+msgstr "Eliminar"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "No templates found."
+msgstr "No hay templates instalados."
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Do you want to load the default templates?"
+msgstr "¿Desea cargar los templates por defecto?"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "How to create a custom template"
+msgstr "Cómo crear un nuevo template"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Upload a new template >>"
+msgstr "Subir un nuevo template >>"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Templating feature is <strong>disabled</strong> by configuration."
+msgstr "La funcionalidad de Templating está <strong>deshabilitada</strong> por configuración."
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Are you sure you want to REMOVE this template?.\\nthis action is not reversible."
+msgstr "¿Está seguro que desea ELIMINAR este template? \\nEsta acción no es reversible"
+
+#: Portal.Web.Output\Views\Templates\List.cshtml
+msgid "Are you sure you want to activate this template?"
+msgstr "¿Está seguro que desea activar este template?"
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "Posted by"
+msgstr "Por"
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "Displaying <span class=\"firstItem\">{0}</span> to <span class=\"lastItem\">{1}</span> of <span class=\"totalItems\">{2}</span> messages"
+msgstr "<span class=\"firstItem\">{0}</span> a <span class=\"lastItem\">{1}</span> de <span class=\"totalItems\">{2}</span> mensajes"
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "Show more messages"
+msgstr "Mostrar más mensajes"
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "Thanks you, a moderator will review the message."
+msgstr "Gracias, un moderador revisará el mensaje."
+
+#: Portal.Web.Output\Views\Topics\Detail.cshtml
+msgid "The browser has lost session, click ok to return to the login page"
+msgstr "El navegador a perdido la sesión, haz clic en OK para ir a la página de login"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Edit thread"
+msgstr "Editar tema"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Post new thread"
+msgstr "Nuevo tema"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Thread message must not be blank."
+msgstr "El mensaje no puede estar vacío."
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Tags must not be blank, separated by spaces and must not contain special characters. The maximum number of tags allowed is 6."
+msgstr "Las etiquetas no deben estar en blanco. Deben estar separadas por espacios y no debe contener caracteres especiales. El número máximo de etiquetas permitidas es de 6"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Subject must not be blank."
+msgstr "El asunto no puede estar vacío"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Email must not be blank in order to notify of new posts."
+msgstr "El correo electrónico no debe estar en blanco a fin de notificar de nuevos mensajes."
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Fill in the fields and submit"
+msgstr "Rellena los campos del formulario"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Subject"
+msgstr "Asunto"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Tags"
+msgstr "Tags"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Separated by spaces"
+msgstr "separados por espacios"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Type the text shown in the image"
+msgstr "Escriba el texto mostrado en la imagen"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Sticky thread?"
+msgstr "Sticky?"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Notify me of new posts on this thread via email"
+msgstr "Notificarme de nuevos mensajes en este tema a través de correo electrónico"
+
+#: Portal.Web.Output\Views\Topics\Edit.cshtml
+msgid "Access to post a message in this thread"
+msgstr ""
+
+#: Portal.Web.Output\Views\Topics\LatestMessages.cshtml
+msgid "Latest messages on &apos;{0}&apos; thread"
+msgstr "Mensajes mas recientes en el tema &apos;{0}&apos;"
+
+#: Portal.Web.Output\Views\Topics\Move.cshtml
+msgid "Move thread \"{0}\" to another forum"
+msgstr "Mover tema \"{0}\" a otro foro"
+
+#: Portal.Web.Output\Views\Topics\Move.cshtml
+msgid "Select the destination forum"
+msgstr "Seleccionar el foro de destino"
+
+#: Portal.Web.Output\Views\Topics\Related.cshtml
+msgid "Related threads"
+msgstr "Temas relacionados"
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Reply"
+msgstr "Responder"
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Body must not be blank."
+msgstr "El cuerpo del mensaje no debe estar en blanco."
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Captcha must not be blank."
+msgstr "Codigo de seguridad no debe estar en blanco."
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Captcha does not match the image value. Please retry."
+msgstr "Codigo de seguridad no coincide con el valor de la imagen. Por favor, inténtelo de nuevo."
+
+#: Portal.Web.Output\Views\Messages\Edit.cshtml
+msgid "Description"
+msgstr "Descripción"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Show all messages"
+msgstr "Mostrar todos los mensajes"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Print"
+msgstr "Imprimir"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Move thread"
+msgstr "Mover tema"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Close"
+msgstr "Cerrar"
+
+#: Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Open to replies"
+msgstr "Abrir tema a nuevas respuestas"
+
+#: \Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Are you sure you want to DELETE this thread?"
+msgstr "¿Estás seguro que deseas ELIMINAR este tema?"
+
+#: \Portal.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Are you sure you want to CLOSE this thread for further replies?"
+msgstr "¿Estás seguro que deseas CERRAR este tema para nuevos mensajes?"
+
+#: Portal.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "Unsubscribe"
+msgstr "Cancelar la suscripción"
+
+#: Portal.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "Unsubscribed from the thread"
+msgstr "Cancelar la suscripción"
+
+#: Portal.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "You have been unsubscribed from the thread {0}."
+msgstr "Te has desuscrito del tema {0}."
+
+#: Portal.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "Thank you."
+msgstr "Gracias."
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "{0} profile"
+msgstr "Perfil de {0}"
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Role"
+msgstr "Rol"
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Messages posted by {0}"
+msgstr "Mensajes enviados por {0}"
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Get all messages posted by {0}"
+msgstr "Obtener todos los mensajes publicados por {0}"
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Loading..."
+msgstr "Cargando..."
+
+#: Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "No messages found."
+msgstr "No se han encontrado mensajes"
+
+#: \Portal.Web.Output\Views\Users\Detail.cshtml
+msgid "Threads posted by {0}"
+msgstr "Temas enviados por {0}"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Email format is invalid."
+msgstr "El formato de correo electrónico no es válido."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Website url format is invalid."
+msgstr "El formato de URL del sitio web no es válido."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Photo url format is invalid."
+msgstr "Formato de la url foto no es válido."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Username is required."
+msgstr "Nombre de usuario es requerido."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Change your account information"
+msgstr "Cambiar los datos de tu cuenta"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Public name"
+msgstr "Nombre público"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Birthdate"
+msgstr "Fecha de Nacimiento"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Photo url"
+msgstr "URL de la foto"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Profile image"
+msgstr "Imagen del perfil de usuario"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Website"
+msgstr "Sitio Web"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Your email will not be shared with anyone. We will not make a different use than detailed below."
+msgstr "Tu dirección de correo electrónico no será compartida con ninguna web o empresa externa. No vamos a hacer un uso diferente a la detallada a continuación."
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Email address"
+msgstr "Dirección de email"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Use my email to notify me of replies to threads I subscribed to"
+msgstr "Enviadme correo electrónicos para notificarme acerca de nuevos mensajes sobre los temas que me he suscrito"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "Send me a newsletter"
+msgstr "Enviadme la newsletter"
+
+#: Portal.Web.Output\Views\Users\Edit.cshtml
+msgid "To edit your account settings, click here"
+msgstr "Para editar los datos de tu cuenta, haz clic aquí"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "User name"
+msgstr "Nombre de usuario"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Search"
+msgstr "Buscar"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Action"
+msgstr "Acción"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Registration date"
+msgstr "Fecha de alta"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Promote"
+msgstr "Promover"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Demote"
+msgstr "Degradar"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Are you sure you want to DELETE the user {0}?"
+msgstr "¿Está seguro que desea eliminar el usuario {0}?"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Are you sure you want to Promote the user {0}?"
+msgstr "¿Está seguro que desea Promover el usuario {0}?"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "Are you sure you want to Demote the user {0}?"
+msgstr "¿Está seguro que desea degradar el usuario {0}?"
+
+#: Portal.Web.Output\Views\Users\List.cshtml
+msgid "No user found for the username &quot;{0}&quot;."
+msgstr "No se han encontrado usuarios que concuerden con el nombre &quot;{0}&quot;."

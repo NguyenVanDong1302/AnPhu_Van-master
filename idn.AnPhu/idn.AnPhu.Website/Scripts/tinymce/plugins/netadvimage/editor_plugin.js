@@ -11,10 +11,9 @@
 (function () {
     tinymce.create('tinymce.plugins.NetAdvImagePlugin', {
         init: function (ed, url) {
-            debugger;
             // Register commands
             ed.addCommand('mceNetAdvImage', function () {
-                debugger;
+
                 // Internal image object like a flash placeholder
                 if (ed.dom.getAttrib(ed.selection.getNode(), 'class').indexOf('mceItem') != -1)
                     return;
@@ -31,10 +30,10 @@
                   });
 
 
-            ed.addCommand('mceNetAdvImagePickup', function (b, txtId) {
-                debugger;
+                  ed.addCommand('mceNetAdvImagePickup', function (b, txtId) {
+
                   	// Internal image object like a flash placeholder
-                //url = url.replace('/Areas/Auth', '/vi/Areas/Auth');
+                  	
 
                   	ed.windowManager.open({
                   		file: url + '/pickup?txtId='+txtId,
