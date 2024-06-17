@@ -1,0 +1,754 @@
+﻿
+
+@using System.Configuration
+@using idn.AnPhu.Biz.Services
+@{
+    Layout = null;
+    //var products = idn.AnPhu.Biz.Services.ServiceFactory.ProductCategoryManager.ListAllProductCategory(Culture);
+    //var listprall = idn.AnPhu.Biz.Services.ServiceFactory.ProductManager.ProductGetAllActive(Culture);
+
+    //var news = idn.AnPhu.Biz.Services.ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
+
+    //var services = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("dich-vu", Culture);
+    //var support = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("chinh-sach-va-quy-dinh", Culture);
+    //var buycar = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("mua-xe", Culture);
+
+    //var about = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("ve-cong-ty", Culture);
+
+
+    //var companyinfo = ServiceFactory.CompanyManager.Get(new Company { CompanyId = 1 });
+    //var adpop = ServiceFactory.AdPopCenterManager.Get(new AdPopCenter { AdCenterId = 1 });
+    //var adleft = ServiceFactory.AdBannerLeftManager.Get(new AdBannerLeft { AdLeftId = 1 });
+    //var adright = ServiceFactory.AdBannerRightManager.Get(new AdBannerRight { AdRightId = 1 });
+}
+
+
+<style>
+    .support-icon-right {
+        background: #F0F3EF;
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 100000;
+        overflow: hidden;
+        width: 250px;
+        color: #fff !important;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+        .support-icon-right h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px !important;
+            font-family: Arial;
+            color: #fff !important;
+            margin: 0 !important;
+            background-color: #3c599f;
+            cursor: pointer;
+        }
+
+        .support-icon-right i {
+            background-color: #D9534F;
+            padding: 15px 15px 12px 15px;
+            margin-right: 20px;
+        }
+</style>
+
+<link href="~/Content/test-drive.css" rel="stylesheet" />
+<script>
+    jQuery(document).ready(function ($) {
+        var h3height = $(".support-icon-right h3").height();
+        $(".support-icon-right h3").click(function () {
+            $('.online-support').toggle('slow');
+            var onlineSupport = $('.online-support').height();
+            if (onlineSupport < 2) {
+                $("#calltrap-btn").animate({ bottom: h3height + 10 + 300 }, 600);
+                $(".tooltiptext").animate({ bottom: h3height + 30 + 300 }, 600);
+            } else {
+                $("#calltrap-btn").animate({ bottom: h3height + 10 }, 600);
+                $(".tooltiptext").animate({ bottom: h3height + 30 }, 600);
+            }
+        });
+    });
+</script>
+<div class="support-icon-right">
+    <div id="wheel" style="">
+        <a id="calltrap-btn" class="b-calltrap-btn calltrap_offline hidden-phone visible-tablet fancybox fancybox.ajax" href="/vi/dang-ky-lai-thu">
+            <div id="calltrap-ico"></div>
+            <span class="tooltiptext" style="">ĐĂNG KÝ LÁI THỬ NGAY!</span>
+        </a>
+    </div>
+    <h3><i class="fa fa-hand-o-right"></i>Chat Live Facebook</h3>
+    <div class="online-support" style="display: none">
+        <div class="fb-page" data-href="https://www.facebook.com/hyundaicaudien.vn/" data-small-header="true" data-height="300" data-width="250" data-tabs="messages" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false" data-show-posts="false">
+        </div>
+    </div>
+</div>
+<div class="footer col-xs-12 col-md-12  " style=" background-color:#f2f3f3;font-family: ModernHBold;">
+    <div class="container ">
+
+
+        <div class=" copyright col-sm-12 no-padding container">
+
+
+            <div class="col-sm-4 no-padding margin-top-footer" id="anim10">
+
+                <div class=" col-md-12 no-padding hidden-xs hidden-sm">
+
+                    <div class=" col-xs-12 no-padding" style="padding-bottom:25px">
+                        @*<img  src="/images/logo-hyundai.png" alt="Trang chủ" style="margin-left: 0px; text-align:center"  >*@
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="col-sm-12  padding-top-footer1" style="padding:0;">
+
+
+
+                    <div class="col-sm-12 col-xs-12" style="padding:0;">
+
+                        <div class=" col-xs-1 no-padding">
+                            <img src="~/Images/forma-footer1.png" />
+                        </div>
+                        <h1 class="col-xs-11" style="font-size:13px; margin-left:-5px">
+                            <a href="/vi/lien-he" style="color: #333">Showroom: Ô số 2, lô 1, cụm CN Lai Xá, Kim Chung, Hoài Đức, Hà Nội.</a>
+                        </h1>
+                        @*<div class=" col-xs-1 no-padding">
+                                <img src="~/Images/forma-footer3.png" />
+                            </div>
+                            <h1 class="col-xs-11" style="font-size:13px; margin-left:-5px">
+                                SR1: 0942 661 366
+                            </h1>*@
+                    </div>
+
+
+
+
+
+
+                    <div class="col-sm-12 col-xs-12 " style="padding:0;">
+                        <div class="col-xs-1 no-padding ">
+                            <img src="~/Images/forma-footer2.png" />
+                        </div>
+                        <h1 class="col-xs-10  " style="font-size:13px; margin-left:-5px">
+                            cskh@hyundaicaudien.vn
+                        </h1>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 " style="padding:0;">
+                        <div class="col-xs-1 no-padding ">
+                            <img src="~/Images/forma-footer3.png" />
+                        </div>
+                        <h1 class="col-xs-10  " style="font-size:13px; margin-left:-5px">
+                            Hotline đặt hẹn: 02432232583
+                        </h1>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 " style="padding:0;">
+                        <div class="col-xs-1 no-padding ">
+                            <img src="~/Images/icon_clock.jpg" style="width: 15px; height: 15px" />
+                        </div>
+                        <h1 class="col-xs-10  " style="font-size:13px; margin-left:-5px">
+                            Giờ làm việc: 8h AM - 5h30 PM
+                        </h1>
+                    </div>
+
+
+
+
+
+
+
+                    <!--<div class="col-sm-12 col-xs-12" style="padding:0">
+                    <div class=" col-xs-1 no-padding">
+                    <img src="~/Images/forma-footer3.png" />
+                    </div>
+                    <h1 class="col-xs-5 " style="font-size:13px; margin-left:-5px">
+                        SR1: 0942 661 366
+                    </h1>
+
+                     <div class=" col-xs-1 no-padding">
+                    <img src="~/Images/forma-footer3.png" />
+                    </div>
+                    <h1 class="col-xs-5 " style="font-size:13px; margin-left:-5px">
+                        SR2: 0948 080 066
+                    </h1>
+                         </div>-->
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+            <div class="col-sm-8 margin-bottom-footer no-padding" id="anim14">
+
+                <div class="col-md-4 footermenu hidden-xs hidden-sm  " style="margin-left: 0px;margin-top: 0px;padding-right:0px">
+                    <div class="col-xs-12 padding-foot">
+                        <div class="title"> Sản Phẩm</div>
+                        <div class="col-xs-9" style="border-bottom:1px solid #a6a6a6; margin-bottom:20px;">
+                        </div>
+                        @*<ul>
+                            @if (products.Count > 0)
+                            {
+
+                                foreach (ProductCategory item in products)
+                                {
+                                    <li>
+                                        <a class="hvr-buzz-out col-xs-12 no-padding " onclick="showmenu(true)">
+                                            <h5 id="prdname" class="abc">@item.PrdCategoryTitle</h5>
+                                        </a>
+                                    </li>
+                                }
+
+                            }
+                        </ul>*@
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 footermenu hidden-xs hidden-sm ">
+                    <div class="col-xs-12 padding-foot">
+                        <div class="title">Dịch vụ</div>
+                        <div class="col-xs-9" style="border-bottom:1px solid #a6a6a6; margin-bottom:20px;">
+                        </div>
+                        @*<ul>
+                            @if (services.Count > 0)
+                            {
+                                foreach (HtmlPageCategory item in services)
+                                {
+
+                                    var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
+                                    if (listhtmlpage != null)
+                                    {
+                                        var n = 1;
+                                        foreach (HtmlPage item1 in listhtmlpage)
+                                        {
+                                            if (n == 1)
+                                            {
+                                                <li>
+                                                    <a class="hvr-buzz-out col-xs-12 no-padding" href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName,htmlpageid = item1.HtmlPageId})">
+                                                        <h5>@item.HtmlPageCategoryTitle</h5>
+                                                    </a>
+                                                </li>
+                                            }
+                                            n++;
+                                        }
+                                    }
+                                }
+
+                            }
+                        </ul>*@
+                    </div>
+                </div>
+
+
+                <div class="col-xs-4 footermenu my-foot hidden-xs hidden-sm ">
+                    <div class="col-xs-12 padding-foot">
+                        <div class="title">Mua Xe</div>
+                        <div class="col-xs-12" style="border-bottom:1px solid #a6a6a6; margin-bottom:20px;">
+                        </div>
+                        <ul>
+                            <li>
+                                <a class="hvr-buzz-out col-xs-12 no-padding" href="@Url.Action("BuyCar", "ProductAction")">
+                                    <h5> Giá xe</h5>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="hvr-buzz-out col-xs-12 no-padding" href="@Url.Action("Register", "ProductAction")">
+                                    <h5>Đăng ký lái thử</h5>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="hvr-buzz-out col-xs-12 no-padding" href="@Url.Action("SupportBuyCar", "ProductAction")">
+                                    <h5>Hỗ trợ trả góp</h5>
+                                </a>
+                            </li>
+                            @* <li>
+                                    <a href="@Url.Action("Guide", "ProductAction")">
+                                        <h5>Hướng dẫn thủ tục</h5>
+                                    </a>
+                                </li>*@
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+            @*  <div class="col-xs-3  col-sm-2 footermenu" style="margin-left: 0px;margin-top: 0px;">
+                    <div class="title">Tin tức</div>
+                     <ul>
+                        @if (news != null)
+                        {
+                            foreach (NewsCategories item in news)
+                            {
+                                <li>
+                                    <a class="hvr-buzz-out" href="@Url.Action("ShowCateNews", "News", new { shortname = item.NewsCategoryShortName })">
+                                        <h5>@item.NewsCategoryTitle</h5>
+                                    </a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+                <div class="col-sm-2 hidden-xs footermenu " style="margin-left: 0px;margin-top: 0px;padding-right:0px">
+                    <div class="title">Về chúng tôi</div>
+                    <ul>
+                        @if (about.Count > 0)
+                        {
+                            foreach (HtmlPageCategory item in about)
+                            {
+
+                                var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
+                                if (listhtmlpage != null)
+                                {
+                                    var n = 1;
+                                    foreach (HtmlPage item1 in listhtmlpage)
+                                    {
+                                        if (n == 1)
+                                        {
+                                            <li>
+                                                <a class="hvr-buzz-out" href="@Url.Action("AboutSub", "HtmlPage", new {HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName,htmlpageid = item1.HtmlPageId})">
+                                                    <h5>@item.HtmlPageCategoryTitle</h5>
+                                                </a>
+                                            </li>
+                                        }
+                                        n++;
+                                    }
+                                }
+                            }
+
+                        }
+
+                    </ul>
+                </div>*@
+
+            @*  <div class="col-xs-3  footermenu " style=" margin-left: 0px;margin-top: 0px; border-bottom:1px solid #cccccc; min-height:35px;font-weight:bolder; padding-bottom:19px; float:right">
+                    <a  href="#" class="col-xs-6 " style=" background:#e5e5e5;font-size:12px;color:#000000; padding-right:0; border-right:3px solid #f4f4f4;padding:10px 0px 10px 13px">
+                       Hyundai Thành Công
+                    </a>
+                    <a href="#" class="col-xs-6 " style="background:#e5e5e5;font-size:12px;color:#000000; padding-right:0;padding:10px 0px 10px 13px">
+                       World Wide Hyundai
+
+                    </a>
+
+
+
+                </div>*@
+
+
+
+
+
+        </div>
+
+
+
+
+        <div class=" col-xs-12  no-padding height-footer1" style="padding:0;">
+
+            <div class=" col-sm-5  hidden-xs no-padding">
+
+
+                <div class="col-md-12 no-padding" style="color:#bfbebe; text-transform:uppercase; font-size:11px; text-align:left ; padding:0">
+                    © Copyright 2016 Hyundai Cầu Diễn All rights Reserved
+                </div>
+
+            </div>
+
+
+            <div class=" col-sm-6  no-padding" style="padding:0">
+                <div class="col-xs-12 no-padding" style="padding:0;">
+
+
+
+                    <div class="col-sm-3  no-padding " style="padding:0;">
+                        <h1 class="count-footer" style="color:#888888; font-size:12px;">
+                            Online:&nbsp
+                            <script language="JavaScript">
+    var fhs = document.createElement('script'); var fhs_id = "5243047";
+                                var ref = ('' + document.referrer + ''); var pn = window.location; var w_h = window.screen.width + " x " + window.screen.height;
+                                fhs.src = "//s1.freehostedscripts.net/ocounter.php?site=" + fhs_id + "&e1=&e2=&r=" + ref + "&wh=" + w_h + "&a=1&pn=" + pn + "";
+                                document.head.appendChild(fhs); document.write("<span id='o_" + fhs_id + "'></span>");
+                            </script>
+
+
+                        </h1>
+                    </div>
+
+
+
+
+
+                    <script>
+                        function GetCookie(name) {
+                            var arg = name + "=";
+                            var alen = arg.length;
+                            var clen = document.cookie.length;
+                            var i = 0;
+                            while (i < clen) {
+                                var j = i + alen;
+                                if (document.cookie.substring(i, j) == arg)
+                                    return getCookieVal(j);
+                                i = document.cookie.indexOf(" ", i) + 1;
+                                if (i == 0) break;
+                            }
+                            return null;
+                        }
+                        function SetCookie(name, value) {
+                            var argv = SetCookie.arguments;
+                            var argc = SetCookie.arguments.length;
+                            var expires = (argc > 2) ? argv[2] : null;
+                            var path = (argc > 3) ? argv[3] : null;
+                            var domain = (argc > 4) ? argv[4] : null;
+                            var secure = (argc > 5) ? argv[5] : false;
+                            document.cookie = name + "=" + escape(value) +
+                                ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+                                ((path == null) ? "" : ("; path=" + path)) +
+                                ((domain == null) ? "" : ("; domain=" + domain)) +
+                                ((secure == true) ? "; secure" : "");
+                        }
+                        function DeleteCookie(name) {
+                            var exp = new Date();
+                            exp.setTime(exp.getTime() - 1);
+                            var cval = GetCookie(name);
+                            document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+                        }
+                        var expDays = 30;
+                        var exp = new Date();
+                        exp.setTime(exp.getTime() + (expDays * 24 * 60 * 60 * 1000));
+                        function amt() {
+                            var count = GetCookie('count')
+                            if (count == null) {
+                                SetCookie('count', '1')
+                                return 1
+                            }
+                            else {
+                                var newcount = parseInt(count) + 1;
+                                DeleteCookie('count')
+                                SetCookie('count', newcount, exp)
+                                return count
+                            }
+                        }
+                        function getCookieVal(offset) {
+                            var endstr = document.cookie.indexOf(";", offset);
+                            if (endstr == -1)
+                                endstr = document.cookie.length;
+                            return unescape(document.cookie.substring(offset, endstr));
+                        }
+                        // End -->
+                    </script>
+
+                    <!-- STEP TWO: Copy this code into the BODY of your HTML document  -->
+                    @*  <h1>Số lượt truy cập hôm nay:&nbsp&nbsp
+                        <script >
+                        <!-- Begin
+                            document.write("" + amt() + "")
+                            // End -->
+                        </script>
+                               </h1>*@
+
+
+
+                    <script>
+
+                        function DisplayVisits() {
+                            // How many visits so far?
+                            var numVisits = GetCookie("numVisits");
+                            if (numVisits) numVisits = parseInt(numVisits) + 1;
+                            else numVisits = 1; // the value for the new cookie
+
+                            // Show the number of visits
+                            if (numVisits == 1) document.write("1");
+                            else document.write(" " + numVisits + " ");
+
+                            // Set the cookie to expire 365 days from now
+                            var today = new Date();
+                            today.setTime(today.getTime() + 365 /*days*/ * 24 /*hours*/ * 60 /*minutes*/ * 60 /*seconds*/ * 1000 /*milliseconds*/);
+                            SetCookie("numVisits", numVisits, today);
+                        }
+
+
+                        //var delete_cookie = function (name) {
+                        //    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                        //};
+
+                        //delete_cookie('numVisits');
+
+
+
+                    </script>
+
+
+                    <body>
+                        <div class="col-sm-3 no-padding" style="border-left:1px solid #9c9c9c; padding-left:5px;padding-right:5px;">
+                            <h1 style="color:#888888; font-size:12px;">
+                                Hôm nay:&nbsp
+                                <script>
+                                    DisplayVisits()
+
+
+
+                                        ;</script>
+                            </h1>
+
+                        </div>
+
+
+
+
+
+
+                    </body>
+
+
+                    <div class="col-sm-6 no-padding " style="border-left:1px solid #9c9c9c; padding-left:5px;padding-right:5px;">
+                        <h1 style="color:#888888; font-size:12px;">
+                            Tổng truy cập:&nbsp
+                            <script language="JavaScript">
+    var fhsh = document.createElement('script'); var fhs_id_h = "3105865";
+                                fhsh.src = "//s1.freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&a=1";
+                                document.head.appendChild(fhsh); document.write("<span id='h_" + fhs_id_h + "'></span>");
+                            </script>
+
+                        </h1>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="show-menu " style="background-color:white;font-family: ModernHBold;">
+        <div id="show-menu" class=" container no-padding" style="display: none">
+            <div class="col-sm-12 col-xs-12 col-md-12 no-padding" style="  background-color:#d0d9dd;">
+                @*<ul class="nav nav-tabs">
+                    @if (products != null)
+                    {
+                        <li class="active" style="">
+                            <a data-toggle="tab" href="#0" style=" margin-left:25px; color:#4a4a4a">
+                                Tất cả
+                            </a>
+                        </li>
+                        var count = 1;
+                        foreach (ProductCategory item1 in products)
+                        {
+                            <li class="" style="background: url(images/icon-bar.png) no-repeat right center;">
+                                <a data-toggle="tab" href="#@count" style=" color:#4a4a4a" id="prdname2">
+                                    @item1.PrdCategoryTitle
+                                </a>
+                            </li>
+                            count++;
+                        }
+
+                    }
+                    <button type="button" class="close col-sm-1 " style="font-weight: bold; color: black; text-align:right; margin-right:16px;" onclick="showmenu(false);">X</button>
+                </ul>*@
+
+            </div>
+            <div class="tab-content col-sm-12 col-xs-12 col-md-12 no-padding" style="    overflow-y: scroll; margin-top:30px;height:270px;padding-left:60px;">
+
+
+                @*@if (products != null)
+                {
+                    <div id="0" class="tab-pane fade in active col-sm-12 no-padding">
+
+                        @foreach (Product itemprd in listprall)
+                        {
+                            <div class="col-sm-3 col-xs-6 product-popup no-padding">
+
+                                <a href="@Url.Action("Detail", "Product", new { productcode = itemprd.ProductCode })">
+                                    <img src="@itemprd.ProductImage" class="img-product-popup col-centered hvr-wobble-to-top-right" alt="@itemprd.ProductName" />
+                                    <div class="carname" style="text-align: center;width:150px; font-weight:bolder;font-size:14px;color:#7b7b7b">@itemprd.ProductName</div>
+                                </a>
+
+                            </div>
+                        }
+                    </div>
+
+                    var count = 1;
+                    foreach (ProductCategory item1 in products)
+                    {
+                        var product = CauDien.Biz.Services.ServiceFactory.ProductManager.ProductGetByCateId(item1.PrdCategoryId, Culture);
+                        <div id="@count" class="tab-pane fade in">
+                            @if (product != null)
+                            {
+                                foreach (Product itemprd in product)
+                                {
+                                    <div class="col-sm-3 col-xs-6  product-popup no-padding">
+                                        <a href="@Url.Action("Detail", "Product", new { productcode = itemprd.ProductCode })">
+                                            <img src="@itemprd.ProductImage" class="img-product-popup col-centered hvr-wobble-to-top-right" alt="@itemprd.ProductName" />
+                                            <div class="carname" style="text-align: center;width:150px;font-weight:bolder;font-size:14px;color:#7b7b7b">@itemprd.ProductName</div>
+                                        </a>
+                                    </div>
+                                }
+                            }
+                        </div>
+                        count++;
+                    }
+                }*@
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+    showmenu = function a() {
+        var i = 0;
+
+        $('#show-menu').eq(0).slideToggle(500);
+
+        $('#show-menu2').hide();
+        $('#show-menu3').hide();
+        $('#show-menu4').hide();
+        $('#show-menu5').hide();
+        $('#show-menu6').hide();
+        if (i == 0) {
+
+
+            $('.menu-pr').addClass('active');
+
+            i = 1;
+        }
+        else if (i == 1) {
+
+
+            $('.menu-pr').removeClass('active');
+            $('#show-menu').hide();
+
+            i = 0;
+        }
+
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+
+        //var c = $("[id=prdname]").text().replace(/\s/g, "");
+
+
+        //alert(c);
+
+
+        //for (var i = 0; i <= c.length; i++) {
+
+
+
+        //    if (c[i] == "X") {
+
+        //        var j = i;
+
+
+        //        var st = c;
+        //        if (j == 0) {
+        //            var m = st.substring(0, j);
+
+        //        }
+
+        //         else if (j <10) {
+        //             var m = st.substring(0, j);
+
+
+        //             alert(m);
+
+
+        //         }
+
+
+        //         else if (10 < j < 20) {
+        //             var m = st.substring(m.length, j);
+
+        //             alert(m);
+
+
+        //         }
+        //         else if (j > 20) {
+        //             alert(j);
+        //             var m = st.substring(19, j);
+        //             alert(m);
+        //         }
+
+
+
+
+
+        //    }
+
+
+
+
+        //}
+
+
+
+    };
+
+
+</script>
+<a href="tel:0942 661 366" title="Gọi 0942 661 366" id="floating-phone">
+    <i class="uk-icon-phone"></i>
+</a>
+
+
+
+
+
+
+

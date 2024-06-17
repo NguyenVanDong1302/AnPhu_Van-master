@@ -134,6 +134,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NetAdvImageController.cs" />
+    <Compile Include="Controllers\ProductActionController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Data\DataWrapper.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
@@ -1889,6 +1890,10 @@
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Shared\NavBar.cshtml" />
     <Content Include="Views\Product\Product360.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\_ActionLayout.cshtml" />
+    <Content Include="Views\ProductAction\Register.cshtml" />
+    <Content Include="Views\ProductAction\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

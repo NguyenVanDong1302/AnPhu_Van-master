@@ -23,7 +23,8 @@
         </div>
     </div>*@
 
-@*background: url(@Model.ProductBackground) center top no-repeat*@
+
+
 
 <script src="~/Scripts/jquery-ui.min.js"></script>
 <script src="~/Scripts/jquery.panorama.js"></script>
@@ -47,11 +48,13 @@
     });
 
 </script>
-
+@{
+    var obj = Model;
+}
 
 
 <div class="background-prd"
-     style="font-family: ModernHBold;">
+     style="background: url(@Model.ProductBackground) center top no-repeat; font-family: ModernHBold;">
     <div class="container my-detail-container">
         <div class="">
 
@@ -61,8 +64,9 @@
                 </a>
             </div>
         </div>
-        <div id="carousel-example-generic" class="carousel slide htcslide" data-ride="carousel" style="">
-            
+        <div id="carousel-example-generic" class="carousel slide htcslide" data-ride="carousel" 
+             style="height: auto !important">
+
             <!-- Wrapper for slides -->
             <div class="carousel-inner my-carusel" role="listbox">
                 <div id="divImagePNG" class="active item item-slide no-padding">
@@ -70,16 +74,15 @@
                         <div class="container">
                             <div class="col-sm-6 col-lg-5 col-xs-7 no-padding " style=" text-align: left;">
                                 <h1 class="carname modernHBold col-lg-12 no-padding " style="text-align:left">
-                                    @*@Model.ProductName*@
-
+                                    @Model.ProductName
                                 </h1>
                                 @*  <div class="price-product">Giá từ: @String.Format("{0:0,0}", Convert.ToDouble(Model.ProductPrice)) VNĐ</div>*@
                                 <h1 class="slogan modernHEcoLight col-lg-12 no-padding ">
-                                    @*@Model.ProductSlogan*@
+                                    @Model.ProductSlogan
 
                                 </h1>
                                 <h1 class="summary col-lg-12 no-padding ">
-                                    @*@MvcHtmlString.Create(Model.ProductSummary)*@
+                                    @MvcHtmlString.Create(Model.ProductSummary)
 
                                 </h1>
 
@@ -100,8 +103,8 @@
 
                             </div>
                             <div class="col-sm-6 col-lg-7 col-xs-5 no-padding hvr-wobble-to-top-right" style="padding-top:60px">
-                                @*  <img class="htccar img-responsive lazy" src="~/tempfiles/uploads/products/slides/@(Model.ProductCode.ToUpper()).png" />*@
-                                @*  <img class="htccar img-responsive lazy" src="~/tempfiles/uploads/products/slides/@(Model.ProductCode.ToUpper()).png" />*@
+                                @*<img class="htccar img-responsive lazy" src="~/tempfiles/uploads/products/slides/@(Model.ProductCode.ToUpper()).png" />*@
+                                  <img class="htccar img-responsive lazy" src="http://hyundaicaudien.vn/tempfiles/uploads/products/slides/ACCENT-2021.png" />
                             </div>
                             @* <div class="col-lg-1 no-padding hidden-xs hidden-sm exterior" style="margin-top:15px;">
                                 <div class="experience_option">
@@ -119,7 +122,7 @@
                 }
                 <div id="divExperience" class="item item-slide no-padding hidden-xs hidden-sm " style="">
                     @Html.Partial("Product360")
-                    <img src="~/Content/images/sliderBanner.gif" class="img-responsive col-lg-12 fix-img fix-col" alt="">
+                    <img src="http://hyundaicaudien.vn/tempfiles/uploads/products/360/accent-2021/ex_aa/es_0.png" class="img-responsive col-lg-12 fix-img fix-col" alt="" />
                 </div>
 
                 @*@if (Model.ProductVideo != null)
@@ -252,6 +255,7 @@
     img.lazy {
         display: block;
     }
+ 
 </style>
 
 <script type="text/javascript">
@@ -535,24 +539,3 @@
 
 </script>
 
-
-
-
-
-<!-- jQuery library -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-<!-- Initialize Bootstrap functionality -->
-<script>
-    // Initialize tooltip component
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-
-    // Initialize popover component
-    $(function () {
-        $('[data-toggle="popover"]').popover()
-    })
-</script>

@@ -18,26 +18,12 @@ namespace idn.AnPhu.Website
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //routes.MapRoute(
-            //    "front_end_gioi_thieu",
-            //    "{culture}/gioi-thieu",
-            //    new { culture = "vi", controller = "Home", action = "About", id = UrlParameter.Optional },
-            //    new[] { "idn.AnPhu.Website.Controllers" }
-            //);
-
-            //routes.MapRoute(
-            //    "front_end_lien_he",
-            //    "{culture}/lien-he",
-            //    new { culture = "vi", controller = "Home", action = "Contact", id = UrlParameter.Optional },
-            //    new[] { "idn.AnPhu.Website.Controllers" }
-            //);
-
-            //routes.MapRoute(
-            //    "Default",    
-            //    "{culture}/{controller}/{action}/{id}",
-            //    new { culture = "vi", controller = "Home", action = "Index", id = UrlParameter.Optional },
-            //    new[] { "idn.AnPhu.Website.Controllers" }
-            //);
+            routes.MapRoute(
+                name: "register",
+                url: "{culture}/dang-ky-lai-thu",
+                defaults: new { culture = "vi", controller = "ProductAction", action = "Register" },
+                new[] { "idn.AnPhu.Website.Controllers" }
+             );
 
             routes.MapRoute(
                  "productdetail",
@@ -59,6 +45,9 @@ namespace idn.AnPhu.Website
                 defaults: new { controller = "Account", action = "Admin" }
             );
 
+   
+
+
             routes.MapRoute(
                 "Default",
                 "{controller}/{action}/{id}",
@@ -72,6 +61,8 @@ namespace idn.AnPhu.Website
             //);
 
             //routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            //Router ProductAction 
      
         }
     }

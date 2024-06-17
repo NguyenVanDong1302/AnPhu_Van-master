@@ -1,0 +1,396 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_ActionLayout.cshtml";
+}
+
+<div class="" style="background-color: #ebebeb; height: 53px;">
+    <div class="container">
+
+        <div class="col-sm-8 no-padding">
+            <a href="/" class="col-sm-1 no-padding" style=" width: 32px">
+                <img style="margin-top: 12px;" src="~/Images/forma-house.png" />
+            </a>
+
+
+
+            <a class="col-sm-1" style="margin-top: 16px; width: 32px">
+                <img src="~/Images/forma-7.png" />
+            </a>
+
+            <a class="col-sm-2 no-padding" href="#" style="margin-top: 16px; width: 18.666667%;">Chăm sóc khách hàng</a>
+
+
+
+            <a href="#" class="col-sm-1 no-padding" style="margin-top: 16px; width: 22px">
+                <img src="~/Images/forma-7.png" />
+
+            </a>
+
+            <a class="col-sm-3 no-padding" href="@Url.Action("Contact", "Home")" style="margin-top:16px;">Đăng ký tư vấn</a>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="" style="background-color: #ebebeb; height: 110px; border-top: 1px solid #f9f9f9; border-bottom: 3px solid #dadada">
+    <div class="container">
+        <div class="col-md-12 no-padding marginbot30">
+            <div class=" col-md-7 h1-text no-padding " style="margin-left: 0px; font-weight: 200; color: #333333; font-size: 19px">
+                Đăng ký tư vấn
+
+            </div>
+
+            <div class="col-md-5 col-xs-8 no-padding" style="margin-top: 50px; text-align: right">
+                <a class=" col-md-6 col-xs-12 no-padding " href="@Url.Action("NewsReceiveRegister", "ProductAction")">
+                    Đăng ký nhận bản tin, catalog
+                </a>
+                <a class=" col-md-3 col-xs-12 no-padding" href="@Url.Action("AnswerQuestion", "ProductAction")">
+                    Trang hỏi đáp
+                </a>
+                <a class=" col-md-3 col-xs-12 no-padding " href="@Url.Action("Contact", "Home")">
+                    Liên hệ
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    @* <div class="col-sm-8 no-padding title-register" style="border-bottom: 1px solid rgb(153, 156, 157)">
+          Đăng ký nhận bản tin, catalog
+
+        </div>*@
+    <div class="row register" id="register-content">
+        @*<div class="header-register ">
+                Vui lòng điền thông tin vào mẫu dưới đây
+            </div>*@
+        <div class="body-register">
+            <div class="col-sm-12 form-horizontal no-padding">
+                <div class="col-sm-5 no-padding">
+
+                    @*  <div class="form-group no-padding" >
+
+                        <label for="Subject" class="col-sm-3 control-label " style="padding-right:0" >Tiêu đề</label>
+                        <div class="col-sm-8 no-padding">
+                            <input type="text" class="form-control no-padding" id="Subject" name="Subject" placeholder="" />
+                        </div>
+                        </div>*@
+
+
+                    <div class="form-group no-padding">
+
+                        <label for="Name" class="col-sm-3 control-label " style="padding-right: 0">Họ Tên</label>
+                        <div class="col-sm-8 ">
+                            <input type="text" class="form-control no-padding" id="Name" name="Name" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form-group no-padding">
+                        <label for="Phone" class="col-sm-3 control-label" style="padding-right: 0">Số điện thoại</label>
+                        <div class="col-sm-8 ">
+                            <input type="email" class="form-control" name="Phone" id="Phone" placeholder="" />
+                        </div>
+                    </div>
+
+                    <div class="form-group no-padding">
+                        <label for="Email" class="col-sm-3 control-label" style="">Email</label>
+                        <div class="col-sm-8 ">
+                            <input type="email" class="form-control" name="Email" id="Email" placeholder="" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Address" class="col-sm-3 control-label " style="padding-right: 0">Địa chỉ</label>
+                        <div class="col-sm-8 ">
+                            <input type="text" class="form-control" id="Address" name="Address" placeholder="" />
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                             <label for="Email" class="col-sm-2 control-label" style="text-align:center">Thời gian</label>
+                            <div class="col-sm-4 no-padding">
+                                <input data-provide="datepicker" name="Time" id="Time" placeholder="" class="form-control date-picker" />
+                                <input type="text" class="form-control" name="Time" id="Time" placeholder="Thời gian" value="@DateTime.Now.ToString("dd/MM/yyyy")" required />
+                            </div>
+                        </div>*@
+
+                    @*<div class="form-group">
+
+                            <label class="col-sm-2 control-label"style="padding-right:0">Ghi chú</label>
+                            <div class="col-sm-6 no-padding">
+                                <textarea class="form-control" rows="3" name="Content" placeholder="" ></textarea>
+                            </div>
+
+                             <a href="javascript:" class="btn  bnt-contact col-sm-2 btn-regitster " style="float:left;" onclick="_register()">Đăng ký</a>
+
+                        </div>*@
+
+                </div>
+                <div class="col-sm-5 no-padding" style="margin: 0; padding-right: 0">
+
+                    <div class="form-group" style="margin: 40px 0px 25px 0px">
+                        <label for="Subject" class="col-sm-4 col-xs-12 control-label " style="font-weight:200">Sản phẩm quan tâm</label>
+                        <div class="col-sm-6 col-xs-12 " style=" ">
+                            @*@Html.DropDownListDefault("ProductId", ViewData.Get<SelectList>("Categories"), "0", "Chọn loại xe", new { @class = "form-control-select ", @style = "background:#e8eaee; border: 1px solid #bfbfbf;" })*@
+
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="">
+                            <img src="/images/blank_car.png" class="img-responsive" style="text-align:center" id="showimage" />
+                        </div>
+                    </div>
+
+                    @*    <div class ="col-lg-12 no-padding">
+                        <div class="col-lg-8 prd-reg">
+                            <h1 id="h1-id" style="line-height:1.2; margin-top:38px"></h1>
+                            <h2 id="h2-id" style="line-height:1.2"></h2>
+                        </div>
+                        <div class="col-lg-4" style="text-align:center; margin-top:70px;color:edc405">
+                             <a href="#" id="urlprd" class="" style="color:edc405">CHI  TIẾT XE</a>
+
+
+                        </div>
+                        </div>*@
+
+
+                </div>
+                <form action="form_action.asp">
+                    <div class="col-sm-2 " style="margin: 0; padding-right: 0; text-align: left">
+                        <div class="col-xs-12 no-padding" style="margin-top: 30px">
+
+                            <h6 class="control-label" style="font-weight: 700; font-size: 18px">Tư vấn</h6>
+
+                        </div>
+                        <div class="col-xs-12 no-padding" style="margin-top: 25px">
+                            <div class="col-xs-1 no-padding" style="text-align: left">
+                                <input type="checkbox" id="Check1" value="Nhận E-catalog" name="checkn" />
+
+                            </div>
+                            <div class=" col-xs-11" style="font-weight: 200; font-size: 14px">Nhận E-catalog</div>
+                        </div>
+                        <div class="col-xs-12 no-padding" style="margin-top: 15px">
+                            <div class="col-xs-1 no-padding" style="text-align: left">
+                                <input type="checkbox" id="Check2" value="Bảng báo giá chi tiết" name="checkn" />
+
+                            </div>
+                            <div class=" col-xs-11" style="font-weight: 200; font-size: 14px; padding-right: 0">Bảng báo giá chi tiết</div>
+                        </div>
+                        <div class="col-xs-12 no-padding" style="margin-top: 15px">
+                            <div class="col-xs-1 no-padding" style="text-align: left">
+                                <input type="checkbox" id="Check3" value="Tư vấn thêm về sản phẩm" name="checkn" />
+
+                            </div>
+                            <div class=" col-xs-11" style="font-weight: 200; font-size: 14px;padding-right:0">Tư vấn thêm về sản phẩm</div>
+                        </div>
+                        <div class="col-xs-12 no-padding" style="margin-top: 15px">
+                            <div class="col-xs-1 no-padding" style="text-align: left">
+                                <input type="checkbox" id="Check4" value="Nhận tin tức" name="checkn" />
+
+                            </div>
+                            <div class=" col-xs-11" style="font-weight: 200; font-size: 14px">Nhận tin tức</div>
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class=" col-sm-12 no-padding">
+        <div class="col-sm-10">
+        </div>
+        <div class="col-sm-2 no-padding">
+            <a href="javascript:" class="btn  bnt-contact btn-news-register " style="float:right; margin:0 ; border-radius:10px;" onclick="_register() " id="a">Gửi</a>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+</div>@*  end container*@
+
+<script type="text/javascript">
+    setAdminCurrentUrl('@Url.Action("SuicideRegister", "ProductAction")', '@Url.Action("SuicideRegister", "ProductAction")');
+</script>
+@Html.Raw(ViewBag.listarry)
+@Html.Raw(ViewBag.listurl)
+@Html.Raw(ViewBag.listh1)
+@Html.Raw(ViewBag.listh2)
+
+
+
+
+<script>
+
+
+
+    function _register() {
+        var a = true;
+
+
+
+
+        //var subject = $("#Subject").val();
+        var productcombo = document.getElementById("ProductId");
+        var x = productcombo.options[productcombo.selectedIndex].value;
+        var name = $("#Name").val();
+        var email = $("#Email").val();
+        var address = $("#Address").val();
+        var phone = $("#Phone").val();
+        var checkn = document.forms[0];
+        var check = "";
+        for (i = 0; i < checkn.length; i++) {
+            if (checkn[i].checked) {
+                check = check + checkn[i].value + " ,  ";
+
+
+
+            }
+
+
+        }
+        if (Check1.checked == false && Check2.checked == false && Check3.checked == false && Check4.checked == false) {
+
+
+            if (a == true) {
+                $('#a').attr('disabled', 'disabled');
+                alert("Vui lòng chọn một phương án");
+                a = false;
+                $('#a').removeAttr('disabled');
+            }
+
+            return false;
+
+
+        }
+
+
+
+        var reg = /^([A-Za-z0-9_\-\.])+\@@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        //if (subject == null || subject == "") {
+        //    alert("Nhập tiêu đề");
+        //    return false;
+        //}
+
+
+
+
+
+
+
+
+
+
+        if (x == null || x == "" || x == 0) {
+            if (a == true) {
+                $('#a').attr('disabled', 'disabled');
+                alert("Chọn xe quan tâm");
+                a = false;
+                $('#a').removeAttr('disabled');
+            }
+
+            return false;
+        }
+        if (name == null || name == "") {
+            if (a == true) {
+                $('#a').attr('disabled', 'disabled');
+                alert("Nhập tên của bạn");
+                a = false;
+                $('#a').removeAttr('disabled');
+            }
+
+            return false;
+        }
+        if (email == null || email == "") {
+            if (a == true) {
+                $('#a').attr('disabled', 'disabled');
+                alert("Nhập Email của bạn");
+                a = false;
+                $('#a').removeAttr('disabled');
+            }
+
+            return false;
+        }
+        if (reg.test(email) == false) {
+            if (a == true) {
+                $('#a').attr('disabled', 'disabled');
+                alert("Email không đúng định dạng");
+                a = false;
+                $('#a').removeAttr('disabled');
+            }
+
+            return false;
+        }
+        if (phone == null || phone == "") {
+            if (a == true) {
+                $('#a').attr('disabled', 'disabled');
+                alert("Nhập số điện thoại của bạn");
+                a = false;
+                $('#a').removeAttr('disabled');
+            }
+
+            return false;
+        }
+
+        if (address == null || address == "") {
+            if (a == true) {
+                $('#a').attr('disabled', 'disabled');
+                alert("Nhập địa chỉ của bạn");
+                a = false;
+                $('#a').removeAttr('disabled');
+            }
+
+            return false;
+        }
+        if (a == true) {
+            $('#a').attr('disabled', 'disabled');
+            alert("Cảm ơn bạn đã gửi thông tin cho chúng tôi. Hệ thống sẽ gửi thông báo về cho bạn ngay sau đây");
+            a = false;
+            $('#a').removeAttr('disabled');
+
+
+        }
+
+        var url = '@Url.Action("SuicideRegister", "ProductAction")';
+                   $.ajax({
+                       url: url,
+                       data: { ProductId: x, Name: name, Email: email, Phone: phone, Address: address, Check: check },
+                       type: 'post',
+                       dataType: 'json',
+                       traditional: true,
+                       success: function (data) {
+
+
+
+                           if (data.Successful) {
+
+                               alert("Bạn " + name + " vừa đăng ký tư vấn thành công. Bạn muốn tư vấn bằng cách: " + check);
+
+
+
+                           }
+                       },
+
+                   });
+               }
+
+
+
+
+               $('.date-picker').datepicker({
+                   format: 'dd/mm/yyyy',
+               });
+</script>
+
+<script type="text/javascript">
+    setAdminCurrentUrl('@Url.Action("SuicideRegister", "ProductAction")', '@Url.Action("SuicideRegister", "ProductAction")');
+</script>
+
