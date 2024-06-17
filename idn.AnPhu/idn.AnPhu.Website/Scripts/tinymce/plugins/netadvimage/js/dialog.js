@@ -109,7 +109,7 @@ function GetImages(node) {
 
         		HideOverlays();
 
-        		$('#directory img').attr('src', '/Scripts/plugins/tinymce/plugins/netadvimage/img/folder-horizontal.gif');
+        		$('#directory img').attr('src', '/Scripts/tinymce/plugins/netadvimage/img/folder-horizontal.gif');
         		$(node).closest('.t-item').find('img:first').attr('src', '/Scripts/tinymce/plugins/netadvimage/img/folder-horizontal-open.gif');
 
 

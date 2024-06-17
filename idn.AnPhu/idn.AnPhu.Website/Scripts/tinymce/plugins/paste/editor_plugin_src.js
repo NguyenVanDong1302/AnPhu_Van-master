@@ -455,7 +455,7 @@
 										}
 
 										// Eliminate all MS Office style definitions that have no CSS equivalent by examining the first characters in the name
-										if (/^(mso|column|font-emph|lang|layout|line-break|list-image|nav|panose|punct|row|ruby|sep|size|src|tab-|table-border|text-(?!align|decor|indent|trans)|top-bar|version|vnd|word-break)/.test(name)) {
+										if (/^(mso|column|font-emph|lang|layout|line-break|list-image|nav|panose|punct|row|ruby|sep|size|src|tab-|table-border|text-(?!align|decor|indent|trans)|top-bar|version|VNÐ|word-break)/.test(name)) {
 											return;
 										}
 

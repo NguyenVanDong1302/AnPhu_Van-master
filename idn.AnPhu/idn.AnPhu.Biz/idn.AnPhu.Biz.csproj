@@ -71,6 +71,7 @@
     <Compile Include="Persistance\SqlServer\AppDicDomainProvider.cs" />
     <Compile Include="Persistance\SqlServer\PrdCategoriesProvider.cs" />
     <Compile Include="Persistance\SqlServer\ProductPropertyProvider.cs" />
+    <Compile Include="Persistance\SqlServer\ProductProvider.cs" />
     <Compile Include="Persistance\SqlServer\ProductReviewProvider.cs" />
     <Compile Include="Persistance\SqlServer\Sys_GroupProvider.cs" />
     <Compile Include="Persistance\SqlServer\Sys_UserProvider.cs" />

@@ -1,0 +1,209 @@
+﻿
+@{
+    Layout = null;
+    var variablesScript = ViewBag.variablesScript as string ?? "";
+}
+<style>
+    .experience_option .color_view {
+        width: 160px;
+        color: #595959;
+        font-weight: bold;
+        height: 16px;
+        line-height: 16px;
+        margin-bottom: 9px;
+        overflow: hidden;
+    }
+
+        .experience_option .color_view img {
+            height: 16px;
+            margin-right: 4px;
+            vertical-align: top;
+            width: 16px;
+            display: inline;
+        }
+
+    .experience_option ul li {
+        display: block;
+        position: relative;
+        float: left;
+        margin-right: 6px;
+        margin-bottom: 2px;
+        display: inline;
+    }
+
+        .experience_option ul li span {
+            display: block;
+            height: 38px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 38px;
+        }
+</style>
+<div class="" style="margin-top:25px; max-width:1000px">
+
+    <div class="col-lg-4 col-lg-offset-4">
+        <div class="experience_category pro360 row">
+            <div class="col-lg-12">
+                <ul class="button-group" style="text-align:center">
+                    <li class="exterior" style="display: inline"><a href="#" class="on button btn btn-primary btn-buycar btn-360" style="border:none; border-radius:10px;">Ngoại thất</a></li>
+                    @*@if (ViewBag.isInterior)
+                    {
+                        <li class="interior" style="display: inline"><a href="#" class="button btn btn-primary btn-buycar btn-360" style="border:none;border-radius:10px;">Nội thất</a></li>
+                    }*@
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@*<img src="~/Content/images/es_1.png" style="width: 400px;"/>*@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="col-lg-2  no-padding hidden-xs hidden-md hidden-sm">
+            <img src="~/Images/affix-click360.png">
+        </div>
+        <div class="col-lg-8  no-padding" id="tempimage">
+            @*<img src="/tempfiles/uploads/products/360/accent-5-cua/ex_p9r/es_0.png" style="display: none;">*@
+            <img src="~/Content/images/TestImage/es_1.png" style="display: none;">
+            <div class="experience_panoramabox exterior" id="panorama">
+            </div>
+
+        </div>
+        <div class="col-lg-1  no-padding" style="margin-top:0px;">
+            <div class="experience_option">
+                <p class="color_view"></p>
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    //<![CDATA[
+    @Html.Raw(variablesScript)
+    //]]>
+</script>
+
+<script type="text/javascript">
+
+    //$(document).ready(function () {
+    //	interiorInit();
+    //	exteriorInit();
+    //});
+
+    var carColor = "";
+    var heii = 289;
+    var widi = 640;
+    var hei = 289;
+    var wid = 640;
+    $(function () {
+        $(".experience_category a").click(function () {
+            if ($(this).attr("class") != "on") {
+                $(".experience_category a").removeClass("on");
+                $(this).addClass("on");
+                if ($(this).parent().attr("class") == "exterior")
+                    exteriorInit();
+                else
+                    interiorInit();
+            }
+            return false;
+        });
+        exteriorInit();
+    });
+    var iCount = iIntCount;
+    function interiorInit() {
+        //$(".experience_option p").empty();
+        $(".experience_option ul").empty();
+        for (var i = 1; i < 35 + 1; i++) {
+            console.log(121)
+            $(".experience_option ul").append("<li class=\"i" + i + "\"><a code='" + arrInt[i - 1]["Code"] + "' href=\"#\" title='" + arrInt[i - 1]["NameVN"] + "'><img alt=\"abc\" src=\"" + expRoot + "/i" + i + ".gif\"></a></li>");
+        }
+        optionInit();
+        $(".experience_option li a").click(function () {
+            $(".experience_option li a").removeClass("on");
+            $(".experience_option li span").hide();
+            $(this).addClass("on");
+            if ($("span", $(this).parent()).length == 0)
+                $("<span><img src=\"/Content/images/cover_color.png\" /></span>").appendTo($(this).parent());
+            else
+                $("span", $(this).parent()).show();
+            carColor = $(this).parent().attr("class");
+            $(".experience_panoramabox").empty();
+            heii = $("#tempimage img").height();
+            widi = $("#tempimage img").width();
+            //$(".experience_panoramabox").append("<img class='panorama' width='" + widi + "' height='" + heii + "' src='" + expRoot + "/" + carColor + "/is_100.jpg" + "' />");
+            //$(".experience_panoramabox img.panorama").one("load", function () {
+            //    $(this).panorama({ views_number: 120, views_columns: 20 });
+            //    $(".pano_loading_start img").attr("src", "/Content/images/btn_start2.png");
+            //});
+            var folder = $(this).parent().attr('class');
+            pannellum.viewer('panorama', {
+                "type": "equirectangular",
+                "panorama": "" + expRoot + "/" + folder + "/isp.jpg",
+                "preview": "" + expRoot + "/" + folder + "/isp_thumb.jpg"
+            });
+
+            $('#panorama').height($('#panorama').width() / 2);
+
+            $('#panorama .pnlm-load-button p').remove();
+            //$('#panorama .pnlm-load-button').append('<img src="/Content/images/btn_start2.png" alt="Start">');
+            $(".experience_option p").html("<img src='" + $("img", $(this)).attr("src") + "'/>&nbsp;" + $(this).attr("title"));
+            return false;
+        });
+        $(".experience_option li a:first").click();
+    }
+    var eCount = iExtCount;
+    function exteriorInit() {
+        //$(".experience_option ul").empty();
+        for (var i = 1; i <= 35; i++) {
+            //test commit   $(".experience_option ul").append("<li class=\"e" + i + "\"><a href=\"#\"><img alt=\"\" src=\"" + carRoot + "/experience/e" + i + ".png\"></a></li>");
+            //$(".experience_option ul").append("<li class=\"e" + i + "\"><a code='" + arrExt[i]["Code"] + "' href=\"#\" title='" + arrExt[i]["NameVN"] + "'><img alt=\"\" src=\"" + colorRoot + "/ex_" + arrExt[i]["NameEN"].replace(/\s/g, "_") + ".png\"></a></li>");
+            $(".experience_option ul").append("<li class=\"e" + i + "\"><a href=\"#\"><img alt=\"\" src=`/Content/images/TestImage/es_" + i + ".png`></a></li>");
+        }
+        optionInit();
+        $(".experience_option li a").click(function () {
+            $(".experience_option li a").removeClass("on");
+            $(".experience_option li span").hide();
+            $(this).addClass("on");
+            if ($("span", $(this).parent()).length == 0)
+                $("<span><img src=\"/Content/images/cover_color.png\" /></span>").appendTo($(this).parent());
+            else
+                $("span", $(this).parent()).show();
+            carColor = $(this).attr("code");
+            $(".experience_panoramabox").empty();
+
+            $(".experience_panoramabox").append("<img class='panorama' width='" + wid + "' height='" + hei + "' src='/Content/images/TestImage/es_1.png' />");
+            $(".experience_panoramabox img.panorama").one("load", function () { $(this).panorama({ views_number: 30, views_columns: 30 }); });
+            //
+            $(".experience_option p").html("<img src='" + $("img", $(this)).attr("src") + "'/>&nbsp;" + $(this).attr("title"));
+            return false;
+        });
+        $(".experience_option li a:first").click();
+    }
+    function optionInit() {
+        var i = $(".experience_option ul li").length;
+
+    }
+    function showPanoramaLargeLayer() {
+        if ($("#layer_experience_panorama").length == 0)
+            $("#wrap").append('<div id="layer_experience_panorama" class="layer_experience_panorama"></div>');
+        else
+            $("#layer_experience_panorama").empty();
+        $("#layer_experience_panorama").append('<div class="layer_panorama_close"><a href="javascript:closeLayer();"><img alt="close" src="/Content/images/btn_layer_close.png"></a></div>');
+        $("#layer_experience_panorama").append('<div class="normal"><div class="box"></div></div>');
+        $("#layer_experience_panorama").append('<div class="experience_category"><ul><li><a class="on" href="#">Ngoại thất</a></li><li><a href="javascript:cubeExterienceCustomiz();">Nội thất</a></li></ul></div>');
+        $("#layer_experience_panorama").append('<div class="experience_desc"><span>The image may differ from the actual product.</span></div>');
+        $("#layer_experience_panorama").height($(document).height()).width($(window).width()).fadeIn();
+        $("#layer_experience_panorama .box").append("<img class='panorama_large' src='" + carRoot + carColor + "/b_0.png" + "' width='1024' height='462'/>");
+        $("#layer_experience_panorama img.panorama_large").panorama({ views_number: 36, views_columns: 36 });
+    }
+    function closeLayer() {
+        $('#layer_experience_panorama').fadeOut();
+    }
+
+</script>

@@ -1,8 +1,558 @@
-﻿
+﻿@model idn.AnPhu.Biz.Models.Product
+
 @{
     ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_DetailLayout.cshtml";
+    var variablesScript = ViewBag.variablesScript as string ?? "";
+    var numSlide = 0;
 }
+    
+@*<div class="background-prd"
+         style="
+        /*background: url(*/@Model.ProductBackground/*)*/
+        center top no-repeat;font-family: ModernHBold;">
+        <div class="container my-detail-container">
+            <div class="">
 
-<h2>Detaillllllll</h2>
+                <div class="" style="">
+                    <a class="floating-top" href="#">
 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+@*background: url(@Model.ProductBackground) center top no-repeat*@
+
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<script src="~/Scripts/jquery.panorama.js"></script>
+@*<script src="~/Scripts/sc_wwdefault.js"></script>*@
+<script>
+    $(document).ready(function () {
+        $('.fancybox').fancybox();
+        $(".various").fancybox({
+            maxWidth: 800,
+            maxHeight: 600,
+            fitToView: false,
+            width: '70%',
+            height: '70%',
+            autoSize: false,
+            closeClick: false,
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+        $('.properties-content img').addClass('img-responsive');
+
+    });
+
+</script>
+
+
+
+<div class="background-prd"
+     style="font-family: ModernHBold;">
+    <div class="container my-detail-container">
+        <div class="">
+
+            <div class="" style="">
+                <a class="floating-top" href="#">
+
+                </a>
+            </div>
+        </div>
+        <div id="carousel-example-generic" class="carousel slide htcslide" data-ride="carousel" style="">
+            
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner my-carusel" role="listbox">
+                <div id="divImagePNG" class="active item item-slide no-padding">
+                    <div class="">
+                        <div class="container">
+                            <div class="col-sm-6 col-lg-5 col-xs-7 no-padding " style=" text-align: left;">
+                                <h1 class="carname modernHBold col-lg-12 no-padding " style="text-align:left">
+                                    @*@Model.ProductName*@
+
+                                </h1>
+                                @*  <div class="price-product">Giá từ: @String.Format("{0:0,0}", Convert.ToDouble(Model.ProductPrice)) VNĐ</div>*@
+                                <h1 class="slogan modernHEcoLight col-lg-12 no-padding ">
+                                    @*@Model.ProductSlogan*@
+
+                                </h1>
+                                <h1 class="summary col-lg-12 no-padding ">
+                                    @*@MvcHtmlString.Create(Model.ProductSummary)*@
+
+                                </h1>
+
+                                <div class="col-lg-12 no-padding ">
+                                    <div class="item-productprice col-lg-5 no-padding" style="text-align:left" id="pro-id-del">
+                                        <a @*href="@Url.Action("BuyCar", "ProductAction", new { productid = Model.ProductId })"*@
+                                           class="btn btn-detail-product hvr-wobble-top" style="margin-top:30px;border-radius:25px; ">
+                                            GIÁ XE
+                                        </a>
+                                    </div>
+
+                                    <div class="item-productprice col-lg-5 no-padding" style="text-align:left">
+                                        <a href="@Url.Action("Register", "ProductAction")" class="btn btn-detail-product hvr-wobble-top" style="margin-top:30px;border-radius:25px;">
+                                            ĐĂNG KÝ LÁI THỬ
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6 col-lg-7 col-xs-5 no-padding hvr-wobble-to-top-right" style="padding-top:60px">
+                                @*  <img class="htccar img-responsive lazy" src="~/tempfiles/uploads/products/slides/@(Model.ProductCode.ToUpper()).png" />*@
+                                @*  <img class="htccar img-responsive lazy" src="~/tempfiles/uploads/products/slides/@(Model.ProductCode.ToUpper()).png" />*@
+                            </div>
+                            @* <div class="col-lg-1 no-padding hidden-xs hidden-sm exterior" style="margin-top:15px;">
+                                <div class="experience_option">
+                                     <p class="color_view"></p>
+                                        <ul>
+                                         </ul>
+                                </div>
+                                 </div>*@
+
+                        </div>
+                    </div>
+                </div>
+                @if (ViewBag.isInterior || ViewBag.isExterior)
+                {
+                }
+                <div id="divExperience" class="item item-slide no-padding hidden-xs hidden-sm " style="">
+                    @Html.Partial("Product360")
+                    <img src="~/Content/images/sliderBanner.gif" class="img-responsive col-lg-12 fix-img fix-col" alt="">
+                </div>
+
+                @*@if (Model.ProductVideo != null)
+                    {
+                        System.Text.RegularExpressions.Regex YoutubeVideoRegex =
+                            new System.Text.RegularExpressions.Regex(@"youtu(?:\.be|be\.com)/(?:.*v(?:/|=)|(?:.*/)?)([a-zA-Z0-9-_]+)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                        System.Text.RegularExpressions.Match youtubeMatch = YoutubeVideoRegex.Match(Model.ProductVideo);
+                        <div id="divVideo" class="item item-slide no-padding" style="">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 no-padding" style="margin-top:40px;">
+                                    @if (youtubeMatch.Success)
+                                    {
+                                        var id = youtubeMatch.Groups[1].Value;
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" width="560" height="315"
+                                                    src="http://www.youtube.com/embed/@id?wmode=opaque&amp;rel=0"></iframe>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                    }*@
+                @*Thu vien anh*@
+                <div id="divGallery" class="item item-slide no-padding" style="">
+                    @*@Html.Partial("GalleryProduct", Model)*@
+                </div>
+
+                @*Danh gia xe*@
+                @*@if (Model.Reviews != null && Model.Reviews.Count > 0)
+                    {
+                        <div id="divReview" class="item item-slide no-padding" style="">
+                            @Html.Partial("ReviewProduct", Model)
+                        </div>
+                    }*@
+
+                @*Thong so xe*@
+                <div id="divSpecification" class="item item-slide no-padding" style="">
+                    @*@Html.Partial("SpecProduct")*@
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3 no-padding padding-detail margin-detail">
+            <div class="col-xs-0 col-md-7"></div>
+
+            <div class="col-xs-2 item-affixcontrol col-md-5">
+                <a class="my-detail-img-cover hvr-wobble-vertical"
+                   href="javascript:"
+                   data-target="#carousel-example-generic"
+                   data-slide-to="0"
+                   id="detailcover">
+                    <div><img class="lazy" src="/images/affix-cover2.png" /></div>
+                    Cover
+                </a>
+            </div>
+        </div>
+
+        <div class=" col-md-7 col-sm-10 margin-detail ">
+            <div class="row htccubeitem ">
+                <div class="col-centered modernHBold">
+                    @if (ViewBag.isInterior || ViewBag.isExterior)
+                    {
+                        numSlide++;
+                    }
+                    <div class="col-xs-2 item-affixcontrol hidden-xs hidden-sm hidden-md  ">
+                        <a class="my-detail-img-360 hvr-wobble-vertical" href="javascript:" data-target="#carousel-example-generic" data-slide-to="@numSlide" id="detail360">
+                            <div><img class="lazy" src="/images/affix-3601.png" /></div>
+                            Cảm nhận 360
+                        </a>
+                    </div>
+                    @*@if (!String.IsNullOrEmpty(Model.ProductVideo))*@
+                    @{
+                        numSlide++;
+                        <div class="col-xs-2 item-affixcontrol no-padding ">
+                            <a class="my-detail-img-video hvr-wobble-vertical" href="javascript:" data-target="#carousel-example-generic" data-slide-to="@numSlide" id="detailvideo">
+                                <div><img class="lazy" src="/images/affix-video1.png" id="abc" /></div>
+                                Phim 30s
+                            </a>
+                        </div>
+                    }
+
+                    @{
+                        numSlide++;
+                    }
+                    <div class="col-xs-2 item-affixcontrol no-padding">
+                        <a class="my-detail-img-gallery hvr-wobble-vertical" href="javascript:" data-target="#carousel-example-generic" data-slide-to="@numSlide" id="detailgallery">
+                            <div><img class="lazy" src="/images/affix-gallery1.png" /></div>
+                            Hình ảnh
+                        </a>
+                    </div>
+                    @*@if (Model.Reviews != null && Model.Reviews.Count > 0)*@
+                    @{
+                        numSlide++;
+                        <div class="col-xs-2 item-affixcontrol no-padding">
+                            <a class="my-detail-img-review hvr-wobble-vertical" href="javascript:" data-target="#carousel-example-generic" data-slide-to="@numSlide" id="detailreview">
+                                <div><img class="lazy" src="/images/affix-review.png" style="" class="my-image-car" /></div>
+                                Đánh giá xe
+                            </a>
+                        </div>
+                    }
+                    @{
+                        numSlide++;
+                    }
+                    <div class="col-xs-2 item-affixcontrol no-padding">
+                        <a class="my-detail-img-spec hvr-wobble-vertical" href="javascript:" data-target="#carousel-example-generic" data-slide-to="@numSlide" id="detailspec">
+                            <div><img class="lazy" src="/images/affix-spec1.png" /></div>
+                            Thông số xe
+                        </a>
+                    </div>
+                    @*@if (Model.ProductBrochure != null)
+                        {
+                            <div class="col-xs-2 item-affixcontrol no-padding">
+                                <a class="my-detail-img-catalog hvr-wobble-vertical" id="htcFileDownload" class="htcdownload" abc="hellocaoto" style="" target="_blank" href="@(!String.IsNullOrEmpty(Model.ProductBrochure) ? Model.ProductBrochure : "javascript:void(0);")">
+                                    <div><img class="lazy" src="/images/affix-catalog1.png" /></div>
+                                    Tải catalog
+                                </a>
+                            </div>
+                        }*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style type="text/css">
+    img.lazy {
+        display: block;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.properties-content img').addClass('lazy');
+    });
+</script>
+
+<div class=" properties-content  container" style=" margin-bottom:80px;">
+    <div class="col-lg-12 no-padding padding-news">
+        @*@if (Model.Properties.Count > 0)
+            {
+                var j = 0;
+                foreach (ProductProperty item in Model.Properties)
+                {
+                    <div class="slide-content" id="slide_content@((j+1).ToString("00"))">
+                        <div class="container">
+                            <div class="content_header">
+                                <div class="titlecate-detail modernHBold" style="text-align:center">
+                                    @item.ProductPropertyTitle.ToUpper()
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-top:20px">
+                            @MvcHtmlString.Create(item.ProductPropertyBody ?? "")
+                        </div>
+                    </div>
+                    j++;
+                }
+            }*@
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $('.menu-pr').addClass('active');
+</script>
+<script type="text/javascript">
+    setAdminCurrentUrl('@Url.Action("Detail", "Product")', '@Url.Action("ListProduct", "Product")');
+    $('.floating-top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+    });
+    $(window).scroll(function () {
+        if ($(window).scrollTop() <= 450) {
+            $('.floating-top').stop(false, true).fadeOut(600);
+        } else {
+            $('.floating-top').stop(false, true).fadeIn(600);
+        }
+    });
+    $(document).ready(function () {
+        if ($(window).scrollTop() <= 450) {
+            $('.floating-top').stop(false, true).fadeOut(0);
+        } else {
+            $('.floating-top').stop(false, true).fadeIn(0);
+        }
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var i = 0;
+        var countli = 0;
+        //var filedownload = true;
+        //if (filedownload == false) {
+        //    countli = $('.htcslide ol li').length;
+        //} else {
+        //    countli = $('.htcslide ol li').length - 1;
+        //}
+        //var countli = $('.htcslide ol li').length - 1;
+
+
+        //click vào nut slide tu doi
+
+        var num1 = $('.htcslide ol li').length;
+
+        $('.htccubeitem a').each(function (num1) {
+            $(this).click(function () {
+                //debugger;
+
+                $(this).attr("data-slide-to", num1 + 1);
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                i = num1 + 1;
+                //gan lại an hien pri,next
+
+            });
+
+        });
+
+
+        $('.carousel-control.right').css("background-image", "none");
+        $('.carousel-control.right').css("background - repeat", "no-repeat");
+        $('.carousel-control.left').css("background-image", "none");
+        $('.carousel-control.left').css("background - repeat", "no-repeat");
+        //$('.carousel-control').css("opacity", "0");
+    });
+</script>
+<style>
+    .ol-htccarousel-indicators {
+        min-width: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 45% !important;
+        text-align: center;
+        text-align: right;
+    }
+
+    ol.ol-htccarousel-indicators li {
+        float: left;
+        border: none /*1px solid #8c8a8b*/;
+        background-color: #d6d6d6;
+    }
+
+    ol.ol-htccarousel-indicators .active {
+        background: #8c8a8b;
+    }
+</style>
+
+
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=533137916817791&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<script>
+    $('#detail360').click(function () {
+
+        var a = $('.my-detail-img-360 img').attr('src', '/images/affix-3602.png');
+        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+    });
+    $('#detailvideo').click(function () {
+
+
+
+
+        var a = $('.my-detail-img-video img').attr('src', '/images/affix-video2.png');
+        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+    });
+
+    $('#detailgallery').click(function () {
+
+
+
+
+        var a = $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery2.png');
+        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+    });
+
+    $('#detailreview').click(function () {
+
+
+
+
+        var a = $('.my-detail-img-review img').attr('src', '/images/affix-review2.png');
+        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+    });
+
+
+    $('#detailspec').click(function () {
+
+
+
+
+        var a = $('.my-detail-img-spec img').attr('src', '/images/affix-spec2.png');
+        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+
+    });
+
+    $('#htcFileDownload').click(function () {
+
+
+
+
+        var a = $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog2.png');
+        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+    });
+
+
+
+    $('#detailcover').click(function () {
+
+        var b = $('#divImagePNG').addClass('my-detail-active');
+
+        //b = window.location.reload();
+        //$(this).addClass("my-detail-active");
+
+        if ($('#divImagePNG').hasClass('my-detail-active')) {
+
+
+            var a = $('.my-detail-img-cover img').attr('src', '/images/affix-cover2.png');
+            $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+            $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+            $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+            $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+            $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+            $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+
+        }
+        $('#divImagePNG').removeClass('my-detail-active');
+
+    });
+
+
+
+
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('.carousel').carousel();
+
+        if ($('#divVideo').hasClass("active")) {
+
+            alert('dasdasd');
+
+        }
+    });
+
+
+</script>
+
+
+
+
+
+<!-- jQuery library -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Initialize Bootstrap functionality -->
+<script>
+    // Initialize tooltip component
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // Initialize popover component
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
