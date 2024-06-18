@@ -18,8 +18,8 @@ namespace idn.AnPhu.Website.Controllers
             ViewData["ListHotProduct"] = listhotproudct;
             var listhotnews = ServiceFactory.NewsManager.GetHotNewsTop(3, Culture);
             ViewData["ListHotNews"] = listhotnews;
-            //var listsalenews = ServiceFactory.NewsManager.GetByCateShortName(100, Culture, "tin-khuyen-mai");
-            //ViewData["ListSaleNews"] = listsalenews;
+            var listsalenews = ServiceFactory.NewsManager.GetByCateShortName(100, Culture, "tin-khuyen-mai");
+            ViewData["ListSaleNews"] = listsalenews;
             //var services = ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("dich-vu", Culture);
             //ViewData["Services"] = services;
             return View();

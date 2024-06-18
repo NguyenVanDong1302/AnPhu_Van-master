@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AppDicDomain.cs" />
+    <Compile Include="Models\HtmlPage.cs" />
+    <Compile Include="Models\HtmlPageCategory.cs" />
+    <Compile Include="Models\HtmlPageCategoryBase.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\NewsCategoryBase.cs" />
     <Compile Include="Models\Product.cs" />
@@ -64,7 +67,10 @@
     <Compile Include="Models\Sys_User.cs" />
     <Compile Include="Models\Sys_UserInGroup.cs" />
     <Compile Include="Persistance\Caching\CacheDataProviderBase.cs" />
+    <Compile Include="Persistance\SqlServer\HtmlPageProvider.cs" />
     <Compile Include="Persistance\Interface\IappDicDomainProvider.cs" />
+    <Compile Include="Persistance\Interface\IHtmlPageCategoryProvider.cs" />
+    <Compile Include="Persistance\Interface\IHtmlPageProvider.cs" />
     <Compile Include="Persistance\Interface\IImportableDataProvider.cs" />
     <Compile Include="Persistance\Interface\INewsProvider.cs" />
     <Compile Include="Persistance\Interface\IPrdCategoriesProvider.cs" />
@@ -75,6 +81,7 @@
     <Compile Include="Persistance\Interface\ISys_GroupProvider.cs" />
     <Compile Include="Persistance\Interface\ISys_UserProvider.cs" />
     <Compile Include="Persistance\SqlServer\AppDicDomainProvider.cs" />
+    <Compile Include="Persistance\SqlServer\HtmlPageCategoryProvider.cs" />
     <Compile Include="Persistance\SqlServer\NewsProvider.cs" />
     <Compile Include="Persistance\SqlServer\PrdCategoriesProvider.cs" />
     <Compile Include="Persistance\SqlServer\ProductPropertyProvider.cs" />
@@ -85,6 +92,8 @@
     <Compile Include="Persistance\SqlServer\Sys_UserProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ApDicDomainManager.cs" />
+    <Compile Include="Services\HtmlPageCategoryManager.cs" />
+    <Compile Include="Services\HtmlPageManager.cs" />
     <Compile Include="Services\NewsManager.cs" />
     <Compile Include="Services\PrdCategoriesManager.cs" />
     <Compile Include="Services\ProductManager.cs" />

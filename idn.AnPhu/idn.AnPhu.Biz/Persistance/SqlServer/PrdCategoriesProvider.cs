@@ -59,7 +59,13 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
 
         public List<ProductCategory> ListAllProductCategory(string culture)
         {
-            throw new NotImplementedException();
+            var comm = this.GetCommand("sp_ProductCategoryGetAll");
+            comm.AddParameter<string>(this.Factory, "Culture", culture);
+            if (comm == null) return null;
+            var dt = this.GetTable(comm);
+            var listGroupNews = EntityBase.ParseListFromTable<ProductCategory>(dt);
+
+            return listGroupNews;
         }
 
         public void Remove(ProductCategory item)

@@ -1,15 +1,18 @@
 ﻿
 
 @using System.Configuration
-@using idn.AnPhu.Biz.Services
+@using idn.AnPhu.Biz.Models;
+@using idn.AnPhu.Biz.Services;
+
 @{
     Layout = null;
-    //var products = idn.AnPhu.Biz.Services.ServiceFactory.ProductCategoryManager.ListAllProductCategory(Culture);
+    var Culture = "vi";
+    var products = idn.AnPhu.Biz.Services.ServiceFactory.ProductCategoryManager.ListAllProductCategory(Culture);
     //var listprall = idn.AnPhu.Biz.Services.ServiceFactory.ProductManager.ProductGetAllActive(Culture);
 
     //var news = idn.AnPhu.Biz.Services.ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
 
-    //var services = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("dich-vu", Culture);
+    var services = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("dich-vu", "vi-VN");
     //var support = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("chinh-sach-va-quy-dinh", Culture);
     //var buycar = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("mua-xe", Culture);
 
@@ -158,12 +161,6 @@
                         </h1>
                     </div>
 
-
-
-
-
-
-
                     <!--<div class="col-sm-12 col-xs-12" style="padding:0">
                     <div class=" col-xs-1 no-padding">
                     <img src="~/Images/forma-footer3.png" />
@@ -179,23 +176,8 @@
                         SR2: 0948 080 066
                     </h1>
                          </div>-->
-
-
-
-
                 </div>
-
-
-
-
-
-
-
-
             </div>
-
-
-
 
             <div class="col-sm-8 margin-bottom-footer no-padding" id="anim14">
 
@@ -204,7 +186,7 @@
                         <div class="title"> Sản Phẩm</div>
                         <div class="col-xs-9" style="border-bottom:1px solid #a6a6a6; margin-bottom:20px;">
                         </div>
-                        @*<ul>
+                        <ul>
                             @if (products.Count > 0)
                             {
 
@@ -218,23 +200,22 @@
                                 }
 
                             }
-                        </ul>*@
+                        </ul>
                     </div>
-
-                </div>
+                </div> 
 
                 <div class="col-md-4 footermenu hidden-xs hidden-sm ">
                     <div class="col-xs-12 padding-foot">
                         <div class="title">Dịch vụ</div>
                         <div class="col-xs-9" style="border-bottom:1px solid #a6a6a6; margin-bottom:20px;">
                         </div>
-                        @*<ul>
+                        <ul>
                             @if (services.Count > 0)
                             {
                                 foreach (HtmlPageCategory item in services)
                                 {
 
-                                    var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
+                                    var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, "vi-VN");
                                     if (listhtmlpage != null)
                                     {
                                         var n = 1;
@@ -254,7 +235,7 @@
                                 }
 
                             }
-                        </ul>*@
+                        </ul>
                     </div>
                 </div>
 

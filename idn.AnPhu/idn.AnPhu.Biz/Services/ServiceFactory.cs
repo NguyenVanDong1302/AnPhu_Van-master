@@ -24,6 +24,8 @@ namespace idn.AnPhu.Biz.Services
             services.Add(typeof(ProductManager), new ProductManager(new idn.AnPhu.Biz.Persistance.SqlServer.ProductProvider()));
             services.Add(typeof(SlideBannerManager), new SlideBannerManager(new idn.AnPhu.Biz.Persistance.SqlServer.SlideBanneProvider()));
             services.Add(typeof(NewsManager), new NewsManager(new idn.AnPhu.Biz.Persistance.SqlServer.NewsProvider()));
+            services.Add(typeof(HtmlPageCategoryManager), new HtmlPageCategoryManager(new idn.AnPhu.Biz.Persistance.SqlServer.HtmlPageCategoryProvider()));
+            services.Add(typeof(HtmlPageManager), new HtmlPageManager(new idn.AnPhu.Biz.Persistance.SqlServer.HtmlPageProvider()));
             #endregion
         }
 
@@ -147,6 +149,29 @@ namespace idn.AnPhu.Biz.Services
             }
         }
 
+        public static HtmlPageCategoryManager HtmlPageCategoryManager
+        {
+            get
+            {
+                return (HtmlPageCategoryManager)services[typeof(HtmlPageCategoryManager)];
+            }
+            set
+            {
+                services[typeof(HtmlPageCategoryManager)] = value;
+            }
+        }
+
+        public static HtmlPageManager HtmlPageManager
+        {
+            get
+            {
+                return (HtmlPageManager)services[typeof(HtmlPageManager)];
+            }
+            set
+            {
+                services[typeof(HtmlPageManager)] = value;
+            }
+        }
     }
 
 }
