@@ -1858,6 +1858,13 @@
     <Content Include="Scripts\tinymce\utils\mctabs.js" />
     <Content Include="Scripts\tinymce\utils\validate.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="tempfiles\uploads\background\banner web-htc_1920x1080.png" />
+    <Content Include="tempfiles\uploads\Banner\all new tucson.jpg" />
+    <Content Include="tempfiles\uploads\Banner\Banner website.jpg" />
+    <Content Include="tempfiles\uploads\Slidebanner\banner web-htc_1920x1080.png.jpg" />
+    <Content Include="tempfiles\uploads\Slidebanner\Banner website.jpg" />
+    <Content Include="tempfiles\uploads\Slidebanner\slide-palisade.jpg" />
+    <Content Include="tempfiles\uploads\Slidebanner\slide-website-mới-custin.jpg" />
     <Content Include="Views\NetAdvImage\Index.aspx" />
     <Content Include="Views\NetAdvImage\Pickup.aspx" />
     <Content Include="Web.config">
@@ -1894,6 +1901,7 @@
     <Content Include="Views\Shared\_ActionLayout.cshtml" />
     <Content Include="Views\ProductAction\Register.cshtml" />
     <Content Include="Views\ProductAction\Index.cshtml" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

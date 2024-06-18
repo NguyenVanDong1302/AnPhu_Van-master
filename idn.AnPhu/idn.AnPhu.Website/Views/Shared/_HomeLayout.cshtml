@@ -1,0 +1,303 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en" style="background-color: #fff; ">
+<head>
+    @*@Html.CanonicalUrl()*@
+    <meta charset="utf-8" />
+    <meta name="description" content="@Html.Raw(ViewBag.Desciption)" />
+    <meta name="keywords" content="@Html.Raw(ViewBag.Keywords)" />
+    <meta name="google-site-verification" content="q5dppm8aZAcA5MNiVAgI8GLetu0KE07IbEfB95Z-oDo" /> @*Bổ sung theo yc của khách hàng*@
+    <title>@ViewBag.Title</title>
+
+    <!-- FACEBOOK OPEN GRAPH -->
+    <meta property="fb:app_id" content="1723034651298741">
+    <meta property="og:url" name="og:url" content="@Request.Url.ToString()">
+    <meta property="og:type" name="og:type" content="website">
+    <meta property="og:site_name" name="og:site_name" content="HYUNDAICAUDIEN">
+    <meta property="og:title" name="og:title" content="@ViewBag.Title">
+    <meta property="og:description" name="og:description" content="@ViewBag.Desciption">
+    @if (ViewBag.MetaOGImage != null && ViewBag.MetaOGImage.Length > 0)
+    {
+        <meta property="og:image:url" content="@ViewBag.MetaOGImage" />
+    }
+    else
+    {
+        <meta property="og:image" name="og:image" content="http://hyundaicaudien.vn/tempfiles/uploads/logobaiviet/IMG_3741.JPG">
+    }
+    <meta property="og:image:width" content="720">
+    <meta property="og:image:height" content="480">
+
+
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bxslider/jquery.bxslider.css" rel="stylesheet" />
+
+    <link href="~/Content/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/icon-hyundai.ico" type="image/x-icon" />
+    <link rel="icon" href="/images/icon-hyundai.ico" type="image/x-icon" />
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/jquery.lazy.min.js"></script>
+    <script src="~/Scripts/tinymce/jquery.tinymce.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.bxslider.min.js"></script>
+    @Scripts.Render("~/scripts/bootstrap")
+    <style type="text/css">
+        #floating {
+            position: absolute;
+            width: 1000px;
+            height: 310px;
+            z-index: 100001;
+        }
+
+        #overPage {
+            background: black;
+            z-index: 350;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10000;
+        }
+    </style>
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='/Content/admin/Script/jquery.min.js'>" + "<" + "/script>");
+    </script>
+    <!-- Ants Insight script -->
+    <script type="text/javascript">
+        var _siteId = "584010439";
+        (function () {
+            var e = document.createElement("script"); e.type = "text/javascript", e.async = !0, e.src = "/Scripts/insight.js";
+            var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(e, t)
+        })();
+    </script>
+    <!-- End of Ants Insight script -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '737422260111850');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=737422260111850&ev=PageView&noscript=1" />
+    </noscript>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-494730855"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-494730855');
+    </script>
+
+    <!-- Event snippet for Website traffic conversion page -->
+    <script>gtag('event', 'conversion', { 'send_to': 'AW-730594908/pzgJCKm-8MkBENz8r9wC' });</script>
+    <!-- Google Tag Manager 2020-12-18 -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K9JG24S');</script>
+    <!-- End Google Tag Manager -->
+    @*24/2/2022 Lộc thêm*@
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBJYX4T42K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YBJYX4T42K');
+    </script>
+</head>
+
+<body style=" ">
+    <script>
+        $(window).scroll(function (event) {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > 0) {
+                $('#BusinessHotline').addClass('fix-position');
+            }
+            else {
+                $('#BusinessHotline').removeClass('fix-position');
+            }
+        });
+    </script>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1723034651298741',
+                xfbml: true,
+                version: 'v2.6'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "/Scripts/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+
+    <!-- navigation panel -->
+    @RenderSection("featured", required: false)
+
+    <div class="font-family: HyundaiSansHead-Regular;">
+
+
+        @RenderBody()
+    </div>
+
+    @Html.Partial("Footer")
+
+    <div style="display: none">
+        <form enctype="multipart/form-data" id="globalUploadFile">
+            <div style="float: left; width: 150px; margin-top: 10px; margin-left: 10px; margin-bottom: 20px;">
+                <input type="file" name="file" id="globalUploadFileInput" style="display: none;" />
+            </div>
+        </form>
+
+    </div>
+
+
+
+
+    @*aaa*@
+    <script type="text/javascript">
+
+        function setAdminCurrentUrl(url) {
+
+            $('.navbar-nav a[href="' + url + '"]').each(function () {
+                $(this).closest('li').addClass('active');
+            });
+        }
+
+    </script>
+
+    <script>
+
+        document.write("<script type='text/javascript' language='javascript'>MainContentW = 1000;LeftBannerW = 125;RightBannerW = 125;LeftAdjust = 5;RightAdjust = 5;TopAdjust = 10;<\/script>");
+
+    </script>
+
+    <script type="text/javascript" src="http://icichtc.ewave.vn:4900/livechatclient/scripts?appid=10340"></script>
+
+    @RenderSection("scripts", required: false)
+    <script>
+        $(function () {
+            $('.lazy').lazy({
+                combined: true,
+                delay: 1000
+            });
+        });
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9JG24S"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-61782649-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</html>
+
+<script>
+    setInterval(function () {
+        $('#anim1, #anim2').toggleClass('magictime foolishIn');
+    }, 2000);
+
+    setInterval(function () {
+        $('#anim3, #anim4').toggleClass('magictime twisterInUp');
+    }, 2000);
+    setInterval(function () {
+        $('#anim5').toggleClass('magictime twisterInDown');
+    }, 2000);
+    setInterval(function () {
+        $('#anim6').toggleClass('magictime foolishIn');
+    }, 2000);
+    setInterval(function () {
+        $('#anim7').toggleClass('magictime tinLeftIn');
+    }, 2200);
+    setInterval(function () {
+        $('#anim8').toggleClass('magictime tinLeftIn');
+    }, 2100);
+    setInterval(function () {
+        $('#anim9').toggleClass('magictime tinLeftIn');
+    }, 2000);
+    setInterval(function () {
+        $('#g-nav').toggleClass('magictime boingInUp');
+    }, 2300);
+    setInterval(function () {
+        $('#c1-nav').toggleClass('magictime boingInUp');
+    }, 2400);
+    setInterval(function () {
+        $('#e-nav').toggleClass('magictime boingInUp');
+    }, 2500);
+    setInterval(function () {
+        $('#m-nav').toggleClass('magictime boingInUp');
+    }, 2600);
+    setInterval(function () {
+        $('#anim10').toggleClass('magictime tinDownIn');
+    }, 2000);
+    setInterval(function () {
+        $('#anim11').toggleClass('magictime tinUpIn');
+    }, 2000);
+    setInterval(function () {
+        $('#anim12').toggleClass('magictime puffIn');
+    }, 3000);
+    setInterval(function () {
+        $('#anim13').toggleClass('magictime puffIn');
+    }, 3000);
+    setInterval(function () {
+        $('#anim14').toggleClass('magictime tinRightIn');
+    }, 2000);
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        var a = $(window).width();
+        if (a < 991) {
+
+            $("#effect1").attr("href", "");
+            $("#effect2").attr("href", "");
+        }
+
+    });
+
+</script>
+
+
+

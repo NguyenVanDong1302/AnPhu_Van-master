@@ -1,32 +1,403 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@using idn.AnPhu.Biz.Services
+@using System.Globalization
+@using idn.AnPhu.Biz.Models
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+@{
+    ViewBag.Title = "Hyundai Cầu Diễn - Đại lý ủy quyền của Hyundai Thành Công";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+    var listslide = ViewData["ListSlide"] as List<SlideBanner>;
+    var listhotpro = ViewData["ListHotProduct"] as List<Product>;
+    //var listhotnews = ViewData["ListHotNews"] as List<News>;
+    //var about = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(17, Culture);
+    //int count = 0;
+    //var companyinfo = ServiceFactory.CompanyManager.Get(new Company { CompanyId = 1 });
+    //var adleft = ServiceFactory.AdBannerLeftManager.Get(new AdBannerLeft { AdLeftId = 1 });
+    //var adright = ServiceFactory.AdBannerRightManager.Get(new AdBannerRight { AdRightId = 1 });
+}   
+
+<div class="slide-content home">
+    @Html.Partial("NavBar")
+    <div class="container hidden-xs hidden-sm" style="width: 100%; margin-top: -136px;">
+        <ul class="bxslider">
+            @if (listslide.Count > 0)
+            {
+                foreach (SlideBanner item in listslide)
+                {
+                    <li>
+                        <a href="@item.Url">
+                            <img class="lazy" src="@item.Image" />
+                        </a>
+                    </li>
+                }
+            }
+            else
+            {
+
+            }
+
+        </ul>
+
+
+    </div>
+   
 </div>
-<input type="text" id="PhoneNo" name="PhoneNo" class="col-xs-11 PhoneNo" />
-@Html.Partial("FileManagerButton", "PhoneNo")
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+<div class="home-content" style="font-family: ModernHBold;">
+    @*@{ if (adleft.IsActive == true && adright.IsActive == false)
+            {
+                <div class="visible-lg" id="floatMenuLeft" style="">
+                    <a href="@adleft.AdLeftLink">
+                        <img class="lazy" src="@adleft.AdLeftImage" />
+                    </a>
+
+                </div>
+                <script type="text/javascript">
+                  var name = "#floatMenuLeft";
+                  var menuYloc = null;
+                  $(document).ready(function () {
+                      if ($(window).width() > 1100) {
+                          menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")));
+                          $(window).scroll(function () {
+
+                              offset = menuYloc + $(document).scrollTop() + "px";
+                              $(name).animate({ top: offset }, { duration: 500, queue: false });
+                          });
+                      }
+                      else {
+                          $(name).hide();
+                      }
+                  });
+                </script>
+
+
+            }
+
+            else if (adleft.IsActive == false && adright.IsActive == true)
+            {
+
+                <div class="visible-lg" id="floatMenuRight" style="display: none !important">
+                    <a href="@adright.AdRightLink">
+                        <img class="lazy" src="@adright.AdRightImage" />
+                    </a>
+
+                </div>
+                <script type="text/javascript">
+
+                         var name1 = "#floatMenuRight";
+                         var menuYloc1 = null;
+                         $(document).ready(function () {
+
+                             if ($(window).width() > 1100) {
+                                 menuYloc1 = parseInt($(name1).css("top").substring(0, $(name1).css("top").indexOf("px")));
+
+                                 $(window).scroll(function () {
+                                     offset1 = menuYloc1 + $(document).scrollTop() + "px";
+
+                                     $(name1).animate({ top: offset1 }, { duration: 500, queue: false });
+
+
+                                 });
+                             }
+                             else {
+                                 $(name1).hide();
+                             }
+                         });
+
+                </script>
+
+
+
+            }
+            else if (adleft.IsActive == false && adright.IsActive == false)
+            {
+
+
+
+
+            }
+
+            else
+            {
+                <div class="visible-lg " id="floatMenuLeft" style="">
+                    <a href="@adleft.AdLeftLink">
+                        <img class="lazy" src="@adleft.AdLeftImage" />
+                    </a>
+
+                </div>
+                <div class="visible-lg " id="floatMenuRight" style="display: none !important">
+                    <a href="@adright.AdRightLink">
+                        <img class="lazy" src="@adright.AdRightImage" />
+                    </a>
+
+                </div>
+
+
+
+                <script type="text/javascript">
+              var name = "#floatMenuLeft";
+              var menuYloc = null;
+              $(document).ready(function () {
+                  if ($(window).width() > 1100) {
+                      menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")));
+                      $(window).scroll(function () {
+                          offset = menuYloc + $(document).scrollTop() + "px";
+                          $(name).animate({ top: offset }, { duration: 500, queue: false });
+                      });
+                  }
+                  else {
+                      $(name).hide();
+                  }
+              });
+                </script>
+
+
+                <script type="text/javascript">
+
+               var name1 = "#floatMenuRight";
+               var menuYloc1 = null;
+               $(document).ready(function () {
+                   if ($(window).width() > 1100) {
+                       menuYloc1 = parseInt($(name1).css("top").substring(0, $(name1).css("top").indexOf("px")));
+                       $(window).scroll(function () {
+                           offset1 = menuYloc1 + $(document).scrollTop() + "px";
+                           $(name1).animate({ top: offset }, { duration: 500, queue: false });
+                       });
+                   }
+                   else {
+                       $(name1).hide();
+                   }
+               });
+
+                </script>
+
+
+            }
+        }*@
+
+
+    <div class="container home-detail no-padding">
+        <div class=" col-centered slidehotproduct">
+            <div class="slide-product">
+                <div style="float: left; list-style: outside none none; position: relative"></div>
+                @if (listhotpro.Count > 0)
+                    {
+                        foreach (Product itemprd in listhotpro.OrderBy(m => m.OrderNo))
+                        {
+                            <div class=" hidden-sm hidden-xs">
+                                <a href="@Url.Action("Detail", "Product", new { productcode = itemprd.ProductCode, productid = itemprd.ProductId })">
+                                    <div class="topcar-img animated infinite tada">
+                                        <img src="@itemprd.ProductImage" class="img-responsive lazy" alt="@itemprd.ProductName" />
+                                    </div>
+                                    <div class="topcarname" style="font-family: 'ModernHBold' !important">@itemprd.ProductName</div>
+                                </a>
+                            </div>
+
+                        }
+                    }
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="my-news5 col-sm-12 no-padding margin-hot-list-cars" style="padding: 0;">
+                <div class="col-md-9 no-padding width-hots">
+                    <div class="mybxslider">
+
+                        @*@if (listhotnews != null && listhotnews.Count > 0)
+                            {
+                                var n = 1;
+
+
+                                foreach (News item2 in listhotnews)
+                                {
+                                    if (n < 4)
+                                    {
+                                        <div class="col-sm-12 no-padding">
+                                            <div class="col-sm-5 height-hot-news " style="background: white;">
+                                                <a href="@Url.Action("Detail", "News", new { category = item2.NewsCategoryTitle.ToUrlSegment(280), shortname = item2.NewsShortName, newsid = item2.NewsId })">
+
+                                                    <div class="col-sm-12">
+                                                        <h2 class="my-title-hots">
+                                                            @item2.NewsTitle.ToTitleOnTable(35)
+                                                        </h2>
+                                                    </div>
+                                                </a>
+                                                <a href="@Url.Action("Detail", "News", new { category = item2.NewsCategoryTitle.ToUrlSegment(280), shortname = item2.NewsShortName, newsid = item2.NewsId })">
+                                                    <div class="col-sm-12 my-summary-hots">
+                                                        <h1>@item2.NewsSummary.ToTitleOnTable(100)</h1>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="  col-sm-7 my-news-nav no-padding">
+
+                                                <a href="@Url.Action("Detail", "News", new { category = item2.NewsCategoryTitle.ToUrlSegment(280), shortname = item2.NewsShortName, newsid = item2.NewsId })">
+                                                    <img class="my-news-image lazy" src="@item2.NewsImage" alt="@item2.NewsTitle" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    }
+                                    n++;
+                                }
+                            }*@
+                    </div>
+                </div>
+
+                @*@{
+                        foreach (var item in about)
+                        {
+                            <div class="col-md-3 col-sm-6 no-padding marginleft15">
+
+                                <div class="col-sm-12 no-padding width-my-about2" style="background: white;">
+                                    <div class="col-sm-6 padding-left-hots">
+
+                                        <center><a class="hvr-shutter-out-horizontal" href="@Url.Action("AboutSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, htmlpageid = item.HtmlPageId, shortname = "gioi-thieu" })"><h1 style="text-transform: uppercase; color: #737373; font-weight: bold">giới thiệu về công ty</h1></a></center>
+                                    </div>
+                                    <div class="col-sm-6 no-padding">
+                                        <img class="lazy" src="@item.HtmlPageImage" class="marginleft-5" style="width:100%; height:auto;" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        }
+                    }*@
+
+                <div class="col-md-3 col-sm-6 no-padding marginleft15" style="margin-top: 6px">
+
+                    <div class="col-sm-12 no-padding width-my-about" style="background: white">
+                        <div class="col-sm-3 no-padding">
+
+                            <img class="lazy" src="~/Images/icon-about1.png" @*id="anim1"*@ />
+
+                        </div>
+                        <div class="col-sm-9 no-padding " @*id="anim3"*@>
+
+                            @*<h1 class="phone-size ">Bán Hàng: @companyinfo.CompanyHotline</h1>*@
+
+                        </div>
+
+                    </div>
+
+                    @*<div class="col-sm-12 no-padding width-my-about" style="background: white; margin-top: 7px;">
+                            <div class="col-sm-3 no-padding">
+
+                                <img class="lazy" src="~/Images/icon-about1.png" id="anim1"/>
+
+                            </div>
+                            <div class="col-sm-9 no-padding " id="anim3">
+
+                                <h1 class="phone-size ">bán hàng SR2 : 0948 080 066</h1>
+
+                            </div>
+
+                        </div>*@
+
+
+                    <div class="col-sm-12 no-padding width-my-about" style="background: white; margin-top: 7px;">
+
+                        <div class="col-sm-3 no-padding">
+
+                            <img class="lazy" src="~/Images/icon-about2.png" @*id="anim2"*@ />
+
+                        </div>
+                        <div class="col-sm-9 no-padding " @*id="anim4"*@>
+
+                            @*<h1 class="phone-size">Dịch Vụ: @companyinfo.ServiceHotline</h1>*@
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="label-service">
+        </div>
+
     </div>
 </div>
+<style type="text/css">
+    img.lazy {
+        display: block;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        //cbpAnimatedHeader();
+        $('.bxslider').bxSlider({
+            auto: true,
+            speed: 600,
+            pause: 7000
+
+            //ticker: true,
+
+            //pagerCustom: '#bx-pager'
+        });
+    });
+    $(document).ready(function () {
+        //cbpAnimatedHeader();
+        $('.mybxslider ').bxSlider({
+            auto: false,
+            speed: 500,
+            //pause: 5000,
+            mode: 'fade',
+            //pagerCustom: '#bx-pager'
+
+
+
+        });
+    });
+
+    $(document).ready(function () {
+        //cbpAnimatedHeader();
+        var a = $(window).width();
+
+        if (a > 800) {
+
+
+            $('.slide-product').bxSlider({
+                //minSlides: 10,
+                //maxSlides: 5,
+                //slideWidth: 160,
+                //ticker: true,
+                //speed: 8000,
+                //auto: true,
+                //pause:0
+                //auto:true
+
+                auto: true,
+                slideWidth: 5000,
+                minSlides: 5,
+                pager: false,
+                maxSlides: 5,
+                slideMargin: 0,
+            });
+
+        }
+        if (a <= 800) {
+
+            $('.slide-product').bxSlider({
+                //minSlides: 10,
+                //maxSlides: 5,
+                //slideWidth: 160,
+                //ticker: true,
+                //speed: 8000,
+                //auto: true,
+                //pause:0
+                //auto:true
+
+                auto: false,
+                slideWidth: 500,
+                minSlides: 4,
+                pager: false,
+                maxSlides: 4,
+                slideMargin: 0,
+            });
+
+        }
+
+    });
+
+
+</script>

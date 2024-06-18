@@ -22,6 +22,8 @@ namespace idn.AnPhu.Biz.Services
             services.Add(typeof(ProductReviewManager), new ProductReviewManager(new AnPhu.Biz.Persistance.SqlServer.ProductReviewProvider()));
             services.Add(typeof(AppDicDomainManager), new AppDicDomainManager(new AnPhu.Biz.Persistance.SqlServer.AppDicDomainProvider()));
             services.Add(typeof(ProductManager), new ProductManager(new idn.AnPhu.Biz.Persistance.SqlServer.ProductProvider()));
+            services.Add(typeof(SlideBannerManager), new SlideBannerManager(new idn.AnPhu.Biz.Persistance.SqlServer.SlideBanneProvider()));
+            services.Add(typeof(NewsManager), new NewsManager(new idn.AnPhu.Biz.Persistance.SqlServer.NewsProvider()));
             #endregion
         }
 
@@ -120,5 +122,31 @@ namespace idn.AnPhu.Biz.Services
                 services[typeof(AppDicDomainManager)] = value;
             }
         }
+
+        public static SlideBannerManager SlideBannerManager
+        {
+            get
+            {
+                return (SlideBannerManager)services[typeof(SlideBannerManager)];
+            }
+            set
+            {
+                services[typeof(SlideBannerManager)] = value;
+            }
+        }
+
+        public static NewsManager NewsManager
+        {
+            get
+            {
+                return (NewsManager)services[typeof(NewsManager)];
+            }
+            set
+            {
+                services[typeof(NewsManager)] = value;
+            }
+        }
+
     }
+
 }

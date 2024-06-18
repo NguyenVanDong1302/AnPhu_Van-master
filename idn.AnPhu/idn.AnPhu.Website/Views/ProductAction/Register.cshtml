@@ -1,224 +1,230 @@
-﻿
+﻿@using idn.AnPhu.Biz.Services
+@model idn.AnPhu.Biz.Models.Product
 @{
-    ViewBag.Title = "Register";
+    ViewBag.Title = "Đăng ký lái thử";
     Layout = "~/Views/Shared/_ActionLayout.cshtml";
+    var listpro = ServiceFactory.ProductManager.ProductGetAllActive("vi-VN");
 }
 
-<div class="" style="background-color: #ebebeb; height: 53px;">
-    <div class="container">
-
-        <div class="col-sm-8 no-padding">
-            <a href="/" class="col-sm-1 no-padding" style=" width: 32px">
-                <img style="margin-top: 12px;" src="~/Images/forma-house.png" />
-            </a>
-
-
-
-            <a class="col-sm-1" style="margin-top: 16px; width: 32px">
-                <img src="~/Images/forma-7.png" />
-            </a>
-
-            <a class="col-sm-2 no-padding" href="#" style="margin-top: 16px; width: 18.666667%;">Chăm sóc khách hàng</a>
-
-
-
-            <a href="#" class="col-sm-1 no-padding" style="margin-top: 16px; width: 22px">
-                <img src="~/Images/forma-7.png" />
-
-            </a>
-
-            <a class="col-sm-3 no-padding" href="@Url.Action("Contact", "Home")" style="margin-top:16px;">Đăng ký tư vấn</a>
-        </div>
-
-    </div>
-</div>
-
-
-
-<div class="" style="background-color: #ebebeb; height: 110px; border-top: 1px solid #f9f9f9; border-bottom: 3px solid #dadada">
-    <div class="container">
-        <div class="col-md-12 no-padding marginbot30">
-            <div class=" col-md-7 h1-text no-padding " style="margin-left: 0px; font-weight: 200; color: #333333; font-size: 19px">
-                Đăng ký tư vấn
-
-            </div>
-
-            <div class="col-md-5 col-xs-8 no-padding" style="margin-top: 50px; text-align: right">
-                <a class=" col-md-6 col-xs-12 no-padding " href="@Url.Action("NewsReceiveRegister", "ProductAction")">
-                    Đăng ký nhận bản tin, catalog
-                </a>
-                <a class=" col-md-3 col-xs-12 no-padding" href="@Url.Action("AnswerQuestion", "ProductAction")">
-                    Trang hỏi đáp
-                </a>
-                <a class=" col-md-3 col-xs-12 no-padding " href="@Url.Action("Contact", "Home")">
-                    Liên hệ
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-</div>
 
 <div class="container">
-    @* <div class="col-sm-8 no-padding title-register" style="border-bottom: 1px solid rgb(153, 156, 157)">
-          Đăng ký nhận bản tin, catalog
+    <div class="" style="background-color: #f2f3f3; height: 17px;">
 
-        </div>*@
-    <div class="row register" id="register-content">
+
+        <div class="col-sm-11 no-padding padding-buy-car">
+            <a href="/" class="col-sm-1 no-padding width-forma-house" style=" font-size:12px; padding-right:0">
+                <img src="~/Images/forma-house2.png" />
+
+            </a>
+
+
+            <a class="col-sm-2 no-padding padding-buy-car" href="#" style="font-size:12px; padding:3px 0; width:55px">> Mua xe</a>
+
+
+
+            <a class="col-sm-5 no-padding padding-buy-car" href="@Url.Action("Register", "ProductAction")" style="font-size:12px; padding:3px 0;"> > Đăng ký lái thử</a>
+        </div>
+
+        @*   <div class="col-md-4 col-xs-12 no-padding" style="margin-top: 16px">
+
+
+                <a style=" text-align:right" class="col-md-6 col-xs-6  submenu no-padding" href="@Url.Action("Register", "ProductAction")">
+                    <img src="~/Images/icon-buycar1.png" class="hidden-xs" />
+                    ĐĂNG KÝ LÁI THỬ
+                </a>
+                 <a class="col-md-2 col-xs-6 title-submenu submenu " href="@Url.Action("Guide", "ProductAction", new { shortname="huong-dan-thu-tuc"})">
+                    Hướng dẫn thủ tục
+                </a>
+                <a  style="float:right; text-align:right" class="col-md-6 col-xs-6  submenu no-padding " href="@Url.Action("SupportBuyCar", "ProductAction")">
+                    <img src="~/Images/icon-supportbuycar1.png" class="hidden-xs" />
+                    HỖ TRỢ TRẢ GÓP
+
+                </a>
+            </div>*@
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="col-xs-12 no-padding title-register" style="font-family: 'ModernHBold' !important">
+        Đăng ký lái thử xe
+
+    </div>
+
+    <div class="col-sm-12 no-padding">
+
+
+
+
+
+        <a href="@Url.Action("BuyCar", "ProductAction")" class="col-md-2 col-sm-3 sev-my-col col-xs-5 hvr-pulse-shrink " style="border: 1px solid #cccccc; padding: 15px 10px 15px 15px;margin-bottom:33px;">
+            <div class="buy-my-img col-sm-12" style="text-align:right; font-family: 'ModernHBold' !important">
+                Giá xe
+            </div>
+
+        </a>
+        <div class="col-sm-6 col-md-8 col-xs-2">
+        </div>
+
+
+        <a href="@Url.Action("SupportBuyCar", "ProductAction")" class="col-md-2 col-sm-3 sev-my-col col-xs-5 hvr-pulse-shrink" style="border: 1px solid #cccccc; padding: 15px 15px 15px 5px">
+            <div class="buy-my-img1 col-sm-12" style="font-family: 'ModernHBold' !important">
+                Hỗ trợ trả góp
+            </div>
+
+        </a>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="row register container" id="register-content" style="margin:0">
         @*<div class="header-register ">
                 Vui lòng điền thông tin vào mẫu dưới đây
             </div>*@
         <div class="body-register">
-            <div class="col-sm-12 form-horizontal no-padding">
-                <div class="col-sm-5 no-padding">
-
-                    @*  <div class="form-group no-padding" >
-
-                        <label for="Subject" class="col-sm-3 control-label " style="padding-right:0" >Tiêu đề</label>
-                        <div class="col-sm-8 no-padding">
-                            <input type="text" class="form-control no-padding" id="Subject" name="Subject" placeholder="" />
-                        </div>
-                        </div>*@
-
+            <div class="col-sm-12 form-horizontal no-padding" style="padding:0">
+                <div class="col-sm-8 no-padding" style="padding:0;">
 
                     <div class="form-group no-padding">
 
-                        <label for="Name" class="col-sm-3 control-label " style="padding-right: 0">Họ Tên</label>
-                        <div class="col-sm-8 ">
-                            <input type="text" class="form-control no-padding" id="Name" name="Name" placeholder="" />
+                        <label for="Name" class="col-sm-2 control-label" style="font-family: 'ModernHBold' !important">Họ Tên</label>
+                        <div class="col-sm-4 no-padding">
+                            <div>
+                                <input type="text" class=" no-padding" id="Name" name="Name" placeholder="" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group no-padding">
-                        <label for="Phone" class="col-sm-3 control-label" style="padding-right: 0">Số điện thoại</label>
-                        <div class="col-sm-8 ">
-                            <input type="email" class="form-control" name="Phone" id="Phone" placeholder="" />
+                        <label for="Email" class="col-sm-2 control-label " style="text-align:center; font-family: 'ModernHBold' !important">Email</label>
+
+                        <div class="col-sm-4 no-padding">
+                            <div>
+                                <input type="text" class="" name="Email" id="Email" placeholder="" required />
+                            </div>
                         </div>
+
+
+
                     </div>
 
-                    <div class="form-group no-padding">
-                        <label for="Email" class="col-sm-3 control-label" style="">Email</label>
-                        <div class="col-sm-8 ">
-                            <input type="email" class="form-control" name="Email" id="Email" placeholder="" required />
-                        </div>
-                    </div>
+
                     <div class="form-group">
-                        <label for="Address" class="col-sm-3 control-label " style="padding-right: 0">Địa chỉ</label>
-                        <div class="col-sm-8 ">
-                            <input type="text" class="form-control" id="Address" name="Address" placeholder="" />
+
+                        <label for="Phone" class="col-sm-2 control-label  " style="font-family: 'ModernHBold' !important"> Điện thoại</label>
+                        <div class="col-sm-4 no-padding">
+                            <div>
+                                <input type="text" class="" name="Phone" id="Phone" placeholder="" />
+                            </div>
                         </div>
+                        <label for="Address" class="col-sm-2 control-label  " style="text-align:center; font-family: 'ModernHBold' !important">Địa chỉ</label>
+
+                        <div class="col-sm-4 no-padding">
+                            <div>
+                                <input type="text" class="" id="Address" name="Address" placeholder="" />
+                            </div>
+                        </div>
+
                     </div>
-                    @*<div class="form-group">
-                             <label for="Email" class="col-sm-2 control-label" style="text-align:center">Thời gian</label>
-                            <div class="col-sm-4 no-padding">
-                                <input data-provide="datepicker" name="Time" id="Time" placeholder="" class="form-control date-picker" />
-                                <input type="text" class="form-control" name="Time" id="Time" placeholder="Thời gian" value="@DateTime.Now.ToString("dd/MM/yyyy")" required />
+
+
+                    <div class="form-group">
+
+                        <label class="col-sm-2 control-label " style="font-family: 'ModernHBold' !important">Ghi chú</label>
+
+                        <div class="col-sm-4 no-padding">
+                            <div>
+                                <textarea class="" rows="3" name="Content" placeholder="" style="height:129px;"></textarea>
                             </div>
-                        </div>*@
+                        </div>
 
-                    @*<div class="form-group">
 
-                            <label class="col-sm-2 control-label"style="padding-right:0">Ghi chú</label>
-                            <div class="col-sm-6 no-padding">
-                                <textarea class="form-control" rows="3" name="Content" placeholder="" ></textarea>
+                        <label for="Email" class="col-sm-2 control-label" style="text-align:center; font-family: 'ModernHBold' !important">Thời gian</label>
+                        <div class="col-sm-4 no-padding">
+                            <div>
+                                <input data-provide="datepicker" name="Time" id="Time" placeholder="Ngày/ Tháng/ Năm" class="date-picker" style="color:blue" />
+
+                                @*<input type="text" class="form-control" name="Time" id="Time" placeholder="Thời gian" value="@DateTime.Now.ToString("dd/MM/yyyy")" required />*@
                             </div>
+                        </div>
 
-                             <a href="javascript:" class="btn  bnt-contact col-sm-2 btn-regitster " style="float:left;" onclick="_register()">Đăng ký</a>
+                        <a href="javascript:" class="btn  bnt-contact btn-news-register " style="float:right ; border-radius:50px;font-family: 'ModernHBold' !important" onclick="_register() " id="a">Đăng ký</a>
 
-                        </div>*@
+
+                    </div>
 
                 </div>
-                <div class="col-sm-5 no-padding" style="margin: 0; padding-right: 0">
+                <div class="col-sm-1 no-padding" style="">
+                </div>
 
-                    <div class="form-group" style="margin: 40px 0px 25px 0px">
-                        <label for="Subject" class="col-sm-4 col-xs-12 control-label " style="font-weight:200">Sản phẩm quan tâm</label>
-                        <div class="col-sm-6 col-xs-12 " style=" ">
-                            @*@Html.DropDownListDefault("ProductId", ViewData.Get<SelectList>("Categories"), "0", "Chọn loại xe", new { @class = "form-control-select ", @style = "background:#e8eaee; border: 1px solid #bfbfbf;" })*@
+                <div class="col-sm-3 padding-buycar-right" style="margin:0">
+                    <div class="form-group" style="">
+                        @*<label for="Subject" class="col-sm-3 control-label">MẪU XE</label>*@
+                        <div class="col-sm-12 no-padding padding-buy-car" style="background:#e8eaee" id="myselect">
+                            @*@Html.DropDownListDefault("ProductId", ViewData.Get<SelectList>("Categories"), "0", "Chọn loại xe", new { @class = "form-control-select", @style = "background:white" })*@
 
+                            @Html.DropDownListFor(
+                               Model => Model.ProductId,
+                               new SelectList(listpro, "ProductId", "ProductName", "ProductImage2"),
+                               "-- Chọn sản phẩm --",
+                               new { @class = "form-control-select" }
+                            )
                         </div>
+                 
                     </div>
                     <div class="col-lg-12">
-                        <div class="">
-                            <img src="/images/blank_car.png" class="img-responsive" style="text-align:center" id="showimage" />
+                        <div class=" hvr-buzz">
+                            <img src="/images/blank_car.png" class="img-responsive hvr-wobble-bottom" style="text-align:center" id="showimage" />
                         </div>
                     </div>
 
-                    @*    <div class ="col-lg-12 no-padding">
-                        <div class="col-lg-8 prd-reg">
-                            <h1 id="h1-id" style="line-height:1.2; margin-top:38px"></h1>
-                            <h2 id="h2-id" style="line-height:1.2"></h2>
+                    <div class="col-lg-12 no-padding">
+                        <div class="col-lg-12 prd-reg">
+                            <h1 id="h1-id" style="line-height:1"></h1>
+                            <h2 id="h2-id" style="line-height:1"></h2>
                         </div>
-                        <div class="col-lg-4" style="text-align:center; margin-top:70px;color:edc405">
-                             <a href="#" id="urlprd" class="" style="color:edc405">CHI  TIẾT XE</a>
+                        <div class="col-lg-12" style="text-align:left; margin-top:10px;color:#223f81">
+                            <a href="#" id="urlprd" class="" style="color:#213f81; font-family: 'ModernHBold' !important">CHI  TIẾT XE</a>
 
 
                         </div>
-                        </div>*@
+                    </div>
 
 
                 </div>
-                <form action="form_action.asp">
-                    <div class="col-sm-2 " style="margin: 0; padding-right: 0; text-align: left">
-                        <div class="col-xs-12 no-padding" style="margin-top: 30px">
-
-                            <h6 class="control-label" style="font-weight: 700; font-size: 18px">Tư vấn</h6>
-
-                        </div>
-                        <div class="col-xs-12 no-padding" style="margin-top: 25px">
-                            <div class="col-xs-1 no-padding" style="text-align: left">
-                                <input type="checkbox" id="Check1" value="Nhận E-catalog" name="checkn" />
-
-                            </div>
-                            <div class=" col-xs-11" style="font-weight: 200; font-size: 14px">Nhận E-catalog</div>
-                        </div>
-                        <div class="col-xs-12 no-padding" style="margin-top: 15px">
-                            <div class="col-xs-1 no-padding" style="text-align: left">
-                                <input type="checkbox" id="Check2" value="Bảng báo giá chi tiết" name="checkn" />
-
-                            </div>
-                            <div class=" col-xs-11" style="font-weight: 200; font-size: 14px; padding-right: 0">Bảng báo giá chi tiết</div>
-                        </div>
-                        <div class="col-xs-12 no-padding" style="margin-top: 15px">
-                            <div class="col-xs-1 no-padding" style="text-align: left">
-                                <input type="checkbox" id="Check3" value="Tư vấn thêm về sản phẩm" name="checkn" />
-
-                            </div>
-                            <div class=" col-xs-11" style="font-weight: 200; font-size: 14px;padding-right:0">Tư vấn thêm về sản phẩm</div>
-                        </div>
-                        <div class="col-xs-12 no-padding" style="margin-top: 15px">
-                            <div class="col-xs-1 no-padding" style="text-align: left">
-                                <input type="checkbox" id="Check4" value="Nhận tin tức" name="checkn" />
-
-                            </div>
-                            <div class=" col-xs-11" style="font-weight: 200; font-size: 14px">Nhận tin tức</div>
-                        </div>
-
-
-                    </div>
-                </form>
             </div>
         </div>
     </div>
-    <div class=" col-sm-12 no-padding">
-        <div class="col-sm-10">
-        </div>
-        <div class="col-sm-2 no-padding">
-            <a href="javascript:" class="btn  bnt-contact btn-news-register " style="float:right; margin:0 ; border-radius:10px;" onclick="_register() " id="a">Gửi</a>
-
-        </div>
-
-
-    </div>
 
 
 
 
 
 
-</div>@*  end container*@
+
+</div>
+
+
 
 <script type="text/javascript">
-    setAdminCurrentUrl('@Url.Action("SuicideRegister", "ProductAction")', '@Url.Action("SuicideRegister", "ProductAction")');
+    setAdminCurrentUrl('@Url.Action("Register", "ProductAction")', '@Url.Action("Register", "ProductAction")');
 </script>
 @Html.Raw(ViewBag.listarry)
 @Html.Raw(ViewBag.listurl)
@@ -226,7 +232,18 @@
 @Html.Raw(ViewBag.listh2)
 
 
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        var $imageElement = $('#showimage');
+        $('#ProductId').on('change', function () {
+            var selectedImageUrl = $('option:selected', this).data('ProductImage2');
+            // Lấy giá trị của ô select có ID là "my-select" bằng jQuery
+            var selectedValue = $("#ProductId").val();
+            console.log(241, listpro);
+            $imageElement.attr('src', "http://hyundaicaudien.vn/tempfiles/uploads/products/registers/SANTA-FE_RE.png");
+        });
+    });
+</script>
 
 <script>
 
@@ -236,41 +253,15 @@
         var a = true;
 
 
-
-
         //var subject = $("#Subject").val();
         var productcombo = document.getElementById("ProductId");
         var x = productcombo.options[productcombo.selectedIndex].value;
+
         var name = $("#Name").val();
         var email = $("#Email").val();
         var address = $("#Address").val();
         var phone = $("#Phone").val();
-        var checkn = document.forms[0];
-        var check = "";
-        for (i = 0; i < checkn.length; i++) {
-            if (checkn[i].checked) {
-                check = check + checkn[i].value + " ,  ";
-
-
-
-            }
-
-
-        }
-        if (Check1.checked == false && Check2.checked == false && Check3.checked == false && Check4.checked == false) {
-
-
-            if (a == true) {
-                $('#a').attr('disabled', 'disabled');
-                alert("Vui lòng chọn một phương án");
-                a = false;
-                $('#a').removeAttr('disabled');
-            }
-
-            return false;
-
-
-        }
+        var time = $("#Time").val();
 
 
 
@@ -284,12 +275,7 @@
 
 
 
-
-
-
-
-
-        if (x == null || x == "" || x == 0) {
+        if (x == null || x == ""||x==0) {
             if (a == true) {
                 $('#a').attr('disabled', 'disabled');
                 alert("Chọn xe quan tâm");
@@ -350,47 +336,84 @@
 
             return false;
         }
+        if (time == null || time == "") {
+            if (a == true) {
+                $('#a').attr('disabled', 'disabled');
+                alert("Chọn thời gian lái thử");
+                a = false;
+                $('#a').removeAttr('disabled');
+            }
+
+            return false;
+        }
+
+
+
         if (a == true) {
             $('#a').attr('disabled', 'disabled');
-            alert("Cảm ơn bạn đã gửi thông tin cho chúng tôi. Hệ thống sẽ gửi thông báo về cho bạn ngay sau đây");
+            //alert("Cảm ơn bạn đã gửi thông tin cho chúng tôi. Hệ thống sẽ gửi thông báo về cho bạn ngay sau đây");
             a = false;
             $('#a').removeAttr('disabled');
 
 
         }
 
-        var url = '@Url.Action("SuicideRegister", "ProductAction")';
-                   $.ajax({
-                       url: url,
-                       data: { ProductId: x, Name: name, Email: email, Phone: phone, Address: address, Check: check },
-                       type: 'post',
-                       dataType: 'json',
-                       traditional: true,
-                       success: function (data) {
+        var url = '@Url.Action("Register", "ProductAction")';
+        $.ajax({
+            url: url,
+            data: { ProductId: x, Name: name, Email: email, Phone: phone, Address: address, Time :time },
+            type: 'post',
+            dataType: 'json',
+            traditional: true,
+            success: function (data) {
 
 
 
-                           if (data.Successful) {
+                if (data.Successful) {
 
-                               alert("Bạn " + name + " vừa đăng ký tư vấn thành công. Bạn muốn tư vấn bằng cách: " + check);
-
-
-
-                           }
-                       },
-
-                   });
-               }
+                    //alert("Bạn " + name + " vừa đăng ký lái thử thành công ");
+                    if (alert("Bạn " + name + " vừa đăng ký lái thử thành công ")) { }
+                    else window.location.reload();
 
 
+                }
+            },
+
+        });
+    }
 
 
-               $('.date-picker').datepicker({
-                   format: 'dd/mm/yyyy',
-               });
+
+
+    $('.date-picker').datepicker({
+        format: 'dd/mm/yyyy',
+    });
 </script>
 
 <script type="text/javascript">
-    setAdminCurrentUrl('@Url.Action("SuicideRegister", "ProductAction")', '@Url.Action("SuicideRegister", "ProductAction")');
+    setAdminCurrentUrl('@Url.Action("Register", "ProductAction")', '@Url.Action("Register", "ProductAction")');
 </script>
 
+@*<script>
+
+
+        $(document).ready(function () {
+            $('div :input').fancyInput();
+            $('#search').removeClass("fancyInput");
+            $("#search>div>b").removeClass("caret");
+            $('#submit_search').removeClass("fancyInput");
+            $('#submit_search>div>b').removeClass("caret");
+            $('#nav').removeClass("fancyInput");
+            $('#nav>div>b').removeClass("caret");
+            $('#my_nav').removeClass("fancyInput");
+            $('#my_nav>div>b').removeClass("caret");
+            $('#myselect').removeClass("fancyInput");
+            var b = document.getElementById("myselect");
+            var c = b.lastElementChild;
+            b.removeChild(c);
+
+
+        });
+
+
+    </script>*@
