@@ -133,6 +133,7 @@
     <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HtmlPageController.cs" />
     <Compile Include="Controllers\NetAdvImageController.cs" />
     <Compile Include="Controllers\ProductActionController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Extensions\Pager\IPagedList.cs" />
     <Compile Include="Extensions\Pager\Pager.cs" />
     <Compile Include="Extensions\Pager\PagerExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\UrlExtensions.cs" />
     <Compile Include="Filters\CustomAuthorizeAttribute.cs" />
     <Compile Include="Filters\CustomErrorHandlerAttribute.cs" />
@@ -1096,6 +1098,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\uploadfile.css" />
+    <Content Include="Images\wheel.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1915,6 +1918,7 @@
     <Content Include="Views\ProductAction\Register.cshtml" />
     <Content Include="Views\ProductAction\Index.cshtml" />
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\HtmlPage\ServicesSub.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

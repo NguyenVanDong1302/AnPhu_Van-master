@@ -5,34 +5,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace idn.AnPhu.Biz.Models
 {
-    public class NewsCategoryBase : EntityBase
+    public class VideoCategoryBase : EntityBase
     {
         [DataColum]
-        public int NewsCategoryId { get; set; }
+        public int VideoCategoryId { get; set; }
 
         [DataColum]
         public int ParentId { get; set; }
 
         [DataColum]
-        public string NewsCategoryTitle { get; set; }
+        public string VideoCategoryTitle { get; set; }
 
-        private NewsCategoryBase _parent;
-        public NewsCategoryBase Parent
+        private VideoCategoryBase _parent;
+        public VideoCategoryBase Parent
         {
             get
             {
-                return _parent ?? (_parent = new NewsCategoryBase()
+                return _parent ?? (_parent = new VideoCategoryBase()
                 {
-                    NewsCategoryId = ParentId
+                    VideoCategoryId = ParentId
                 });
             }
             set { _parent = value; }
         }
 
-        public List<NewsCategoryBase> Children { get; set; }
+        public List<VideoCategoryBase> Children { get; set; }
 
         public int HLevel
         {
@@ -51,11 +50,11 @@ namespace idn.AnPhu.Biz.Models
                     {
                         l += "|--";
                     }
-                    return string.Format("{0}{1}", l, NewsCategoryTitle);
+                    return string.Format("{0}{1}", l, VideoCategoryTitle);
 
                 }
 
-                return NewsCategoryTitle;
+                return VideoCategoryTitle;
             }
         }
     }

@@ -1,13 +1,14 @@
 ﻿@using idn.AnPhu.Biz.Services
 @using System.Globalization
 @using idn.AnPhu.Biz.Models
+@using idn.AnPhu.Website.Extensions
 
 @{
     ViewBag.Title = "Hyundai Cầu Diễn - Đại lý ủy quyền của Hyundai Thành Công";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
     var listslide = ViewData["ListSlide"] as List<SlideBanner>;
     var listhotpro = ViewData["ListHotProduct"] as List<Product>;
-    //var listhotnews = ViewData["ListHotNews"] as List<News>;
+    var listhotnews = ViewData["ListHotNews"] as List<News>;
     //var about = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(17, Culture);
     //int count = 0;
     //var companyinfo = ServiceFactory.CompanyManager.Get(new Company { CompanyId = 1 });
@@ -34,12 +35,8 @@
             {
 
             }
-
         </ul>
-
-
     </div>
-   
 </div>
 
 <div class="home-content" style="font-family: ModernHBold;">
@@ -111,11 +108,7 @@
             else if (adleft.IsActive == false && adright.IsActive == false)
             {
 
-
-
-
             }
-
             else
             {
                 <div class="visible-lg " id="floatMenuLeft" style="">
@@ -130,8 +123,6 @@
                     </a>
 
                 </div>
-
-
 
                 <script type="text/javascript">
               var name = "#floatMenuLeft";
@@ -174,7 +165,6 @@
             }
         }*@
 
-
     <div class="container home-detail no-padding">
         <div class=" col-centered slidehotproduct">
             <div class="slide-product">
@@ -194,7 +184,6 @@
 
                         }
                     }
-
             </div>
         </div>
         <div class="container">
@@ -202,11 +191,9 @@
                 <div class="col-md-9 no-padding width-hots">
                     <div class="mybxslider">
 
-                        @*@if (listhotnews != null && listhotnews.Count > 0)
+                        @if (listhotnews != null && listhotnews.Count > 0)
                             {
                                 var n = 1;
-
-
                                 foreach (News item2 in listhotnews)
                                 {
                                     if (n < 4)
@@ -237,7 +224,7 @@
                                     }
                                     n++;
                                 }
-                            }*@
+                            }
                     </div>
                 </div>
 
@@ -276,7 +263,7 @@
 
                     </div>
 
-                    @*<div class="col-sm-12 no-padding width-my-about" style="background: white; margin-top: 7px;">
+                    <div class="col-sm-12 no-padding width-my-about" style="background: white; margin-top: 7px;">
                             <div class="col-sm-3 no-padding">
 
                                 <img class="lazy" src="~/Images/icon-about1.png" id="anim1"/>
@@ -288,7 +275,7 @@
 
                             </div>
 
-                        </div>*@
+                        </div>
 
 
                     <div class="col-sm-12 no-padding width-my-about" style="background: white; margin-top: 7px;">

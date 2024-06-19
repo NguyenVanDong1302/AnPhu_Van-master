@@ -45,7 +45,22 @@ namespace idn.AnPhu.Website
                 defaults: new { controller = "Account", action = "Admin" }
             );
 
-   
+            //HtmlPages
+            routes.MapRoute(
+            name: "service",
+            url: "{culture}/dich-vu/{shortname}-{htmlpageid}/{HtmlPageCateId}",
+            defaults:
+                new
+                {
+                    culture = "vi",
+                    controller = "HtmlPage",
+                    action = "ServicesSub",
+                    shortname = UrlParameter.Optional,
+                    HtmlPageCateId = UrlParameter.Optional,
+                    htmlpageid = UrlParameter.Optional
+                }
+            );
+
 
 
             routes.MapRoute(

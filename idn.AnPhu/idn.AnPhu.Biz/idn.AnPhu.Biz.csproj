@@ -66,7 +66,12 @@
     <Compile Include="Models\Sys_PermissionInGroup.cs" />
     <Compile Include="Models\Sys_User.cs" />
     <Compile Include="Models\Sys_UserInGroup.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\VideoCategory.cs" />
+    <Compile Include="Models\VideoCategoryBase.cs" />
     <Compile Include="Persistance\Caching\CacheDataProviderBase.cs" />
+    <Compile Include="Persistance\Interface\INewsCategoryProvider.cs" />
+    <Compile Include="Persistance\Interface\IVideoCategoryProvider.cs" />
     <Compile Include="Persistance\SqlServer\HtmlPageProvider.cs" />
     <Compile Include="Persistance\Interface\IappDicDomainProvider.cs" />
     <Compile Include="Persistance\Interface\IHtmlPageCategoryProvider.cs" />
@@ -82,6 +87,7 @@
     <Compile Include="Persistance\Interface\ISys_UserProvider.cs" />
     <Compile Include="Persistance\SqlServer\AppDicDomainProvider.cs" />
     <Compile Include="Persistance\SqlServer\HtmlPageCategoryProvider.cs" />
+    <Compile Include="Persistance\SqlServer\NewsCategoryProvider.cs" />
     <Compile Include="Persistance\SqlServer\NewsProvider.cs" />
     <Compile Include="Persistance\SqlServer\PrdCategoriesProvider.cs" />
     <Compile Include="Persistance\SqlServer\ProductPropertyProvider.cs" />
@@ -90,10 +96,12 @@
     <Compile Include="Persistance\SqlServer\SlideBanneProvider.cs" />
     <Compile Include="Persistance\SqlServer\Sys_GroupProvider.cs" />
     <Compile Include="Persistance\SqlServer\Sys_UserProvider.cs" />
+    <Compile Include="Persistance\SqlServer\VideoCategoryProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ApDicDomainManager.cs" />
     <Compile Include="Services\HtmlPageCategoryManager.cs" />
     <Compile Include="Services\HtmlPageManager.cs" />
+    <Compile Include="Services\NewsCategoryManager.cs" />
     <Compile Include="Services\NewsManager.cs" />
     <Compile Include="Services\PrdCategoriesManager.cs" />
     <Compile Include="Services\ProductManager.cs" />
@@ -103,6 +111,7 @@
     <Compile Include="Services\SlideBannerManager.cs" />
     <Compile Include="Services\Sys_GroupManager.cs" />
     <Compile Include="Services\Sys_UserManager.cs" />
+    <Compile Include="Services\VideoCategoryManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />

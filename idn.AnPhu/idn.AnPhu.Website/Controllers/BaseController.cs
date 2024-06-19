@@ -1,10 +1,13 @@
-﻿using idn.AnPhu.Utils;
+﻿using Client.Core.Configuration;
+using idn.AnPhu.Utils;
 using idn.AnPhu.Website.Filters;
 using idn.AnPhu.Website.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 
@@ -180,6 +183,46 @@ namespace idn.AnPhu.Website.Controllers
         {
             return JsonView("", model);
         }
+
+        //protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        //{
+        //    base.OnActionExecuting(filterContext);
+
+
+        //    string culture = (string)RouteData.Values["CultureName"];
+
+
+        //    if (string.IsNullOrEmpty(culture))
+        //    {
+        //        culture = (string)RouteData.Values["Culture"];
+
+
+        //        var cList = idocNet.Core.Configuration.SiteConfiguration.Current.AcceptedCultures;
+
+
+        //        foreach (var c in cList)
+        //        {
+        //            if (c.TwoLetterISOLanguageName.Equals(culture, StringComparison.InvariantCultureIgnoreCase))
+        //            {
+        //                culture = c.Name;
+        //                break;
+        //            }
+        //        }
+
+        //    }
+
+        //    if (string.IsNullOrEmpty(culture))
+        //    {
+
+
+
+        //        culture = SiteConfiguration.Current.DefaultCultureName;
+        //    }
+
+        //    CultureInfo ci = new CultureInfo(culture);
+        //    Thread.CurrentThread.CurrentUICulture = ci;
+        //    Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(ci.Name);
+        //}
 
         #region["Common"]
         public class Gender

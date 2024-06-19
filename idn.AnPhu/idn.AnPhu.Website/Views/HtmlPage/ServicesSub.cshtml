@@ -1,0 +1,308 @@
+﻿
+@model idn.AnPhu.Biz.Models.HtmlPageCategory
+@using idn.AnPhu.Biz.Models;
+@using idn.AnPhu.Biz.Services;
+@using idn.AnPhu.Website.Extensions;
+
+@{
+    ViewBag.Title = "Dịch vụ - " + Model.HtmlPageCategoryTitle;
+    Layout = "~/Views/Shared/_ActionLayout.cshtml";
+    var listcate = ViewBag.ListCates as List<HtmlPageCategory>;
+    int htmlpageid = ViewBag.HtmlPageId;
+    //var countpage = 1;
+
+}
+
+<script>
+    $(document).ready(function () {
+        $('.htmlpage-content img').addClass('img-responsive');
+    });
+</script>
+
+
+<div class="container">
+    <div class="" style="background-color:#f2f3f3; height:17px;">
+        <a href="/" class="col-sm-1 no-padding width-forma-house" style=" font-size:12px; padding-right:0">
+            <img src="~/Images/forma-house2.png" />
+        </a>
+        <a class="col-sm-1 no-padding padding-detail" href="@Url.Action("ServicesSub", "HtmlPage")" style="font-size:12px;padding-top:3px;"> > Dịch vụ</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-12 no-padding marginbot30">
+        <div class="col-md-10 no-padding h1-text"
+             style="margin-left: 0px; font-weight: bolder; color: #666666">
+            Dịch vụ
+        </div>
+
+        <a class="col-md-10 col-xs-8 title-submenu1 submenu no-padding"
+           style="font-weight: bolder">
+            Hyundai Cầu Diễn cam kết cung cấp chất lượng dịch vụ tốt nhất cho khách
+            hàng
+        </a>
+    </div>
+</div>
+
+
+
+<div class="container">
+    @if (listcate.Count > 0 && listcate != null)
+    {
+        <div class="row no-margin " style="margin-top:14px;">
+            @if (listcate.Count == 1)
+            {
+                foreach (HtmlPageCategory item1 in listcate)
+                {
+                    var Culture = "vi-VN";
+                    var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item1.HtmlPageCategoryId, Culture);
+                    var n = 1;
+                    foreach (HtmlPage itemhtml in listhtmlpage)
+                    {
+                        if (n == 1)
+                        {
+                            if (itemhtml.HtmlPageCategoryId == @Model.HtmlPageCategoryId)
+
+                            {
+                                <a class="col-md-12 col-xs-12 title-submenu submenu active" href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item1.HtmlPageCategoryId, shortname = item1.HtmlPageCategoryShortName, htmlpageid = itemhtml.HtmlPageId})">
+                                    @itemhtml.HtmlPageCategoryTitle
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="col-md-12 col-xs-12 title-submenu submenu " href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item1.HtmlPageCategoryId, shortname = item1.HtmlPageCategoryShortName, htmlpageid = itemhtml.HtmlPageId})">
+                                    @itemhtml.HtmlPageCategoryTitle
+                                </a>
+                            }
+                        }
+                        n++;
+                    }
+                }
+            }
+
+
+            else if (listcate.Count == 2)
+            {
+
+                foreach (HtmlPageCategory item1 in listcate)
+                {
+                    var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item1.HtmlPageCategoryId, Culture);
+                    var n = 1;
+                    foreach (HtmlPage itemhtml in listhtmlpage)
+                    {
+                        if (n == 1)
+                        {
+                            if (itemhtml.HtmlPageCategoryId == @Model.HtmlPageCategoryId)
+                            {
+                                <a class="col-md-6 col-xs-6 title-submenu submenu active " href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item1.HtmlPageCategoryId, shortname = item1.HtmlPageCategoryShortName, htmlpageid = itemhtml.HtmlPageId})">
+                                    @itemhtml.HtmlPageCategoryTitle
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="col-md-6 col-xs-6 title-submenu submenu " href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item1.HtmlPageCategoryId, shortname = item1.HtmlPageCategoryShortName, htmlpageid = itemhtml.HtmlPageId})">
+                                    @itemhtml.HtmlPageCategoryTitle
+                                </a>
+                            }
+                        }
+                        n++;
+                    }
+                }
+            }
+            else if (listcate.Count == 3)
+            {
+
+                foreach (HtmlPageCategory item1 in listcate)
+                {
+                    var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item1.HtmlPageCategoryId, Culture);
+                    var n = 1;
+                    foreach (HtmlPage itemhtml in listhtmlpage)
+                    {
+                        if (n == 1)
+                        {
+                            if (itemhtml.HtmlPageCategoryId == @Model.HtmlPageCategoryId)
+                            {
+                                <a class="col-md-4 col-xs-6 title-submenu submenu active " href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item1.HtmlPageCategoryId, shortname = item1.HtmlPageCategoryShortName, htmlpageid = itemhtml.HtmlPageId})">
+                                    @itemhtml.HtmlPageCategoryTitle
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="col-md-4 col-xs-6 title-submenu submenu " href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item1.HtmlPageCategoryId, shortname = item1.HtmlPageCategoryShortName, htmlpageid = itemhtml.HtmlPageId})">
+                                    @itemhtml.HtmlPageCategoryTitle
+                                </a>
+                            }
+                        }
+                        n++;
+                    }
+                }
+            }
+            else
+            {
+
+                foreach (HtmlPageCategory item1 in listcate)
+                {
+                    var Culture = "vi-VN";
+                    var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item1.HtmlPageCategoryId, Culture);
+                    var n = 1;
+                    foreach (HtmlPage itemhtml in listhtmlpage)
+                    {
+                        if (n == 1)
+                        {
+                            if (itemhtml.HtmlPageCategoryId == @Model.HtmlPageCategoryId)
+                            {
+
+                                <a class="col-md-3 col-xs-6 title-submenu3 submenu active my-height-service " href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item1.HtmlPageCategoryId, shortname = item1.HtmlPageCategoryShortName, htmlpageid = itemhtml.HtmlPageId})">
+
+                                    <div class="col-md-3 no-padding">
+                                        <img src="@item1.HtmlPageCategoryImage" style="margin-left:auto; margin-right:auto;display:block; margin-top:5px; margin-bottom:8px" alt="" />
+                                    </div>
+                                    <div class="col-md-9 no-padding title-serve">
+
+                                        @itemhtml.HtmlPageCategoryTitle
+
+                                    </div>
+                                </a>
+                            }
+                            else
+                            {
+
+                                <a class="col-md-3 col-xs-6 title-submenu3 submenu my-height-service " href="@Url.Action("ServicesSub", "HtmlPage", new {HtmlPageCateId = item1.HtmlPageCategoryId, shortname = item1.HtmlPageCategoryShortName, htmlpageid = itemhtml.HtmlPageId})">
+                                    <div class="col-md-3 no-padding">
+                                        <img src="@item1.HtmlPageCategoryImage" style="margin-left:auto;margin-right:auto;display:block;margin-top:5px; margin-bottom:8px" alt="" />
+                                    </div>
+                                    <div class="col-md-9 no-padding title-serve">
+
+                                        @itemhtml.HtmlPageCategoryTitle
+
+                                    </div>
+                                </a>
+                            }
+                        }
+                        n++;
+                    }
+                }
+            }
+        </div>
+    }
+</div>
+
+<div class="col-sm-12 no-padding htmlpage-details">
+
+</div>
+
+<div class="container">
+    <div class="col-sm-12 no-padding ">
+        @if (Model.ListPage.Count > 0)
+        {
+            if (Model.ListPage.Count == 1)
+            {
+                <div class="col-md-12" style="background:white">
+                    @MvcHtmlString.Create(Model.ListPage[0].HtmlPageBody)
+                </div>
+            }
+            else
+            {
+                <div class="col-md-4 no-padding" style="margin-top:15px">
+                    <ul class="listpage-new " style="padding-left:7px;">
+                        @foreach (HtmlPage item in Model.ListPage)
+                        {
+                            if (item.HtmlPageTitle.Length < 37)
+                            {
+                                <li class="" id="li-id">
+                                    <h2>
+                                        <a href="@Url.Action("ServicesSub", "HtmlPage",
+                                            new {HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryTitle.ToUrlSegment(280), htmlpageid = item.HtmlPageId})" id="sev-id">
+                                            @item.HtmlPageTitle
+                                        </a>
+                                    </h2>
+                                </li>
+                            }
+                            else
+                            {
+                                <li style="height: 60px;" id="li-id2">
+                                    <h2 class="line2">
+                                        <a href="@Url.Action("ServicesSub", "HtmlPage",
+                                             new {HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryTitle.ToUrlSegment(280), htmlpageid = item.HtmlPageId}) " id="sev-id1">
+                                            @item.HtmlPageTitle
+                                        </a>
+                                    </h2>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+                <div class="col-md-8 htmlpage-content my-service-content" style="background:#f2f3f3" id="service-content-active">
+                    @if (htmlpageid == 0)
+                    {
+                        <h1 style="" id="b-sev">@Model.ListPage[0].HtmlPageTitle</h1>
+                        @MvcHtmlString.Create(Model.ListPage[0].HtmlPageBody)
+                    }
+                    else
+                    {
+                        foreach (HtmlPage item in Model.ListPage)
+                        {
+                            if (item.HtmlPageId == Convert.ToInt32(htmlpageid))
+                            {
+                                <h1 style="" id="b-sev1" class="mytext-services">@item.HtmlPageTitle</h1>
+                                @MvcHtmlString.Create(item.HtmlPageBody)
+                            }
+                        }
+                    }
+                    <div class="col-sm-12 no-padding back-to-top" style="margin-top:50px;">
+                        <div class="col-sm-8 col-xs-7">
+
+
+                        </div>
+                        <a href="#" class="col-sm-4 col-xs-5 sev-my-col " style="border:1px solid #b5b8bc ;padding:15px 0 15px 0; margin-bottom:10px">
+
+                            <div class="sev-my-img col-sm-11">
+                                Lên đầu trang
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+
+    <script type="text/javascript">
+    setAdminCurrentUrl('@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = Model.HtmlPageCategoryId, shortname = Model.HtmlPageCategoryShortName})',
+        '@Url.Action("Services", "HtmlPage", new { shortname = "dich-vu" })');
+    @* setAdminCurrentUrl('@Url.Action("ServicesSub", "HtmlPage",
+    new { HtmlPageCateId = Model.HtmlPageCategoryId, shortname = Model.HtmlPageCategoryTitle, htmlpageid = 2 })');*@
+    setServiceUrl('@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = Model.HtmlPageCategoryId, shortname = Model.HtmlPageCategoryShortName })');
+    </script>
+
+</div>
+
+
+<script>
+    //$(function a() {
+    //    $('#sev-id').each(function () {
+    //        if ($(this).prop('href') == window.location.href) {
+    //            $(this).addClass('testsev');
+    //            $('#li-id').addClass("sev-color");
+    //        }
+    //    });
+    //});
+    var $backToTop = $(".back-to-top");
+
+    $backToTop.on('click', function (e) {
+        $("html, body").animate({ scrollTop: 0 }, 500);
+    });
+
+    $(function () {
+        var url = window.location.pathname,
+            urlRegExp = new RegExp(url.replace(/\/$/, '') + "$");
+        $('.listpage-new li a').each(function () {
+            if (urlRegExp.test(this.href.replace(/\/$/, ''))) {
+                $(this).addClass('active');
+                $(this).parents('li').css('background', 'url(/images/forma-12.png) no-repeat left');
+                $(this).parent().previoussibling().find('a').removeClass('active');
+            }
+        });
+    });
+
+</script>

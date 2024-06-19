@@ -33,8 +33,11 @@ namespace idn.AnPhu.Website
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/site.css", 
                 "~/Content/styles-{version}.css",
-                "~/Content/bootstrap.min.css"
+                "~/Content/styles-1.0.1.css"
                 ));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css", "~/Content/styles-{version}.css"));
+
             bundles.Add(new StyleBundle("~/Content/admin-bootstrap-ace").Include(
                 "~/Areas/Auth/Content/assets/css/bootstrap.min.css",
                 //"~/Areas/Auth/Content/assets/css/font-awesome.min.css",
@@ -52,6 +55,8 @@ namespace idn.AnPhu.Website
                 "~/Areas/Auth/Content/jquery-ui/jquery-ui.custom.min.css"
 
             ));
+
+            bundles.Add(new ScriptBundle("~/Common/js").Include("~/Scripts/common-1.0.1.js"));
 
             bundles.Add(new StyleBundle("~/Content/admin-css").Include(
                 "~/Areas/Auth/Content/Administrator.css"

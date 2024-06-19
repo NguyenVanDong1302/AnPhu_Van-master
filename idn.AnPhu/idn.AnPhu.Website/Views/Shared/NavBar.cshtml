@@ -1,10 +1,13 @@
 ﻿
 @using idn.AnPhu.Biz.Services
+@using idn.AnPhu.Biz.Models
+
 @{
     Layout = null;
-    //var news = idn.AnPhu.Biz.Services.ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
-    //var services = CauDien.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("dich-vu", Culture);
-    //var video = CauDien.Biz.Services.ServiceFactory.VideoCategoryManager.ListAllVideoCategory(Culture);
+    var Culture = "vi-VN";
+    var news = idn.AnPhu.Biz.Services.ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
+    var services = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("dich-vu", Culture);
+    var video = idn.AnPhu.Biz.Services.ServiceFactory.VideoCategoryManager.ListAllVideoCategory(Culture);
 
     //var support = CauDien.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("chinh-sach-va-quy-dinh", Culture);
     //var about = CauDien.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("ve-cong-ty", Culture);
@@ -17,10 +20,9 @@
     //var listhotnews = ViewData["ListHotNews"] as List<News>;
     var hotline = "0942661366";
 
-
-    var services = "";
-    var news = "";
-    var video = "";
+    //var news = "";
+    //var services = "";
+    //var video = "";
     var support = "";
     var about = "";
     var listcate = "";
@@ -137,12 +139,10 @@
                         <li class="dropdown">
                             <a href="@Url.Action("Services", "HtmlPage", new { shortname = "dich-vu" })" class="dropdown-toggle " data-toggle="dropdown" aria-expanded="true">Dịch vụ</a>
                             <ul class="dropdown-menu menu-fullwidth">
-
                                 @if (services != null)
                                 {
-
                                     //Comment 
-                                    @*foreach (HtmlPageCategory item in services)
+                                    foreach (HtmlPageCategory item in services)
                                     {
                                         var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
                                         if (listhtmlpage != null)
@@ -154,11 +154,9 @@
                                                 {
                                                     <li class="">
                                                         <a class="hvr-sweep-to-right" href="@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName })">
-
                                                             @item.HtmlPageCategoryTitle
                                                         </a>
                                                     </li>
-
                                                 }
                                                 n++;
                                             }
@@ -169,16 +167,10 @@
                                                 <a class="hvr-sweep-to-right" href="@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName })">
                                                     @item.HtmlPageCategoryTitle
                                                 </a>
-
                                             </li>
                                         }
-
-                                    }*@
-
-
+                                    }
                                 }
-
-
 
                             </ul>
                         </li>
@@ -190,10 +182,10 @@
                                 {
 
                                     //Comment 
-                                    @*foreach (NewsCategories item in news)
+                                    foreach (NewsCategories item in news)
                                     {
                                         <li><a href="@Url.Action("ShowCateNews", "News", new { shortname = item.NewsCategoryShortName })">@item.NewsCategoryTitle</a></li>
-                                    }*@
+                                    }
                                 }
                             </ul>
                         </li>
@@ -203,10 +195,10 @@
                                 @if (video != null)
                                 {
                                     // Comment
-                                    @*foreach (VideoCategory item in video)
+                                    foreach (VideoCategory item in video)
                                     {
                                         <li><a href="@Url.Action("ListVideoByCate", "Video", new { shortname=item.VideoCategoryShortName})">@item.VideoCategoryTitle</a></li>
-                                    }*@
+                                    }
                                 }
                             </ul>
                         </li>
