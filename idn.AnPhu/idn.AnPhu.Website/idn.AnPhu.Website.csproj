@@ -135,6 +135,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HtmlPageController.cs" />
     <Compile Include="Controllers\NetAdvImageController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductActionController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Data\DataWrapper.cs" />
@@ -1861,6 +1862,7 @@
     <Content Include="Scripts\tinymce\utils\mctabs.js" />
     <Content Include="Scripts\tinymce\utils\validate.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="tempfiles\uploads\41237101_1974576189252255_4645793792538968064_o.jpg" />
     <Content Include="tempfiles\uploads\Accent_662x376.png" />
     <Content Include="tempfiles\uploads\AnhMenu\stfe.png" />
     <Content Include="tempfiles\uploads\Anhxei10-hatchback-2021\grand-i10-hatchback.png" />
@@ -1869,6 +1871,7 @@
     <Content Include="tempfiles\uploads\background\Creata2022.png" />
     <Content Include="tempfiles\uploads\Banner\all new tucson.jpg" />
     <Content Include="tempfiles\uploads\Banner\Banner website.jpg" />
+    <Content Include="tempfiles\uploads\Hyundai Thanh Cong giai thuong nha phan phoi toan cau.jpg" />
     <Content Include="tempfiles\uploads\hyundai-grand-i10-sedan-2021.png" />
     <Content Include="tempfiles\uploads\logobaiviet\tucson.png" />
     <Content Include="tempfiles\uploads\products\slides\CUSTIN.png" />
@@ -1881,6 +1884,7 @@
     <Content Include="tempfiles\uploads\Slidebanner\slide-palisade.jpg" />
     <Content Include="tempfiles\uploads\Slidebanner\slide-website-mới-custin.jpg" />
     <Content Include="tempfiles\uploads\xe\VENU.png" />
+    <Content Include="tempfiles\uploads\zing.jpg" />
     <Content Include="Views\NetAdvImage\Index.aspx" />
     <Content Include="Views\NetAdvImage\Pickup.aspx" />
     <Content Include="Web.config">
@@ -1928,6 +1932,7 @@
     <Folder Include="Content\TestCss\" />
     <Folder Include="Views\Administrator\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\News\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
