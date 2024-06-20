@@ -138,6 +138,7 @@
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductActionController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\VideosController.cs" />
     <Compile Include="Data\DataWrapper.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Extensions\Pager\IPagedList.cs" />
@@ -1924,6 +1925,8 @@
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
     <Content Include="Views\HtmlPage\ServicesSub.cshtml" />
     <Content Include="Views\News\ShowListCateNews.cshtml" />
+    <Content Include="Views\Shared\_ViewsLayout.cshtml" />
+    <Content Include="Views\News\ShowCateNews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1934,6 +1937,7 @@
     <Folder Include="Views\Administrator\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Test\" />
+    <Folder Include="Views\Videos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

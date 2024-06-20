@@ -28,6 +28,7 @@ namespace idn.AnPhu.Biz.Services
             services.Add(typeof(HtmlPageManager), new HtmlPageManager(new idn.AnPhu.Biz.Persistance.SqlServer.HtmlPageProvider()));
             services.Add(typeof(NewsCategoryManager), new NewsCategoryManager(new idn.AnPhu.Biz.Persistance.SqlServer.NewsCategoryProvider()));
             services.Add(typeof(VideoCategoryManager), new VideoCategoryManager(new idn.AnPhu.Biz.Persistance.SqlServer.VideoCategoryProvider()));
+            services.Add(typeof(VideoManager), new VideoManager(new idn.AnPhu.Biz.Persistance.SqlServer.VideoProvider()));
             #endregion
         }
 
@@ -194,6 +195,18 @@ namespace idn.AnPhu.Biz.Services
             set
             {
                 services[typeof(VideoCategoryManager)] = value;
+            }
+        }
+
+        public static VideoManager VideoManager
+        {
+            get
+            {
+                return (VideoManager)services[typeof(VideoManager)];
+            }
+            set
+            {
+                services[typeof(VideoManager)] = value;
             }
         }
     }

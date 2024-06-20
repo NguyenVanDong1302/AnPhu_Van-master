@@ -1,0 +1,141 @@
+﻿@using System.Globalization
+@using System.Web.UI
+@using idn.AnPhu.Biz.Models 
+@using idn.AnPhu.Website.Extensions
+
+@model NewsCategories
+
+@{
+    var page = ViewData["Page"];
+    ViewBag.Title = Model.NewsCategoryTitle + " - trang " + page;
+    var listcate = ViewBag.ListCates as List<NewsCategories>;
+}
+
+<div class="container margintop20" style="font-family: ModernHBold">
+
+
+    <div class="" style="background-color:#f2f3f3; height: 17px;font-family: ModernHBold;">
+        <div class="col-sm-11 no-padding padding-detail">
+            <a href="/" class="col-sm-1 no-padding width-forma-house" style=" font-size:12px; padding-right:0">
+                <img src="~/Images/forma-house2.png" />
+
+            </a>
+            <a class="col-sm-1 no-padding padding-news" href="#" style="font-size:12px; padding:3px 0 0 0; width:55px">> Tin tức</a>
+
+        </div>
+
+    </div>
+
+    @if (listcate.Count > 0)
+    {
+        <div class="col-xs-12 no-padding" style="border-bottom:2px solid #afafaf ">
+            <a class=" col-md-2 col-xs-6 title-submenu submenu no-padding " href="@Url.Action("ShowListCateNews","News")" style="text-align:center; margin-top:30px;font-size:14px; background:none;">
+                Tin tức chung
+            </a>
+            @foreach (NewsCategories item1 in listcate)
+            {
+                <a class="col-xs-6 title-submenu2 submenu no-padding " href="@Url.Action("ShowCateNews", "News", new { shortname=item1.NewsCategoryShortName})">
+                    @item1.NewsCategoryTitle
+                </a>
+            }
+
+            <div class="col-sm-2 no-padding time-news">
+
+                @{
+                    string dt = System.DateTime.Now.DayOfWeek.ToString("");
+                    DateTime now = DateTime.Now;
+                    string date = now.GetDateTimeFormats('d')[0];
+                    string time = now.GetDateTimeFormats('t')[0];
+                    string my = DateTime.Now.ToString("dddd", new System.Globalization.CultureInfo("vi"));
+
+
+                    <h1>@my, @date</h1>
+
+                }
+
+
+            </div>
+        </div>
+
+    }
+
+    <div class="newscate" style="font-family: ModernHBold;">
+        @if (Model.ListNews.Count > 0 && Model.ListNews != null)
+        {
+            var count = 1;
+            foreach (News itemnews in Model.ListNews)
+            {
+
+                if (count < 3)
+                {
+                    <div class="itemnews3 col-lg-12 " style="border-bottom: 1px solid #b6b9be;">
+                        <div class="col-md-3 col-xs-5 no-padding" style="padding:0">
+                            <a href="@Url.Action("Detail", "News", new { category = itemnews.NewsCategoryShortName, shortname = itemnews.NewsShortName, newsid = itemnews.NewsId })">
+                                <img class="img-responsive imgnews" src="@itemnews.NewsImage" alt="@itemnews.NewsTitle" />
+                            </a>
+                        </div>
+                        <div class="col-md-9 col-xs-6 " style="padding-left:25px;padding-right:0">
+                            <div class="newsdetail2">
+                                <a href="@Url.Action("Detail", "News", new { category = itemnews.NewsCategoryShortName, shortname = itemnews.NewsShortName, newsid = itemnews.NewsId })">
+                                    <h2 class="car-font-size">@itemnews.NewsTitle.ToTitleOnTable(250)</h2>
+                                </a>
+                                <h3 class="datecount" style="font-size:10px;color:#a8a8a8; margin-bottom:15px;">@itemnews.NewsCategoryTitle | @itemnews.PublishDate.ToString("dd/MM/yyy HH:mm")</h3>
+                                <h3 style="color:#666666">@itemnews.NewsSummary.ToTitleOnTable(120)</h3>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                else
+                {
+                    <div class="itemnews3 col-lg-12" style="border-bottom: 1px solid #b6b9be;">
+                        <div class="col-md-3 col-xs-5 no-padding" style="padding:0">
+                            <a href="@Url.Action("Detail", "News", new { category = itemnews.NewsCategoryShortName, shortname = itemnews.NewsShortName, newsid = itemnews.NewsId })">
+                                <img class="img-responsive imgnews" src="@itemnews.NewsImage" alt="@itemnews.NewsTitle" />
+                            </a>
+                        </div>
+                        <div class="col-md-9 col-xs-6 " style="padding-left:25px;padding-right:0">
+                            <div class="newsdetail2">
+                                <a href="@Url.Action("Detail", "News", new { category = itemnews.NewsCategoryShortName, shortname = itemnews.NewsShortName, newsid = itemnews.NewsId })">
+                                    <h2 class="car-font-size">@itemnews.NewsTitle.ToTitleOnTable(250)</h2>
+                                </a>
+                                <h3 class="datecount" style="font-size:10px;color:#a8a8a8; margin-bottom:15px;">@itemnews.NewsCategoryTitle | @itemnews.PublishDate.ToString("dd/MM/yyy HH:mm")</h3>
+                                <h3 style="color:#666666">@itemnews.NewsSummary.ToTitleOnTable(125)</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                count++;
+            }
+        }
+
+    </div>
+    <div class="col-xs-12" style="padding-top: 31px; padding-bottom:20px;font-family: ModernHBold;">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-7 " style="margin:0;text-align:right"> @Html.Partial("UserPager", "newstype")</div>
+    </div>
+    <script type="text/javascript">
+    setAdminCurrentUrl('@Url.Action("ShowCateNews", "News", new { shortname = Model.NewsCategoryShortName })', '@Url.Action("ShowListCateNews", "News")');
+    </script>
+
+</div>
+
+
+
+<script>
+
+    $(function () {
+        $('#z-nav').each(function () {
+            if ($('#ad').hasClass('title-submenu')) {
+                $('#m-nav').removeClass('testbn');
+                $('#m2-nav').removeClass('active');
+                $('#z-nav').addClass('testbn')
+            }
+        });
+    });
+
+
+</script>

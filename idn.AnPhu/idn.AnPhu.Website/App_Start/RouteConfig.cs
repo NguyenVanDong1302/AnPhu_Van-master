@@ -63,6 +63,33 @@ namespace idn.AnPhu.Website
 
 
 
+            // News 
+
+            routes.MapRoute(
+               name: "tin-tuc",
+               url: "{culture}/tin-tuc",
+               defaults: new { culture = "vi", controller = "News", action = "ShowListCateNews" }
+           );
+            routes.MapRoute(
+                name: "news-cate",
+                url: "{culture}/tin-tuc/{shortname}/{page}",
+                defaults: new { culture = "vi", controller = "News", action = "ShowCateNews", shortname = UrlParameter.Optional, page = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+               name: "news-cate2",
+               url: "{culture}/tin-tuc/{shortname}/{page}",
+               defaults: new { culture = "vi", controller = "News", action = "ShowCrudeNews", shortname = UrlParameter.Optional, page = UrlParameter.Optional }
+           );
+
+
+            routes.MapRoute(
+               name: "news-detail",
+               url: "{culture}/tin-tuc/{category}/{shortname}/{newsid}",
+               defaults: new { culture = "vi", controller = "News", action = "Detail", category = UrlParameter.Optional, shortname = UrlParameter.Optional, newsid = UrlParameter.Optional }
+           );
+
+
             routes.MapRoute(
                 "Default",
                 "{controller}/{action}/{id}",
