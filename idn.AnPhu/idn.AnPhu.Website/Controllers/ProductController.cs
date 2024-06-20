@@ -26,7 +26,6 @@ namespace idn.AnPhu.Website.Controllers
             {
                 product.Properties = ServiceFactory.ProductPropertyManager.GetByPrdId(product.ProductId, Culture);
 
-
                 ViewBag.isInterior = true;
                 ViewBag.isExterior = true;
 

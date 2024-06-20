@@ -1923,6 +1923,7 @@
     <Content Include="Views\ProductAction\Index.cshtml" />
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
     <Content Include="Views\HtmlPage\ServicesSub.cshtml" />
+    <Content Include="Views\News\ShowListCateNews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1932,7 +1933,6 @@
     <Folder Include="Content\TestCss\" />
     <Folder Include="Views\Administrator\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\News\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>

@@ -79,14 +79,6 @@ namespace idn.AnPhu.Website.Controllers
             return View(category);
         }
 
-
-
-
-
-
-
-
-
         public ActionResult Detail(string category, string shortname, int newsid)
         {
             var list = ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
