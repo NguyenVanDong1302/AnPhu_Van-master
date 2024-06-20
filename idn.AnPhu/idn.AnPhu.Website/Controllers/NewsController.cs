@@ -32,6 +32,7 @@ namespace idn.AnPhu.Website.Controllers
         public ActionResult ShowListCateNews(int page = 0)
         {
             var total = 0;
+            var Culture = "vi-VN";
             string keyword = ConfigurationManager.AppSettings["keyword"];
             string decsription = ConfigurationManager.AppSettings["description"];
             var list = ServiceFactory.NewsManager.GetAllActive(page * _userPageSize, _userPageSize, ref total, Culture);

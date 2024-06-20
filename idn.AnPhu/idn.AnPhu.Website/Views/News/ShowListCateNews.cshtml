@@ -12,7 +12,7 @@
     var list = ViewBag.List as List<News>;
     var listhotnews = ViewData["ListHotNews"] as List<News>;
     var news = idn.AnPhu.Biz.Services.ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
-
+    //abcccccc 
 
 }
 <div class="container margintop20">
@@ -26,15 +26,7 @@
             </a>
 
             <a class="col-sm-1 no-padding padding-news" href="#" style="font-size: 12px; padding: 3px 0 0 0; width: 55px">> Tin tức</a>
-
-
-
         </div>
-
-
-
-
-
     </div>
 </div>
 
@@ -130,7 +122,7 @@
     </div>
     <div class="col-xs-12" style="padding-top: 31px; padding-bottom: 20px;">
         <div class="col-sm-5"></div>
-        <div class="col-sm-7 " style="margin: 0; text-align: right">@Html.Partial("UserPager", "newstype")</div>
+        @*<div class="col-sm-7 " style="margin: 0; text-align: right">@Html.Partial("UserPager", "newstype")</div>*@
     </div>
     <script type="text/javascript">
         setAdminCurrentUrl('@Url.Action("ShowListCateNews", "News")', '@Url.Action("ShowListCateNews", "News")');
