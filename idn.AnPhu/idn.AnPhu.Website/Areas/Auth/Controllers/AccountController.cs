@@ -7,8 +7,6 @@ using idn.AnPhu.Website.Extensions;
 using idn.AnPhu.Website.Filters;
 using idn.AnPhu.Website.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -27,18 +25,30 @@ namespace idn.AnPhu.Website.Areas.Auth.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
-            if (Session != null)
-            {
-                Session.UserState = null;
-                Session.SessionId = null;
-                Session.Session.Clear();
-            }
-            Response.Cookies.Clear();
-            if (CUtils.IsNullOrEmpty(returnUrl))
-            {
-                returnUrl = Url.ActionLocalized("Index", "Home", new { area = "Auth" });
-            }
+            //if (Session != null)
+            //{
+            //    Session.UserState = null;
+            //    Session.SessionId = null;
+            //    Session.Session.Clear();
+            //}
+            //Response.Cookies.Clear();
+            //if (CUtils.IsNullOrEmpty(returnUrl))
+            //{
+            //    returnUrl = Url.ActionLocalized("Index", "Home", new { area = "Auth" });
+            //}
+            //ViewBag.ReturnUrl = returnUrl;
+            //return View();
+
+            // ThangPV edit 
+            ViewBag.IsLogin = true;
             ViewBag.ReturnUrl = returnUrl;
+            return View();
+        }
+
+        //[RequireAuthorization(UserRole.Admin)]
+        //[HttpGet]
+        public ActionResult Admin()
+        {
             return View();
         }
 

@@ -1,34 +1,21 @@
-﻿
-@using idn.AnPhu.Biz.Services
+﻿@using idn.AnPhu.Biz.Services
 @using idn.AnPhu.Biz.Models
-
 @{
     Layout = null;
-    var Culture = "vi-VN";
     var news = idn.AnPhu.Biz.Services.ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
     var services = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("dich-vu", Culture);
     var video = idn.AnPhu.Biz.Services.ServiceFactory.VideoCategoryManager.ListAllVideoCategory(Culture);
 
-    //var support = CauDien.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("chinh-sach-va-quy-dinh", Culture);
-    //var about = CauDien.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("ve-cong-ty", Culture);
-    //var listcate = CauDien.Biz.Services.ServiceFactory.ProductCategoryManager.ListAllProductCategory(Culture);
-    //var listprall = CauDien.Biz.Services.ServiceFactory.ProductManager.ProductGetAllActive(Culture);
+    var support = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("chinh-sach-va-quy-dinh", Culture);
+    var about = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("ve-cong-ty", Culture);
+    var listcate = idn.AnPhu.Biz.Services.ServiceFactory.PrdCategoriesManager.ListAllProductCategory(Culture);
+    var listprall = idn.AnPhu.Biz.Services.ServiceFactory.ProductManager.ProductGetAllActive(Culture);
     //var companyinfo = ServiceFactory.CompanyManager.Get(new Company { CompanyId = 1 });
     //var adpop = ServiceFactory.AdPopCenterManager.Get(new AdPopCenter { AdCenterId = 1 });
     //var adleft = ServiceFactory.AdBannerLeftManager.Get(new AdBannerLeft { AdLeftId = 1 });
     //var adright = ServiceFactory.AdBannerRightManager.Get(new AdBannerRight { AdRightId = 1 });
-    //var listhotnews = ViewData["ListHotNews"] as List<News>;
+    var listhotnews = ViewData["ListHotNews"] as List<News>;
     var hotline = "0942661366";
-
-    var support = "";
-    var about = "";
-    var listcate = "";
-    var listprall = "";
-    var companyinfo = "";
-    var adpop = "";
-    var adleft = "";
-    var adright = "";
-    var listhotnews = "";
 }
 
 <div class=" ">
@@ -94,10 +81,10 @@
                 </div>*@
             <div class="container-fluid no-padding" style="padding: 0 36px">
                 <a href="/" class="float-left navbar-logo">
-                    <img src="@Url.Content("~/Content/Images/logo-tcmotornew1.png")" alt="hyundai cầu diễn" />
+                    <img src="@Url.Content("~/Images/logo-tcmotornew1.png")" alt="hyundai cầu diễn" />
                 </a>
                 <a href="/" class="float-right navbar-logo dealer-logo" style="line-height: 55px; height: 55px;">
-                    <img src="@Url.Content("~/Content/Images/logo-dailynew.png")" alt="hyundai cầu diễn" class="img-responsive d-inline-block" />
+                    <img src="@Url.Content("~/Images/logo-dailynew.png")" alt="hyundai cầu diễn" class="img-responsive d-inline-block" />
                 </a>
             </div>
         </div>
@@ -131,13 +118,13 @@
             <div class="hidden-xs hidden-sm right-info menu">
                 <div class="container">
                     <ul class="navbar">
-                        <li><a href="@Url.Action("ListProduct", "Product")">Sản phẩm</a></li>
+                        <li><a href="@Url.Action("ListProduct", "ProductClient",  new { shortname = "xe-du-lich" })">Sản phẩm</a></li>
                         <li class="dropdown">
                             <a href="@Url.Action("Services", "HtmlPage", new { shortname = "dich-vu" })" class="dropdown-toggle " data-toggle="dropdown" aria-expanded="true">Dịch vụ</a>
                             <ul class="dropdown-menu menu-fullwidth">
+
                                 @if (services != null)
                                 {
-                                    //Comment 
                                     foreach (HtmlPageCategory item in services)
                                     {
                                         var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
@@ -150,9 +137,11 @@
                                                 {
                                                     <li class="">
                                                         <a class="hvr-sweep-to-right" href="@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName })">
+
                                                             @item.HtmlPageCategoryTitle
                                                         </a>
                                                     </li>
+
                                                 }
                                                 n++;
                                             }
@@ -163,10 +152,14 @@
                                                 <a class="hvr-sweep-to-right" href="@Url.Action("ServicesSub", "HtmlPage", new { HtmlPageCateId = item.HtmlPageCategoryId, shortname = item.HtmlPageCategoryShortName })">
                                                     @item.HtmlPageCategoryTitle
                                                 </a>
+
                                             </li>
                                         }
+
                                     }
                                 }
+
+
 
                             </ul>
                         </li>
@@ -176,8 +169,6 @@
                                 <li><a class="hvr-sweep-to-right" href="@Url.Action("ShowListCateNews", "News")">Tin tức chung</a></li>
                                 @if (news != null)
                                 {
-
-                                    //Comment 
                                     foreach (NewsCategories item in news)
                                     {
                                         <li><a href="@Url.Action("ShowCateNews", "News", new { shortname = item.NewsCategoryShortName })">@item.NewsCategoryTitle</a></li>
@@ -190,7 +181,6 @@
                             <ul class="dropdown-menu" role="menu">
                                 @if (video != null)
                                 {
-                                    // Comment
                                     foreach (VideoCategory item in video)
                                     {
                                         <li><a href="@Url.Action("ListVideoByCate", "Video", new { shortname=item.VideoCategoryShortName})">@item.VideoCategoryTitle</a></li>
@@ -251,9 +241,7 @@
 
                         @if (services != null)
                         {
-
-                            //Comment
-                            @*foreach (HtmlPageCategory item in services)
+                            foreach (HtmlPageCategory item in services)
                             {
                                 if (item.HtmlPageCategoryShortName != "hen-lich-dich-vu")
                                 {
@@ -277,7 +265,7 @@
                                         }
                                     }
                                 }
-                            }*@
+                            }
                         }
 
 
@@ -290,11 +278,10 @@
                     <ul class="dropdown-menu" role="menu">
                         @if (news != null)
                         {
-                            //Comment
-                            @*foreach (NewsCategories item in news)
+                            foreach (NewsCategories item in news)
                             {
                                 <li><a href="@Url.Action("ShowCateNews", "News", new { shortname=item.NewsCategoryShortName})">@item.NewsCategoryTitle</a></li>
-                            }*@
+                            }
                         }
                     </ul>
                 </li>
@@ -336,8 +323,7 @@
                 </div>
                 @if (support != null)
                 {
-                    //Comment
-                    @*foreach (HtmlPageCategory item in support)
+                    foreach (HtmlPageCategory item in support)
                     {
                         var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
                         if (listhtmlpage != null)
@@ -372,7 +358,7 @@
                                 </a>
                             </div>
                         }
-                    }*@
+                    }
                 }
             </div>
         </div>
@@ -388,8 +374,7 @@
                 </div>
                 @if (services != null)
                 {
-                    //Comment
-                    @*foreach (HtmlPageCategory item in services)
+                    foreach (HtmlPageCategory item in services)
                     {
                         var listhtmlpage = ServiceFactory.HtmlPageManager.GetHtmlPageByCateId(item.HtmlPageCategoryId, Culture);
                         if (listhtmlpage != null)
@@ -427,7 +412,7 @@
                                 </a>
                             </div>
                         }
-                    }*@
+                    }
                 }
             </div>
         </div>
@@ -447,8 +432,7 @@
                             </a>
                         </li>
                         var count = 1;
-                        //Comment
-                        @*foreach (ProductCategory item1 in listcate)
+                        foreach (PrdCategories item1 in listcate)
                         {
                             <li class="" style="background: url(images/icon-bar.png) no-repeat right center;">
                                 <a data-toggle="tab" href="#@count" class="effeckt-tab" style=" color:#4a4a4a">
@@ -456,15 +440,14 @@
                                 </a>
                             </li>
                             count++;
-                        }*@
+                        }
                     }
                     <button type="button" class="close col-sm-1 " style="font-weight: bold; color: black; text-align: right; margin-right: 16px;" onclick="showmenu(false);">X</button>
                 </ul>
 
             </div>
             <div class="tab-content col-sm-12 col-xs-12 col-md-12 no-padding " style="overflow-y: scroll; margin-top: 30px; height: 270px; padding-left: 60px;">
-                 @*Comment*@
-                @*@if (listcate != null)
+                @if (listcate != null)
                 {
                     <div id="0" class="tab-pane fade in active col-sm-12 no-padding">
 
@@ -472,7 +455,7 @@
                         {
                             <div class="col-sm-3 col-xs-6 product-popup no-padding ">
 
-                                <a href="@Url.Action("Detail", "Product", new { productcode = itemprd.ProductCode })">
+                                <a href="@Url.Action("Detail", "ProductClient", new { productcode = itemprd.ProductCode })">
                                     <img src="@itemprd.ProductImage" class="img-product-popup lazy col-centered animated infinite flash" alt="@itemprd.ProductName" />
                                     <div class="carname" style="text-align: center; width: 150px; font-weight: bolder; font-size: 14px; color: #7b7b7b">@itemprd.ProductName</div>
                                 </a>
@@ -480,9 +463,9 @@
                         }
                     </div>
                     var count = 1;
-                    foreach (ProductCategory item1 in listcate)
+                    foreach (PrdCategories item1 in listcate)
                     {
-                        var product = CauDien.Biz.Services.ServiceFactory.ProductManager.ProductGetByCateId(item1.PrdCategoryId, Culture);
+                        var product = idn.AnPhu.Biz.Services.ServiceFactory.ProductManager.ProductGetByCateId(item1.PrdCategoryId, Culture);
                         <div id="@count" class="tab-pane fade in">
                             @if (product != null)
                             {
@@ -499,7 +482,7 @@
                         </div>
                         count++;
                     }
-                }*@
+                }
             </div>
         </div>
     </div>
@@ -828,10 +811,7 @@
     });
 </script>
 
-@*Comment*@
-@*@if (adpop.IsActive == false)
-{
-}*@
+
 
 @*@if (adpop.IsActive == true)
 {
@@ -852,12 +832,12 @@
     </div>
 }*@
 <script language="javascript" type="text/javascript">
-    function opennew() {
+    @*function opennew() {
         var expire = new Date();
         expire = new Date(expire.getTime() + 20);
         document.cookie = "VFGEN-FORUM=here; expires=" + expire;
-        @*window.open('@adpop.AdCenterLink', '_blank');*@
-    }
+        window.open('@adpop.AdCenterLink', '_blank');
+    }*@
 
     function GetCookie(name) {
         var arg = name + "=";
@@ -917,7 +897,7 @@
     }
     function AdsMe() {
         $("#overPage,#floating").hide();
-        opennew();
+        //opennew();
     }
 
 </script>

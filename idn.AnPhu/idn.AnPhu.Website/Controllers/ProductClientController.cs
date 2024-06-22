@@ -1,26 +1,26 @@
-﻿using idn.AnPhu.Biz.Services;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Web;
-using System.Web.Mvc;
+﻿using Client.Core.Data.Entities.Paging;
+using Client.Core.Extensions;
 using idn.AnPhu.Biz.Models;
-using System.Globalization;
-using idn.AnPhu.Website.Utils;
+using idn.AnPhu.Biz.Services;
+using idn.AnPhu.Utils;
+using idn.AnPhu.Website.Controllers;
 using idn.AnPhu.Website.Helper;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Net;
+using System.Web.Mvc;
+using TConst = idn.AnPhu.Constants;
 
 namespace idn.AnPhu.Website.Controllers
 {
-    public class ProductController : BaseController
+    public class ProductClientController : BaseController
     {
-
         // GET: Auth/Product
         public ActionResult Detail(string productcode, string shortname)
         {
             var Culture = "vi-VN";
-            var product = ServiceFactory.ProductManager.GetByCode(new Product { ProductCode = "santa-fe" }, Culture);
+            var product = ServiceFactory.ProductManager.GetByCode(new Product { ProductCode = productcode }, Culture);
 
             if (product != null)
             {
@@ -170,8 +170,79 @@ namespace idn.AnPhu.Website.Controllers
             //}
             return View(product);
 
-            //return View();
-            
+
+
+
+        }
+        public ActionResult ListProduct()
+        {
+            string keyword = ConfigurationManager.AppSettings["keyword"];
+            string decsription = ConfigurationManager.AppSettings["description"];
+            var Culture = "vi";
+            var categories = ServiceFactory.PrdCategoriesManager.ListAllProductCategory(Culture);
+            if (categories.Count > 0)
+            {
+                return RedirectToAction("ListProductByCate", new { shortname = categories[0].PrdCategoryShortName });
+            }
+            else
+            {
+                ViewBag.Keywords = keyword;
+                ViewBag.Desciption = decsription;
+                return View();
+            }
+        }
+
+        public ActionResult ListProductSale()
+        {
+            var categories = ServiceFactory.PrdCategoriesManager.ListAllProductCategory(Culture);
+            if (categories.Count > 0)
+            {
+                return RedirectToAction("ListProductByCateSale", new { shortname = categories[0].PrdCategoryShortName });
+                //return View();
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public ActionResult ListProductByCateSale(string shortname)
+        {
+            var categories = ServiceFactory.PrdCategoriesManager.ListAllProductCategory(Culture);
+            var category = ServiceFactory.PrdCategoriesManager.GetByShortName(new PrdCategories { PrdCategoryShortName = shortname }, Culture);
+            if (category != null)
+            {
+                category.ListProducts = ServiceFactory.ProductManager.ProductGetByCateId(category.PrdCategoryId, Culture);
+                ViewBag.Keywords = category.PrdCategoryKeyword;
+                ViewBag.Desciption = category.PrdCategoryDescription;
+            }
+            else
+            {
+                return ResultHelper.NotFoundResult(this);
+            }
+            //var data = ServiceFactory.NewsManager.gett
+            ViewBag.ListCates = categories;
+            return View(category);
+        }
+
+        public ActionResult ListProductByCate(string shortname)
+        {
+            var Culture = "vi";
+            var categories = ServiceFactory.PrdCategoriesManager.ListAllProductCategory(Culture);
+            var category = ServiceFactory.PrdCategoriesManager.GetByShortName(new PrdCategories { PrdCategoryShortName = shortname }, Culture);
+            if (category != null)
+            {
+                category.ListProducts = ServiceFactory.ProductManager.ProductGetByCateId(category.PrdCategoryId, "vi-VN");
+                ViewBag.Keywords = category.PrdCategoryKeyword;
+                ViewBag.Desciption = category.PrdCategoryDescription;
+
+            }
+            else
+            {
+                return ResultHelper.NotFoundResult(this);
+            }
+            //var data = ServiceFactory.NewsManager.get
+            ViewBag.ListCates = categories;
+            return View(category);
         }
     }
 }

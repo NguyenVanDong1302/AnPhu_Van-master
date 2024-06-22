@@ -42,6 +42,12 @@ namespace idn.AnPhu.Constants
     {
         public const string Sys_User = "Sys_User";
         public const string Sys_Group = "Sys_Group";
+        public const string PrdCategories = "PrdCategories";
+        public const string Product = "Product";
+        public const string ProductProperties = "ProductProperties";
+        public const string ProductVersions = "ProductVersions";
+        public const string ProductReviews = "ProductReviews";
+        public const string AppDicDomain = "AppDicDomain";
     }
 
     #region["Columns Table"]

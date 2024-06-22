@@ -1,4 +1,5 @@
-﻿using idn.AnPhu.Biz.Persistance.SqlServer;
+﻿using idn.AnPhu.Biz.Persistance.Interface;
+using idn.AnPhu.Biz.Persistance.SqlServer;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,6 +30,9 @@ namespace idn.AnPhu.Biz.Services
             services.Add(typeof(NewsCategoryManager), new NewsCategoryManager(new idn.AnPhu.Biz.Persistance.SqlServer.NewsCategoryProvider()));
             services.Add(typeof(VideoCategoryManager), new VideoCategoryManager(new idn.AnPhu.Biz.Persistance.SqlServer.VideoCategoryProvider()));
             services.Add(typeof(VideoManager), new VideoManager(new idn.AnPhu.Biz.Persistance.SqlServer.VideoProvider()));
+            services.Add(typeof(ProductPropertiesManager), new ProductPropertiesManager(new ProductPropertiesProvider()));
+            services.Add(typeof(ProductReviewsManager), new ProductReviewsManager(new ProductReviewsProvider()));
+            services.Add(typeof(ProductVersionsManager), new ProductVersionsManager(new ProductVersionsProvider()));
             #endregion
         }
 
@@ -67,7 +71,30 @@ namespace idn.AnPhu.Biz.Services
             }
         }
 
-        public static PrdCategoriesManager ProductCategoryManager
+        public static ProductVersionsManager ProductVersionsManager
+        {
+            get
+            {
+                return (ProductVersionsManager)services[typeof(ProductVersionsManager)];
+            }
+            set
+            {
+                services[typeof(ProductVersionsManager)] = value;
+            }
+        }
+        //public static PrdCategoriesManager ProductCategoryManager
+        //{
+        //    get
+        //    {
+        //        return (PrdCategoriesManager)services[typeof(PrdCategoriesManager)];
+        //    }
+        //    set
+        //    {
+        //        services[typeof(PrdCategoriesManager)] = value;
+        //    }
+        //}
+
+        public static PrdCategoriesManager PrdCategoriesManager
         {
             get
             {
@@ -76,6 +103,17 @@ namespace idn.AnPhu.Biz.Services
             set
             {
                 services[typeof(PrdCategoriesManager)] = value;
+            }
+        }
+        public static ProductReviewsManager ProductReviewsManager
+        {
+            get
+            {
+                return (ProductReviewsManager)services[typeof(ProductReviewsManager)];
+            }
+            set
+            {
+                services[typeof(ProductReviewsManager)] = value;
             }
         }
 
@@ -207,6 +245,17 @@ namespace idn.AnPhu.Biz.Services
             set
             {
                 services[typeof(VideoManager)] = value;
+            }
+        }
+        public static ProductPropertiesManager ProductPropertiesManager
+        {
+            get
+            {
+                return (ProductPropertiesManager)services[typeof(ProductPropertiesManager)];
+            }
+            set
+            {
+                services[typeof(ProductPropertiesManager)] = value;
             }
         }
     }

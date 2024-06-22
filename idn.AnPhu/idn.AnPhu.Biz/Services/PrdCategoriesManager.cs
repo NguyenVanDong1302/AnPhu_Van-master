@@ -1,6 +1,8 @@
 ﻿using Client.Core.Data;
+using Client.Core.Data.Entities.Paging;
 using idn.AnPhu.Biz.Models;
 using idn.AnPhu.Biz.Persistance.Interface;
+using idn.AnPhu.Biz.Persistance.SqlServer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,41 +15,53 @@ namespace idn.AnPhu.Biz.Services
     //{
     //}
 
-    public class PrdCategoriesManager : DataManagerBase<ProductCategory>
+    public class PrdCategoriesManager : DataManagerBase<PrdCategories>
     {
-        public PrdCategoriesManager()
-            : base()
-        { }
-
-        public PrdCategoriesManager(IDataProvider<ProductCategory> provider)
-            : base(provider)
+        public PrdCategoriesManager(IDataProvider<PrdCategories> provider) : base(provider)
         {
+
         }
 
-        private IPrdCategoriesProvider ProductCategoryProvider
+        IPrdCategoriesProvider PrdCategoriesProvider
         {
-            get { return (IPrdCategoriesProvider)Provider; }
+            get
+            {
+                return (IPrdCategoriesProvider)Provider;
+            }
         }
-        public List<ProductCategory> Search(int startIndex, int lenght, ref int totalItem, string culture)
+        public PageInfo<PrdCategories> Search(string txtSearch, int pageIndex, int pageSize)
         {
-            return ProductCategoryProvider.Search(startIndex, lenght, ref totalItem, culture);
+            int totalItems = 0;
+            var pageInfo = new PageInfo<PrdCategories>(pageIndex, pageSize);
+            var startIndex = (pageIndex - 1) * pageSize;
+
+            pageInfo.DataList = PrdCategoriesProvider.Search(txtSearch, startIndex, pageSize, ref totalItems);
+            pageInfo.ItemCount = totalItems;
+
+            return pageInfo;
         }
-        public ProductCategory GetByShortName(ProductCategory model, string culture)
+
+        public PrdCategories GetByShortName(PrdCategories model, string culture)
         {
-            return ProductCategoryProvider.GetByShortName(model, culture);
+            return PrdCategoriesProvider.GetByShortName(model, culture);
         }
 
         public List<ProductCategoryBase> GetAllProductCategory(string culture)
         {
-            return ProductCategoryProvider.GetAllProductCategory(culture);
+            return PrdCategoriesProvider.GetAllProductCategory(culture);
         }
-        public List<ProductCategory> ListAllProductCategory(string culture)
+        public List<PrdCategories> ListAllProductCategory(string culture)
         {
-            return ProductCategoryProvider.ListAllProductCategory(culture);
+            return PrdCategoriesProvider.ListAllProductCategory(culture);
         }
-        public void Add(ProductCategory model, string Culture)
+        public void Add(PrdCategories model, string Culture)
         {
-            ProductCategoryProvider.Add(model, Culture);
+            PrdCategoriesProvider.Add(model, Culture);
+        }
+        public List<PrdCategories> GetAll()
+        {
+            int total = 0;
+            return PrdCategoriesProvider.GetAll(0, 0, ref total);
         }
     }
 }

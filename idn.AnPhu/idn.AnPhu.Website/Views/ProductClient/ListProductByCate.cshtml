@@ -1,0 +1,96 @@
+﻿@using idn.AnPhu.Biz.Models;
+@model PrdCategories
+@{
+    ViewBag.Title = "Danh sách sản phẩm - " + Model.PrdCategoryTitle;
+    Layout = "~/Views/Shared/_DetailLayout.cshtml";
+    var listcate = ViewBag.ListCates as List<PrdCategories>;
+}
+
+<div class="container"> 
+    <div class="prcate-body">
+        @if (listcate.Count > 0)
+        {
+            <div class="title-prcate">
+                <ul class="product-cate">
+                    @foreach (PrdCategories item1 in listcate)
+                    {
+                        if (item1.PrdCategoryShortName == "xe-du-lich")
+                        {
+                            <li class="col-md-12 product-cate1">
+                                <h2>
+                                    <a class="submenu" href="@Url.Action("ListProductByCate", "ProductClient", new { shortname=item1.PrdCategoryShortName})">
+                                        @item1.PrdCategoryTitle
+                                    </a>
+                                </h2>
+
+                            </li>
+                        }
+                        else if (item1.PrdCategoryShortName == "xe-suv-xe-mpv")
+                        {
+                            <li class="col-md-12 product-cate2">
+                                <h2>
+                                    <a class="submenu" href="@Url.Action("ListProductByCate", "ProductClient", new { shortname=item1.PrdCategoryShortName})">
+                                        @item1.PrdCategoryTitle
+                                    </a>
+                                </h2>
+
+                            </li>
+                        }
+                        else if (item1.PrdCategoryShortName == "xe-chuyen-dung")
+                        {
+                            <li class="col-md-12 product-cate3">
+                                <h2>
+                                    <a class="submenu" href="@Url.Action("ListProductByCate", "ProductClient", new { shortname=item1.PrdCategoryShortName})">
+                                        @item1.PrdCategoryTitle
+                                    </a>
+                                </h2>
+
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="col-md-12 product-cate1">
+                                <h2>
+                                    <a class="submenu" href="@Url.Action("ListProductByCate", "ProductClient", new { shortname=item1.PrdCategoryShortName})">
+                                        @item1.PrdCategoryTitle
+                                    </a>
+                                </h2>
+
+                            </li>
+                        }
+                    }
+                </ul>
+
+            </div>
+        }
+        <div class="detail-prcate">
+            @if (Model.ListProducts.Count > 0)
+            {
+
+                foreach (Product itemprd in Model.ListProducts)
+                {
+
+                    <div class="col-md-4 col-xs-6 itemproduct">
+                        <div class="detail-prd">
+                            <a href="@Url.Action("Detail", "ProductClient", new { productcode=itemprd.ProductCode})">
+                                <img src="@itemprd.ProductImage" class="img-responsive" alt="@itemprd.ProductName" />
+                                <div class="carname">@itemprd.ProductName</div>
+                            </a>
+                            <div class="slogan">@itemprd.ProductSlogan</div>
+                        </div>
+                    </div>
+
+                }
+            }
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.menu-pr').addClass('active');
+</script>
+<script type="text/javascript">
+    setServiceUrl('@Url.Action("ListProductByCate", "ProductClient", new { shortname = Model.PrdCategoryShortName })', '@Url.Action("ListProduct", "ProductClient")');
+     setAdminCurrentUrl('@Url.Action("ListProductByCate", "ProductClient", new { shortname = Model.PrdCategoryShortName })', '@Url.Action("ListProduct", "ProductClient")');
+</script>
+
+

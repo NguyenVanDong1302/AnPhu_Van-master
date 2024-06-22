@@ -7,7 +7,7 @@
 @{
     Layout = null;
     var Culture = "vi";
-    var products = idn.AnPhu.Biz.Services.ServiceFactory.ProductCategoryManager.ListAllProductCategory(Culture);
+    var products = idn.AnPhu.Biz.Services.ServiceFactory.PrdCategoriesManager.ListAllProductCategory(Culture);
     //var listprall = idn.AnPhu.Biz.Services.ServiceFactory.ProductManager.ProductGetAllActive(Culture);
 
     //var news = idn.AnPhu.Biz.Services.ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
@@ -190,7 +190,7 @@
                             @if (products.Count > 0)
                             {
 
-                                foreach (ProductCategory item in products)
+                                foreach (PrdCategories item in products)
                                 {
                                     <li>
                                         <a class="hvr-buzz-out col-xs-12 no-padding " onclick="showmenu(true)">

@@ -10,7 +10,7 @@ namespace idn.AnPhu.Biz.Persistance.Interface
 {
     public interface IProductProvider : IDataProvider<Product>
     {
-        List<Product> Search(int startIndex, int lenght, ref int totalItem, string culture);
+        List<Product> Search(string txtSearch, int startIndex, int pageCount, ref int totalItems);
         List<Product> ProductGetByCateId(int cateid, string culture);
         void Add(Product model, string culture);
         List<Product> ProductGetAllActive(string culture);

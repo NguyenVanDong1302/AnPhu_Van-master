@@ -10,41 +10,37 @@ using System.Threading.Tasks;
 using System.Data.Common;
 
 using Client.Core.Data.DataAccess;
-//using Client.Core.Data.Entities;
-//using Client.Core.Utils;
-//using idn.AnPhu.Biz.Models;
-//using idn.AnPhu.Biz.Persistance.Interface;
-//using idn.AnPhu.Constants;
-//using idn.AnPhu.Utils;
-//using System;
-//using System.Collections.Generic;
-//using System.Data;
-//using System.Data.Common;
-//using System.Linq;
-//using System.Text;
+using idn.AnPhu.Constants;
+
 
 namespace idn.AnPhu.Biz.Persistance.SqlServer
 {
     internal class PrdCategoriesProvider : DataAccessBase, IPrdCategoriesProvider
     {
-        public void Add(ProductCategory model, string culture)
+        public void Add(PrdCategories model, string culture)
         {
             throw new NotImplementedException();
         }
 
-        public void Add(ProductCategory item)
+        public void Add(PrdCategories item)
         {
             throw new NotImplementedException();
         }
 
-        public ProductCategory Get(ProductCategory dummy)
+        public PrdCategories Get(PrdCategories dummy)
         {
             throw new NotImplementedException();
         }
 
-        public List<ProductCategory> GetAll(int startIndex, int count, ref int totalItems)
+        public List<PrdCategories> GetAll(int startIndex, int count, ref int totalItems)
         {
-            throw new NotImplementedException();
+            DbCommand comm = this.GetCommand("Sp_PrdCategories_GetAll");
+
+            DataTable table = this.GetTable(comm);
+
+            table.TableName = TableName.PrdCategories;
+
+            return EntityBase.ParseListFromTable<PrdCategories>(table);
         }
 
         public List<ProductCategoryBase> GetAllProductCategory(string culture)
@@ -52,45 +48,61 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
             throw new NotImplementedException();
         }
 
-        public ProductCategory GetByShortName(ProductCategory model, string culture)
+        public PrdCategories GetByShortName(PrdCategories dummy, string culture)
         {
-            throw new NotImplementedException();
+            var comm = this.GetCommand("Sp_PrdCategories_GetByShortName");
+            if (comm == null)
+            {
+                return null;
+            }
+            comm.AddParameter<string>(this.Factory, "shortName", dummy.PrdCategoryShortName);
+            //comm.AddParameter<string>(this.Factory, "Culture", culture);
+            var dt = this.GetTable(comm);
+            var htmlPageCate = EntityBase.ParseListFromTable<PrdCategories>(dt).FirstOrDefault();
+            return htmlPageCate ?? null;
+            //throw new NotImplementedException();
         }
 
-        public List<ProductCategory> ListAllProductCategory(string culture)
+        public List<PrdCategories> ListAllProductCategory(string culture)
         {
             var comm = this.GetCommand("sp_ProductCategoryGetAll");
             comm.AddParameter<string>(this.Factory, "Culture", culture);
             if (comm == null) return null;
             var dt = this.GetTable(comm);
-            var listGroupNews = EntityBase.ParseListFromTable<ProductCategory>(dt);
+            var listGroupNews = EntityBase.ParseListFromTable<PrdCategories>(dt);
 
             return listGroupNews;
         }
 
-        public void Remove(ProductCategory item)
+        public void Remove(PrdCategories item)
         {
             throw new NotImplementedException();
         }
 
-        public List<ProductCategory> Search(int startIndex, int lenght, ref int totalItem, string culture)
+        public List<PrdCategories> Search(string txtSearch, int startIndex, int pageSize, ref int totalItems)
         {
-            var comm = this.GetCommand("sp_ProductCategorySearch");
-            if (comm == null) return null;
-            comm.AddParameter<int>(this.Factory, "StartIndex", startIndex);
-            comm.AddParameter<string>(this.Factory, "Culture", culture);
-            comm.AddParameter<int>(this.Factory, "Length", lenght);
-            var totalItemsParam = comm.AddParameter(this.Factory, "TotalItems", DbType.Int32, null);
+            DbCommand comm = this.GetCommand("Sp_PrdCategories_Search");
+            comm.AddParameter<string>(this.Factory, "txtSearch", (txtSearch != null && txtSearch.Trim().Length > 0) ? txtSearch : null);
+            comm.AddParameter<int>(this.Factory, "startIndex", startIndex);
+            comm.AddParameter<int>(this.Factory, "count", pageSize);
+   
+            // đại diện cho DbParameter, để sử dụng như 1 biến bình thường 
+            DbParameter totalItemsParam = comm.AddParameter(this.Factory, "totalItems", DbType.Int32, null);
             totalItemsParam.Direction = ParameterDirection.Output;
-            var dt = this.GetTable(comm);
+
+            var table = this.GetTable(comm);
+            table.TableName = TableName.PrdCategories;
+
             if (totalItemsParam.Value != DBNull.Value)
             {
-                totalItem = Convert.ToInt32(totalItemsParam.Value);
+                totalItems = Convert.ToInt32(totalItemsParam.Value);
             }
-            return EntityBase.ParseListFromTable<ProductCategory>(dt);
+
+            return EntityBase.ParseListFromTable<PrdCategories>(table);
+
         }
 
-        public void Update(ProductCategory @new, ProductCategory old)
+        public void Update(PrdCategories @new, PrdCategories old)
         {
             throw new NotImplementedException();
         }

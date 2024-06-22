@@ -74,7 +74,7 @@
 }
 
 function processAjaxFormResult(response) {
-    //debugger;
+    debugger;
     if (response.Success === true) {
         if (response.Messages && response.Messages.length > 0) {
             alert(response.Messages[0]);
@@ -89,7 +89,7 @@ function processAjaxFormResult(response) {
     }
 
     else {
-        //debugger;
+        debugger;
         if (response.IsServiceException === true) {
             _showErrorMsg123("Có lỗi trong quá trình xử lý!", response.Detail);
         }

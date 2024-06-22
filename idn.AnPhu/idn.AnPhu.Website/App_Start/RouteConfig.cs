@@ -24,14 +24,27 @@ namespace idn.AnPhu.Website
                 defaults: new { culture = "vi", controller = "ProductAction", action = "Register" },
                 new[] { "idn.AnPhu.Website.Controllers" }
              );
-
+                
             routes.MapRoute(
                  "productdetail",
                  url: "{culture}/san-pham",
-                 new { culture = "vi", controller = "Product", action = "Detail" },
+                 new { culture = "vi", controller = "ProductClientClient", action = "Detail" },
                  new[] { "idn.AnPhu.Website.Controllers" }
              );
-    
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+              name: "listprd",
+              url: "{culture}/danh-sach-san-pham/{shortname}",
+              defaults: new { culture = "vi", controller = "ProductClient", action = "ListProductByCate", shortname = UrlParameter.Optional }
+             );
+
+            routes.MapRoute(
+               name: "productcate",
+               url: "{culture}/danh-muc-san-pham/{shortname}",
+               defaults: new { culture = "vi", controller = "ProductClient", action = "ListProductByCateSale", shortname = UrlParameter.Optional }
+            );
+
             routes.MapRoute(
              "NetAdvImage",
              "{scriptPath}/tinymce/plugins/netadvimage/{action}",
@@ -44,7 +57,7 @@ namespace idn.AnPhu.Website
                 url: "admin",
                 defaults: new { controller = "Account", action = "Admin" }
             );
-
+                
             //HtmlPages
             routes.MapRoute(
             name: "service",
@@ -76,11 +89,11 @@ namespace idn.AnPhu.Website
                 defaults: new { culture = "vi", controller = "News", action = "ShowCateNews", shortname = UrlParameter.Optional, page = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-               name: "news-cate2",
-               url: "{culture}/tin-tuc/{shortname}/{page}",
-               defaults: new { culture = "vi", controller = "News", action = "ShowCrudeNews", shortname = UrlParameter.Optional, page = UrlParameter.Optional }
-           );
+           // routes.MapRoute(
+           //    name: "news-cate2",
+           //    url: "{culture}/tin-tuc/{shortname}/{page}",
+           //    defaults: new { culture = "vi", controller = "News", action = "ShowCrudeNews", shortname = UrlParameter.Optional, page = UrlParameter.Optional }
+           //);
 
 
             routes.MapRoute(

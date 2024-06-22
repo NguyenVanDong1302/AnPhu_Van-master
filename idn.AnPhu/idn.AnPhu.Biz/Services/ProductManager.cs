@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using idn.AnPhu.Biz.Models;
 using idn.AnPhu.Biz.Persistance.Interface;
+using Client.Core.Data.Entities.Paging;
 
 
 namespace idn.AnPhu.Biz.Services
@@ -27,9 +28,14 @@ namespace idn.AnPhu.Biz.Services
         }
 
 
-        public List<Product> Search(int startIndex, int lenght, ref int totalItem, string culture)
+        public PageInfo<Product> Search(string txtSearch, int pageIndex, int pageSize)
         {
-            return ProductProvider.Search(startIndex, lenght, ref totalItem, culture);
+            int totalItems = 0;
+            var pageInfo = new PageInfo<Product>(pageIndex, pageSize);
+            var startIndex = (pageIndex - 1) * pageSize;
+            pageInfo.DataList = ProductProvider.Search(txtSearch, startIndex, pageSize, ref totalItems);
+            pageInfo.ItemCount = totalItems;
+            return pageInfo;
         }
         public List<Product> ProductGetByCateId(int cateid, string culture)
         {
@@ -43,6 +49,8 @@ namespace idn.AnPhu.Biz.Services
         {
             ProductProvider.Add(model, Culture);
         }
+
+        /// ///////////////////////////////////////////////////////
         public List<Product> GetListHotProduct(string culture)
         {
             return ProductProvider.GetListHotProduct(culture);

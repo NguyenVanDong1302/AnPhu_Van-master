@@ -2,9 +2,11 @@
 using Client.Core.Data.Entities;
 using idn.AnPhu.Biz.Models;
 using idn.AnPhu.Biz.Persistance.Interface;
+using idn.AnPhu.Constants;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,13 +33,13 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
         }
         public Product GetByCode(Product dummy, string culture)
         {
-            var comm = this.GetCommand("sp_ProductGetByCode");
+            var comm = this.GetCommand("Sp_Product_GetByCode");
             if (comm == null)
             {
                 return null;
             }
-            comm.AddParameter<string>(this.Factory, "ProductCode", dummy.ProductCode);
-            comm.AddParameter<string>(this.Factory, "Culture", culture);
+            comm.AddParameter<string>(this.Factory, "productCode", dummy.ProductCode);
+            //comm.AddParameter<string>(this.Factory, "Culture", culture);
             var dt = this.GetTable(comm);
             var htmlPage = EntityBase.ParseListFromTable<Product>(dt).FirstOrDefault();
             return htmlPage ?? null;
@@ -144,22 +146,28 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
         //    return EntityBase.ParseListFromTable<HtmlPage>(dt);
         //}
 
-        public List<Product> Search(int startIndex, int lenght, ref int totalItem, string culture)
+        public List<Product> Search(string txtSearch, int startIndex, int pageCount, ref int totalItems)
         {
-            var comm = this.GetCommand("sp_ProductSearch");
-            if (comm == null) return null;
-            comm.AddParameter<int>(this.Factory, "StartIndex", startIndex);
-            comm.AddParameter<string>(this.Factory, "Culture", culture);
-            comm.AddParameter<int>(this.Factory, "Length", lenght);
-            var totalItemsParam = comm.AddParameter(this.Factory, "TotalItems", DbType.Int32, null);
+            DbCommand comm = this.GetCommand("Sp_Product_Search");
+            comm.AddParameter<string>(this.Factory, "txtSearch", (txtSearch != null && txtSearch.Trim().Length > 0) ? txtSearch : null);
+            comm.AddParameter<int>(this.Factory, "startIndex", startIndex);
+            comm.AddParameter<int>(this.Factory, "count", pageCount);
+
+            DbParameter totalItemsParam = comm.AddParameter(this.Factory, "totalItems", DbType.Int32, null);
             totalItemsParam.Direction = ParameterDirection.Output;
-            var dt = this.GetTable(comm);
+
+            DataTable table = this.GetTable(comm);
+            table.TableName = TableName.Product;
+
             if (totalItemsParam.Value != DBNull.Value)
             {
-                totalItem = Convert.ToInt32(totalItemsParam.Value);
+                totalItems = Convert.ToInt32(totalItemsParam.Value);
             }
-            return EntityBase.ParseListFromTable<Product>(dt);
+            List<Product> products = EntityBase.ParseListFromTable<Product>(table);
+            return products;
         }
+
+        // VD add
         public List<Product> GetListHotProduct(string culture)
         {
             var comm = this.GetCommand("sp_ProductGetHotProduct");
@@ -168,6 +176,7 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
             var dt = this.GetTable(comm);
             return EntityBase.ParseListFromTable<Product>(dt);
         }
+        // VD add
         public List<Product> GetListNewProduct(string culture)
         {
             var comm = this.GetCommand("sp_ProductGetNewProduct");
@@ -176,7 +185,7 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
             var dt = this.GetTable(comm);
             return EntityBase.ParseListFromTable<Product>(dt);
         }
-
+        // VD add
         public List<Product> GetListSaleProduct(string culture)
         {
             var comm = this.GetCommand("sp_ProductGetSaleProduct");
@@ -185,7 +194,7 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
             var dt = this.GetTable(comm);
             return EntityBase.ParseListFromTable<Product>(dt);
         }
-
+        // VD add
         public List<Product> GetListHotNewSaleProduct(string culture)
         {
             var comm = this.GetCommand("sp_ProductGetHotNewSaleProduct");
@@ -194,7 +203,7 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
             var dt = this.GetTable(comm);
             return EntityBase.ParseListFromTable<Product>(dt);
         }
-
+        // VD add
         public List<Product> ProductGetByCateId(int cateid, string culture)
         {
             var comm = this.GetCommand("sp_ProductGetByCateId");
@@ -205,6 +214,7 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
 
             return EntityBase.ParseListFromTable<Product>(dt);
         }
+        // VD add
         public List<Product> ProductGetAllActive(string culture)
         {
             var comm = this.GetCommand("sp_ProductGetAllActive");

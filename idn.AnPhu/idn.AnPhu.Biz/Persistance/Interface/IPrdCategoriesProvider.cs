@@ -8,16 +8,12 @@ using System.Threading.Tasks;
 
 namespace idn.AnPhu.Biz.Persistance.Interface
 {
-    //internal class IPrdCategoriesProvider
-    //{
-    //}
-
-    interface IPrdCategoriesProvider : IDataProvider<ProductCategory>
+    interface IPrdCategoriesProvider : IDataProvider<PrdCategories>
     {
-        List<ProductCategory> Search(int startIndex, int lenght, ref int totalItem, string culture);
+        List<PrdCategories> Search(string txtSearch, int startIndex, int pageCount, ref int totalItems);
         List<ProductCategoryBase> GetAllProductCategory(string culture);
-        List<ProductCategory> ListAllProductCategory(string culture);
-        void Add(ProductCategory model, string culture);
-        ProductCategory GetByShortName(ProductCategory model, string culture);
+        List<PrdCategories> ListAllProductCategory(string culture);
+        void Add(PrdCategories model, string culture);
+        PrdCategories GetByShortName(PrdCategories model, string culture);
     }
 }
