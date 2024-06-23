@@ -19,4 +19,3 @@ bin-release/
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
 /idn.AnPhu/.vs
-/idn.AnPhu/idn.AnPhu.Website/Web.config
