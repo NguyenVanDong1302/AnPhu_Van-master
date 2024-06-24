@@ -10,8 +10,8 @@ namespace idn.AnPhu.Biz.Persistance.Interface
 {
 	public interface ILocationDiscountsProvider : IDataProvider<LocationDiscounts>
 	{
-	/*	void Add(LocationDiscount model, string culture);
-		List<LocationDiscount> Search(int startIndex, int lenght, ref int totalItem, string culture);
-		List<LocationDiscount> GetAllActive(string culture);*/
+		void Add(LocationDiscounts model, string culture);
+		List<LocationDiscounts> Search(int startIndex, int lenght, ref int totalItem, string culture);
+		List<LocationDiscounts> GetAllActive(string culture);
 	}
 }

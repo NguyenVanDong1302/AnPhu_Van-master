@@ -1,6 +1,7 @@
 ﻿using Client.Core.Data;
 using idn.AnPhu.Biz.Models;
 using idn.AnPhu.Biz.Persistance.Interface;
+using idn.AnPhu.Biz.Persistance.SqlServer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,5 +30,9 @@ namespace idn.AnPhu.Biz.Services
 			int total = 0;
 			return Provider.GetAll(0, 0, ref total);
 		}
-	}
+        public List<LocationDiscounts> GetAllActive(string culture)
+        {
+            return LocationDiscountsProvider.GetAllActive(culture);
+        }
+    }
 }

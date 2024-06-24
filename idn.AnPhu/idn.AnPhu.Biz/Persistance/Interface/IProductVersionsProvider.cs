@@ -7,5 +7,7 @@ namespace idn.AnPhu.Biz.Persistance.Interface
     {
         List<ProductVersions> GetAllVersions(int productId, int startIndex, int count, ref int totalItems);
         List<ProductVersions> Search(int productId, string txtSearch, int startIndex, int pageCount, ref int totalItems);
+        List<ProductVersion> GetByPrdId(int productid, string culture);
+
     }
 }

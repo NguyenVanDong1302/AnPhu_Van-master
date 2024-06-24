@@ -70,5 +70,38 @@ namespace idn.AnPhu.Website.Controllers
             ViewBag.Desciption = decsription;
             return View();
         }
+
+        public ActionResult BuyCar(string data, int productid = 0, int versionid = 0)
+        {
+
+
+            var listpro = ServiceFactory.ProductManager.ProductGetAllActive(Culture);
+            if (listpro.Count > 0)
+            {
+                foreach (Product item in listpro)
+                {
+                    item.Versions = ServiceFactory.ProductVersionsManager.GetByPrdId(item.ProductId, Culture);
+                }
+            }
+            var data1 = ServiceFactory.ProductManager.Get(new Product { ProductId = productid });
+            var listdata = ServiceFactory.ProductManager.ProductGetAllActive(Culture);
+            ViewBag.Categories = new SelectList(listdata, "ProductId", "ProductName");//lấy ra một 1 item cảu list
+            var listver = ServiceFactory.ProductVersionsManager.GetByPrdId(productid, Culture);
+            ViewBag.Versions = new SelectList(listver, "VersionId", "VersionTitle");
+            var listlocation = ServiceFactory.LocationDiscountsManager.GetAllActive(Culture);
+            ViewBag.Locations = new SelectList(listlocation, "LocationDiscountId", "LocationDiscountName");
+            var priceinsurrance = ServiceFactory.PriceInsurranceManager.GetAllActive(Culture);
+            ViewBag.PriceInsurrance = new SelectList(priceinsurrance, "PriceInsurranceId", "PriceInsurranceName");
+            var pricemaintenance = ServiceFactory.PriceMaintenanceManager.GetAllActive(Culture);
+            ViewBag.PriceMaintenance = new SelectList(pricemaintenance, "PriceMaintenanceId", "PriceMaintenanceName");
+
+            var listlocation1 = ServiceFactory.LocationManager.GetAllActive(Culture);
+            ViewBag.Locations1 = new SelectList(listlocation1, "LocationDiscountId", "LocationName");
+
+            ViewBag.Keywords = "giá xe hyundai, bảng giá xe hyundai, gia xe hyundai, bang gia xe hyundai, Hyundai Cầu Diễn";
+            ViewBag.Desciption = "Bảng giá các xe Hyundai đầy đủ và chính xác nhất. Thông tin được cung cấp bởi Hyundai Cầu Diễn - Đại lý ủy quyền của Hyundai Thành Công";
+            return View(listpro);
+
+        }
     }
 }

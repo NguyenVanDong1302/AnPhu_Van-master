@@ -1,17 +1,223 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@using idn.AnPhu.Biz.Services
+@using idn.AnPhu.Biz.Models
+@{
+    ViewBag.Title = "Gửi liên hệ tới Hyundai Cầu Diễn";
+    var companyinfo = ServiceFactory.CompanyManager.Get(new Company { CompanyId = 1 });
+    Layout = "~/Views/Shared/_ActionLayout.cshtml";
+
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<script src="~/Scripts/maps.js"></script>
+<div class="container">
+    <div class="" style="background-color: #f2f3f3; height: 17px;">
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+        <div class="col-sm-11 no-padding padding-detail">
+            <a href="/" class="col-sm-1 no-padding width-forma-house" style=" font-size:12px; padding-right:0">
+                <img src="~/Images/forma-house2.png" />
+
+            </a>
+
+
+            <a class="col-sm-1 no-padding padding-detail" href="@Url.Action("Contact", "Home")" style="font-size:12px; padding:3px 0 0 0;" id="contact-myactive">> Liên hệ</a>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+<div class="container">
+    <div class="col-md-12 no-padding marginbot30">
+        <div class=" col-md-12 h1-text no-padding " style="margin-left: 0px; font-weight: 500; color: #666666; font-size: 24px; font-family: 'ModernHBold' !important" id="anim12">
+            Thông tin liên hệ
+        </div>
+        <div class=" col-md-12  no-padding " style="margin-left: 0px; font-weight: 200; color:#a0a0a0; font-size: 12px;" id="anim13">
+            Quý khách vui lòng điền đầy đủ thông tin yêu cầu khi gửi về Hyundai Cầu Diễn
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="container">
+    <div class="col-xs-12 boddy-contact">
+
+        <form action="@Url.Action("Contact","Home")" method="post" class="form-horizontal">
+
+
+
+            <div class="col-xs-12 no-padding" style="margin-top:-10px;">
+
+
+                <div class=" col-sm-6 form-contact no-padding">
+                    <div class="form-group">
+
+                        <label for="Subject" class="col-md-2 col-xs-3  control-label animated infinite bounce" style=" padding-left:0; padding-right:0; text-align:right; font-family: 'ModernHBold' !important">Họ tên</label>
+
+                        <div class="col-sm-10 col-xs-9 ">
+                            <div>
+
+                                <input type="text" class="" id="Name" name="Name" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Subject" class="col-md-2 col-xs-3  control-label animated infinite bounce" style="padding-left:0; padding-right:0; text-align:right; font-family: 'ModernHBold' !important">Email</label>
+                        <div class="col-sm-10 col-xs-9 ">
+                            <div>
+                                <input type="text" class="" name="Email" id="Email" placeholder="" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Subject" class="col-md-2 col-xs-3  control-label animated infinite bounce" style="padding-left:0; padding-right:0;text-align:right; font-family: 'ModernHBold' !important">Điện thoại</label>
+                        <div class="col-sm-10 col-xs-9 ">
+                            <div>
+                                <input type="text" class="" name="Phone" id="Phone" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Subject" class="col-md-2 col-xs-3 control-label animated infinite bounce" style="padding-left:0; padding-right:0;text-align:right; font-family: 'ModernHBold' !important">Địa chỉ</label>
+                        <div class="col-sm-10  col-xs-9">
+                            <div>
+                                <input type="text" class="" id="Address" name="Address" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-6 form-contact no-padding">
+
+                    <div class="form-group">
+                        <div class="col-sm-12 no-padding marginleft15">
+                            <label for="Subject" class="col-md-2 col-xs-3  control-label animated infinite bounce" style="padding-left: 0; padding-right: 0;text-align:right; font-family: 'ModernHBold' !important">Tiêu đề</label>
+                            <div class="col-sm-10 col-xs-9 ">
+                                <div>
+                                    <input type="text" class="" id="Subject" name="Subject" placeholder="" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12 no-padding marginleft15" id="mycontent">
+                            <label for="Subject" class="col-md-2 col-xs-3  control-label animated infinite bounce" style="padding-left:0; padding-right:0;text-align:right; font-family: 'ModernHBold' !important">Nội dung</label>
+                            <div class="col-sm-10 col-xs-9">
+                                <div>
+                                    <textarea class="" rows="4" name="Content" placeholder="" style=" height:100px"></textarea>
+                                </div>
+                            </div>
+                            <div id="my_contact">
+                                <input class="btn bnt-contact" value="Gửi" type="submit" id="submitContact" style="border-radius:20px; width:110px; margin-right:15px; font-family: 'ModernHBold' !important" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+            <div class="col-xs-12 no-padding padding-detail" style="margin-top: 57px;">
+                <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1861.6374315437447!2d105.7211072079407!3d21.061681449518503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134544c4a2493c7%3A0x1e4d0a4809fe8893!2zQ8O0bmcgVHkgQ-G7lSBQaOG6p24gw5QgVMO0IMSQ4bqhaSBOYW0!5e0!3m2!1sen!2sin!4v1505416567527" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></center>
+
+
+
+
+
+                <!--<div class="col-sm-12 no-padding map-contact" id="map-canvas" style=" border:3px solid #cbcbcb; margin-bottom:40px;"></div>-->
+                @*   <div class=" detail-contact" style="color:#223f81">
+                          <h1 >
+                       @companyinfo.CompanyName
+                        </h1>
+                                @MvcHtmlString.Create(companyinfo.CompanyInfo)
+                    </div>*@
+            </div>
+
+
+
+
+
+
+        </form>
+    </div>
+</div>
+    </div>
+<script type="text/javascript">
+    setAdminCurrentUrl('@Url.Action("Contact","Home")', '@Url.Action("Contact","Home")');
+</script>
+<script>
+    $("#submitContact").click(function () {
+        var subject = $("#Subject").val();
+        var name = $("#Name").val();
+        var email = $("#Email").val();
+        var address = $("#Address").val();
+        var phone = $("#Phone").val();
+        var reg = /^([A-Za-z0-9_\-\.])+\@@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if (subject == null || subject == "") {
+            alert("Nhập tiêu đề");
+            return false;
+        }
+        if (name == null || name == "") {
+            alert("Nhập tên của bạn");
+            return false;
+        }
+        if (address == null || address == "") {
+            alert("Nhập địa chỉ của bạn");
+            return false;
+        }
+        if (email == null || email == "") {
+            alert("Nhập email của bạn");
+            return false;
+        }
+        if (reg.test(email) == false) {
+            alert("Email không đúng định dạng");
+            return false;
+        }
+        if (phone == null || phone == "") {
+            alert("Nhập số điện thoại của bạn");
+            return false;
+        }
+        return true;
+    });
+</script>
+
+@*<script>
+
+
+        $(document).ready(function () {
+            $('div :input').fancyInput();
+            $('#search').removeClass("fancyInput");
+            $("#search>div>b").removeClass("caret");
+            $('#submit_search').removeClass("fancyInput");
+            $('#submit_search>div>b').removeClass("caret");
+            $('#nav').removeClass("fancyInput");
+            $('#nav>div>b').removeClass("caret");
+            $('#my_nav').removeClass("fancyInput");
+            $('#my_nav>div>b').removeClass("caret");
+            $('#my_contact').removeClass("fancyInput");
+            var m = document.getElementById("my_contact");
+            var n = m.lastElementChild;
+            m.removeChild(n);
+
+        });
+
+
+    </script>*@

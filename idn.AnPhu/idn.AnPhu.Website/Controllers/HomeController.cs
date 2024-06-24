@@ -32,10 +32,12 @@ namespace idn.AnPhu.Website.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            ViewBag.Keywords = "liên hệ, thông tin liên hệ, Hyundai Cầu Diễn";
+            ViewBag.Desciption = "Thông tin liên hệ của Hyundai Cầu Diễn - Đại lý ủy quyền của Hyundai Thành Công ! Bạn cần đóng góp ý kiến hãy vào đây.";
             return View();
         }
     }

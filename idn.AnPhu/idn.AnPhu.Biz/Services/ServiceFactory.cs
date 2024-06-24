@@ -45,6 +45,9 @@ namespace idn.AnPhu.Biz.Services
             services.Add(typeof(VideoCategoriesManager), new VideoCategoriesManager(new VideoCategoriesProvider()));
             services.Add(typeof(AdBannerLeftsManager), new AdBannerLeftsManager(new AdBannerLeftsProvider()));
             services.Add(typeof(VideosManager), new VideosManager(new VideosProvider()));
+            services.Add(typeof(PriceInsurranceManager), new PriceInsurranceManager(new idn.AnPhu.Biz.Persistance.SqlServer.PriceInsurranceProvider()));
+            services.Add(typeof(LocationManager), new LocationManager(new idn.AnPhu.Biz.Persistance.SqlServer.LocationProvider()));
+            services.Add(typeof(PriceMaintenanceManager), new PriceMaintenanceManager(new idn.AnPhu.Biz.Persistance.SqlServer.PriceMaintenanceProvider()));
             #endregion
         }
 
@@ -58,6 +61,43 @@ namespace idn.AnPhu.Biz.Services
                 }
             }
             return default(T);
+        }
+
+        public static LocationManager LocationManager
+        {
+            get
+            {
+                return (LocationManager)services[typeof(LocationManager)];
+            }
+            set
+            {
+                services[typeof(LocationManager)] = value;
+            }
+        }
+
+        public static PriceMaintenanceManager PriceMaintenanceManager
+        {
+            get
+            {
+                return (PriceMaintenanceManager)services[typeof(PriceMaintenanceManager)];
+            }
+            set
+            {
+                services[typeof(PriceMaintenanceManager)] = value;
+            }
+        }
+
+
+        public static PriceInsurranceManager PriceInsurranceManager
+        {
+            get
+            {
+                return (PriceInsurranceManager)services[typeof(PriceInsurranceManager)];
+            }
+            set
+            {
+                services[typeof(PriceInsurranceManager)] = value;
+            }
         }
 
         public static AdBannerRightsManager AdBannerRightsManager

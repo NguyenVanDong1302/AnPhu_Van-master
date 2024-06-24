@@ -2,6 +2,7 @@
 using Client.Core.Data.Entities.Paging;
 using idn.AnPhu.Biz.Models;
 using idn.AnPhu.Biz.Persistance.Interface;
+using idn.AnPhu.Biz.Persistance.SqlServer;
 using System.Collections.Generic;
 
 namespace idn.AnPhu.Biz.Services
@@ -41,6 +42,11 @@ namespace idn.AnPhu.Biz.Services
         public override void Add(ProductVersions item)
         {
             base.Add(item);
+        }
+
+        public List<ProductVersion> GetByPrdId(int productid, string culture)
+        {
+            return ProductVersionsProvider.GetByPrdId(productid, culture);
         }
     }
 }

@@ -4,11 +4,11 @@
     Layout = null;
     var news = idn.AnPhu.Biz.Services.ServiceFactory.NewsCategoryManager.ListAllNewsCategory(Culture);
     var services = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("dich-vu", Culture);
-    var video = idn.AnPhu.Biz.Services.ServiceFactory.VideoCategoryManager.ListAllVideoCategory(Culture);
+    var video = idn.AnPhu.Biz.Services.ServiceFactory.VideoCategoryManager.ListAllVideoCategory("vi-VN");
 
     var support = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("chinh-sach-va-quy-dinh", Culture);
     var about = idn.AnPhu.Biz.Services.ServiceFactory.HtmlPageCategoryManager.GetAllActiveByShortName("ve-cong-ty", Culture);
-    var listcate = idn.AnPhu.Biz.Services.ServiceFactory.PrdCategoriesManager.ListAllProductCategory(Culture);
+    var listcate = idn.AnPhu.Biz.Services.ServiceFactory.PrdCategoriesManager.ListAllProductCategory("vi-VN");
     var listprall = idn.AnPhu.Biz.Services.ServiceFactory.ProductManager.ProductGetAllActive(Culture);
     //var companyinfo = ServiceFactory.CompanyManager.Get(new Company { CompanyId = 1 });
     //var adpop = ServiceFactory.AdPopCenterManager.Get(new AdPopCenter { AdCenterId = 1 });
@@ -177,13 +177,13 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="@Url.Action("ListVideo", "Video")" class="dropdown-toggle" data-toggle="dropdown">Video</a>
+                            <a href="@Url.Action("ListVideo", "Videos")" class="dropdown-toggle" data-toggle="dropdown">Video</a>
                             <ul class="dropdown-menu" role="menu">
                                 @if (video != null)
                                 {
                                     foreach (VideoCategory item in video)
                                     {
-                                        <li><a href="@Url.Action("ListVideoByCate", "Video", new { shortname=item.VideoCategoryShortName})">@item.VideoCategoryTitle</a></li>
+                                        <li><a href="@Url.Action("ListVideoByCate", "Videos", new { shortname=item.VideoCategoryShortName})">@item.VideoCategoryTitle</a></li>
                                     }
                                 }
                             </ul>

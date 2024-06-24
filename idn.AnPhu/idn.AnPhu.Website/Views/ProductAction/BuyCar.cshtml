@@ -1,0 +1,406 @@
+﻿@using idn.AnPhu.Biz.Models;
+
+@{
+    ViewBag.Title = "BuyCar";
+    Layout = "~/Views/Shared/_ActionLayout.cshtml";
+}
+
+<h2>BuyCar</h2>
+
+@model List<Product>
+
+@{
+    ViewBag.Title = "Bảng giá các xe Hyundai  - Hyundai Cầu Diễn";
+    Layout = "~/Views/Shared/_ActionLayout.cshtml";
+    var product = ViewBag.Product as Product;
+}
+
+<script>
+    function _getVersion() {
+        var proid = $("#ProductId").val();
+        var url = '@Url.Action("GetVersion", "ProductAction")';
+        $.ajax({
+            url: url,
+            data: { ProductId: proid },
+            type: 'get',
+            dataType: 'html',
+            success: function (data) {
+                if (data.length > 0) {
+                    $("#VersionId").html(data);
+                }
+                else {
+
+                }
+            }
+        });
+    }
+</script>
+<div class="container">
+    <div class="" style="background-color: #f2f3f3; height: 17px;">
+
+
+        <div class="col-sm-11 no-padding padding-buy-car">
+            <a href="/" class="col-sm-1 no-padding width-forma-house" style=" font-size:12px; padding-right:0">
+                <img src="~/Images/forma-house2.png" />
+
+            </a>
+
+
+            <a class="col-sm-2 no-padding padding-buy-car" href="#" style="font-size:12px; padding:3px 0 0 0; width:55px">> Mua xe</a>
+
+
+
+            <a class="col-sm-1 no-padding padding-buy-car" href="@Url.Action("BuyCar", "ProductAction")" style="font-size:12px; padding:3px 0 0 0;">> Giá xe</a>
+        </div>
+
+
+
+    </div>
+</div>
+<div class="container">
+    <div class="container no-padding" style="margin: 0">
+
+
+
+        @* <a  style="background: transparent url(&quot;/images/forma1.png&quot;) no-repeat scroll left center;" class="col-md-2 col-xs-6 title-submenu submenu " href="@Url.Action("EstimatePrice", "ProductAction")">
+                Dự toán chi phí
+            </a>*@
+
+        <div class="col-sm-12 no-padding" style="margin-top: 15px;">
+
+
+
+
+            <a href="@Url.Action("Register", "ProductAction")" class="col-sm-3 col-md-2 sev-my-col col-xs-5 hvr-pulse-shrink " style="border: 1px solid #cccccc; padding: 15px 10px 15px 5px;margin-bottom:33px;">
+                <div class="buy-my-img col-sm-12" style="text-align:right">
+                    Đăng ký lái thử
+                </div>
+
+            </a>
+            <div class="col-sm-6 col-md-8 col-xs-2">
+            </div>
+
+
+            <a href="@Url.Action("SupportBuyCar", "ProductAction")" class="col-sm-3 col-md-2 sev-my-col col-xs-5 hvr-pulse-shrink" style="border: 1px solid #cccccc; padding: 15px 15px 15px 5px">
+                <div class="buy-my-img1 col-sm-12">
+                    Hỗ trợ trả góp
+                </div>
+
+            </a>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+<div class="container">
+
+    @if (Model.Count > 0)
+    {
+
+
+        var count = 1;
+        foreach (Product item in Model)
+        {
+
+
+            if (count != Model.Count + 1)
+            {
+
+
+                @*  <table class="table table-product">
+                    <tr>
+                        <td class="itemproduct-version col-lg-8" style="padding: 20px 20px 0 0px;border: 1px solid #a3a3a3;">*@
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class=" col-lg-12 no-padding container" style="border-bottom:1px solid #c7cace; padding-bottom:30px">
+                    <div class=" col-lg-5" style="padding: 0; vertical-align: top; margin-top:10px;">
+
+
+                        <a href="@Url.Action("Detail", "Product", new { productcode = item.ProductCode })">
+
+
+
+                            <div class="col-sm-10 animated infinite bounceInRight ">
+
+                                <div class="animated infinite shake">
+                                    <img src="@item.ProductImage2" style="width:100%" class="animated infinite bounceOutLeft" alt="" />
+                                    @*  <img src="@item.ProductImage2" style="width:100%" class="animated infinite " alt="" />*@
+
+                                </div>
+                                @*  <div class="animated infinite lightSpeedIn">
+                                    <img src="@item.ProductImage2" style="width:100%" class="animated infinite shake" alt="" />
+                                            </div>*@
+
+
+                            </div>
+
+                            <div class="col-sm-9 " style="">
+
+                                <div class=" modernHBold carname-buycar animated infinite bounceInLeft  " id="carnamebuy">@item.ProductName</div>
+                            </div>
+
+
+                            @* <div class="col-sm-12 no-padding">
+                                 <div class="col-xs-4 no-padding">
+                                     <a href="@Url.Action("Register", "ProductAction")" class="btn btn-primary btn-buycar" style="border-radius:0px;">ĐĂNG KÝ LÁI THỬ
+                                     </a>
+                                </div>
+                                 <div class="col-xs-4 no-padding">
+                                    <a href="@Url.Action("SupportBuyCar", "ProductAction")" class="btn btn-primary btn-buycar" style="border-radius:0px;">HỖ TRỢ TRẢ GÓP
+                                     </a>
+                                </div>
+                                 <div class="col-xs-4 no-padding">
+                                     <a href="@Url.Action("Detail", "Product", new { productcode = item.ProductCode })" class="btn btn-primary btn-buycar" style="border-radius:0px;"> CHI TIẾT XE
+                                     </a>
+
+                                </div>
+                                    </div>*@
+
+
+                        </a>
+
+                    </div>
+
+                    <div class=" col-lg-7 padding-buycar-right" style=" margin-top:15px">
+                        <table class="table " style="border:none">
+
+
+
+                            @foreach (ProductVersion item1 in item.Versions)
+                            {
+                                <tr>
+                                    <td class=" col-xs-6 " style="padding:0; padding-top:0px;">
+                                        <div class="col-xs-12 no-padding">
+                                            <h1 class="version-title  animated infinite lightSpeedIn" style=" text-align:left">@item1.VersionTitle</h1>
+                                        </div>
+
+                                        <div class=" col-sm-12 hidden-xs no-padding  ">
+
+                                            <h1 class="version-description animated infinite lightSpeedIn " style="text-align:left; margin-bottom:45px;">@item1.VersionDescription</h1>
+
+                                        </div>
+                                    </td>
+
+                                    <td class=" col-xs-6 version-description price no-padding " style="color: #213f81;padding:0px;">    
+
+                                        <div class="col-sm-12 buycar-prices no-padding animated infinite tada "> @String.Format("{0:0,0}", Convert.ToDouble(item1.VersionPrice)) Đ</div>
+
+                                        @*<a href="@Url.Action("EstimatePrice", "ProductAction", new { productid = item.ProductId })" class="btn btn-primary btn-buycar"  style=" margin-top:35px;">DỰ TOÁN CHI PHÍ
+                                            </a>*@
+
+
+
+
+                                        <div class=" col-xs-12 " style="padding:0;">
+                                            <button type="button" class="btn btn-primary btn-buycar animated infinite rotateIn  mybtncar" data-toggle="modal" data-target="#formContact " onclick="_myestimate()" id="@item.ProductId" name="@item1.VersionId"> DỰ TOÁN CHI PHÍ </button>
+
+
+
+
+                                        </div>
+
+
+
+
+                                    </td>
+
+
+
+
+
+                                </tr>
+
+
+                            }
+
+
+                        </table>
+                    </div>
+                </div>
+
+
+
+
+                count++;
+                <script>
+                        window.onload = function () {
+
+                            var buttons = document.querySelectorAll('button');
+
+                            for (var i = 0; i < buttons.length; ++i) {
+                                buttons[i].addEventListener('click', clickFunc);
+                            }
+
+                            function clickFunc() {
+
+                                var url = '@Url.Action("GetMyId", "ProductAction")';
+                                $.ajax({
+                                    url: url,
+                                    data: {productid:this.id, versionid:this.name},
+                                    type: 'get',
+                                    dataType: 'html',
+                                    traditional: true,
+                                    success: function (data) {
+                                        $("#ab").html(data);
+                                    }
+                                });
+                            }
+
+                        }
+
+
+                </script>
+
+
+
+
+
+
+
+            }
+
+        }
+    }
+
+
+
+</div>
+
+
+
+<script type="text/javascript">
+    setAdminCurrentUrl('@Url.Action("EstimatePrice", "ProductAction")', '@Url.Action("BuyCar", "ProductAction")');
+</script>
+<div id="formContact" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content" style="height:559px;">
+            @*<div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>*@
+            <div class="modal-body">
+
+
+
+
+
+                <div class="col-sm-4 no-padding" style="background-color:#ebedee; height:557px;padding:0" id="ab">
+
+
+                </div>
+
+
+                <div class="col-sm-8" id="abc" style="color:#666666; background:white; margin-bottom:150px;">
+                    <button type="button" class="close" data-dismiss="modal" style="font-size:50px;">&times;</button>
+
+                </div>
+
+
+
+
+
+            </div>
+            @*<div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>*@
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        setAdminCurrentUrl('@Url.Action("EstimatePrice", "ProductAction")');
+    </script>
+
+
+
+
+</div>
+
+<script>
+
+
+
+
+
+
+
+
+    function _estimate() {
+
+
+        var productcombo = document.getElementById("ProductId");
+        var x = productcombo.options[productcombo.selectedIndex].value;
+        var versioncombo = document.getElementById("VersionId");
+        var y = versioncombo.options[versioncombo.selectedIndex].value;
+        var location = document.getElementById("LocationDiscountId");
+        var z = location.options[location.selectedIndex].value;
+        var priceinsurrance = document.getElementById("PriceInsurranceId");
+        var a = priceinsurrance.options[priceinsurrance.selectedIndex].value;
+        var pricemaintenance = document.getElementById("PriceMaintenanceId");
+        var b = pricemaintenance.options[pricemaintenance.selectedIndex].value;
+
+        if (x == null || x == "") {
+            alert("Chọn mẫu xe cần tính toán chi phí");
+            return false;
+        }
+        if (y == null || y == "") {
+            alert("Chọn phiên bản xe");
+            return false;
+        }
+        if (z == null || z == "") {
+            alert("Chọn khu vực");
+            return false;
+        }
+        if (a == null || a == "" || a == "01/01/2011 lúc 12:01:00") {
+            alert("Chọn bảo hiểm dân sự");
+            return false;
+        }
+        if (b == null || b == "") {
+            alert("Chọn bảo trì đường bộ");
+            return false;
+        }
+
+        var url = '@Url.Action("Estimate", "ProductAction")';
+        $.ajax({
+            url: url,
+            data: { ProductId: x, VersionId: y, LocationValue: z, PriceInsurranceValue: a, PriceMaintenanceValue: b },
+            type: 'get',
+            dataType: 'html',
+            traditional: true,
+            success: function (data) {
+                $("#abc").html(data);
+            }
+        });
+    }
+</script>
+
+

@@ -49,6 +49,13 @@ namespace idn.AnPhu.Website
             );
 
             routes.MapRoute(
+                name: "homecontact",
+                url: "{culture}/lien-he",
+                defaults: new { culture = "vi", controller = "Home", action = "Contact" },
+                new[] { "idn.AnPhu.Website.Controllers" }
+            );
+
+            routes.MapRoute(
              "NetAdvImage",
              "{scriptPath}/tinymce/plugins/netadvimage/{action}",
              new { controller = "NetAdvImage" }
@@ -77,6 +84,19 @@ namespace idn.AnPhu.Website
                 }
             );
 
+            // Video
+            //routes.MapRoute(
+            //    name: "videocate",
+            //    url: "{culture}/video",
+            //    defaults: new { culture = "vi", controller = "Videos", action = "ListVideo" },
+            //    new[] { "idn.AnPhu.Website.Controllers" }
+            //);
+            routes.MapRoute(
+                name: "videocatedetail",
+                url: "{culture}/danh-sach-video/{shortname}",
+                defaults: new { culture = "vi", controller = "Videos", action = "ListVideoByCate", shortname = UrlParameter.Optional },
+                new[] { "idn.AnPhu.Website.Controllers" }
+            );
 
 
             // News 
@@ -115,6 +135,24 @@ namespace idn.AnPhu.Website
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 new[] { "idn.AnPhu.Website.Controllers" }
             );
+
+            // ProductAction
+            routes.MapRoute(
+                name: "productbuycar",
+                url: "{culture}/bang-gia",
+                defaults: new { culture = "vi", controller = "ProductAction", action = "BuyCar" }
+            );
+            routes.MapRoute(
+                name: "productestimate",
+                url: "{culture}/du-toan-chi-phi",
+                defaults: new { culture = "vi", controller = "ProductAction", action = "EstimatePrice" }
+            );
+            routes.MapRoute(
+               name: "supportbuycar",
+               url: "{culture}/ho-tro-mua-xe",
+               defaults: new { culture = "vi", controller = "ProductAction", action = "SupportBuyCar" }
+             );
+
             //routes.MapRoute(
             //    name: "productdetail",
             //    url: "{culture}/san-pham/{productcode}",
@@ -124,7 +162,7 @@ namespace idn.AnPhu.Website
             //routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             //Router ProductAction 
-     
+
         }
     }
 }

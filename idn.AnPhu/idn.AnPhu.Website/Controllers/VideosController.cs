@@ -16,7 +16,7 @@ namespace idn.AnPhu.Website.Controllers
         // GET: Videos
         public ActionResult ListVideo()
         {
-            var categories = ServiceFactory.VideoCategoryManager.ListAllVideoCategory(Culture);
+            var categories = ServiceFactory.VideoCategoryManager.ListAllVideoCategory("vi-VN");
             if (categories.Count > 0)
             {
                 return RedirectToAction("ListVideoByCate", new { shortname = categories[0].VideoCategoryShortName });
@@ -28,6 +28,7 @@ namespace idn.AnPhu.Website.Controllers
         }
         public ActionResult ListVideoByCate(string shortname, int page = 0)
         {
+            var Culture = "vi-VN";
             var categories = ServiceFactory.VideoCategoryManager.ListAllVideoCategory(Culture);
             var total = 0;
             var category = ServiceFactory.VideoCategoryManager.GetByShortName(new VideoCategory { VideoCategoryShortName = shortname }, Culture);

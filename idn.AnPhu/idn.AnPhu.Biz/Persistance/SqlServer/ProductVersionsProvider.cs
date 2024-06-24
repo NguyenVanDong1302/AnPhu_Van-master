@@ -166,5 +166,20 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
 
             this.SafeExecuteNonQuery(comm);
         }
+
+        public List<ProductVersion> GetByPrdId(int productId, string culture)
+        {
+            var comm = this.GetCommand("sp_ProductVersionGetByPrdId");
+            if (comm == null)
+            {
+                return null;
+            }
+            comm.AddParameter<int>(this.Factory, "ProductId", productId);
+            comm.AddParameter<string>(this.Factory, "Culture", culture);
+            var dt = this.GetTable(comm);
+            var htmlPage = EntityBase.ParseListFromTable<ProductVersion>(dt);
+            return htmlPage ?? null;
+            //throw new NotImplementedException();
+        }
     }
 }
