@@ -1514,6 +1514,15 @@
     <Content Include="Areas\Auth\Views\CategoriesNews\Update.cshtml" />
     <Content Include="Areas\Auth\Views\AdBannerRights\Index.cshtml" />
     <Content Include="Areas\Auth\Views\AdBannerRights\Update.cshtml" />
+    <Content Include="Areas\Auth\Views\ProductVersions\Create.cshtml" />
+    <Content Include="Areas\Auth\Views\ProductVersions\Index.cshtml" />
+    <Content Include="Areas\Auth\Views\ProductVersions\Update.cshtml" />
+    <Content Include="Areas\Auth\Views\ProductReviews\Create.cshtml" />
+    <Content Include="Areas\Auth\Views\ProductReviews\Index.cshtml" />
+    <Content Include="Areas\Auth\Views\ProductReviews\Update.cshtml" />
+    <Content Include="Areas\Auth\Views\ProductProperties\Create.cshtml" />
+    <Content Include="Areas\Auth\Views\ProductProperties\Index.cshtml" />
+    <Content Include="Areas\Auth\Views\ProductProperties\Update.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\common-1.0.1.js" />
     <Content Include="Scripts\core.js" />
@@ -1919,9 +1928,14 @@
     <None Include="Scripts\_references.js" />
     <Content Include="tempfiles\uploads\41237101_1974576189252255_4645793792538968064_o.jpg" />
     <Content Include="tempfiles\uploads\Accent_662x376.png" />
+    <Content Include="tempfiles\uploads\anh gia xe\CUSTIN.png" />
+    <Content Include="tempfiles\uploads\anh gia xe\hyundai-creta-mau-den.png" />
+    <Content Include="tempfiles\uploads\anh gia xe\hyundai-venue-min.png" />
+    <Content Include="tempfiles\uploads\anh gia xe\PALISADE.png" />
     <Content Include="tempfiles\uploads\AnhMenu\stfe.png" />
     <Content Include="tempfiles\uploads\Anhxei10-hatchback-2021\grand-i10-hatchback.png" />
     <Content Include="tempfiles\uploads\Anhxei10-hatchback-2021\hyundai-grand-i10-sedan-2021.png" />
+    <Content Include="tempfiles\uploads\Anhxei10-sedan-2021\hyundai-grand-i10-sedan-2021.png" />
     <Content Include="tempfiles\uploads\background\banner web-htc_1920x1080.png" />
     <Content Include="tempfiles\uploads\background\Creata2022.png" />
     <Content Include="tempfiles\uploads\Banner\all new tucson.jpg" />
@@ -1929,6 +1943,8 @@
     <Content Include="tempfiles\uploads\Hyundai Thanh Cong giai thuong nha phan phoi toan cau.jpg" />
     <Content Include="tempfiles\uploads\hyundai-grand-i10-sedan-2021.png" />
     <Content Include="tempfiles\uploads\logobaiviet\tucson.png" />
+    <Content Include="tempfiles\uploads\New folder %2810%29\BBB03257.png" />
+    <Content Include="tempfiles\uploads\products\gallery\Tucson 2022\2022-tucson-phev_16-9.png" />
     <Content Include="tempfiles\uploads\products\slides\CUSTIN.png" />
     <Content Include="tempfiles\uploads\products\slides\Elantra.png" />
     <Content Include="tempfiles\uploads\products\slides\IONIQ-5.png" />
@@ -1988,11 +2004,14 @@
     <Content Include="Views\ProductAction\BuyCar.cshtml" />
     <Content Include="Views\Videos\ListVideoByCate.cshtml" />
     <Content Include="Views\Videos\ListVideo.cshtml" />
+    <Content Include="Views\ProductAction\SupportBuyCar.cshtml" />
+    <Content Include="Views\News\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Auth\Models\" />
     <Folder Include="Areas\Auth\UploadFiles\" />
+    <Folder Include="Areas\Auth\Views\Properties\" />
     <Folder Include="Content\fontHyundai\font\" />
     <Folder Include="Content\TestCss\" />
     <Folder Include="Views\Administrator\" />

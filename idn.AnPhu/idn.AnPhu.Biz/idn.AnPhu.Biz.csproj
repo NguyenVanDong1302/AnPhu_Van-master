@@ -49,6 +49,7 @@
     <Compile Include="Models\AdBannerLefts.cs" />
     <Compile Include="Models\AdBannerRights.cs" />
     <Compile Include="Models\AppDicDomain.cs" />
+    <Compile Include="Models\BankDiscount.cs" />
     <Compile Include="Models\CategoriesNews.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\HtmlPage.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Persistance\Caching\CacheDataProviderBase.cs" />
     <Compile Include="Persistance\Interface\IAdBannerLeftsProvider.cs" />
     <Compile Include="Persistance\Interface\IAdBannerRightsProvider.cs" />
+    <Compile Include="Persistance\Interface\IBankDiscountProvider.cs" />
     <Compile Include="Persistance\Interface\ICategoriesNewsProvider.cs" />
     <Compile Include="Persistance\Interface\ICompanyProvider.cs" />
     <Compile Include="Persistance\Interface\IHtmlPageCategoriesProvider.cs" />
@@ -111,6 +113,7 @@
     <Compile Include="Persistance\Interface\IVideosProvider.cs" />
     <Compile Include="Persistance\SqlServer\AdBannerLeftsProvider.cs" />
     <Compile Include="Persistance\SqlServer\AdBannerRightsProvider.cs" />
+    <Compile Include="Persistance\SqlServer\BankDiscountProvider.cs" />
     <Compile Include="Persistance\SqlServer\CategoriesNewsProvider.cs" />
     <Compile Include="Persistance\SqlServer\CompanyProvider.cs" />
     <Compile Include="Persistance\SqlServer\HtmlPageCategoriesProvider.cs" />
@@ -157,6 +160,7 @@
     <Compile Include="Services\AdBannerLeftsManager.cs" />
     <Compile Include="Services\AdBannerRightsManager.cs" />
     <Compile Include="Services\ApDicDomainManager.cs" />
+    <Compile Include="Services\BankDiscountManager.cs" />
     <Compile Include="Services\CategoriesNewsManager.cs" />
     <Compile Include="Services\CompanyManager.cs" />
     <Compile Include="Services\HtmlPageCategoriesManager.cs" />

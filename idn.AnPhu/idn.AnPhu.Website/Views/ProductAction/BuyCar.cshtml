@@ -5,8 +5,6 @@
     Layout = "~/Views/Shared/_ActionLayout.cshtml";
 }
 
-<h2>BuyCar</h2>
-
 @model List<Product>
 
 @{
@@ -59,18 +57,10 @@
 </div>
 <div class="container">
     <div class="container no-padding" style="margin: 0">
-
-
-
         @* <a  style="background: transparent url(&quot;/images/forma1.png&quot;) no-repeat scroll left center;" class="col-md-2 col-xs-6 title-submenu submenu " href="@Url.Action("EstimatePrice", "ProductAction")">
                 Dự toán chi phí
             </a>*@
-
         <div class="col-sm-12 no-padding" style="margin-top: 15px;">
-
-
-
-
             <a href="@Url.Action("Register", "ProductAction")" class="col-sm-3 col-md-2 sev-my-col col-xs-5 hvr-pulse-shrink " style="border: 1px solid #cccccc; padding: 15px 10px 15px 5px;margin-bottom:33px;">
                 <div class="buy-my-img col-sm-12" style="text-align:right">
                     Đăng ký lái thử
@@ -80,29 +70,13 @@
             <div class="col-sm-6 col-md-8 col-xs-2">
             </div>
 
-
             <a href="@Url.Action("SupportBuyCar", "ProductAction")" class="col-sm-3 col-md-2 sev-my-col col-xs-5 hvr-pulse-shrink" style="border: 1px solid #cccccc; padding: 15px 15px 15px 5px">
                 <div class="buy-my-img1 col-sm-12">
                     Hỗ trợ trả góp
                 </div>
 
             </a>
-
-
-
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
     </div>
 </div>
 
@@ -111,45 +85,20 @@
 
 
 <div class="container">
-
     @if (Model.Count > 0)
     {
-
-
         var count = 1;
         foreach (Product item in Model)
         {
-
-
             if (count != Model.Count + 1)
             {
-
-
                 @*  <table class="table table-product">
                     <tr>
                         <td class="itemproduct-version col-lg-8" style="padding: 20px 20px 0 0px;border: 1px solid #a3a3a3;">*@
-
-
-
-
-
-
-
-
-
-
-
-
                 <div class=" col-lg-12 no-padding container" style="border-bottom:1px solid #c7cace; padding-bottom:30px">
                     <div class=" col-lg-5" style="padding: 0; vertical-align: top; margin-top:10px;">
-
-
                         <a href="@Url.Action("Detail", "Product", new { productcode = item.ProductCode })">
-
-
-
                             <div class="col-sm-10 animated infinite bounceInRight ">
-
                                 <div class="animated infinite shake">
                                     <img src="@item.ProductImage2" style="width:100%" class="animated infinite bounceOutLeft" alt="" />
                                     @*  <img src="@item.ProductImage2" style="width:100%" class="animated infinite " alt="" />*@
@@ -158,16 +107,12 @@
                                 @*  <div class="animated infinite lightSpeedIn">
                                     <img src="@item.ProductImage2" style="width:100%" class="animated infinite shake" alt="" />
                                             </div>*@
-
-
                             </div>
 
                             <div class="col-sm-9 " style="">
 
                                 <div class=" modernHBold carname-buycar animated infinite bounceInLeft  " id="carnamebuy">@item.ProductName</div>
                             </div>
-
-
                             @* <div class="col-sm-12 no-padding">
                                  <div class="col-xs-4 no-padding">
                                      <a href="@Url.Action("Register", "ProductAction")" class="btn btn-primary btn-buycar" style="border-radius:0px;">ĐĂNG KÝ LÁI THỬ
@@ -183,16 +128,12 @@
 
                                 </div>
                                     </div>*@
-
-
                         </a>
 
                     </div>
 
                     <div class=" col-lg-7 padding-buycar-right" style=" margin-top:15px">
                         <table class="table " style="border:none">
-
-
 
                             @foreach (ProductVersion item1 in item.Versions)
                             {
@@ -216,38 +157,17 @@
                                         @*<a href="@Url.Action("EstimatePrice", "ProductAction", new { productid = item.ProductId })" class="btn btn-primary btn-buycar"  style=" margin-top:35px;">DỰ TOÁN CHI PHÍ
                                             </a>*@
 
-
-
-
                                         <div class=" col-xs-12 " style="padding:0;">
                                             <button type="button" class="btn btn-primary btn-buycar animated infinite rotateIn  mybtncar" data-toggle="modal" data-target="#formContact " onclick="_myestimate()" id="@item.ProductId" name="@item1.VersionId"> DỰ TOÁN CHI PHÍ </button>
-
-
-
-
                                         </div>
-
-
-
-
                                     </td>
-
-
-
-
-
                                 </tr>
 
 
                             }
-
-
                         </table>
                     </div>
                 </div>
-
-
-
 
                 count++;
                 <script>
@@ -275,15 +195,7 @@
                             }
 
                         }
-
-
                 </script>
-
-
-
-
-
-
 
             }
 

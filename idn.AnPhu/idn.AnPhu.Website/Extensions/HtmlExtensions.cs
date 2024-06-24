@@ -114,6 +114,18 @@ namespace idn.AnPhu.Website.Extensions
         }
         #endregion
 
-        
+        public static MvcHtmlString DropDownListDefault(this HtmlHelper htmlHelper, string name, IEnumerable<SelectListItem> selectList, object defaultValue, string defaultText, object htmAttribute = null)
+        {
+            List<SelectListItem> list = new List<SelectListItem>(selectList);
+            SelectListItem item = new SelectListItem();
+            item.Text = defaultText;
+            item.Value = defaultValue.ToString();
+            list.Insert(0, item);
+            return htmlHelper.DropDownList(name, list, htmAttribute);
+        }
+        public static T Get<T>(this ViewDataDictionary viewData, string key)
+        {
+            return (T)viewData[key];
+        }
     }
 }

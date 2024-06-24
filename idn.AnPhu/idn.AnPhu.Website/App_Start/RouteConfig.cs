@@ -26,6 +26,19 @@ namespace idn.AnPhu.Website
              );
 
             routes.MapRoute(
+                name: "supportbuycar",
+                url: "{culture}/ho-tro-mua-xe",
+                defaults: new { culture = "vi", controller = "ProductAction", action = "SupportBuyCar" },
+                new[] { "idn.AnPhu.Website.Controllers" }
+            );
+            routes.MapRoute(
+              name: "productbuycar",
+              url: "{culture}/bang-gia",
+              defaults: new { culture = "vi", controller = "ProductAction", action = "BuyCar" },
+              new[] { "idn.AnPhu.Website.Controllers" }
+            );
+
+            routes.MapRoute(
                 name: "productdetail",
                 url: "{culture}/san-pham/{productcode}",
                 defaults: new { culture = "vi", controller = "ProductClient", action = "Detail", productcode = UrlParameter.Optional },
@@ -128,6 +141,8 @@ namespace idn.AnPhu.Website
                      new[] { "idn.AnPhu.Website.Controllers" }
            );
 
+            //Hồ sơ trả góp 
+        
 
             routes.MapRoute(
                 "Default",
@@ -137,21 +152,12 @@ namespace idn.AnPhu.Website
             );
 
             // ProductAction
-            routes.MapRoute(
-                name: "productbuycar",
-                url: "{culture}/bang-gia",
-                defaults: new { culture = "vi", controller = "ProductAction", action = "BuyCar" }
-            );
+      
             routes.MapRoute(
                 name: "productestimate",
                 url: "{culture}/du-toan-chi-phi",
                 defaults: new { culture = "vi", controller = "ProductAction", action = "EstimatePrice" }
             );
-            routes.MapRoute(
-               name: "supportbuycar",
-               url: "{culture}/ho-tro-mua-xe",
-               defaults: new { culture = "vi", controller = "ProductAction", action = "SupportBuyCar" }
-             );
 
             //routes.MapRoute(
             //    name: "productdetail",

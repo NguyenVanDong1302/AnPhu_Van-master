@@ -1,0 +1,388 @@
+﻿@using idn.AnPhu.Biz.Models;
+@using idn.AnPhu.Website.Extensions;
+@model List<Product>
+@using idn.AnPhu.Biz.Services
+@{
+    ViewBag.Title = "Hỗ trợ trả góp mua xe Hyundai  - Hyundai Cầu Diễn";
+    Layout = "~/Views/Shared/_ActionLayout.cshtml";
+
+    var product = ViewBag.Product as Product;
+    var version = ViewBag.Version as ProductVersion;
+
+}
+<head>
+    <script src="~/Scripts/autoNumeric-2.0-BETA.js"></script>
+    <script src="~/Scripts/autoNumeric-min.js"></script>
+    <script src="~/Scripts/autoNumeric.js"></script>
+</head>
+
+
+<script>
+    function _getVersion() {
+        var proid = $("#ProductId").val();
+        var url = "@Url.Action("GetVersion","ProductAction")";
+        $.ajax({
+            url: url,
+            data: { ProductId: proid },
+            type: 'get',
+            dataType: 'html',
+            success: function (data) {
+                if (data.length > 0) {
+                    $("#VersionId").html(data);
+                }
+                else {
+
+                }
+            }
+        });
+    }
+</script>
+
+<script>
+    function _getPrice() {
+
+
+
+
+        var verid = $("#VersionId").val();
+
+
+
+        var url = "@Url.Action("GetPrice","ProductAction")";
+
+        $.ajax({
+            url: url,
+            data: { versionid: verid},
+            type: 'get',
+            dataType: 'html',
+            success: function (version) {
+
+                $("#h1-id").html(version);
+
+
+            }
+        });
+
+
+
+    }
+</script>
+
+<div class="container">
+    <div class="" style="background-color: #f2f3f3; height: 17px;">
+
+
+        <div class="col-sm-11 no-padding padding-buy-car">
+            <a href="/" class="col-sm-1 no-padding width-forma-house" style=" font-size:12px; padding-right:0">
+                <img src="~/Images/forma-house2.png" />
+
+            </a>
+
+
+            <a class="col-sm-2 no-padding padding-buy-car" href="#" style="font-size:12px; padding:3px 0; width:55px">> Mua xe</a>
+
+
+
+            <a class="col-sm-5 no-padding padding-buy-car" href="@Url.Action("SupportBuyCar", "ProductAction")" style="font-size:12px; padding:3px 0;">> Hỗ trợ trả góp</a>
+        </div>
+
+        @*   <div class="col-md-4 col-xs-12 no-padding" style="margin-top: 16px">
+
+
+                <a style=" text-align:right" class="col-md-6 col-xs-6  submenu no-padding" href="@Url.Action("Register", "ProductAction")">
+                    <img src="~/Images/icon-buycar1.png" class="hidden-xs" />
+                    ĐĂNG KÝ LÁI THỬ
+                </a>
+                 <a class="col-md-2 col-xs-6 title-submenu submenu " href="@Url.Action("Guide", "ProductAction", new { shortname="huong-dan-thu-tuc"})">
+                    Hướng dẫn thủ tục
+                </a>
+                <a  style="float:right; text-align:right" class="col-md-6 col-xs-6  submenu no-padding " href="@Url.Action("SupportBuyCar", "ProductAction")">
+                    <img src="~/Images/icon-supportbuycar1.png" class="hidden-xs" />
+                    HỖ TRỢ TRẢ GÓP
+
+                </a>
+            </div>*@
+
+
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-xs-12 no-padding title-register" style=" font-size:24px">
+        Hỗ trợ tính toán khi mua xe trả góp
+
+    </div>
+
+
+    <div class="col-sm-12 no-padding">
+
+
+        <a href="@Url.Action("BuyCar", "ProductAction")" class="col-md-2 col-sm-3 sev-my-col col-xs-5 hvr-pulse-shrink">
+            <div class="buy-my-img col-sm-12" style="text-align:right">
+                Giá xe
+            </div>
+
+        </a>
+        <div class="col-md-8 col-sm-6 col-xs-2">
+        </div>
+
+
+        <a href="@Url.Action("Register", "ProductAction")" class="col-md-2 col-sm-3 sev-my-col col-xs-5 hvr-pulse-shrink ">
+            <div class="buy-my-img1 col-sm-12">
+                Đăng ký lái thử
+            </div>
+
+        </a>
+
+    </div>
+
+
+
+
+
+
+    <div class="row support-buycar" style="">
+        <div class="col-md-12 no-padding margintop-20" style="padding:0">
+            <div class="col-md-5  no-padding" style="padding:0;">
+                <div class="form-group" style="margin-top:0">
+                    <label for="Subject" class="col-md-3  control-label" style="">Mẫu xe</label>
+                    <div class="col-md-8 marginleft-10" style="padding-left:0">
+                        <div>
+                            @Html.DropDownListDefault("ProductId", ViewData.Get<SelectList>("Categories"), "", "-- Tất cả --", new { @class = "form-control", onchange = "_getVersion()" })
+                        </div>
+                    </div>
+
+                    <label for="Subject" class="col-md-3 control-label" style="">Trả trước</label>
+                    <div class="col-md-8 marginleft-10" style="padding-left:0">
+                        @*<select class="form-control" id="FirstPrice">
+                                <option value="">Số tiền trả trước</option>
+                                @for (int i = 10; i < 90; i += 10)
+                                {
+                                    <option value="@i">@i %</option>
+                                }
+                            </select>*@
+                        <div>
+                            <input class="form-control" type="text" id="FirstPrice" />
+                        </div>
+                    </div>
+
+
+
+
+                    <label for="Subject" class="col-md-5 control-label" style="text-align:center">Thời hạn</label>
+                    <div class="col-md-6 no-padding marginleft-25">
+                        <div>
+                            <select class="form-control " id="Month">
+                                <option value="">Thời hạn vay</option>
+                                @for (int i = 6; i <= 60; i += 6)
+                                {
+                                    <option value="@i">@i tháng</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="col-md-5  no-padding marginleft-40" style="padding:0">
+                <div class="form-group">
+
+
+
+                    <label for="Subject" class="col-md-3 control-label" style=" text-align:center">Dòng xe</label>
+                    <div class="col-md-8" style="padding-left:0;">
+                        <div>
+                            @Html.DropDownListDefault("VersionId", ViewData.Get<SelectList>("Versions"), "", "-- Tất cả --", new { @class = "form-control", onchange = "_getPrice()" })
+                        </div>
+                    </div>
+                    <label for="Subject" class="col-md-3 control-label" style="text-align:center">Ngân hàng </label>
+                    <div class="col-md-8" style="padding-left:0">
+                        <div>
+                            @Html.DropDownListDefault("BankDiscountId", ViewData.Get<SelectList>("Locations"), "", "-- Tất cả --", new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div>
+                        <input class="btn btn-support-buycar margintop25 marginright45" value="TÍNH TOÁN" type="submit" style="float:right; margin-bottom:40px;height:32px;" onclick="_cal()" />
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-2 hidden-xs hidden-sm no-padding width200 margintop10">
+                <div class="col-md-12  no-padding hvr-pulse-shrink">
+                    <img src="/images/blank_car.png" class="img-responsive" style="text-align:center" id="showimage" />
+                </div>
+
+                <div class="col-md-12 margintop-10">
+
+
+
+                    <div class="col-md-12 hvr-pulse-shrink ">
+
+                        <h1 id="h1-id" style=" font-size:23px;text-align:right; font-weight:bolder; line-height:1.3"> </h1>
+
+
+                    </div>
+
+                    <div class="col-sm-12 hvr-pulse-shrink ">
+                        <h1 style="text-align:right; height:0px; line-height:0;">
+                            VNĐ
+
+                        </h1>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @*<input class="btn btn-support-buycar" value="Hủy" type="reset" style="float:right;" onclick="_resetform()" />*@
+
+        <div class="col-sm-12 no-padding" style="padding:0;">
+
+            <div id="Result">
+
+                @* <div class="row">
+                                         <div class="col-sm-10 col-sm-offset-2">
+                                             <img class="img-responsive" src="/tempfiles/uploads/products/abc/@product.ProductCode.ToUpper()_RE.png" />
+                                                   <div class="col-xs-6  ">
+                                        @* <a href="#" data-toggle="modal" data-target=".detail" class="btn btn-support-buycar" >Chi tiết</a>
+                                            </div>
+                                         <div class="col-xs-6  no-padding">
+                                <a class="btn btn-support-buycar" href="@Url.Action("SupportBuyCar", "ProductAction", new { productid=product.ProductId,versionid=version.VersionId})">
+                                    Hỗ trợ trả góp
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>*@
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+                $('#FirstPrice').autoNumeric('init', { aSep: ',', aDec:'.' });
+
+                function _resetform() {
+                    $("#Price").val("");
+                    $('#FirstPrice').val("");
+                    $("#Interest").val("");
+                    document.getElementById('Month').selectedIndex = 0;
+                }
+                function _cal() {
+
+
+                    var prductcombo = document.getElementById("ProductId");
+                    var versioncombo = document.getElementById("VersionId");
+                    var firstCombo = document.getElementById("FirstPrice");
+                    firstCombo.value = $('#FirstPrice').autoNumeric('get');
+                    var img = document.getElementById("ProductImage");
+                    var product = prductcombo.options[prductcombo.selectedIndex].value;
+                    var firstprice = firstCombo.value;
+                    var versionid = versioncombo.options[versioncombo.selectedIndex].value;
+                    var location = document.getElementById("BankDiscountId");
+                    var interest = location.options[location.selectedIndex].value;
+                    var monthcombo = document.getElementById("Month");
+                    var month = monthcombo.options[monthcombo.selectedIndex].value
+
+
+
+                    if (product == null || product == "") {
+                        alert("Bạn cần chọn sản phẩm ");
+                        return false;
+                    }
+                    if (firstprice == null || firstprice == "" ) {
+                        alert("Bạn cần chọn số tiền trả trước ");
+                        return false;
+                    }
+
+
+
+                    if (interest == null || interest == "") {
+                        alert("Bạn cần chọn lãi suất ngân hàng");
+                        return false;
+                    }
+
+                    if (month == null || month == "") {
+                        alert("Bạn cần chọn thời hạn vay");
+                        return false;
+                    }
+
+                    var url = '@Url.Action("Cal", "ProductAction")';
+                    $.ajax({
+                        url: url,
+                        data: { Product: product, VersionId: versionid, FirstPrice: firstprice, Interest: interest, Month: month },
+                        type: 'get',
+                        dataType: 'html',
+                        traditional: true,
+                        success: function (data) {
+                            $("#Result").html(data);
+                        }
+                    });
+
+                }
+    </script>
+    <script type="text/javascript">
+                setAdminCurrentUrl('@Url.Action("SupportBuyCar", "ProductAction")', '@Url.Action("BuyCar", "ProductAction")');
+    </script>
+
+
+</div>
+
+
+@Html.Raw(ViewBag.listarry)
+@*@Html.Raw(ViewBag.listurl)*@
+@Html.Raw(ViewBag.listh1)
+@*@Html.Raw(ViewBag.listh2)*@
+
+

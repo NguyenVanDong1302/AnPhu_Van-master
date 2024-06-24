@@ -48,6 +48,7 @@ namespace idn.AnPhu.Biz.Services
             services.Add(typeof(PriceInsurranceManager), new PriceInsurranceManager(new idn.AnPhu.Biz.Persistance.SqlServer.PriceInsurranceProvider()));
             services.Add(typeof(LocationManager), new LocationManager(new idn.AnPhu.Biz.Persistance.SqlServer.LocationProvider()));
             services.Add(typeof(PriceMaintenanceManager), new PriceMaintenanceManager(new idn.AnPhu.Biz.Persistance.SqlServer.PriceMaintenanceProvider()));
+            services.Add(typeof(BankDiscountManager), new BankDiscountManager(new idn.AnPhu.Biz.Persistance.SqlServer.BankDiscountProvider()));
             #endregion
         }
 
@@ -61,6 +62,17 @@ namespace idn.AnPhu.Biz.Services
                 }
             }
             return default(T);
+        }
+        public static BankDiscountManager BankDiscountManager
+        {
+            get
+            {
+                return (BankDiscountManager)services[typeof(BankDiscountManager)];
+            }
+            set
+            {
+                services[typeof(BankDiscountManager)] = value;
+            }
         }
 
         public static LocationManager LocationManager
