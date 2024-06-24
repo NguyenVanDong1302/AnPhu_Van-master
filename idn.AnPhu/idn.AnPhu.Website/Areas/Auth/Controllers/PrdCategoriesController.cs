@@ -30,7 +30,7 @@ namespace idn.AnPhu.Website.Areas.Auth.Controllers
             else
             {
                 pageInfo.PageIndex = 1;
-                pageInfo.PageSize = 10; // Hard code to get all data
+                pageInfo.PageSize = TConst.Nonsense.MAX_PAGE_SIZE; // Hard code to get all data
             }
 
             var pageView = "";
@@ -52,7 +52,7 @@ namespace idn.AnPhu.Website.Areas.Auth.Controllers
             }
 
             ViewBag.pageView = pageView;
-            var listPageSize = new int[3] { 10, 15, 20 };
+            var listPageSize = new int[3] { 5, 10, 15 };
             ViewBag.listPageSize = listPageSize;
             ViewBag.JsonDataList = JsonConvert.SerializeObject(pageInfo.DataList);
 

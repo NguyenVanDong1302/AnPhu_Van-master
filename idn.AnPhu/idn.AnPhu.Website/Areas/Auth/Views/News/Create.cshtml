@@ -1,0 +1,372 @@
+﻿
+@using idn.AnPhu.Website.Areas.Auth.Models
+@model News
+
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Auth/Views/Shared/_LayoutAuth.cshtml";
+    var message = CUtils.StrValue(ViewBag.message);
+}
+
+
+@section StyleSheet {
+    <style>
+        .container-admin {
+            font-size: 13px;
+        }
+
+            .container-admin .header-admin {
+                margin: 0 8px;
+                margin-bottom: 12px;
+                font-size: 24px;
+                font-weight: lighter;
+                color: #2679b5;
+                border-bottom: 1px dotted #e2e2e2;
+                padding-bottom: 16px;
+                padding-top: 7px;
+            }
+
+            .container-admin .header-table {
+                padding: 12px;
+                background-color: #EFF3F8;
+                display: flex;
+                justify-content: space-between;
+            }
+
+        .input-number {
+            width: 78px;
+        }
+
+        .box-input {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-danger {
+            margin-top: 8px;
+        }
+
+        .btn {
+            margin-left: 8px;
+            margin-top: -5px;
+        }
+    </style>
+}
+
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="#">Home</a>
+    </li>
+    <li><a href="@Url.Action("Index", "Home")">Dashboard</a></li>
+    <li><a href="@Url.Action("Index", "News")">Danh sách danh mục tin tức</a></li>
+    @if (ViewBag.IsEdit != null && ViewBag.IsEdit == true)
+    {
+        <li class="active">@Model.NewsCategoryTitle</li>
+    }
+    else
+    {
+        <li class="active">Tạo mới tin tức</li>
+    }
+</ul>
+
+<div class="container-admin">
+    <div class="header-admin">Tạo mới tin tức</div>
+    <div class="content-admin">
+        <div class="content-table">
+            @using (Html.BeginForm("Create", "News", FormMethod.Post, new { id = "manageForm", @class = "form-horizontal", onsubmit = "checkValid(event)" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+                        Tiêu đề tin tức:
+                    </label>
+
+                    <div class="col-sm-9 box-input">
+                        <input type="text" name="NewsTitle" class="col-xs-12 col-sm-6" oninput="validateEmpty(event)" />
+                        <div class="text-danger"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">
+                        Danh mục:
+                    </label>
+
+                    <div class="col-sm-9">
+                        <div class="clearfix">
+                            <select name="NewsCategoryId" id="NewsCategoryId" onchange="chooseNewsCategory(event)">
+                                <option value="0">-- Tất cả --</option>
+                                @foreach (CategoriesNews item in ViewBag.ListCategoriesNews)
+                                {
+                                    if (item.ParentId == 0)
+                                    {
+                                        <option value="@item.NewsCategoryId">@item.NewsCategoryTitle</option>
+                                        var childs = new CategoriesNewsModel().GetChildCategories(ViewBag.ListCategoriesNews, item.NewsCategoryId);
+                                        foreach (var child in childs)
+                                        {
+                                            <option value="@child.NewsCategoryId">&nbsp;&nbsp;| --@child.NewsCategoryTitle</option>
+                                        }
+                                    }
+
+
+                                }
+
+                            </select>
+                            <div class="text-danger"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2">
+                        Mô tả:
+                    </label>
+
+                    <div class="col-sm-9 box-input">
+                        <textarea type="text" name="NewsDescription" rows="2" class="col-xs-12 col-sm-6" oninput="validateEmpty(event)"></textarea>
+                        <div class="text-danger"></div>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">
+                        Keyword:
+                    </label>
+
+                    <div class="col-sm-9 box-input">
+                        <textarea type="text" name="NewsKeyword" class="col-xs-12 col-sm-6" oninput="validateEmpty(event)"></textarea>
+                        <div class="text-danger"></div>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2">
+                        Tóm tắt:
+                    </label>
+
+                    <div class="col-sm-9 box-input">
+                        <textarea type="text" name="NewsSummary" class="col-xs-12 col-sm-6" oninput="validateEmpty(event)"></textarea>
+                        <div class="text-danger" id="error_summary"></div>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2">
+                        Hình ảnh:
+                    </label>
+
+                    <div class="col-sm-9">
+                        <div>
+                            <div style="display: flex">
+                                <input type="text" name="NewsImage" id="NewsImage" class="col-xs-12 col-sm-6" style="width: 300px" oninput="validateEmpty(event)" />
+                                <span type="button" onclick="ChooseImage(event)" class="btn btn-sm btn-success">Browse..</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                @*<div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2">
+                        Nội dung
+                    </label>
+
+                    <div class="col-sm-9 box-input">
+                        <textarea type="text" id="NewsBody" rows="2" class="col-xs-12 col-sm-6" oninput="validateEmpty(event)"></textarea>
+                        <div class="text-danger"></div>
+                    </div>
+                    </div>*@
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2">
+                        Nội dung:
+                    </label>
+
+                    <div class="col-sm-9 box-input">
+                        <input type="hidden" name="NewsBody" id="news_body" />
+                        <textarea type="text" id="NewsBody" rows="2" class="col-xs-12 col-sm-6" oninput="validateEmpty(event)"></textarea>
+                        <div class="text-danger"></div>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2">
+                        Thứ tự:
+                    </label>
+
+                    <div class="col-sm-9">
+                        <input type="number" name="OrderNo" class="col-xs-12 col-sm-6 input-number" value="0" />
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">
+                        Trạng thái:
+                    </label>
+
+                    <div class="checkbox">
+                        <label>
+                            <input name="IsActive" type="checkbox" class="ace" value="true">
+
+                            <span class="lbl"> Ẩn/Hiện danh mục</span>
+                            <input name="IsActive" type="hidden" value="false" />
+                        </label>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">
+                        Tin nổi bật:
+                    </label>
+
+                    <div class="checkbox">
+                        <label>
+                            <input name="IsHotNews" type="checkbox" class="ace" value="true">
+
+                            <span class="lbl"> Bài viết nổi bật</span>
+                            <input name="IsHotNews" type="hidden" value="false" />
+                        </label>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+                        Tin liên quan
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="NewsOther" name="NewsOther" class="col-xs-12 col-sm-6" style="width: 175px" oninput="validateEmpty(event)" />
+                        @*<input type="text" id="search" name="txtSearch" class="col-xs-12 col-sm-6" style="width: 175px" />*@
+                        <button class="btn btn-success" onclick="Filter()">Lọc</button>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <button type="submit" href="#" id="btn_submit_save" class="btn btn-success">Lưu</button>
+            }
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/xpexkui2wt6x0dv6vwafp5mt3v4o8z3pxc81q1nxtlfb4ik4/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script><script src="https://cdn.tiny.cloud/1/xpexkui2wt6x0dv6vwafp5mt3v4o8z3pxc81q1nxtlfb4ik4/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="/Content/js/ckfinder/ckfinder.js"></script>
+    <!-- Script to wire up your TinyMCE editor -->
+    <script type="text/javascript">
+        // Initialize your tinyMCE Editor with your preferred options
+        tinymce.init({
+            selector: "#NewsBody",
+            plugins: 'code',
+            init_instance_callback: function (editor) {
+                editor.on('input', function (e) {
+                    var value = tinymce.get("NewsBody").getContent();
+                    $('#news_body').val(value);
+                });
+            }
+        });
+
+        function chooseNewsCategory(e) {
+            if ($(e.target).find(":selected").val() == '0') {
+                $(e.target).next().text('Bạn cần chọn danh mục tin tức');
+            } else {
+                $(e.target).next().text('');
+            }
+        }
+
+        function ChooseImage(e) {
+            debugger
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $('#NewsImage').val(fileUrl);
+            }
+            finder.popup();
+        }
+    </script>
+    <script>
+        $('#btn_submit_save').click(function () {
+            $("#manageForm").attr("action", '@Url.ActionLocalized("Create")').submit();
+        });
+
+        function validateEmpty(e) {
+            if ($(e.target).val() == '' && $(e.target).attr('id') != 'NewsOther' && $(e.target).attr('id') != 'NewsBody' && $(e.target).attr('id') != 'NewsImage' && $(e.target).attr('id') != 'news_body') {
+                $(e.target).next().text('Bạn không được để trống');
+            } else {
+                $(e.target).next().text('');
+            }
+        }
+
+        function checkValid(e) {
+            var inputs = $('input, textarea');
+            var bug = 0;
+
+            for (var i = 1; i < inputs.length; i++) {
+                if ($(inputs[i]).val() == '' && $(inputs[i]).attr('id') != 'NewsOther' && $(inputs[i]).attr('id') != 'NewsBody' && $(inputs[i]).attr('id') != 'NewsImage' && $(inputs[i]).attr('id') != 'news_body') {
+                    $(inputs[i]).next().text('Bạn không được để trống');
+                    bug++;
+                }
+            }
+
+            if ($('#NewsCategoryId').find(":selected").val() == '0') {
+                $('#NewsCategoryId').next().text('Bạn cần chọn danh mục tin tức');
+                bug++;
+            }
+
+            if (bug > 0) {
+                e.preventDefault();
+            } else {
+                var value = tinymce.get("NewsBody").getContent();
+                $('#news_body').val(value);
+                return true;
+            }
+        }
+
+        @*function Filter() {
+            var key = $('input[name="txtSearch"]').val();
+            var newsOther = '';
+            var url = '@Url.Action("Filter", "News")';
+            jQuery.ajax({
+                url: '/vi/Auth/News/Filter?search=' + key,
+                dataType: 'json',
+                type: 'get',
+                traditional: true,
+                success: function (data) {
+                    console.log(data);
+                }
+            });
+        }*@
+
+        var message = '@MvcHtmlString.Create(message)';
+
+        $(document).ready(function () {
+            if (message.trim() != null && message.trim() != '') {
+                alert(message);
+                window.location.href = '/vi/quan-tri/danh-sach-tin-tuc/danh-sach';
+            }
+        })
+    </script>
+
+
+
+}
+
+
+

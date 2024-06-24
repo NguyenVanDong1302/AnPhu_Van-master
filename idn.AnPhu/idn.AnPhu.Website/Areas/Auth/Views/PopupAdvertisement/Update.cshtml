@@ -1,0 +1,155 @@
+﻿
+@model PopupAdvertisement
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Areas/Auth/Views/Shared/_LayoutAuth.cshtml";
+    var message = CUtils.StrValue(ViewBag.message);
+}
+
+
+@section StyleSheet {
+    <style>
+        .container-admin {
+            font-size: 13px;
+        }
+
+            .container-admin .header-admin {
+                margin: 0 8px;
+                margin-bottom: 12px;
+                font-size: 24px;
+                font-weight: lighter;
+                color: #2679b5;
+                border-bottom: 1px dotted #e2e2e2;
+                padding-bottom: 16px;
+                padding-top: 7px;
+            }
+
+            .container-admin .header-table {
+                padding: 12px;
+                background-color: #EFF3F8;
+                display: flex;
+                justify-content: space-between;
+            }
+
+        .input-number {
+            width: 78px;
+        }
+
+        .form-group .btn {
+            margin-left: 16px;
+        }
+
+        .box-input {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-danger {
+            margin-top: 8px;
+        }
+    </style>
+}
+
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="#">Home</a>
+    </li>
+    <li><a href="@Url.Action("Index", "Home")">Dashboard</a></li>
+    <li><a href="@Url.Action("Index", "PopupAdvertisement")">Popup quảng cáo</a></li>
+</ul>
+
+<div class="container-admin">
+    <div class="header-admin">Sửa thông tin Popup</div>
+    <div class="content-admin">
+        <div class="content-table">
+            @using (Html.BeginForm("Update", "PopupAdvertisement", FormMethod.Post, new { id = "manageForm", @class = "form-horizontal", onsubmit = "checkValid(event)" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-2">
+                        Ảnh:
+                    </label>
+
+                    <div class="col-sm-9">
+                        <div>
+                            <div style="display: flex">
+                                <input type="text" name="Image" id="Image" value="@Model.Image" class="col-xs-12 col-sm-6" style="width: 300px" oninput="validateEmpty(event)" />
+                                <span type="button" onclick="ChooseImage(event)" class="btn btn-sm btn-success">Browse..</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+                        Link:
+                    </label>
+
+                    <div class="col-sm-9 box-input">
+                        <input type='hidden' name="Id" value="@Model.Id" />
+                        <input type='text' name="Link" value="@Model.Link" oninput="validateEmpty(event)" />
+                        <div class="text-danger"></div>
+                    </div>
+                </div>
+                <button type="submit" id="btn_submit_save" class="btn btn-success">Lưu</button>
+            }
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    <script src="/Content/js/ckfinder/ckfinder.js"></script>
+    <!-- Script to wire up your TinyMCE editor -->
+    <script type="text/javascript">
+        function ChooseImage(e) {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $('#Image').val(fileUrl);
+            }
+            finder.popup();
+        }
+    </script>
+    <script>
+        $('#btn_submit_save').click(function () {
+            $("#manageForm").attr("action", '@Url.ActionLocalized("Update")').submit();
+        });
+
+        function validateEmpty(e) {
+            if ($(e.target).val() == '') {
+                $(e.target).next().text('Bạn không được để trống');
+            } else {
+                $(e.target).next().text('');
+            }
+        }
+
+        function checkValid(e) {
+            var inputs = $('input, textarea');
+            var bug = 0;
+
+            for (var i = 1; i < inputs.length; i++) {
+                if ($(inputs[i]).val() == '' && $(inputs[i]).attr('id') != 'NewsOther' && $(inputs[i]).attr('id') != 'NewsBody' && $(inputs[i]).attr('id') != 'NewsImage' && $(inputs[i]).attr('id') != 'news_body') {
+                    $(inputs[i]).next().text('Bạn không được để trống');
+                    bug++;
+                }
+            }
+
+            if (bug > 0) {
+                e.preventDefault();
+            } else {
+                return true;
+            }
+        }
+
+        var message = '@MvcHtmlString.Create(message)';
+
+        $(document).ready(function () {
+            if (message.trim() != null && message.trim() != '') {
+                alert(message);
+            }
+        })
+    </script>
+}
+

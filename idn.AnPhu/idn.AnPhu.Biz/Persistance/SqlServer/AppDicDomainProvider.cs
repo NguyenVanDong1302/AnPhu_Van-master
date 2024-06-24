@@ -38,9 +38,14 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
             throw new NotImplementedException();
         }
 
-        public List<AppDicDomain> GetListAppDicDomainByItemCode(string itemCode)
+        public List<AppDicDomain> GetListAppDicDomainByItemCode(string domainCode)
         {
-            throw new NotImplementedException();
+            var comm = this.GetCommand("App_Domain_GetDic");
+            if (comm == null) return null;
+            comm.AddParameter<string>(this.Factory, "Domain_Code", domainCode);
+            var dt = this.GetTable(comm);
+
+            return EntityBase.ParseListFromTable<AppDicDomain>(dt);
         }
 
         public AppDicDomain GetNewsTypeOnHome(string itemCode)

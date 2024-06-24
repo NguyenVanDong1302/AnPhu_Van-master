@@ -6,6 +6,7 @@ using System.Text;
 using System.Web;
 using Microsoft.VisualBasic;
 
+
 namespace idn.AnPhu.Website.Utils
 {
     public class StringUtils : System.Web.UI.Page
@@ -190,29 +191,30 @@ namespace idn.AnPhu.Website.Utils
             return "";
         }
 
-        //public static string URLForHTML(string sServerURL)
-        //{
-        //    string applicationPath = HttpContext.Current.Request.ApplicationPath;
-        //    bool flag = sServerURL.StartsWith("~");
-        //    string result;
-        //    if (flag)
-        //    {
-        //        bool flag2 = Operators.CompareString(applicationPath, "/", false) == 0;
-        //        if (flag2)
-        //        {
-        //            result = applicationPath + sServerURL.Substring(2);
-        //        }
-        //        else
-        //        {
-        //            result = applicationPath + sServerURL.Substring(1);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        result = sServerURL;
-        //    }
-        //    return result;
-        //}
+        public static string URLForHTML(string sServerURL)
+        {
+            string applicationPath = HttpContext.Current.Request.ApplicationPath;
+            bool flag = sServerURL.StartsWith("~");
+            string result;
+            if (flag)
+            {
+                //bool flag2 = Operators.CompareString(applicationPath, "/", false) == 0;
+                bool flag2 = true;
+                if (flag2)
+                {
+                    result = applicationPath + sServerURL.Substring(2);
+                }
+                else
+                {
+                    result = applicationPath + sServerURL.Substring(1);
+                }
+            }
+            else
+            {
+                result = sServerURL;
+            }
+            return result;
+        }
 
         //public static string galleryItem(string sRoot, string sClass, string name)
         //{
@@ -248,54 +250,54 @@ namespace idn.AnPhu.Website.Utils
 
 
 
+        public static string galleryItemMB(string sRoot, string sClass, string name)
+        {
+            var sReturn = "";
 
-        //public static string galleryItemMB(string sRoot, string sClass, string name)
-        //{
-        //    var sReturn = "";
+            var i = 1;
 
-        //    var i = 1;
+            if (!(Directory.Exists(HttpContext.Current.Server.MapPath(sRoot + "/" + sClass + "/"))))
+            {
+                return "";
+            }
 
-        //    if (!(Directory.Exists(HttpContext.Current.Server.MapPath(sRoot + "/" + sClass + "/"))))
-        //    {
-        //        return "";
-        //    }
-
-        //    foreach (var sFile in Directory.GetFiles(HttpContext.Current.Server.MapPath(sRoot + "/" + sClass + "/"), "*_sum*.*"))
-        //    {
-        //        var fileText = HttpContext.Current.Server.MapPath(sRoot + "/" + sClass + "/" + Path.GetFileNameWithoutExtension(sFile) + "l.txt");
-        //        if (File.Exists(fileText))
-        //        {
-        //            string[] arrLine = File.ReadAllLines(fileText);
-        //            sReturn += "<li class='" + sClass + "' type='movie'><a onclick=\"return showGalleryLargeLayer(this,'" + arrLine[0] + "','" + arrLine[1] + "')\" href='#'>";
-        //        }
-        //        else
-        //        {
-        //            var s = Path.GetFileName(sFile);
-        //            var fileName = "";
-        //            if (s != null)
-        //            {
-        //                fileName = s.Replace("_sum", "_");
-        //                if (fileName.IndexOf("gallery_") == -1)
-        //                {
-        //                    fileName = fileName.Replace(".png", ".jpg");
-        //                    if (fileName.IndexOf("exterior_") == 0)
-        //                    {
-        //                        fileName = fileName.Replace("exterior_", "exterior_4door_");
-        //                    }
-        //                }
-        //            }
-        //            sReturn += "<li class='fix-galery-li col-md-3 col-sm-4 col-xs-6 " + sClass + "' style='display: none;' index=\"" + i + "\" ><a class='fancybox' rel='" + sClass + "' href='" + URLForHTML(sRoot + sClass + "/" + fileName) + "'>";
-        //        }
-        //        sReturn += "<img width='193' height='136'   src='" + URLForHTML(sRoot + sClass + "/" + Path.GetFileName(sFile)) + "'>" + "<div class='cover'>" + name + "</div>" + "</a></li>";
-
-
-        //        i++;
-
-        //    }
+            foreach (var sFile in Directory.GetFiles(HttpContext.Current.Server.MapPath(sRoot + "/" + sClass + "/"), "*_sum*.*"))
+            {
+                var fileText = HttpContext.Current.Server.MapPath(sRoot + "/" + sClass + "/" + Path.GetFileNameWithoutExtension(sFile) + "l.txt");
+                if (File.Exists(fileText))
+                {
+                    string[] arrLine = File.ReadAllLines(fileText);
+                    sReturn += "<li class='" + sClass + "' type='movie'><a onclick=\"return showGalleryLargeLayer(this,'" + arrLine[0] + "','" + arrLine[1] + "')\" href='#'>";
+                }
+                else
+                {
+                    var s = Path.GetFileName(sFile);
+                    var fileName = "";
+                    if (s != null)
+                    {
+                        fileName = s.Replace("_sum", "_");
+                        if (fileName.IndexOf("gallery_") == -1)
+                        {
+                            fileName = fileName.Replace(".png", ".jpg");
+                            if (fileName.IndexOf("exterior_") == 0)
+                            {
+                                fileName = fileName.Replace("exterior_", "exterior_4door_");
+                            }
+                        }
+                    }
+                    sReturn += "<li class='fix-galery-li col-md-3 col-sm-4 col-xs-6 " + sClass + "' style='display: none;' index=\"" + i + "\" ><a class='fancybox' rel='" + sClass + "' href='" + URLForHTML(sRoot + sClass + "/" + fileName) + "'>";
+                }
+                sReturn += "<img width='193' height='136'   src='" + URLForHTML(sRoot + sClass + "/" + Path.GetFileName(sFile)) + "'>" + "<div class='cover'>" + name + "</div>" + "</a></li>";
 
 
-        //    return sReturn;
-        //}
+                i++;
+
+            }
+
+
+            return sReturn;
+        }
+
 
 
 

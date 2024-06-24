@@ -174,7 +174,7 @@
                         foreach (Product itemprd in listhotpro.OrderBy(m => m.OrderNo))
                         {
                             <div class=" hidden-sm hidden-xs">
-                                <a href="@Url.Action("Detail", "Product", new { productcode = itemprd.ProductCode, productid = itemprd.ProductId })">
+                                <a href="@Url.Action("Detail", "ProductClient", new { productcode = itemprd.ProductCode, productid = itemprd.ProductId })">
                                     <div class="topcar-img animated infinite tada">
                                         <img src="@itemprd.ProductImage" class="img-responsive lazy" alt="@itemprd.ProductName" />
                                     </div>

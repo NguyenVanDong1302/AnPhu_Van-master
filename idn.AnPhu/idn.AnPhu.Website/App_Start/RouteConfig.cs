@@ -24,25 +24,28 @@ namespace idn.AnPhu.Website
                 defaults: new { culture = "vi", controller = "ProductAction", action = "Register" },
                 new[] { "idn.AnPhu.Website.Controllers" }
              );
-                
+
             routes.MapRoute(
-                 "productdetail",
-                 url: "{culture}/san-pham",
-                 new { culture = "vi", controller = "ProductClientClient", action = "Detail" },
-                 new[] { "idn.AnPhu.Website.Controllers" }
-             );
+                name: "productdetail",
+                url: "{culture}/san-pham/{productcode}",
+                defaults: new { culture = "vi", controller = "ProductClient", action = "Detail", productcode = UrlParameter.Optional },
+                new[] { "idn.AnPhu.Website.Controllers"}
+            );
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
               name: "listprd",
               url: "{culture}/danh-sach-san-pham/{shortname}",
-              defaults: new { culture = "vi", controller = "ProductClient", action = "ListProductByCate", shortname = UrlParameter.Optional }
-             );
+              defaults: new { culture = "vi", controller = "Product", action = "ListProductByCate", shortname = UrlParameter.Optional },
+               new[] { "idn.AnPhu.Website.Controllers" }
+              );
 
             routes.MapRoute(
                name: "productcate",
                url: "{culture}/danh-muc-san-pham/{shortname}",
-               defaults: new { culture = "vi", controller = "ProductClient", action = "ListProductByCateSale", shortname = UrlParameter.Optional }
+               defaults: new { culture = "vi", controller = "Product", action = "ListProductByCateSale", shortname = UrlParameter.Optional },
+                     new[] { "idn.AnPhu.Website.Controllers" }
+
             );
 
             routes.MapRoute(
@@ -81,12 +84,14 @@ namespace idn.AnPhu.Website
             routes.MapRoute(
                name: "tin-tuc",
                url: "{culture}/tin-tuc",
-               defaults: new { culture = "vi", controller = "News", action = "ShowListCateNews" }
+               defaults: new { culture = "vi", controller = "News", action = "ShowListCateNews" },
+                     new[] { "idn.AnPhu.Website.Controllers" }
            );
             routes.MapRoute(
                 name: "news-cate",
                 url: "{culture}/tin-tuc/{shortname}/{page}",
-                defaults: new { culture = "vi", controller = "News", action = "ShowCateNews", shortname = UrlParameter.Optional, page = UrlParameter.Optional }
+                defaults: new { culture = "vi", controller = "News", action = "ShowCateNews", shortname = UrlParameter.Optional, page = UrlParameter.Optional },
+                      new[] { "idn.AnPhu.Website.Controllers" }
             );
 
            // routes.MapRoute(
@@ -99,7 +104,8 @@ namespace idn.AnPhu.Website
             routes.MapRoute(
                name: "news-detail",
                url: "{culture}/tin-tuc/{category}/{shortname}/{newsid}",
-               defaults: new { culture = "vi", controller = "News", action = "Detail", category = UrlParameter.Optional, shortname = UrlParameter.Optional, newsid = UrlParameter.Optional }
+               defaults: new { culture = "vi", controller = "News", action = "Detail", category = UrlParameter.Optional, shortname = UrlParameter.Optional, newsid = UrlParameter.Optional },
+                     new[] { "idn.AnPhu.Website.Controllers" }
            );
 
 

@@ -1,0 +1,308 @@
+﻿
+@model PageInfo<News>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Auth/Views/Shared/_LayoutAuth.cshtml";
+}
+
+@section StyleSheet {
+    <style>
+        .header-admin {
+            margin: 0 8px;
+            margin-bottom: 12px;
+            font-size: 24px;
+            font-weight: lighter;
+            color: #2679b5;
+            border-bottom: 1px dotted #e2e2e2;
+            padding-bottom: 16px;
+            padding-top: 7px;
+        }
+
+        .header-table {
+            padding: 12px;
+            background-color: #EFF3F8;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .paginate {
+            display: flex;
+            justify-content: space-between;
+            background-color: #EFF3F8;
+            padding: 20px;
+        }
+
+        .dataTables_wrapper .row:last-child, .dataTables_wrapper .row:first-child {
+            display: none !important;
+        }
+
+        /*.table > thead > tr > th:last-child::after {
+            display: none;
+        }*/
+        .display-none {
+            display: none !important;
+        }
+
+        .width-114 {
+            width: 114px !important;
+        }
+    </style>
+
+}
+
+<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+        </li>
+        <li><a href="@Url.Action("Index", "Home")">Dashboard</a></li>
+        <li><a href="@Url.Action("Index", "News")">Danh sách tin tức</a></li>
+    </ul>
+</div>
+<div class="main-container" id="main-container">
+    <div class="header-admin">Danh sách tin tức</div>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div>
+                                    <div class="header-table">
+                                        <div class="filter-select">
+                                            <span>Display</span>
+                                            <select id="pageSize" name="pageSize" onchange="updatePageSize()" value="@Model.PageSize">
+                                                @foreach (var index in ViewBag.listPageSize)
+                                                {
+                                                    if (index == @Model.PageSize)
+                                                    {
+                                                        <option value="@index" selected>@index</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@index">@index</option>
+                                                    }
+                                                }
+                                            </select>
+                                            <span>records</span>
+                                        </div>
+                                        <div class="search-box">
+                                            <span>Search:</span>
+                                            <input type="text" id="txtSearch" name="name" onkeyup="search(event)" />
+                                        </div>
+                                    </div>
+                                    <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Tiêu đề</th>
+                                                <th class="width-114">Danh mục</th>
+                                                <th class="width-114">Người tạo</th>
+
+                                                <th class="width-114">
+                                                    <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                                    Ngày tạo
+                                                </th>
+                                                <th class="width-114">Lượt xem</th>
+                                                <th class="width-114">Status</th>
+
+                                                <th class="width-114"></th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            @foreach (News item in Model.DataList)
+                                            {
+                                                <tr>
+                                                    <td>@item.NewsTitle</td>
+                                                    <td class="width-114">@item.NewsCategoryTitle</td>
+                                                    <td class="width-114">@item.CreateBy</td>
+                                                    <td class="width-114">@item.CreateDateFormat</td>
+                                                    <td class="width-114">@item.Count</td>
+                                                    <td class="hidden-480">
+                                                        @if (item.IsActive == true)
+                                                        {
+                                                            <span class="label label-sm label-success">Is Active</span>
+
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="label label-sm label-danger">UnActive</span>
+
+                                                        }
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="hidden-sm hidden-xs action-buttons">
+                                                            <button class="btn btn-xs btn-info" onclick="window.location.href='/vi/quan-tri/danh-sach-tin-tuc/cap-nhat?newsId='+ @item.NewsId">
+                                                                <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                                            </button>
+                                                            <button class="btn btn-xs btn-danger" onclick="confirmDelete(@item.NewsId)">
+                                                                <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                            </button>
+                                                        </div>
+
+                                                        <div class="hidden-md hidden-lg">
+                                                            <div class="inline pos-rel">
+                                                                <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                                    <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                                </button>
+
+                                                                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                                    <li>
+                                                                        <a href="'/vi/quan-tri/danh-sach-tin-tuc/cap-nhat?newsId='+ @item.NewsId" class="tooltip-success" data-rel="tooltip" title="Edit">
+                                                                            <span class="green">
+                                                                                <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="tooltip-error" data-rel="tooltip" title="Delete" onclick="confirmDelete(@item.NewsId)">
+                                                                            <span class="red">
+                                                                                <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            }
+
+
+                                        </tbody>
+                                    </table>
+                                    <div class="paginate no-margin-top">
+                                        <div class="dataTables_info" id="dynamic-table_info" role="status" aria-live="polite">@ViewBag.pageView</div>
+
+                                        <ul class="pagination pull-right no-margin" style="display: inline-block">
+                                            <li class="prev">
+                                                <a href="javascript:void(0);" onclick="prev()">
+                                                    Previous
+                                                </a>
+                                            </li>
+                                            @for (var i = 1; i <= Model.PageCount; i++)
+                                            {
+                                                if (i == Model.PageIndex)
+                                                {
+                                                    <li class="active">
+                                                        <a href="javascript:void(0);" onclick="goToPage(@i)">@i</a>
+                                                    </li>
+                                                }
+                                                else
+                                                {
+                                                    <li>
+                                                        <a href="javascript:void(0);" onclick="goToPage(@i)">@i</a>
+                                                    </li>
+                                                }
+                                            }
+
+                                            <li class="next">
+                                                <a href="javascript:void(0);" onclick="next()">
+                                                    Next
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a href="/vi/quan-tri/danh-sach-tin-tuc/tao-moi" class="btn btn-success">Tạo mới</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+</div><!-- /.main-container -->
+@section Scripts {
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            jQuery(function ($) {
+                //initiate dataTables plugin
+                var oTable1 =
+                    $('#dynamic-table')
+                        .dataTable({
+                            bAutoWidth: false,
+                            "aoColumns": [
+                                { "bSortable": false },
+                                null, null, null, null, null,
+                                { "bSortable": false }
+                            ],
+                            "aaSorting": [],
+
+                        });
+
+                var sorts = $(".sort");
+                jQuery.each(sorts, function (i, val) {
+                    $(sorts[i]).removeClass('sorting_disabled');
+                });
+
+            })
+        });
+
+    </script>
+    <script>
+
+    var pageIndex = @Model.PageIndex;
+    var pageSize = @Model.PageSize;
+
+    function updatePageSize() {
+        var pageSizeUpdate = $('#pageSize').val();
+        var txtSearch = $('#txtSearch').val().trim();
+        debugger
+        window.location.href = "/vi/quan-tri/danh-sach-tin-tuc/danh-sach?page=" + pageIndex + "&pageSize=" + pageSizeUpdate + "&txtSearch=" + txtSearch;
+        debugger
+    }
+
+    function search(e) {
+        var txtSearch = $('#txtSearch').val().trim();
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            window.location.href = "/vi/quan-tri/danh-sach-tin-tuc/danh-sach?page=" + pageIndex + "&pageSize=" + pageSize + "&txtSearch=" + txtSearch;
+        }
+
+    }
+
+    function prev() {
+        if (pageIndex > 1) {
+            pageIndex--;
+            window.location.href = "/vi/quan-tri/danh-sach-tin-tuc/danh-sach?page=" + pageIndex + "&pageSize=" + pageSize;
+        }
+
+    }
+
+    function next() {
+        if (pageIndex < @Model.PageCount) {
+            pageIndex++;
+            window.location.href = "/vi/quan-tri/danh-sach-tin-tuc/danh-sach?page=" + pageIndex + "&pageSize=" + pageSize;
+        }
+
+    }
+
+    function goToPage(index) {
+        var txtSearch = $('#txtSearch').val().trim();
+            window.location.href = "/vi/quan-tri/danh-sach-tin-tuc/danh-sach?page=" + index + "&pageSize=" + pageSize + "&txtSearch=" + txtSearch;
+        }
+
+        var message = '@ViewBag.message';
+
+        $(document).ready(function () {
+            if (message.trim() != null && message.trim() != '') {
+                alert(message);
+            }
+        })
+
+        function confirmDelete(id) {
+            if (confirm("Bạn muốn xóa tin có mã " + id + " ?") == true) {
+                window.location.href = '/vi/quan-tri/danh-sach-tin-tuc/xoa?newsId=' + id;
+            } else {
+                return false;
+            }
+        }
+    </script>
+}
+

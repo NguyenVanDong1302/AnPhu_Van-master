@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using idn.AnPhu.Constants;
+using System.Data.Common;
 
 namespace idn.AnPhu.Biz.Persistance.SqlServer
 {
@@ -125,22 +127,26 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
         //    return EntityBase.ParseListFromTable<HtmlPage>(dt);
         //}
 
-        public List<News> Search(int startIndex, int lenght, ref int totalItem, string culture)
+        public List<News> Search(string txtSearch, int startIndex, int pageSize, ref int totalItems)
         {
-            var comm = this.GetCommand("sp_NewsSearch");
-            if (comm == null) return null;
-            comm.AddParameter<int>(this.Factory, "StartIndex", startIndex);
-            comm.AddParameter<string>(this.Factory, "Culture", culture);
-            comm.AddParameter<int>(this.Factory, "Length", lenght);
-            var totalItemsParam = comm.AddParameter(this.Factory, "TotalItems", DbType.Int32, null);
+            DbCommand comm = this.GetCommand("Sp_News_Search");
+            comm.AddParameter<string>(this.Factory, "txtSearch", (txtSearch != null && txtSearch.Trim().Length > 0) ? txtSearch : null);
+            comm.AddParameter<int>(this.Factory, "startIndex", startIndex);
+            comm.AddParameter<int>(this.Factory, "count", pageSize);
+
+            DbParameter totalItemsParam = comm.AddParameter(this.Factory, "totalItems", DbType.Int32, null);
             totalItemsParam.Direction = ParameterDirection.Output;
-            var dt = this.GetTable(comm);
+
+            var table = this.GetTable(comm);
+            table.TableName = TableName.News;
+
             if (totalItemsParam.Value != DBNull.Value)
             {
-                totalItem = Convert.ToInt32(totalItemsParam.Value);
+                totalItems = Convert.ToInt32(totalItemsParam.Value);
             }
-            return EntityBase.ParseListFromTable<News>(dt);
+            return EntityBase.ParseListFromTable<News>(table);
         }
+
         public List<News> GetByCateId(int categoryid, int topcount, string culture)
         {
             var comm = this.GetCommand("sp_NewsGetByCateId");
@@ -228,5 +234,47 @@ namespace idn.AnPhu.Biz.Persistance.SqlServer
             return EntityBase.ParseListFromTable<News>(dt);
             //throw new NotImplementedException();
         }
+
+        public List<News> SearchUsersSide(int newsCategoryId, int startIndex, int pageSize, ref int totalItems)
+        {
+            DbCommand comm = this.GetCommand("Sp_News_SearchByCate");
+            comm.AddParameter<int>(this.Factory, "newsCategoryId", newsCategoryId);
+            comm.AddParameter<int>(this.Factory, "startIndex", startIndex);
+            comm.AddParameter<int>(this.Factory, "count", pageSize);
+
+            DbParameter totalItemsParam = comm.AddParameter(this.Factory, "totalItems", DbType.Int32, null);
+            totalItemsParam.Direction = ParameterDirection.Output;
+
+            var table = this.GetTable(comm);
+            table.TableName = TableName.News;
+
+            if (totalItemsParam.Value != DBNull.Value)
+            {
+                totalItems = Convert.ToInt32(totalItemsParam.Value);
+            }
+
+            return EntityBase.ParseListFromTable<News>(table);
+        }
+
+        public List<News> GetHot(int top)
+        {
+            DbCommand comm = this.GetCommand("Sp_News_GetHot");
+            comm.AddParameter<int>(this.Factory, "top", top);
+            var table = this.GetTable(comm);
+            table.TableName = TableName.News;
+
+            return EntityBase.ParseListFromTable<News>(table);
+        }
+
+        public List<News> SearchNewsOther(string search)
+        {
+            DbCommand comm = this.GetCommand("Sp_News_SearchNewsOther");
+            comm.AddParameter<string>(this.Factory, "search", (search != null && search.Trim().Length > 0) ? search : null);
+
+            var table = this.GetTable(comm);
+            table.TableName = TableName.News;
+            return EntityBase.ParseListFromTable<News>(table);
+        }
+
     }
 }

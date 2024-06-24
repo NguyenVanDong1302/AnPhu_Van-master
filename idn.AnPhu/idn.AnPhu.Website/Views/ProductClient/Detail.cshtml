@@ -1,14 +1,13 @@
 ﻿@model idn.AnPhu.Biz.Models.Product
-
+@using idn.AnPhu.Biz.Models 
 @{
     ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_DetailLayout.cshtml";
     var variablesScript = ViewBag.variablesScript as string ?? "";
     var numSlide = 0;
-    //abc your Helllo 000000000000000000000000000000000
 }
    
-@*<div class="background-prd"
+<div class="background-prd"
          style="
         /*background: url(*/@Model.ProductBackground/*)*/
         center top no-repeat;font-family: ModernHBold;">
@@ -22,7 +21,7 @@
                 </div>
             </div>
         </div>
-    </div>*@
+    </div>
 
 
 
@@ -49,9 +48,6 @@
     });
 
 </script>
-@{
-    var obj = Model;
-}
 
 
 <div class="background-prd"
@@ -65,7 +61,7 @@
                 </a>
             </div>
         </div>
-        <div id="carousel-example-generic" class="carousel slide htcslide" data-ride="carousel" 
+        <div id="carousel-example-generic" class="carousel slide htcslide" data-ride="carousel"
              style="height: auto !important">
 
             <!-- Wrapper for slides -->
@@ -77,19 +73,18 @@
                                 <h1 class="carname modernHBold col-lg-12 no-padding " style="text-align:left">
                                     @Model.ProductName
                                 </h1>
-                                @*  <div class="price-product">Giá từ: @String.Format("{0:0,0}", Convert.ToDouble(Model.ProductPrice)) VNĐ</div>*@
+                                  <div class="price-product">Giá từ: @String.Format("{0:0,0}", Convert.ToDouble(Model.ProductPrice)) VNĐ</div>
                                 <h1 class="slogan modernHEcoLight col-lg-12 no-padding ">
                                     @Model.ProductSlogan
 
                                 </h1>
                                 <h1 class="summary col-lg-12 no-padding ">
                                     @MvcHtmlString.Create(Model.ProductSummary)
-
                                 </h1>
 
                                 <div class="col-lg-12 no-padding ">
                                     <div class="item-productprice col-lg-5 no-padding" style="text-align:left" id="pro-id-del">
-                                        <a @*href="@Url.Action("BuyCar", "ProductAction", new { productid = Model.ProductId })"*@
+                                        <a href="@Url.Action("BuyCar", "ProductAction", new { productid = Model.ProductId })"
                                            class="btn btn-detail-product hvr-wobble-top" style="margin-top:30px;border-radius:25px; ">
                                             GIÁ XE
                                         </a>
@@ -105,15 +100,15 @@
                             </div>
                             <div class="col-sm-6 col-lg-7 col-xs-5 no-padding hvr-wobble-to-top-right" style="padding-top:60px">
                                 @*<img class="htccar img-responsive lazy" src="~/tempfiles/uploads/products/slides/@(Model.ProductCode.ToUpper()).png" />*@
-                                  <img class="htccar img-responsive lazy" src="http://hyundaicaudien.vn/tempfiles/uploads/products/slides/ACCENT-2021.png" />
+                                <img class="htccar img-responsive lazy" src="http://hyundaicaudien.vn/tempfiles/uploads/products/slides/ACCENT-2021.png" />
                             </div>
                             @* <div class="col-lg-1 no-padding hidden-xs hidden-sm exterior" style="margin-top:15px;">
-                                <div class="experience_option">
-                                     <p class="color_view"></p>
-                                        <ul>
-                                         </ul>
-                                </div>
-                                 </div>*@
+                            <div class="experience_option">
+                                 <p class="color_view"></p>
+                                    <ul>
+                                     </ul>
+                            </div>
+                             </div>*@
 
                         </div>
                     </div>
@@ -127,26 +122,26 @@
                 </div>
 
                 @*@if (Model.ProductVideo != null)
-                    {
-                        System.Text.RegularExpressions.Regex YoutubeVideoRegex =
-                            new System.Text.RegularExpressions.Regex(@"youtu(?:\.be|be\.com)/(?:.*v(?:/|=)|(?:.*/)?)([a-zA-Z0-9-_]+)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                        System.Text.RegularExpressions.Match youtubeMatch = YoutubeVideoRegex.Match(Model.ProductVideo);
-                        <div id="divVideo" class="item item-slide no-padding" style="">
-                            <div class="row">
-                                <div class="col-md-8 col-md-offset-2 no-padding" style="margin-top:40px;">
-                                    @if (youtubeMatch.Success)
-                                    {
-                                        var id = youtubeMatch.Groups[1].Value;
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" width="560" height="315"
-                                                    src="http://www.youtube.com/embed/@id?wmode=opaque&amp;rel=0"></iframe>
-                                        </div>
-                                    }
-                                </div>
+                {
+                    System.Text.RegularExpressions.Regex YoutubeVideoRegex =
+                        new System.Text.RegularExpressions.Regex(@"youtu(?:\.be|be\.com)/(?:.*v(?:/|=)|(?:.*/)?)([a-zA-Z0-9-_]+)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                    System.Text.RegularExpressions.Match youtubeMatch = YoutubeVideoRegex.Match(Model.ProductVideo);
+                    <div id="divVideo" class="item item-slide no-padding" style="">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 no-padding" style="margin-top:40px;">
+                                @if (youtubeMatch.Success)
+                                {
+                                    var id = youtubeMatch.Groups[1].Value;
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" width="560" height="315"
+                                                src="http://www.youtube.com/embed/@id?wmode=opaque&amp;rel=0"></iframe>
+                                    </div>
+                                }
                             </div>
                         </div>
+                    </div>
 
-                    }*@
+                }*@
                 @*Thu vien anh*@
                 <div id="divGallery" class="item item-slide no-padding" style="">
                     @*@Html.Partial("GalleryProduct", Model)*@
@@ -154,11 +149,11 @@
 
                 @*Danh gia xe*@
                 @*@if (Model.Reviews != null && Model.Reviews.Count > 0)
-                    {
-                        <div id="divReview" class="item item-slide no-padding" style="">
-                            @Html.Partial("ReviewProduct", Model)
-                        </div>
-                    }*@
+                {
+                    <div id="divReview" class="item item-slide no-padding" style="">
+                        @Html.Partial("ReviewProduct", Model)
+                    </div>
+                }*@
 
                 @*Thong so xe*@
                 <div id="divSpecification" class="item item-slide no-padding" style="">
@@ -196,9 +191,9 @@
                             Cảm nhận 360
                         </a>
                     </div>
-                    @*@if (!String.IsNullOrEmpty(Model.ProductVideo))*@
-                    @{
-                        numSlide++;
+                    @if (!String.IsNullOrEmpty(Model.ProductVideo))
+                    { 
+                    numSlide++;
                         <div class="col-xs-2 item-affixcontrol no-padding ">
                             <a class="my-detail-img-video hvr-wobble-vertical" href="javascript:" data-target="#carousel-example-generic" data-slide-to="@numSlide" id="detailvideo">
                                 <div><img class="lazy" src="/images/affix-video1.png" id="abc" /></div>
@@ -216,8 +211,8 @@
                             Hình ảnh
                         </a>
                     </div>
-                    @*@if (Model.Reviews != null && Model.Reviews.Count > 0)*@
-                    @{
+                    @if (Model.Reviews != null && Model.Reviews.Count > 0)
+                    {
                         numSlide++;
                         <div class="col-xs-2 item-affixcontrol no-padding">
                             <a class="my-detail-img-review hvr-wobble-vertical" href="javascript:" data-target="#carousel-example-generic" data-slide-to="@numSlide" id="detailreview">
@@ -235,15 +230,15 @@
                             Thông số xe
                         </a>
                     </div>
-                    @*@if (Model.ProductBrochure != null)
-                        {
-                            <div class="col-xs-2 item-affixcontrol no-padding">
-                                <a class="my-detail-img-catalog hvr-wobble-vertical" id="htcFileDownload" class="htcdownload" abc="hellocaoto" style="" target="_blank" href="@(!String.IsNullOrEmpty(Model.ProductBrochure) ? Model.ProductBrochure : "javascript:void(0);")">
-                                    <div><img class="lazy" src="/images/affix-catalog1.png" /></div>
-                                    Tải catalog
-                                </a>
-                            </div>
-                        }*@
+                    @if (Model.ProductBrochure != null)
+                    {
+                        <div class="col-xs-2 item-affixcontrol no-padding">
+                            <a class="my-detail-img-catalog hvr-wobble-vertical" id="htcFileDownload" class="htcdownload" abc="hellocaoto" style="" target="_blank" href="@(!String.IsNullOrEmpty(Model.ProductBrochure) ? Model.ProductBrochure : "javascript:void(0);")">
+                                <div><img class="lazy" src="/images/affix-catalog1.png" /></div>
+                                Tải catalog
+                            </a>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
@@ -267,7 +262,7 @@
 
 <div class=" properties-content  container" style=" margin-bottom:80px;">
     <div class="col-lg-12 no-padding padding-news">
-        @*@if (Model.Properties.Count > 0)
+        @if (Model.Properties.Count > 0)
             {
                 var j = 0;
                 foreach (ProductProperty item in Model.Properties)
@@ -286,7 +281,7 @@
                     </div>
                     j++;
                 }
-            }*@
+            }
     </div>
 </div>
 

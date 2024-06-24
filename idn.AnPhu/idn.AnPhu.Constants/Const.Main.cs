@@ -48,6 +48,20 @@ namespace idn.AnPhu.Constants
         public const string ProductVersions = "ProductVersions";
         public const string ProductReviews = "ProductReviews";
         public const string AppDicDomain = "AppDicDomain";
+        public const string AdBannerRights = "AdBannerRights";
+        public const string CategoriesNews = "CategoriesNews";
+        public const string Company = "Company";
+        public const string HtmlPageCategories = "HtmlPageCategories";
+        public const string HtmlPages = "HtmlPages";
+        public const string LocationDiscounts = "LocationDiscounts";
+        public const string PopupAdvertisement = "PopupAdvertisement";
+        public const string PriceOptions = "PriceOptions";
+        public const string SlideBanners = "SlideBanners";
+        public const string VideoCategories = "VideoCategories";
+        public const string AdBannerLefts = "AdBannerLefts";
+        public const string Videos = "Videos";
+        public const string News = "News";
+
     }
 
     #region["Columns Table"]
