@@ -33,8 +33,8 @@ namespace idn.AnPhu.Biz.Models
 
         [DataColum]
         public string VideoKeyword { get; set; }
-
-
+          [DataColum]
+        public string VideoThumbnail { get; set; }
 
 
         [DataColum]
