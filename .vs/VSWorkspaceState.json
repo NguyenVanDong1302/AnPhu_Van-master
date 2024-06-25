@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\idn.AnPhu",
+    "\\idn.AnPhu\\idn.AnPhu.Website",
+    "\\idn.AnPhu\\idn.AnPhu.Website\\Views",
+    "\\idn.AnPhu\\idn.AnPhu.Website\\Views\\Shared"
   ],
+  "SelectedNode": "\\idn.AnPhu\\idn.AnPhu.Website",
   "PreviewInSolutionExplorer": false
 }
