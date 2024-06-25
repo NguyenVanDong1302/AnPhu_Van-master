@@ -1,0 +1,48 @@
+﻿@using idn.AnPhu.Biz.Models; 
+@model Product
+@{
+    ViewBag.Title = "ReviewProduct";
+    var url = Url.Action("Fancybox", "Products");
+}
+
+<style>
+.review_list ul li a.review {
+display: block;
+font-family: Georgia;
+padding-bottom: 12px;
+}
+.review_list ul li .source {
+color: #666666;
+font-size: 12px;
+line-height: 30px;
+}
+.review_list ul li img.logo {
+height: 25px;
+width: 60px;
+}
+</style>
+<div class="row" style="margin-top:15px; max-width:1000px">
+<div class="review_list">
+	<ul>
+		@if(Model.Reviews != null && Model.Reviews.Count > 0)
+		{
+			var i = 0;
+            foreach (var item in Model.Reviews)
+			{
+				i++;
+				<li class="col-sm-3" code="@item.ReviewId" proId="@item.ProductId" src="@item.ReviewLogo">
+					<a class="review various" data-fancybox-type="iframe" href="@Url.Action("Fancybox", "Product", new { itemCode=item.ReviewId})">@MvcHtmlString.Create(item.ReviewTitle)</a>
+					<span class="source">
+						@*<img class="logo" src="@(!string.IsNullOrEmpty(item.ReviewLogo) ? StringClass.returnPathImage(item.ReviewLogo) : "#")" />&nbsp;@item.ReviewTitle*@
+						<img  class="logo" src="@item.ReviewLogo"/> &nbsp;
+                        @MvcHtmlString.Create(item.ReviewSource)
+					</span>
+				</li>
+			}
+		}
+
+	</ul>
+</div>
+
+</div>
+

@@ -73,7 +73,7 @@
                                 <h1 class="carname modernHBold col-lg-12 no-padding " style="text-align:left">
                                     @Model.ProductName
                                 </h1>
-                                  <div class="price-product">Giá từ: @String.Format("{0:0,0}", Convert.ToDouble(Model.ProductPrice)) VNĐ</div>
+                                <div class="price-product">Giá từ: @String.Format("{0:0,0}", Convert.ToDouble(Model.ProductPrice)) VNĐ</div>
                                 <h1 class="slogan modernHEcoLight col-lg-12 no-padding ">
                                     @Model.ProductSlogan
 
@@ -103,12 +103,12 @@
                                 <img class="htccar img-responsive lazy" src="http://hyundaicaudien.vn/tempfiles/uploads/products/slides/ACCENT-2021.png" />
                             </div>
                             @* <div class="col-lg-1 no-padding hidden-xs hidden-sm exterior" style="margin-top:15px;">
-                            <div class="experience_option">
-                                 <p class="color_view"></p>
-                                    <ul>
-                                     </ul>
-                            </div>
-                             </div>*@
+                    <div class="experience_option">
+                         <p class="color_view"></p>
+                            <ul>
+                             </ul>
+                    </div>
+                     </div>*@
 
                         </div>
                     </div>
@@ -121,43 +121,42 @@
                     <img src="http://hyundaicaudien.vn/tempfiles/uploads/products/360/accent-2021/ex_aa/es_0.png" class="img-responsive col-lg-12 fix-img fix-col" alt="" />
                 </div>
 
-                @*@if (Model.ProductVideo != null)
-                {
-                    System.Text.RegularExpressions.Regex YoutubeVideoRegex =
-                        new System.Text.RegularExpressions.Regex(@"youtu(?:\.be|be\.com)/(?:.*v(?:/|=)|(?:.*/)?)([a-zA-Z0-9-_]+)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                    System.Text.RegularExpressions.Match youtubeMatch = YoutubeVideoRegex.Match(Model.ProductVideo);
-                    <div id="divVideo" class="item item-slide no-padding" style="">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 no-padding" style="margin-top:40px;">
-                                @if (youtubeMatch.Success)
-                                {
-                                    var id = youtubeMatch.Groups[1].Value;
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" width="560" height="315"
-                                                src="http://www.youtube.com/embed/@id?wmode=opaque&amp;rel=0"></iframe>
-                                    </div>
-                                }
+                @if (Model.ProductVideo != null)
+                    {
+                        System.Text.RegularExpressions.Regex YoutubeVideoRegex =
+                            new System.Text.RegularExpressions.Regex(@"youtu(?:\.be|be\.com)/(?:.*v(?:/|=)|(?:.*/)?)([a-zA-Z0-9-_]+)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                        System.Text.RegularExpressions.Match youtubeMatch = YoutubeVideoRegex.Match(Model.ProductVideo);
+                        <div id="divVideo" class="item item-slide no-padding" style="">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 no-padding" style="margin-top:40px;">
+                                    @if (youtubeMatch.Success)
+                                    {
+                                        var id = youtubeMatch.Groups[1].Value;
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" width="560" height="315"
+                                                    src="http://www.youtube.com/embed/@id?wmode=opaque&amp;rel=0"></iframe>
+                                        </div>
+                                    }
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                }*@
+                    }
                 @*Thu vien anh*@
                 <div id="divGallery" class="item item-slide no-padding" style="">
-                    @*@Html.Partial("GalleryProduct", Model)*@
+                    @Html.Partial("GalleryProduct", Model)
                 </div>
 
                 @*Danh gia xe*@
-                @*@if (Model.Reviews != null && Model.Reviews.Count > 0)
+                @if (Model.Reviews != null && Model.Reviews.Count > 0)
                 {
                     <div id="divReview" class="item item-slide no-padding" style="">
                         @Html.Partial("ReviewProduct", Model)
                     </div>
-                }*@
-
+                }
                 @*Thong so xe*@
                 <div id="divSpecification" class="item item-slide no-padding" style="">
-                    @*@Html.Partial("SpecProduct")*@
+                    @Html.Partial("SpecProduct")
                 </div>
             </div>
         </div>
@@ -285,11 +284,17 @@
     </div>
 </div>
 
+<div class=" properties-content  container" style=" margin-bottom:80px;">
+    <div class="col-lg-12 no-padding padding-news">
+        @Html.Partial("ViewBody")
+    </div>
+</div>
 
-<script type="text/javascript">
-    $('.menu-pr').addClass('active');
-</script>
-<script type="text/javascript">
+
+    <script type="text/javascript">
+        $('.menu-pr').addClass('active');
+    </script>
+    <script type="text/javascript">
     setAdminCurrentUrl('@Url.Action("Detail", "Product")', '@Url.Action("ListProduct", "Product")');
     $('.floating-top').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 800);
@@ -309,229 +314,229 @@
             $('.floating-top').stop(false, true).fadeIn(0);
         }
     });
-</script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        var i = 0;
-        var countli = 0;
-        //var filedownload = true;
-        //if (filedownload == false) {
-        //    countli = $('.htcslide ol li').length;
-        //} else {
-        //    countli = $('.htcslide ol li').length - 1;
-        //}
-        //var countli = $('.htcslide ol li').length - 1;
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var i = 0;
+            var countli = 0;
+            //var filedownload = true;
+            //if (filedownload == false) {
+            //    countli = $('.htcslide ol li').length;
+            //} else {
+            //    countli = $('.htcslide ol li').length - 1;
+            //}
+            //var countli = $('.htcslide ol li').length - 1;
 
 
-        //click vào nut slide tu doi
+            //click vào nut slide tu doi
 
-        var num1 = $('.htcslide ol li').length;
+            var num1 = $('.htcslide ol li').length;
 
-        $('.htccubeitem a').each(function (num1) {
-            $(this).click(function () {
-                //debugger;
+            $('.htccubeitem a').each(function (num1) {
+                $(this).click(function () {
+                    //debugger;
 
-                $(this).attr("data-slide-to", num1 + 1);
-                $('html, body').animate({ scrollTop: 0 }, 800);
-                i = num1 + 1;
-                //gan lại an hien pri,next
+                    $(this).attr("data-slide-to", num1 + 1);
+                    $('html, body').animate({ scrollTop: 0 }, 800);
+                    i = num1 + 1;
+                    //gan lại an hien pri,next
+
+                });
 
             });
+
+
+            $('.carousel-control.right').css("background-image", "none");
+            $('.carousel-control.right').css("background - repeat", "no-repeat");
+            $('.carousel-control.left').css("background-image", "none");
+            $('.carousel-control.left').css("background - repeat", "no-repeat");
+            //$('.carousel-control').css("opacity", "0");
+        });
+    </script>
+    <style>
+        .ol-htccarousel-indicators {
+            min-width: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 45% !important;
+            text-align: center;
+            text-align: right;
+        }
+
+        ol.ol-htccarousel-indicators li {
+            float: left;
+            border: none /*1px solid #8c8a8b*/;
+            background-color: #d6d6d6;
+        }
+
+        ol.ol-htccarousel-indicators .active {
+            background: #8c8a8b;
+        }
+    </style>
+
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=533137916817791&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+
+    <script>
+        $('#detail360').click(function () {
+
+            var a = $('.my-detail-img-360 img').attr('src', '/images/affix-3602.png');
+            $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+            $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+            $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+            $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+            $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+            $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+        });
+        $('#detailvideo').click(function () {
+
+
+
+
+            var a = $('.my-detail-img-video img').attr('src', '/images/affix-video2.png');
+            $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+            $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+            $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+            $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+            $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+            $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+        });
+
+        $('#detailgallery').click(function () {
+
+
+
+
+            var a = $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery2.png');
+            $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+            $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+            $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+            $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+            $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+            $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+        });
+
+        $('#detailreview').click(function () {
+
+
+
+
+            var a = $('.my-detail-img-review img').attr('src', '/images/affix-review2.png');
+            $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+            $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+            $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+            $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+            $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+            $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
 
         });
 
 
-        $('.carousel-control.right').css("background-image", "none");
-        $('.carousel-control.right').css("background - repeat", "no-repeat");
-        $('.carousel-control.left').css("background-image", "none");
-        $('.carousel-control.left').css("background - repeat", "no-repeat");
-        //$('.carousel-control').css("opacity", "0");
-    });
-</script>
-<style>
-    .ol-htccarousel-indicators {
-        min-width: 80px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 45% !important;
-        text-align: center;
-        text-align: right;
-    }
-
-    ol.ol-htccarousel-indicators li {
-        float: left;
-        border: none /*1px solid #8c8a8b*/;
-        background-color: #d6d6d6;
-    }
-
-    ol.ol-htccarousel-indicators .active {
-        background: #8c8a8b;
-    }
-</style>
-
-
-<div id="fb-root"></div>
-<script>
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=533137916817791&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-</script>
-
-<div id="fb-root"></div>
-<script>
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-
-<script>
-    $('#detail360').click(function () {
-
-        var a = $('.my-detail-img-360 img').attr('src', '/images/affix-3602.png');
-        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
-        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
-        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
-        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
-        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
-        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
-
-
-    });
-    $('#detailvideo').click(function () {
+        $('#detailspec').click(function () {
 
 
 
 
-        var a = $('.my-detail-img-video img').attr('src', '/images/affix-video2.png');
-        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
-        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
-        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
-        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
-        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
-        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
-
-
-    });
-
-    $('#detailgallery').click(function () {
-
-
-
-
-        var a = $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery2.png');
-        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
-        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
-        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
-        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
-        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
-        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
-
-
-    });
-
-    $('#detailreview').click(function () {
-
-
-
-
-        var a = $('.my-detail-img-review img').attr('src', '/images/affix-review2.png');
-        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
-        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
-        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
-        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
-        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
-        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
-
-
-    });
-
-
-    $('#detailspec').click(function () {
-
-
-
-
-        var a = $('.my-detail-img-spec img').attr('src', '/images/affix-spec2.png');
-        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
-        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
-        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
-        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
-        $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
-        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
-
-
-
-    });
-
-    $('#htcFileDownload').click(function () {
-
-
-
-
-        var a = $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog2.png');
-        $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
-        $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
-        $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
-        $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
-        $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
-        $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
-
-
-    });
-
-
-
-    $('#detailcover').click(function () {
-
-        var b = $('#divImagePNG').addClass('my-detail-active');
-
-        //b = window.location.reload();
-        //$(this).addClass("my-detail-active");
-
-        if ($('#divImagePNG').hasClass('my-detail-active')) {
-
-
-            var a = $('.my-detail-img-cover img').attr('src', '/images/affix-cover2.png');
+            var a = $('.my-detail-img-spec img').attr('src', '/images/affix-spec2.png');
             $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
             $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
             $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
             $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
             $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+            $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
+
+
+
+        });
+
+        $('#htcFileDownload').click(function () {
+
+
+
+
+            var a = $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog2.png');
+            $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+            $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+            $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+            $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
             $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+            $('.my-detail-img-cover img').attr('src', '/images/affix-cover1.png');
 
-        }
-        $('#divImagePNG').removeClass('my-detail-active');
 
-    });
-
+        });
 
 
 
-</script>
+        $('#detailcover').click(function () {
 
-<script type="text/javascript">
+            var b = $('#divImagePNG').addClass('my-detail-active');
 
-    $(document).ready(function () {
-        $('.carousel').carousel();
+            //b = window.location.reload();
+            //$(this).addClass("my-detail-active");
 
-        if ($('#divVideo').hasClass("active")) {
-
-            alert('dasdasd');
-
-        }
-    });
+            if ($('#divImagePNG').hasClass('my-detail-active')) {
 
 
-</script>
+                var a = $('.my-detail-img-cover img').attr('src', '/images/affix-cover2.png');
+                $('.my-detail-img-360 img').attr('src', '/images/affix-3601.png');
+                $('.my-detail-img-video img').attr('src', '/images/affix-video1.png');
+                $('.my-detail-img-gallery img').attr('src', '/images/affix-gallery1.png');
+                $('.my-detail-img-review img').attr('src', '/images/affix-review.png');
+                $('.my-detail-img-catalog img').attr('src', '/images/affix-catalog1.png');
+                $('.my-detail-img-spec img').attr('src', '/images/affix-spec1.png');
+
+            }
+            $('#divImagePNG').removeClass('my-detail-active');
+
+        });
+
+
+
+
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.carousel').carousel();
+
+            if ($('#divVideo').hasClass("active")) {
+
+                alert('dasdasd');
+
+            }
+        });
+
+
+    </script>
 

@@ -1940,11 +1940,22 @@
     <Content Include="tempfiles\uploads\background\Creata2022.png" />
     <Content Include="tempfiles\uploads\Banner\all new tucson.jpg" />
     <Content Include="tempfiles\uploads\Banner\Banner website.jpg" />
+    <Content Include="Images\btn_show_sp.png" />
     <Content Include="tempfiles\uploads\Hyundai Thanh Cong giai thuong nha phan phoi toan cau.jpg" />
     <Content Include="tempfiles\uploads\hyundai-grand-i10-sedan-2021.png" />
     <Content Include="tempfiles\uploads\logobaiviet\tucson.png" />
     <Content Include="tempfiles\uploads\New folder %2810%29\BBB03257.png" />
+    <Content Include="tempfiles\uploads\ngoaithat1.jpg" />
+    <Content Include="tempfiles\uploads\ngoaithat2.jpg" />
+    <Content Include="tempfiles\uploads\ngoaithat3.jpg" />
+    <Content Include="tempfiles\uploads\ngoaithat4.jpg" />
+    <Content Include="tempfiles\uploads\ngoaithat5.jpg" />
+    <Content Include="tempfiles\uploads\ngoaithat6.jpg" />
+    <Content Include="tempfiles\uploads\ngoaithat7.jpg" />
+    <Content Include="tempfiles\uploads\products\gallery\creta-2022\gallery\others\gallery_02.jpg" />
+    <Content Include="tempfiles\uploads\products\gallery\creta-2022\gallery\others\gallery_sum01.jpg" />
     <Content Include="tempfiles\uploads\products\gallery\Tucson 2022\2022-tucson-phev_16-9.png" />
+    <Content Include="tempfiles\uploads\products\html\grand_i10_spec.htm" />
     <Content Include="tempfiles\uploads\products\slides\CUSTIN.png" />
     <Content Include="tempfiles\uploads\products\slides\Elantra.png" />
     <Content Include="tempfiles\uploads\products\slides\IONIQ-5.png" />
@@ -2006,6 +2017,11 @@
     <Content Include="Views\Videos\ListVideo.cshtml" />
     <Content Include="Views\ProductAction\SupportBuyCar.cshtml" />
     <Content Include="Views\News\Detail.cshtml" />
+    <Content Include="Views\ProductClient\ReviewProduct.cshtml" />
+    <Content Include="Views\ProductClient\GalleryProduct.cshtml" />
+    <Content Include="Views\ProductClient\SpecProduct.cshtml" />
+    <Content Include="tempfiles\uploads\NewFolder %2820%29\NewFolder\SantaFe-2021-Catalogue.pdf" />
+    <Content Include="Views\Shared\ViewBody.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2014,6 +2030,7 @@
     <Folder Include="Areas\Auth\Views\Properties\" />
     <Folder Include="Content\fontHyundai\font\" />
     <Folder Include="Content\TestCss\" />
+    <Folder Include="upload\" />
     <Folder Include="Views\Administrator\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Test\" />

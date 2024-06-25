@@ -8880,6 +8880,7 @@ html, body {
         position: relative;
         overflow: hidden;
         text-align: center;
+        height: auto;
     }
 
     .text_play {

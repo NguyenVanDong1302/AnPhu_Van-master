@@ -51,18 +51,18 @@ namespace idn.AnPhu.Website.Controllers
                     sRootGallery = "~/tempfiles/uploads/products/gallery/" + productcode + "/";
                 var gaCat = "";
                 var gaCatItem = "";
-                //var galleryCat = ServiceFactory.AppDicDomainManager.GetListAppDicDomainByItemCode("GALLERY_CAT");
-                //if (galleryCat != null && galleryCat.Count > 0)
-                //{
-                //    foreach (var gaItem in galleryCat)
-                //    {
+                var galleryCat = ServiceFactory.AppDicDomainManager.GetListAppDicDomainByItemCode("GALLERY_CAT");
+                if (galleryCat != null && galleryCat.Count > 0)
+                {
+                    foreach (var gaItem in galleryCat)
+                    {
 
-                //        gaCat += "<li>";
-                //        gaCat += "<a class=\"" + gaItem.Item_Code.ToLower() + "\" href=\"javascript:cubeGalleryCustomiz('1','" + gaItem.Item_Code.ToLower() + "');\" style=\"z-index: 8\">" + gaItem.Item_Value + "</a>";
-                //        gaCat += "</li>";
-                //        gaCatItem += StringUtils.galleryItemMB(sRootGallery, gaItem.Item_Code.ToLower(), gaItem.Item_Value);
-                //    }
-                //}
+                        gaCat += "<li>";
+                        gaCat += "<a class=\"" + gaItem.Item_Code.ToLower() + "\" href=\"javascript:cubeGalleryCustomiz('1','" + gaItem.Item_Code.ToLower() + "');\" style=\"z-index: 8\">" + gaItem.Item_Value + "</a>";
+                        gaCat += "</li>";
+                        gaCatItem += StringUtils.galleryItemMB(sRootGallery, gaItem.Item_Code.ToLower(), gaItem.Item_Value);
+                    }
+                }
 
                 ViewBag.gaCat = gaCat;
                 ViewBag.gaCatItem = gaCatItem;
@@ -164,7 +164,8 @@ namespace idn.AnPhu.Website.Controllers
 
                 #endregion
                 #region["Thong so ky thuat"]
-                var sFile = string.Format("~/tempfiles/uploads/products/html/{0}_{1}.htm", product.ProductCode.Replace('-', '_'), "spec");
+                //var sFile = string.Format("~/tempfiles/uploads/products/html/{0}_{1}.htm", product.ProductCode.Replace('-', '_'), "spec");
+                var sFile = "~/tempfiles/uploads/products/html/grand_i10_spec.htm";
                 var contentFile = StringUtils.File_Read(sFile);
                 ViewBag.contentFile = !String.IsNullOrEmpty(contentFile) ? contentFile : "";
                 #endregion
